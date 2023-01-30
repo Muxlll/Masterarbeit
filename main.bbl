@@ -1,0 +1,745 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{bungartz_griebel_2004}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6896a9c32e9b9dfde90b5c5e30d80881}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{fullhash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{bibnamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authorbibnamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authornamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authorfullhash}{d0a1f27c785b7d61140590690ac47017}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Numerica}
+      \field{title}{Sparse grids}
+      \field{volume}{13}
+      \field{year}{2004}
+      \field{pages}{147\bibrangedash 269}
+      \range{pages}{123}
+      \verb{doi}
+      \verb 10.1017/S0962492904000182
+      \endverb
+    \endentry
+    \entry{pfluegerSpatiallyAdaptive}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f54860793c01cc839e2c0fefe8c50097}{%
+           family={Pflüger},
+           familyi={P\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f54860793c01cc839e2c0fefe8c50097}
+      \strng{fullhash}{f54860793c01cc839e2c0fefe8c50097}
+      \strng{bibnamehash}{f54860793c01cc839e2c0fefe8c50097}
+      \strng{authorbibnamehash}{f54860793c01cc839e2c0fefe8c50097}
+      \strng{authornamehash}{f54860793c01cc839e2c0fefe8c50097}
+      \strng{authorfullhash}{f54860793c01cc839e2c0fefe8c50097}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spatially Adaptive Sparse Grids for High Dimensional Problems}
+      \field{volume}{13}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www5.in.tum.de/pub/pflueger10spatially.pdf
+      \endverb
+      \verb{url}
+      \verb https://www5.in.tum.de/pub/pflueger10spatially.pdf
+      \endverb
+    \endentry
+    \entry{sparse_grids_nutshell}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6896a9c32e9b9dfde90b5c5e30d80881}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{fullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{bibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorbibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authornamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorfullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{editorbibnamehash}{a1ae6ffdc58b9fb07dac5ae9010f8eb0}
+      \strng{editornamehash}{a1ae6ffdc58b9fb07dac5ae9010f8eb0}
+      \strng{editorfullhash}{a1ae6ffdc58b9fb07dac5ae9010f8eb0}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The technique of sparse grids allows to overcome the curse of dimensionality, which prevents the use of classical numerical discretization schemes in more than three or four dimensions, under suitable regularity assumptions. The approach is obtained from a multi-scale basis by a tensor product construction and subsequent truncation of the resulting multiresolution series expansion. This entry level article gives an introduction to sparse grids and the sparse grid combination technique.}
+      \field{booktitle}{Sparse Grids and Applications}
+      \field{isbn}{978-3-642-31703-3}
+      \field{title}{Sparse Grids in a Nutshell}
+      \field{year}{2013}
+      \field{pages}{57\bibrangedash 80}
+      \range{pages}{24}
+    \endentry
+    \entry{garcke_griebel_mining}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d2d880a01248cce2619de9163354533}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a89d53c4f1eaa27ffdbaa8c4376f3df6}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d131294c667b11067652ebfa6e1d835}{%
+           family={Thess},
+           familyi={T\bibinitperiod},
+           given={M-},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{672f97f7fb361b9268973cdcbcaef433}
+      \strng{fullhash}{672f97f7fb361b9268973cdcbcaef433}
+      \strng{bibnamehash}{672f97f7fb361b9268973cdcbcaef433}
+      \strng{authorbibnamehash}{672f97f7fb361b9268973cdcbcaef433}
+      \strng{authornamehash}{672f97f7fb361b9268973cdcbcaef433}
+      \strng{authorfullhash}{672f97f7fb361b9268973cdcbcaef433}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing}
+      \field{title}{Data Mining with Sparse Grids}
+      \field{volume}{67}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.1007/s006070170007
+      \endverb
+    \endentry
+    \entry{griebel1990combination}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6896a9c32e9b9dfde90b5c5e30d80881}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=011cc96822d7baa0be7b01124f4ed55c}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=432cf1cc01338e00ab0cdb10c8339b78}{%
+           family={Zenger},
+           familyi={Z\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{fullhash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{bibnamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authorbibnamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authornamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authorfullhash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A combination technique for the solution of sparse grid problems}
+      \field{year}{1990}
+    \endentry
+    \entry{spatially_adaptive_refinement}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6039b7668c5102126e12d322f5407274}{%
+           family={Obersteiner},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{fullhash}{91fb8b4d0373238575275da07e684a49}
+      \strng{bibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorbibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{4}
+      \field{title}{A Generalized Spatially Adaptive Sparse Grid Combination Technique with Dimension-wise Refinement}
+      \field{volume}{43}
+      \field{year}{2021}
+      \field{pages}{A2381\bibrangedash A2403}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1137/20M1325885
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/20M1325885
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/20M1325885
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/20M1325885
+      \endverb
+    \endentry
+    \entry{HEGLAND2007249}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6022d776b216c890b7280bcfa0726029}{%
+           family={Hegland},
+           familyi={H\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ef06fe5b2df6dda62817bd43d8e10b8}{%
+           family={Challis},
+           familyi={C\bibinitperiod},
+           given={Vivien},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{19a40e03669427b5e268d80c892167b6}
+      \strng{fullhash}{19a40e03669427b5e268d80c892167b6}
+      \strng{bibnamehash}{19a40e03669427b5e268d80c892167b6}
+      \strng{authorbibnamehash}{19a40e03669427b5e268d80c892167b6}
+      \strng{authornamehash}{19a40e03669427b5e268d80c892167b6}
+      \strng{authorfullhash}{19a40e03669427b5e268d80c892167b6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The combination technique has repeatedly been shown to be an effective tool for the approximation with sparse grid spaces. Little is known about the reasons of this effectiveness and in some cases the combination technique can even break down. It is known, however, that the combination technique produces an exact result in the case of a projection into a sparse grid space if the involved partial projections commute. The performance of the combination technique is analysed using a projection framework and the C/S decomposition. Error bounds are given in terms of angles between the spanning subspaces or the projections onto these subspaces. Based on this analysis modified combination coefficients are derived which are optimal in a certain sense and which can substantially extend the applicability and performance of the combination technique.}
+      \field{issn}{0024-3795}
+      \field{journaltitle}{Linear Algebra and its Applications}
+      \field{number}{2}
+      \field{title}{The combination technique and some generalisations}
+      \field{volume}{420}
+      \field{year}{2007}
+      \field{pages}{249\bibrangedash 275}
+      \range{pages}{27}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.laa.2006.07.014
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S002437950600334X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S002437950600334X
+      \endverb
+      \keyw{Spare grids,High-dimensional approximation,Linear combination of projections}
+    \endentry
+    \entry{garckeOpticom}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Pittsburgh, Pennsylvania, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{fullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{bibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorbibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authornamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorfullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider the sparse grid combination technique for regression, which we regard as a problem of function reconstruction in some given function space. We use a regularised least squares approach, discretised by sparse grids and solved using the so-called combination technique, where a certain sequence of conventional grids is employed. The sparse grid solution is then obtained by addition of the partial solutions with combination co-efficients dependent on the involved grids. This approach shows instabilities in certain situations and is not guaranteed to converge with higher discretisation levels. In this article we apply the recently introduced optimised combination technique, which repairs these instabilities. Now the combination coefficients also depend on the function to be reconstructed, resulting in a non-linear approximation method which achieves very competitive results. We show that the computational complexity of the improved method still scales only linear in regard to the number of data.}
+      \field{booktitle}{Proceedings of the 23rd International Conference on Machine Learning}
+      \field{isbn}{1595933832}
+      \field{series}{ICML '06}
+      \field{title}{Regression with the Optimised Combination Technique}
+      \field{year}{2006}
+      \field{pages}{321\bibrangedash 328}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/1143844.1143885
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1143844.1143885
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1143844.1143885
+      \endverb
+    \endentry
+    \entry{DensityEstimationFabry}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cfe4e3cbca426d34744d790283e57614}{%
+           family={Fabry},
+           familyi={F\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technical University of Munich}%
+      }
+      \strng{namehash}{cfe4e3cbca426d34744d790283e57614}
+      \strng{fullhash}{cfe4e3cbca426d34744d790283e57614}
+      \strng{bibnamehash}{cfe4e3cbca426d34744d790283e57614}
+      \strng{authorbibnamehash}{cfe4e3cbca426d34744d790283e57614}
+      \strng{authornamehash}{cfe4e3cbca426d34744d790283e57614}
+      \strng{authorfullhash}{cfe4e3cbca426d34744d790283e57614}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Spatially adaptive Density Estimation with the Sparse Grid Combination Technique}
+      \field{type}{Masterarbeit}
+      \field{year}{2020}
+    \endentry
+    \entry{MachineLearningMoser}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1a5c8438d6d0fd9cc5b667b205999927}{%
+           family={Moser},
+           familyi={M\bibinitperiod},
+           given={Cora\bibnamedelima Charlotte},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technical University of Munich}%
+      }
+      \strng{namehash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \strng{fullhash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \strng{bibnamehash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \strng{authorbibnamehash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \strng{authornamehash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \strng{authorfullhash}{1a5c8438d6d0fd9cc5b667b205999927}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Machine Learning with the Sparse Grid Density Estimation using the Combination Technique}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2020}
+      \keyw{Sparse Grid,Density Estimation,Machine Learning}
+    \endentry
+    \entry{numpy}{article}{}
+      \name{author}{26}{}{%
+        {{un=0,uniquepart=base,hash=db2b4761cc46be347b418e68660c9554}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b053969d2c6a9ec8689980fb6463cd56}{%
+           family={Millman},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi Jarrod},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a5a65a789013a8d1e8035ec28df9b6e}{%
+           family={Walt},
+           familyi={W\bibinitperiod},
+           given={St{é}fan\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0,
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fd9ed8466bbb96364ae008f2a665e6e}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4321feefe3d5715c6fe12639d2a1f7f1}{%
+           family={Wieser},
+           familyi={W\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8d1b0c2bff88b6bf54e2e934e2853f6}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=265437a4424f0b845118651d7d04ab93}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d23819637a961e0e598e1c82a8f10d}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Nathaniel\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ad1d38817acd2f00cb7f324ec7d37ea}{%
+           family={Kern},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ae844f84614690134ff5d8252fdc430}{%
+           family={Picus},
+           familyi={P\bibinitperiod},
+           given={Matti},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a22828b76006f42d747b699d2ef5167}{%
+           family={Hoyer},
+           familyi={H\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10aba85d08ce22d724b21878b93f590a}{%
+           family={Kerkwijk},
+           familyi={K\bibinitperiod},
+           given={Marten\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=626cc151613864abeb653c0d8172d98c}{%
+           family={Brett},
+           familyi={B\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a989405517bbf67ae7b16be1d03c0081}{%
+           family={Haldane},
+           familyi={H\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9517b38a3050d34c03ac479ee122f64a}{%
+           family={R{í}o},
+           familyi={R\bibinitperiod},
+           given={Jaime\bibnamedelima Fern{á}ndez},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0,
+           prefix={del},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=76256cb9e4c31e0a4744b1b49a6199f4}{%
+           family={Wiebe},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aac4486f60accb8b7db22ef300423e11}{%
+           family={G{é}rard-Marchant},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22fcbc93c38819e962968aad3e3cba7f}{%
+           family={Sheppard},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbb0c40f5d70be8ce47ce9daafdf5749}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c7e4c94b846fa41e2fc0a88e0dc656d}{%
+           family={Weckesser},
+           familyi={W\bibinitperiod},
+           given={Warren},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c588b2e35e75bba896fc5677afb52fa9}{%
+           family={Abbasi},
+           familyi={A\bibinitperiod},
+           given={Hameer},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52e2684c111b194e1f15fa06b0ce4544}{%
+           family={Gohlke},
+           familyi={G\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{6689ecc3c9e295b778f29b8693fbf88e}
+      \strng{fullhash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \strng{bibnamehash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \strng{authorbibnamehash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \strng{authornamehash}{6689ecc3c9e295b778f29b8693fbf88e}
+      \strng{authorfullhash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{9}
+      \field{number}{7825}
+      \field{title}{Array programming with {NumPy}}
+      \field{volume}{585}
+      \field{year}{2020}
+      \field{pages}{357\bibrangedash 362}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/s41586-020-2649-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41586-020-2649-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41586-020-2649-2
+      \endverb
+    \endentry
+    \entry{sklearn}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=bab4e5caee2d67831e464ce575022b37}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfa3239dded54488f9a82a5718d5b927}{%
+           family={Varoquaux},
+           familyi={V\bibinitperiod},
+           given={Ga{ë}l},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12ebe424e1c87de156c57e8fa7683f46}{%
+           family={Gramfort},
+           familyi={G\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=504ea1986689f1047a6f0beda2cb3822}{%
+           family={Michel},
+           familyi={M\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f3fc06fb9fcbb01b9cc0985eaf0a71c}{%
+           family={Thirion},
+           familyi={T\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=721be0317527f44db425f7a97dcab15e}{%
+           family={Grisel},
+           familyi={G\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3b6c8582cea4e8b6576137b6a72cadc}{%
+           family={Blondel},
+           familyi={B\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86e647e5c801f3ce733927f75f029463}{%
+           family={Prettenhofer},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89d698773eaf2fae761ff0008031c7be}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b255e99d411f28c789a231829f765c64}{%
+           family={Dubourg},
+           familyi={D\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR. org}%
+      }
+      \strng{namehash}{026cfc129149d06bacef9a7806267d69}
+      \strng{fullhash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \strng{bibnamehash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \strng{authorbibnamehash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \strng{authornamehash}{026cfc129149d06bacef9a7806267d69}
+      \strng{authorfullhash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{the Journal of machine Learning research}
+      \field{title}{Scikit-learn: Machine learning in Python}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2825\bibrangedash 2830}
+      \range{pages}{6}
+    \endentry
+    \entry{online_offline}{inbook}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b7bbb02bc42692ee4dece588642a9b18}{%
+           family={Peherstorfer},
+           familyi={P\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63d03579e9a6486af997d640d5050203}{%
+           family={Pflüge},
+           familyi={P\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e5207f564248b6012e32fdd734e9ea56}
+      \strng{fullhash}{e5207f564248b6012e32fdd734e9ea56}
+      \strng{bibnamehash}{e5207f564248b6012e32fdd734e9ea56}
+      \strng{authorbibnamehash}{e5207f564248b6012e32fdd734e9ea56}
+      \strng{authornamehash}{e5207f564248b6012e32fdd734e9ea56}
+      \strng{authorfullhash}{e5207f564248b6012e32fdd734e9ea56}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2014 SIAM International Conference on Data Mining (SDM)}
+      \field{title}{Density Estimation with Adaptive Sparse Grids for Large Data Sets}
+      \field{pages}{443\bibrangedash 451}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1137/1.9781611973440.51
+      \endverb
+      \verb{eprint}
+      \verb https://epubs.siam.org/doi/pdf/10.1137/1.9781611973440.51
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/abs/10.1137/1.9781611973440.51
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/abs/10.1137/1.9781611973440.51
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
