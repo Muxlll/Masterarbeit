@@ -6,7 +6,7 @@ from sklearn import svm, metrics
 from sklearn.utils import shuffle
 from sklearn.model_selection import cross_val_score
 
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 
 import timeit
 
@@ -65,8 +65,8 @@ def from_standard(lower, upper, value):
 
 class Dataset:
     def __init__(self, X, Y, ratio=0.8) -> None:
-        self.X = X
-        self.Y = Y
+        self.X = torch.Tensor(X)
+        self.Y = torch.Tensor(Y)
         X, Y = shuffle(X, Y)
 
         self.X_train = torch.Tensor(X[:int(len(X) * ratio)])
@@ -118,10 +118,10 @@ class Optimization:
     def fit(self):
         if self.type == 0:
             clf = GridSearchCV(self.model, self.hyperparameterspace)
-            print(self.dataset.get_X())
-            return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
+            return clf.fit(self.dataset.get_X().reshape(-1, 1), self.dataset.get_Y())
         elif self.type == 1:
-            return ((0,0), 1)
+            clf = RandomizedSearchCV(self.model, self.hyperparameterspace)
+            return clf.fit(self.dataset.get_X().reshape(-1, 1), self.dataset.get_Y())
         elif self.type == 2:
             return ((0,0), 1)
         elif self.type == 3:
