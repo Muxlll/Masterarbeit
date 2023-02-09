@@ -5,6 +5,14 @@
 
 \section{Hyperparameter Optimization}
 
+Most machine learning models have parameters that have to be defined before the learning phase. They are called hyperparameters and strongly influence the behavior of the model. One example is the number of epochs of the learning phase of a neural network. There are different techniques for the optimization of hyperparameters and they all define the machine learning model as a black box function $ f $ with the hyperparameters as input and the resulting performance as output. The overall goal is to find a configuration $ \lambda_{min} $ from $ \Lambda = \Lambda_1 \times \Lambda_2 \times ... \times \Lambda_N $ that minimizes the function $ f $ with $ N $ hyperparameters with 
+\begin{equation}
+	\lambda_{min} = \text{arg} \min_{\lambda \in \Lambda} f(\lambda) .
+\end{equation}
+
+Depending on the evaluation metric, this can for example find the configuration where the model has the smallest loss. 
+\cite{feurer2019hyperparameter,bischl2021hyperparameter}
+
 \begin{itemize}
 	\item Definition machine learning 
 	\item Examples machine learning tasks and architectures
