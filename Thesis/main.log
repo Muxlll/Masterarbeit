@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.27)  9 FEB 2023 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.27)  10 FEB 2023 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1689,25 +1689,17 @@ chapter 1.
 
 ]
 chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-17.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
-File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-))
-(./chapters/03_implementation.tex [2
+) (./chapters/03_implementation.tex [2
 
 
 ]
-LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 4.
- [3]
 chapter 3.
-) (./chapters/05_conclusion_and_outlook.tex [4
+) (./chapters/05_conclusion_and_outlook.tex [3
 
 
 ]
 chapter 4.
-) [5
+) [4
 
 
 ]
@@ -1717,7 +1709,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 93
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [6
+ [5
 
 
 ]
@@ -1727,30 +1719,38 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 94
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [7
+ [6
 
 
 ]
 chapter without number
 No complaints by nag.
-[8
+[7
 
 
 ] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52129 strings out of 480194
- 1187857 string characters out of 5893742
- 2179457 words of memory out of 5000000
- 68904 multiletter control sequences out of 15000+600000
- 516766 words of font info for 203 fonts, out of 8000000 for 9000
+ 52091 strings out of 480194
+ 1187281 string characters out of 5893742
+ 2179459 words of memory out of 5000000
+ 68880 multiletter control sequences out of 15000+600000
+ 515425 words of font info for 197 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 115i,8n,109p,10599b,2379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,7n,109p,10599b,2379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
@@ -1758,10 +1758,10 @@ fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
 atino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (15 pages, 559485 bytes).
+Output written on main.pdf (14 pages, 557927 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
- 81607 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 77511 words of extra memory for PDF output out of 89155 (max. 10000000)
 
