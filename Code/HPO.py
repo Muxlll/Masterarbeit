@@ -10,6 +10,8 @@ from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 
 import timeit
 
+import copy
+
 import sklearn.gaussian_process as gp
 
 from scipy.stats import norm
@@ -18,27 +20,14 @@ from scipy.optimize import minimize
 
 from sklearn.utils import shuffle
 
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-
-import itertools
-
-from mpl_toolkits import mplot3d
-
-
-from scipy.io import arff
-import pandas as pd
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-import time, sys
+import time
+import sys
 from IPython.display import clear_output
 
 import pysgpp
-
-from bayes_opt import BayesianOptimization, UtilityFunction
 
 
 def update_progress(progress, time, remaining_time):
@@ -53,19 +42,12 @@ def update_progress(progress, time, remaining_time):
         progress = 1
 
     block = int(round(bar_length * progress))
-    clear_output(wait = True)
-    text = "Progress: [{0}] {1:.1f}%".format( "#" * block + "-" * (bar_length - block), progress * 100)
+    clear_output(wait=True)
+    text = "Progress: [{0}] {1:.1f}%".format(
+        "#" * block + "-" * (bar_length - block), progress * 100)
     text += "\nCurrent time per iteration: " + str(time)
     text += "\nApprox. time remaining: " + str(remaining_time)
     print(text)
-
-    
-def to_standard(lower, upper, value):
-    return (value-lower)/(upper-lower)
-
-
-def from_standard(lower, upper, value):
-    return value*(upper-lower)+lower
 
 
 class Dataset:
@@ -96,9 +78,6 @@ class Dataset:
 
     def get_Y(self):
         return self.Y
-
-    
-
 
 
 def expected_improvement(x, gaussian_process, evaluated_loss, greater_is_better=False, n_params=1):
@@ -133,7 +112,8 @@ def expected_improvement(x, gaussian_process, evaluated_loss, greater_is_better=
     # In case sigma equals zero
     with np.errstate(divide='ignore'):
         Z = scaling_factor * (mu - loss_optimum) / sigma
-        expected_improvement = scaling_factor * (mu - loss_optimum) * norm.cdf(Z) + sigma * norm.pdf(Z)
+        expected_improvement = scaling_factor * \
+            (mu - loss_optimum) * norm.cdf(Z) + sigma * norm.pdf(Z)
         expected_improvement[sigma == 0.0] == 0.0
 
     return -1 * expected_improvement
@@ -162,7 +142,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
     best_x = None
     best_acquisition_value = 1
     n_params = bounds.shape[0]
-
+    
     for starting_point in np.random.uniform(bounds[:, 0], bounds[:, 1], size=(n_restarts, n_params)):
 
         res = minimize(fun=acquisition_func,
@@ -211,7 +191,6 @@ def bayesian_optimisation(X, Y, n_iters, sample_loss, bounds, x0=None, n_pre_sam
 
     n_params = bounds.shape[0]
 
-    
     if x0 is None:
         for params in np.random.uniform(bounds[:, 0], bounds[:, 1], (n_pre_samples, bounds.shape[0])):
             x_list.append(params)
@@ -239,20 +218,24 @@ def bayesian_optimisation(X, Y, n_iters, sample_loss, bounds, x0=None, n_pre_sam
     for n in range(n_iters):
 
         starttime = timeit.default_timer()
-    
+
         model.fit(xp, yp)
 
         # Sample next hyperparameter
         if random_search:
-            x_random = np.random.uniform(bounds[:, 0], bounds[:, 1], size=(random_search, n_params))
-            ei = -1 * expected_improvement(x_random, model, yp, greater_is_better=True, n_params=n_params)
+            x_random = np.random.uniform(
+                bounds[:, 0], bounds[:, 1], size=(random_search, n_params))
+            ei = -1 * expected_improvement(x_random, model,
+                                           yp, greater_is_better=True, n_params=n_params)
             next_sample = x_random[np.argmax(ei), :]
         else:
-            next_sample = sample_next_hyperparameter(expected_improvement, model, yp, greater_is_better=True, bounds=bounds, n_restarts=100)
+            next_sample = sample_next_hyperparameter(
+                expected_improvement, model, yp, greater_is_better=True, bounds=bounds, n_restarts=100)
 
         # Duplicates will break the GP. In case of a duplicate, we will randomly sample a next query point.
         if np.any(np.abs(next_sample - xp) <= epsilon):
-            next_sample = np.random.uniform(bounds[:, 0], bounds[:, 1], bounds.shape[0])
+            next_sample = np.random.uniform(
+                bounds[:, 0], bounds[:, 1], bounds.shape[0])
 
         # Sample loss for new set of parameters
         cv_score = sample_loss(next_sample)
@@ -269,12 +252,14 @@ def bayesian_optimisation(X, Y, n_iters, sample_loss, bounds, x0=None, n_pre_sam
 
         endtime = timeit.default_timer()
         time += (endtime-starttime)
-    
+
         remaining_time_prediction = (time/(n+1))*n_iters - time
-        
-        update_progress(percentage, (endtime-starttime), remaining_time_prediction)
+
+        update_progress(percentage, (endtime-starttime),
+                        remaining_time_prediction)
 
     return xp, yp
+
 
 def to_standard(lower, upper, value):
     return (value-lower)/(upper-lower)
@@ -285,51 +270,102 @@ def from_standard(lower, upper, value):
 
 
 """
-    Optimization class
-    arguments: Dataset, model, hyperparameter space, type of optimization, metric
-        Type:
-            0: Grid search
-            1: Random search
-            2: Bayesian Optimization
-            3: Sparse grid search
-        Metrics:
-            "accuracy": simple testing accuracy
-            "loss": simple loss
-            "10-fold crossvalidation": 10-fold crossvalidation       
+    Optimization class 
+    Params:
+        dataset:                data of the class Dataset
+        model:                  model to find the best params for (can be model or blackbox function depending on type)
+        hyperparameterspace:    definition of hyperparameter space (dict with "list" or "interval" as first element of list)
+        type:                   available ones: "grid_search", "random_search", "bayesian", "sparse"
+        budget:                 upper bound for number of model evaluations
+        verbosity:              verbosity for output
+        sparse_params:          list of values: [B-spline_degree, adaptivity]
 """
+
+
 class Optimization:
-    def __init__(self, dataset, model, hyperparameterspace, type=0) -> None:
-        self.dataset = dataset   
+    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", budget=100, verbosity=1, sparse_params=[3, 0.95]) -> None:
+        self.dataset = dataset
         self.model = model
         self.hyperparameterspace = hyperparameterspace
-        self.type = type    
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.type = type
+        self.budget = budget
+        self.verbosity = verbosity
+        self.sparse_params = sparse_params
+
+        if self.type == "grid_search" or self.type == "random_search":
+
+            param_dimension = len(self.hyperparameterspace)
+            param_per_dimension = int(self.budget**(1/param_dimension))
+
+            for key in self.hyperparameterspace.keys():
+                if self.hyperparameterspace.get(key)[0] == "list":
+                    self.hyperparameterspace_processed.get(key).pop(0)
+                    self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(key)
+                elif self.hyperparameterspace.get(key)[0] == "interval":
+                    param_list = []
+                    for i in range(param_per_dimension):
+                        upper = self.hyperparameterspace.get(key)[2]
+                        lower = self.hyperparameterspace.get(key)[1]
+                        param_list.append(
+                            (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
+                    self.hyperparameterspace_processed[key] = param_list
+                elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                    param_list = []
+                    for i in range(param_per_dimension):
+                        upper = self.hyperparameterspace.get(key)[2]
+                        lower = self.hyperparameterspace.get(key)[1]
+                        param_list.append(int(
+                            (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
+                    self.hyperparameterspace_processed[key] = param_list
+                else:
+                    print("Need to specify the type of list")
+        elif self.type == "bayesian":
+            list = []
+            for key in self.hyperparameterspace.keys():
+                if self.hyperparameterspace.get(key)[0] != 'list':
+                    self.hyperparameterspace_processed.get(key).pop(0)
+                    list.append(self.hyperparameterspace_processed.get(key))
+                else: 
+                    list.append([0,1])
+            self.hyperparameterspace_processed = np.array(list)
+        elif self.type == "sparse":
+            for key in self.hyperparameterspace.keys():
+                self.hyperparameterspace_processed.get(key).pop(0)
 
 
     def fit(self):
-        if self.type == 0:
-            clf = GridSearchCV(self.model, self.hyperparameterspace)
+
+        if self.type == "grid_search":
+            clf = GridSearchCV(
+                self.model, self.hyperparameterspace_processed, verbose=self.verbosity)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
-        elif self.type == 1:
-            clf = RandomizedSearchCV(self.model, self.hyperparameterspace)
+
+        elif self.type == "random_search":
+
+            clf = RandomizedSearchCV(
+                self.model, self.hyperparameterspace_processed, verbose=self.verbosity, n_iter=self.budget)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
-        elif self.type == 2:
-            return bayesian_optimisation(self.dataset.get_X(), self.dataset.get_Y(), 10, self.model, self.hyperparameterspace)
-        elif self.type == 3:
+
+        elif self.type == "bayesian":
+            return bayesian_optimisation(self.dataset.get_X(), self.dataset.get_Y(), self.budget, self.model, self.hyperparameterspace_processed)
+        
+        elif self.type == "sparse":
+
             f = self.model
 
-                        
             # dimension of domain
             d = f.getNumberOfParameters()
             # B-spline degree
-            p = 3
+            p = self.sparse_params[0]
             # maximal number of grid points
-            N = 200
+            N = self.budget
             # adaptivity of grid generation
-            gamma = 0.95
-
+            gamma = self.sparse_params[1]
 
             grid = pysgpp.Grid.createModBsplineGrid(d, p)
-            gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(f, grid, N, gamma)
+            gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(
+                f, grid, N, gamma)
 
             functionValues = gridGen.getFunctionValues()
 
@@ -343,11 +379,11 @@ class Optimization:
             y_values = []
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
-                x_values.append(gp.getStandardCoordinate(0)) 
+                x_values.append(gp.getStandardCoordinate(0))
                 y_values.append(gp.getStandardCoordinate(1))
-                
-                
-            plt.plot(x_values, y_values, 'bo')
+
+            if self.verbosity >= 1:
+                plt.plot(x_values, y_values, 'bo')
 
             ######################################## grid functions ########################################
             # Hierarchization
@@ -376,38 +412,48 @@ class Optimization:
                     fX0 = functionValues[i]
                     x0Index = i
 
-            x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index));
+            x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
             ftX0 = ft.eval(x0)
 
-            print("\nOptimal hyperparameters so far:")
-            print("Epochs: ", from_standard(1,300,x0[1]))
-            print("learning_rate: ", from_standard(0.00001,0.01,x0[0]))
+            if self.verbosity > 0:
+                print("\nOptimal hyperparameters so far:")
+                i = 0
+                for key in self.hyperparameterspace.keys():
+                    if self.hyperparameterspace[key][0] == "list":
+                        index = int(x0[i]*(len(self.hyperparameterspace_processed[key])-2))
+                        print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
+                    else:
+                        print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                    i += 1
 
-            print("Resulting loss:")
-            print(ftX0)
+                print("Resulting loss:")
+                print(ftX0)
 
             ################################## Optimize with gradient descent ##################################
-            #print("x0 = {}".format(x0))
-            #print("f(x0) = {:.6g}, ft(x0) = {:.6g}\n".format(fX0, ftX0))
 
-            ## We apply the gradient method and print the results.
+            # We apply the gradient method and print the results.
             gradientDescent.setStartingPoint(x0)
             gradientDescent.optimize()
             xOpt = gradientDescent.getOptimalPoint()
             ftXOpt = gradientDescent.getOptimalValue()
 
-            print(xOpt)
             fXOpt = f.eval(xOpt)
+            if self.verbosity > 0:
+                # print(xOpt)
+                print("\nOptimal hyperparameters after optimization:")
+                i = 0
+                for key in self.hyperparameterspace.keys():
+                    if self.hyperparameterspace[key][0] == "list":
+                        index = int(xOpt[i]*(len(self.hyperparameterspace_processed[key])-2))
+                        print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
+                    else:
+                        print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
+                    i += 1
+                print("Resulting loss (Optimal value from optimization):")
+                print(ftXOpt)
+                print("Resulting loss (Optimal point evaluated):")
+                print(fXOpt)
 
-            print("\nOptimal hyperparameters after optimization:")
-            print("Epochs: ", from_standard(1,300,xOpt[1]))
-            print("learning_rate: ", from_standard(0.00001,0.01,xOpt[0]))
-            print("Resulting loss (Optimal value from optimization):")
-            print(ftXOpt)
-            print("Resulting loss (Optimal point evaluated):")
-            print(fXOpt)
-            #print("\nxOpt = {}".format(xOpt))
-            #print("f(xOpt) = {:.6g}, ft(xOpt) = {:.6g}\n".format(fXOpt, ftXOpt))
             return xOpt
-        #else:
-        #    AssertionError("Type not specified correctly")
+        else:
+            AssertionError("Type not specified correctly")
