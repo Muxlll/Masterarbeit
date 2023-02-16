@@ -338,13 +338,13 @@ class Optimization:
 
         if self.type == "grid_search":
             clf = GridSearchCV(
-                self.model, self.hyperparameterspace_processed, verbose=self.verbosity)
+                self.model, self.hyperparameterspace_processed, scoring='neg_mean_absolute_error', error_score='raise', verbose=self.verbosity)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
 
         elif self.type == "random_search":
 
             clf = RandomizedSearchCV(
-                self.model, self.hyperparameterspace_processed, verbose=self.verbosity, n_iter=self.budget)
+                self.model, self.hyperparameterspace_processed, scoring='neg_mean_absolute_error', verbose=self.verbosity, n_iter=self.budget)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
 
         elif self.type == "bayesian":
