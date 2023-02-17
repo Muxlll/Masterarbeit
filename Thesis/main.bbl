@@ -19,6 +19,46 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{supervised_learning}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a5322941b8332d56c20676583a7faa35}{%
+           family={Cunningham},
+           familyi={C\bibinitperiod},
+           given={Pádraig},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cd60d757e4f4b8b7c6318fd2b1be3fe}{%
+           family={Cord},
+           familyi={C\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acd23d68440c8f218c06e751ece47eda}{%
+           family={Delany},
+           familyi={D\bibinitperiod},
+           given={Sarah\bibnamedelima Jane},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2b43ebb17ffccf302b81581e395b981a}
+      \strng{fullhash}{2b43ebb17ffccf302b81581e395b981a}
+      \strng{bibnamehash}{2b43ebb17ffccf302b81581e395b981a}
+      \strng{authorbibnamehash}{2b43ebb17ffccf302b81581e395b981a}
+      \strng{authornamehash}{2b43ebb17ffccf302b81581e395b981a}
+      \strng{authorfullhash}{2b43ebb17ffccf302b81581e395b981a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine learning techniques for multimedia: case studies on organization and retrieval}
+      \field{title}{Supervised learning}
+      \field{year}{2008}
+      \field{pages}{21\bibrangedash 49}
+      \range{pages}{29}
+    \endentry
     \entry{feurer2019hyperparameter}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=2661e0a744cd67c731851c7f1c80d2e2}{%
@@ -43,8 +83,8 @@
       \strng{authorbibnamehash}{b354f633c98aba5a037e655b4d3514b1}
       \strng{authornamehash}{b354f633c98aba5a037e655b4d3514b1}
       \strng{authorfullhash}{b354f633c98aba5a037e655b4d3514b1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Automated machine learning: Methods, systems, challenges}
@@ -127,8 +167,8 @@
       \strng{authorbibnamehash}{06c9841b6c792ff88510f6539d206469}
       \strng{authornamehash}{6c8a87765fd30c86b6505d02369b32f2}
       \strng{authorfullhash}{06c9841b6c792ff88510f6539d206469}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery}
