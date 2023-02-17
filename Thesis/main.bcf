@@ -2351,9 +2351,14 @@
     <bcf:citekey order="1">supervised_learning</bcf:citekey>
     <bcf:citekey order="2">feurer2019hyperparameter</bcf:citekey>
     <bcf:citekey order="2">bischl2021hyperparameter</bcf:citekey>
-    <bcf:citekey order="3">supervised_learning</bcf:citekey>
+    <bcf:citekey order="3">random_search</bcf:citekey>
     <bcf:citekey order="4">feurer2019hyperparameter</bcf:citekey>
-    <bcf:citekey order="5">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="5">feurer2019hyperparameter</bcf:citekey>
+    <bcf:citekey order="6">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="8">supervised_learning</bcf:citekey>
+    <bcf:citekey order="9">feurer2019hyperparameter</bcf:citekey>
+    <bcf:citekey order="10">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="11">random_search</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

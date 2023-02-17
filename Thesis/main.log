@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.27)  16 FEB 2023 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 FEB 2023 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -170,7 +170,7 @@ Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS)
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count197
 \U@D=\dimen139
-\l@unhyphenated=\language8
+\l@unhyphenated=\language12
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -319,7 +319,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip71
 \blx@bcfin=\read3
 \blx@bcfout=\write3
-\blx@langwohyphens=\language9
+\blx@langwohyphens=\language13
 \c@mincomprange=\count315
 \c@maxcomprange=\count316
 \c@mincompwidth=\count317
@@ -1417,45 +1417,89 @@ LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 \CommentStream=\write5
 
 Excluding comment 'comment')
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count472
+\float@exts=\toks45
+\float@box=\box74
+\@float@everytoks=\toks46
+\@floatcapt=\box75
+)
+Package scrhack Info: loading float hack on input line 32.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
+File: float.hak 2021/11/13 v3.35 KOMA-Script scrhack part (hacking package floa
+t)
+Package scrhack Info: redefining \newfloat on input line 163.
+Package scrhack Info: redefining \listof on input line 163.
+Package scrhack Info: undefining \float@addtolists on input line 163.
+)
+Package tocbasic Info: setting babel extension for `loa' on input line 95.
+\@float@every@algorithm=\toks47
+\c@algorithm=\count473
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count474
+\c@ALG@rem=\count475
+\c@ALG@nested=\count476
+\ALG@tlm=\skip94
+\ALG@thistlm=\skip95
+\c@ALG@Lnr=\count477
+\c@ALG@blocknr=\count478
+\c@ALG@storecount=\count479
+\c@ALG@tmpcounter=\count480
+\ALG@tmplength=\skip96
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+pplx on input line 6
-4.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 67.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 64.
+line 67.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 64.
-Package scrbase Info: activating american \contentsname on input line 64.
-Package scrbase Info: activating american \listfigurename on input line 64.
-Package scrbase Info: activating american \listtablename on input line 64.
+ line 67.
+Package scrbase Info: activating american \contentsname on input line 67.
+Package scrbase Info: activating american \listfigurename on input line 67.
+Package scrbase Info: activating american \listtablename on input line 67.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1498,21 +1542,21 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 64.
-Package biblatex Info: Reference segment=0 on input line 64.
+Package biblatex Info: Reference section=0 on input line 67.
+Package biblatex Info: Reference segment=0 on input line 67.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count472
+\scratchcounter=\count481
 \scratchdimen=\dimen320
-\scratchbox=\box74
-\nofMPsegments=\count473
-\nofMParguments=\count474
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count475
+\scratchbox=\box76
+\nofMPsegments=\count482
+\nofMParguments=\count483
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count484
 \MPscratchDim=\dimen321
-\MPnumerator=\count476
-\makeMPintoPDFobject=\count477
-\everyMPtoPDFconversion=\toks46
+\MPnumerator=\count485
+\makeMPintoPDFobject=\count486
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1522,24 +1566,24 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count478
-Package scrhack Info: undefining \float@addtolists on input line 64.
+\c@lstlisting=\count487
+Package scrhack Info: undefining \float@addtolists on input line 67.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 64.
-Package microtype Info: Applying patch `item' on input line 64.
-Package microtype Info: Applying patch `toc' on input line 64.
-Package microtype Info: Applying patch `eqnum' on input line 64.
-Package microtype Info: Applying patch `footnote' on input line 64.
+LaTeX Info: Redefining \microtypecontext on input line 67.
+Package microtype Info: Applying patch `item' on input line 67.
+Package microtype Info: Applying patch `toc' on input line 67.
+Package microtype Info: Applying patch `eqnum' on input line 67.
+Package microtype Info: Applying patch `footnote' on input line 67.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 64.
+LaTeX Info: Redefining \showhyphens on input line 67.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1547,9 +1591,10 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1560,11 +1605,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count479
+\c@section@level=\count488
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1577,19 +1622,19 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 64.
+(scrbook)           before \begin{document} on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count480
+\BKM@id=\count489
 ))
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 64.
+line 67.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 64.
+line 67.
 
 (./pages/cover.tex
 <logos/tum.pdf, id=7, 742.775pt x 391.4625pt>
@@ -1670,7 +1715,7 @@ chapter without number
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 78
+Package tocbasic Info: character protrusion at toc deactivated on input line 81
 .
  (./main.toc)
 \tf@toc=\write7
@@ -1692,43 +1737,53 @@ chapter 2.
 [2
 
 
-]) (./chapters/03_implementation.tex
+]
+<figures/comparison_searches.png, id=146, 1502.61375pt x 757.83125pt>
+File: figures/comparison_searches.png Graphic file (type png)
+<use figures/comparison_searches.png>
+Package pdftex.def Info: figures/comparison_searches.png  used on input line 38
+.
+(pdftex.def)             Requested size: 300.51743pt x 151.56357pt.
 LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 4.
- [3]
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 44.
+ [3 <./figures/comparison_searches.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 53.
+) (./chapters/03_implementation.tex
+[4]
 chapter 3.
-) (./chapters/05_conclusion_and_outlook.tex [4
+) (./chapters/05_conclusion_and_outlook.tex [5
 
 
 ]
 chapter 4.
-) [5
+) [6
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 93
+Package tocbasic Info: character protrusion at lof deactivated on input line 96
 .
  (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [6
+ [7
 
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 94
+Package tocbasic Info: character protrusion at lot deactivated on input line 97
 .
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [7
+ [8
 
 
 ]
 chapter without number
 No complaints by nag.
-[8
+[9
 
 
 ] (./main.aux)
@@ -1739,13 +1794,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52117 strings out of 480194
- 1187704 string characters out of 5893742
- 2179582 words of memory out of 5000000
- 68887 multiletter control sequences out of 15000+600000
- 516311 words of font info for 210 fonts, out of 8000000 for 9000
- 16 hyphenation exceptions out of 8191
- 115i,8n,109p,10599b,2379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52816 strings out of 480121
+ 1199268 string characters out of 5892160
+ 2191014 words of memory out of 5000000
+ 69529 multiletter control sequences out of 15000+600000
+ 518541 words of font info for 240 fonts, out of 8000000 for 9000
+ 61 hyphenation exceptions out of 8191
+ 115i,8n,109p,10599b,2620s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
@@ -1753,10 +1808,10 @@ fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
 atino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (15 pages, 563428 bytes).
+Output written on main.pdf (16 pages, 637360 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 77511 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 77516 words of extra memory for PDF output out of 89155 (max. 10000000)
 

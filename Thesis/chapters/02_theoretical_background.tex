@@ -27,16 +27,47 @@ The idea of the first approach for the optimization is to discretize the domains
 
 One advantage of this method is that it is easy to implement and very simple. Also, the whole search space is explored evenly.
 
-On the other hand, the curse of the dimensionality makes it very slow if the function evaluations are very expensive. For most machine learning 
-
-
+On the other hand, the curse of the dimensionality makes it very slow if the function evaluations are very expensive. This is the case for most machine learning algorithms because the training phase of the model takes much time. Another drawback is that each hyperparameter only takes $ n $ different values.
 
 
 \subsection{Random Search}
+The next technique \cite{random_search} is similar to the grid search because the idea is also to evaluate different hyperparameter configurations. In contrast to the previous one, random search generates for each run and for each parameter exactly one random value from an interval which has to be specified. For this approach, a budget $ b $ has to be given. This parameter determines the number of different combinations that are evaluated. A direct comparison of grid search and random search can be seen in figure \ref{fig:comparison_searches}.
 
-\cite{random_search}
+\begin{figure}[hbtp!]
+	\centering
+	\includegraphics[scale=0.2]{figures/comparison_searches.png}
+	\caption{Comparison of grid search (left) and random search (right) in the two dimensional case. For both techniques, 9 different combinations are evaluated. In the left case, only 3 distinct values for each hyperparameter are set whereas there are 9 different values for each parameter in the random search. Taken from \cite{feurer2019hyperparameter}. }
+	\label{fig:comparison_searches}
+\end{figure}
+
+In this figure, a two dimensional setting is depicted. For both techniques, 9 different combinations are evaluated. In the case of grid search, only 3 distinct values are taken for each hyperparameter while there are 9 different ones in the random search. In this example, the better result is found in random search as more distinct values are taken for the important parameter. Note that this is not always the case. 
+
+Compared to the normal grid search, this is one advantage. For each hyperparameter, $ b $ (budget) different values are taken into consideration which is much more compared to the grid search with the same overall number of combinations. Additionally, this technique is also easy to implement and relatively simple. 
+
+One disadvantage is that it is also very expensive if the budget is high because of the long training times of machine learning models. 
+
 
 \subsection{Bayesian Optimization}
+\cite{bischl2021hyperparameter}
+\begin{algorithm}
+	\caption{Bayesian Optimization}\label{alg:bayesian_opt}
+	\begin{algorithmic}
+		\State Generate initial $\lambda^{(1)}, ..., \lambda^{(k)} $
+		\State Initialize archive $A^{[0]} \gets ((\lambda^{(1)}, f(\lambda^{(1)})), ..., (\lambda^{(k)}, f(\lambda^{(k)})))$
+		\State $ t \gets 1 $ 
+		\While{Stopping criterion not met}
+			\State Fit surrogate model $ (f(\lambda), \sigma(\lambda)) $ on $ A^{[t-1]} $
+			\State Build acquisition function $ u(\lambda) $ from $ (f(\lambda), \sigma(\lambda)) $
+			\State Obtain proposal $ \lambda^{+} $ by optimizing $ u: \lambda^+ \in arg\max{\lambda \in \Lambda} u(\lambda) $
+			\State Evaluate $ f(\lambda^+)$
+			\State Obtain $A^[t]$ by augmenting $ A^{[t-1]} $ with $ (\lambda^{(+)}, f(\lambda^{(+)})) $
+			\State $ t \gets t+1 $
+		\EndWhile
+		\State return $ \lambda_{best} $: Best-performing $\lambda$ from archive or according to surrogates prediction
+	\end{algorithmic}
+\end{algorithm}
+
+
 
 \subsection{Other Techniques}
 
