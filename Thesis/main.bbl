@@ -279,6 +279,36 @@
       \field{volume}{25}
       \field{year}{2012}
     \endentry
+    \entry{andonie2019hyperparameter}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2a56da0e6c116c9850c73b287754d07e}{%
+           family={Andonie},
+           familyi={A\bibinitperiod},
+           given={Răzvan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2a56da0e6c116c9850c73b287754d07e}
+      \strng{fullhash}{2a56da0e6c116c9850c73b287754d07e}
+      \strng{bibnamehash}{2a56da0e6c116c9850c73b287754d07e}
+      \strng{authorbibnamehash}{2a56da0e6c116c9850c73b287754d07e}
+      \strng{authornamehash}{2a56da0e6c116c9850c73b287754d07e}
+      \strng{authorfullhash}{2a56da0e6c116c9850c73b287754d07e}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Membrane Computing}
+      \field{number}{4}
+      \field{title}{Hyperparameter optimization in learning systems}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{pages}{279\bibrangedash 291}
+      \range{pages}{13}
+    \endentry
     \entry{garrido2020dealing}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b61b33e1fb9b96afeee463f9272b7302}{%
@@ -303,8 +333,8 @@
       \strng{authorbibnamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
       \strng{authornamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
       \strng{authorfullhash}{e744f1e1d334f8dd7d249e69333d3a7a}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Neurocomputing}
@@ -344,8 +374,8 @@
       \strng{authorbibnamehash}{e6d2f0960d0b5f32376938e9781bcac2}
       \strng{authornamehash}{e6d2f0960d0b5f32376938e9781bcac2}
       \strng{authorfullhash}{e6d2f0960d0b5f32376938e9781bcac2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Learning and Intelligent Optimization: 5th International Conference, LION 5, Rome, Italy, January 17-21, 2011. Selected Papers 5}

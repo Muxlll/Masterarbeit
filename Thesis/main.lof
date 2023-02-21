@@ -3,6 +3,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of grid search (left) and random search (right) in the two dimensional case. For both techniques, 9 different combinations are evaluated. In the left case, only 3 distinct values for each hyperparameter are set whereas there are 9 different values for each parameter in the random search. Taken from \blx@tocontentsinit {0}\cite {feurer2019hyperparameter}. \relax }}{3}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic iteration steps of the bayesian optimization. The maximum of the acquisition function determines the next function evaluation (red dot in the middle). The goal is to find the minimum of the dashed line. The blue band is the uncertainty of the function. Taken from \blx@tocontentsinit {0}\cite {feurer2019hyperparameter}. \relax }}{5}{figure.caption.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
