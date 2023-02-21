@@ -177,6 +177,41 @@
       \field{pages}{e1484}
       \range{pages}{-1}
     \endentry
+    \entry{yang2020hyperparameter}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7f8a6256a19361714c6f6a011671f17d}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0bc9fb2a53a5ae2c43f946abc2d7026}{%
+           family={Shami},
+           familyi={S\bibinitperiod},
+           given={Abdallah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fe94961415bbb2dc0eb174c499655848}
+      \strng{fullhash}{fe94961415bbb2dc0eb174c499655848}
+      \strng{bibnamehash}{fe94961415bbb2dc0eb174c499655848}
+      \strng{authorbibnamehash}{fe94961415bbb2dc0eb174c499655848}
+      \strng{authornamehash}{fe94961415bbb2dc0eb174c499655848}
+      \strng{authorfullhash}{fe94961415bbb2dc0eb174c499655848}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurocomputing}
+      \field{title}{On hyperparameter optimization of machine learning algorithms: Theory and practice}
+      \field{volume}{415}
+      \field{year}{2020}
+      \field{pages}{295\bibrangedash 316}
+      \range{pages}{22}
+    \endentry
     \entry{random_search}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=0bc66fe902c838c216bd3175dfeb045b}{%
@@ -207,6 +242,117 @@
       \field{title}{Random search for hyper-parameter optimization.}
       \field{volume}{13}
       \field{year}{2012}
+    \endentry
+    \entry{snoek2012practical}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b9d827c94405733235f3f953a0691fd5}{%
+           family={Snoek},
+           familyi={S\bibinitperiod},
+           given={Jasper},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42a970b0a0f1ed24b23064370cc9392f}{%
+           family={Larochelle},
+           familyi={L\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1552be0c6aa9c6e0fd91a130a682853}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Ryan\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{fullhash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{bibnamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authorbibnamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authornamehash}{8ec3cd03032d713954b0895ecd0d8292}
+      \strng{authorfullhash}{8ec3cd03032d713954b0895ecd0d8292}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Practical bayesian optimization of machine learning algorithms}
+      \field{volume}{25}
+      \field{year}{2012}
+    \endentry
+    \entry{garrido2020dealing}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b61b33e1fb9b96afeee463f9272b7302}{%
+           family={Garrido-Merchán},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Eduardo\bibnamedelima C},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ad295841b60cb4fd4e71bbd8bbda5f6}{%
+           family={Hernández-Lobato},
+           familyi={H\bibinithyphendelim L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \strng{fullhash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \strng{bibnamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \strng{authorbibnamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \strng{authornamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \strng{authorfullhash}{e744f1e1d334f8dd7d249e69333d3a7a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurocomputing}
+      \field{title}{Dealing with categorical and integer-valued variables in bayesian optimization with gaussian processes}
+      \field{volume}{380}
+      \field{year}{2020}
+      \field{pages}{20\bibrangedash 35}
+      \range{pages}{16}
+    \endentry
+    \entry{hutter2011sequential}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7038b3724d98251482688b5fd2461f95}{%
+           family={Hoos},
+           familyi={H\bibinitperiod},
+           given={Holger\bibnamedelima H},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=91d47c0d6ebf96d50082140932162381}{%
+           family={Leyton-Brown},
+           familyi={L\bibinithyphendelim B\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \strng{fullhash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \strng{bibnamehash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \strng{authorbibnamehash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \strng{authornamehash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \strng{authorfullhash}{e6d2f0960d0b5f32376938e9781bcac2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Learning and Intelligent Optimization: 5th International Conference, LION 5, Rome, Italy, January 17-21, 2011. Selected Papers 5}
+      \field{title}{Sequential model-based optimization for general algorithm configuration}
+      \field{year}{2011}
+      \field{pages}{507\bibrangedash 523}
+      \range{pages}{17}
     \endentry
   \enddatalist
 \endrefsection

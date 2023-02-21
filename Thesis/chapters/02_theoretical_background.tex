@@ -18,7 +18,7 @@ In our case, the function f is a machine learning algorithm that is trained on a
 where M is the model. In the context of supervised learning, the whole data set is split into a training set which is used to optimize the model and a testing set to evaluate the performance on new, unseen data \cite{supervised_learning}.
 
 All in all, the goal is get evaluation scores on the testing data set which can be achieved with Equation \ref{eq:optimization}. 
-\cite{feurer2019hyperparameter,bischl2021hyperparameter}
+\cite{feurer2019hyperparameter,bischl2021hyperparameter,yang2020hyperparameter}
 
 In the following, different techniques for the optimization are presented and discussed with their advantages and disadvantages.
 
@@ -48,6 +48,10 @@ One disadvantage is that it is also very expensive if the budget is high because
 
 
 \subsection{Bayesian Optimization}
+
+Another possible technique for finding the best hyperparameters of machine learning models is called bayesian optimization (BO) \cite{snoek2012practical}. This is an iterative approach for optimizing the expensive black box function by modeling it based on observations. A so-called \textit{surrogate model} is made with the help of the \textit{archive} $ A $ which contains observed function evaluations. This surrogate model is created by regression and the technique which is most often used is the Gaussian process \cite{bischl2021hyperparameter}. The problem of this technique arises when some hyperparameters are categorical or integer-valued which is the reason why extra approximations can lead to worse results and special treatment is needed \cite{garrido2020dealing}. Another possible technique for the surrogate model is using random forests \cite{hutter2011sequential}. All in all, this model estimates the machine learning model depending on the hyperparameter configuration and also the prediction uncertainty $ \sigma(\lambda) $. A second function called \textit{acquisition function} is built based on the prediction distribution. 
+
+
 \cite{bischl2021hyperparameter}
 \begin{algorithm}
 	\caption{Bayesian Optimization}\label{alg:bayesian_opt}
@@ -58,7 +62,7 @@ One disadvantage is that it is also very expensive if the budget is high because
 		\While{Stopping criterion not met}
 			\State Fit surrogate model $ (f(\lambda), \sigma(\lambda)) $ on $ A^{[t-1]} $
 			\State Build acquisition function $ u(\lambda) $ from $ (f(\lambda), \sigma(\lambda)) $
-			\State Obtain proposal $ \lambda^{+} $ by optimizing $ u: \lambda^+ \in arg\max{\lambda \in \Lambda} u(\lambda) $
+			\State Obtain proposal $ \lambda^{+} $ by optimizing $ u: \lambda^+ \in arg\max_{\lambda \in \Lambda} u(\lambda) $
 			\State Evaluate $ f(\lambda^+)$
 			\State Obtain $A^[t]$ by augmenting $ A^{[t-1]} $ with $ (\lambda^{(+)}, f(\lambda^{(+)})) $
 			\State $ t \gets t+1 $

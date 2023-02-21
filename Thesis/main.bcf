@@ -2351,14 +2351,23 @@
     <bcf:citekey order="1">supervised_learning</bcf:citekey>
     <bcf:citekey order="2">feurer2019hyperparameter</bcf:citekey>
     <bcf:citekey order="2">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="2">yang2020hyperparameter</bcf:citekey>
     <bcf:citekey order="3">random_search</bcf:citekey>
     <bcf:citekey order="4">feurer2019hyperparameter</bcf:citekey>
     <bcf:citekey order="5">feurer2019hyperparameter</bcf:citekey>
-    <bcf:citekey order="6">bischl2021hyperparameter</bcf:citekey>
-    <bcf:citekey order="8">supervised_learning</bcf:citekey>
-    <bcf:citekey order="9">feurer2019hyperparameter</bcf:citekey>
+    <bcf:citekey order="6">snoek2012practical</bcf:citekey>
+    <bcf:citekey order="7">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="8">garrido2020dealing</bcf:citekey>
+    <bcf:citekey order="9">hutter2011sequential</bcf:citekey>
     <bcf:citekey order="10">bischl2021hyperparameter</bcf:citekey>
-    <bcf:citekey order="11">random_search</bcf:citekey>
+    <bcf:citekey order="12">supervised_learning</bcf:citekey>
+    <bcf:citekey order="13">feurer2019hyperparameter</bcf:citekey>
+    <bcf:citekey order="14">bischl2021hyperparameter</bcf:citekey>
+    <bcf:citekey order="15">yang2020hyperparameter</bcf:citekey>
+    <bcf:citekey order="16">random_search</bcf:citekey>
+    <bcf:citekey order="17">snoek2012practical</bcf:citekey>
+    <bcf:citekey order="18">garrido2020dealing</bcf:citekey>
+    <bcf:citekey order="19">hutter2011sequential</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
