@@ -3,7 +3,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of grid search (left) and random search (right) in the two dimensional case. For both techniques, 9 different combinations are evaluated. In the left case, only 3 distinct values for each hyperparameter are set whereas there are 9 different values for each parameter in the random search. Taken from \blx@tocontentsinit {0}\cite {feurer2019hyperparameter}. \relax }}{3}{figure.caption.4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic iteration steps of the bayesian optimization. The maximum of the acquisition function determines the next function evaluation (red dot in the middle). The goal is to find the minimum of the dashed line. The blue band is the uncertainty of the function. Taken from \blx@tocontentsinit {0}\cite {feurer2019hyperparameter}. \relax }}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic iteration steps of the bayesian optimization. The maximum of the acquisition function determines the next function evaluation (red dot in the middle). The goal is to find the minimum of the dashed line. The blue band is the uncertainty of the function. Taken from \blx@tocontentsinit {0}\cite {feurer2019hyperparameter}. \relax }}{6}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the nodal basis. Level of the grid is 3 and hat functions are used. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}. \relax }}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Hierarchical subspaces up to level 3 on the left. On the right, nodal spaces up to level 3. The combination of $ W_1 $ up to $ W_3 $ is the same space as $ V_3 $. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}. \relax }}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the hierarchical basis. Level of the grid is 3 and hat functions are used. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}.\relax }}{9}{figure.caption.8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

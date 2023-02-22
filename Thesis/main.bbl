@@ -179,12 +179,12 @@
     \endentry
     \entry{yang2020hyperparameter}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=7f8a6256a19361714c6f6a011671f17d}{%
+        {{un=1,uniquepart=given,hash=7f8a6256a19361714c6f6a011671f17d}{%
            family={Yang},
            familyi={Y\bibinitperiod},
            given={Li},
            giveni={L\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=e0bc9fb2a53a5ae2c43f946abc2d7026}{%
            family={Shami},
            familyi={S\bibinitperiod},
@@ -383,6 +383,256 @@
       \field{year}{2011}
       \field{pages}{507\bibrangedash 523}
       \range{pages}{17}
+    \endentry
+    \entry{wilson2018maximizing}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bb1de5ab5e98033aa6286a621825b9a6}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74f38b41d3c1199abc243147c58d6d8e}{%
+           family={Deisenroth},
+           familyi={D\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{870dc43c19021ea6a57c74c8ae99177a}
+      \strng{fullhash}{870dc43c19021ea6a57c74c8ae99177a}
+      \strng{bibnamehash}{870dc43c19021ea6a57c74c8ae99177a}
+      \strng{authorbibnamehash}{870dc43c19021ea6a57c74c8ae99177a}
+      \strng{authornamehash}{870dc43c19021ea6a57c74c8ae99177a}
+      \strng{authorfullhash}{870dc43c19021ea6a57c74c8ae99177a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Maximizing acquisition functions for Bayesian optimization}
+      \field{volume}{31}
+      \field{year}{2018}
+    \endentry
+    \entry{jamieson2016non}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=240fa0e010cb30dc1e40c10157f58276}{%
+           family={Jamieson},
+           familyi={J\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70e0fe957473b80f1b1b5dcb8e99d31e}{%
+           family={Talwalkar},
+           familyi={T\bibinitperiod},
+           given={Ameet},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{8d73e62313e285b2d14f05516bbefeff}
+      \strng{fullhash}{8d73e62313e285b2d14f05516bbefeff}
+      \strng{bibnamehash}{8d73e62313e285b2d14f05516bbefeff}
+      \strng{authorbibnamehash}{8d73e62313e285b2d14f05516bbefeff}
+      \strng{authornamehash}{8d73e62313e285b2d14f05516bbefeff}
+      \strng{authorfullhash}{8d73e62313e285b2d14f05516bbefeff}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial intelligence and statistics}
+      \field{title}{Non-stochastic best arm identification and hyperparameter optimization}
+      \field{year}{2016}
+      \field{pages}{240\bibrangedash 248}
+      \range{pages}{9}
+    \endentry
+    \entry{8030298}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f0962c507736f307551f51103b62f977}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={G.\bibnamedelimi I.},
+           giveni={G\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f670efeb6a3bae70534a4d4b4de7414c}{%
+           family={Fokoue-Nkoutche},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a72aa119d3fddab36f106f59f4969353}{%
+           family={Nannicini},
+           familyi={N\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cda973763391f588b9e21931d3f4c4d}{%
+           family={Samulowitz},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \strng{fullhash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \strng{bibnamehash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \strng{authorbibnamehash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \strng{authornamehash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \strng{authorfullhash}{1a91ba9601fe183a3a75f1779ff35d1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IBM Journal of Research and Development}
+      \field{number}{4/5}
+      \field{title}{An effective algorithm for hyperparameter optimization of neural networks}
+      \field{volume}{61}
+      \field{year}{2017}
+      \field{pages}{9:1\bibrangedash 9:11}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1147/JRD.2017.2709578
+      \endverb
+    \endentry
+    \entry{smithson2016neural}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f70016a057f6cf72761b799d20aae434}{%
+           family={Smithson},
+           familyi={S\bibinitperiod},
+           given={Sean\bibnamedelima C},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=11a33b1aa9e89479e304318dff521b9c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=d90aad83bff904908e883af6145d73af}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Warren\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be22b60c4a9bf9c7a832eceb7d921922}{%
+           family={Meyer},
+           familyi={M\bibinitperiod},
+           given={Brett\bibnamedelima H},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3355e00423580cbb5adeb2cdc35d2223}
+      \strng{fullhash}{3355e00423580cbb5adeb2cdc35d2223}
+      \strng{bibnamehash}{3355e00423580cbb5adeb2cdc35d2223}
+      \strng{authorbibnamehash}{3355e00423580cbb5adeb2cdc35d2223}
+      \strng{authornamehash}{3355e00423580cbb5adeb2cdc35d2223}
+      \strng{authorfullhash}{3355e00423580cbb5adeb2cdc35d2223}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}
+      \field{title}{Neural networks designing neural networks: multi-objective hyper-parameter optimization}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{loshchilov2016cma}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1241b8181104f1917578d4c7f9b323b6}{%
+           family={Loshchilov},
+           familyi={L\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b308ccb07134a06ec3735828ac4f15e2}
+      \strng{fullhash}{b308ccb07134a06ec3735828ac4f15e2}
+      \strng{bibnamehash}{b308ccb07134a06ec3735828ac4f15e2}
+      \strng{authorbibnamehash}{b308ccb07134a06ec3735828ac4f15e2}
+      \strng{authornamehash}{b308ccb07134a06ec3735828ac4f15e2}
+      \strng{authorfullhash}{b308ccb07134a06ec3735828ac4f15e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1604.07269}
+      \field{title}{CMA-ES for hyperparameter optimization of deep neural networks}
+      \field{year}{2016}
+    \endentry
+    \entry{b_splines}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=06a62916f96f396a2a807520c092d764}{%
+           family={Valentin},
+           familyi={V\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{06a62916f96f396a2a807520c092d764}
+      \strng{fullhash}{06a62916f96f396a2a807520c092d764}
+      \strng{bibnamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authorbibnamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authornamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authorfullhash}{06a62916f96f396a2a807520c092d764}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{B-splines for sparse grids : algorithms and application to higher-dimensional optimization}
+      \field{year}{2019}
+      \verb{doi}
+      \verb http://dx.doi.org/10.18419/opus-10504
+      \endverb
+      \verb{urlraw}
+      \verb http://nbn-resolving.de/urn:nbn:de:bsz:93-opus-ds-105215
+      \endverb
+      \verb{url}
+      \verb http://nbn-resolving.de/urn:nbn:de:bsz:93-opus-ds-105215
+      \endverb
+    \endentry
+    \entry{pfluger2010spatially}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=33c391612cc957b953f1bed8dc793cda}{%
+           family={Pflüger},
+           familyi={P\bibinitperiod},
+           given={Dirk\bibnamedelima Michael},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technische Universität München}%
+      }
+      \strng{namehash}{33c391612cc957b953f1bed8dc793cda}
+      \strng{fullhash}{33c391612cc957b953f1bed8dc793cda}
+      \strng{bibnamehash}{33c391612cc957b953f1bed8dc793cda}
+      \strng{authorbibnamehash}{33c391612cc957b953f1bed8dc793cda}
+      \strng{authornamehash}{33c391612cc957b953f1bed8dc793cda}
+      \strng{authorfullhash}{33c391612cc957b953f1bed8dc793cda}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spatially adaptive sparse grids for high-dimensional problems}
+      \field{type}{phdthesis}
+      \field{year}{2010}
     \endentry
   \enddatalist
 \endrefsection
