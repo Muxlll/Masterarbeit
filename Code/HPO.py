@@ -283,12 +283,14 @@ def from_standard(lower, upper, value):
 
 
 class Optimization:
-    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", budget=100, verbosity=1, sparse_params=[3, 0.95]) -> None:
+    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", cv=5, scoring='neg_mean_squared_error', budget=100, verbosity=1, sparse_params=[3, 0.95]) -> None:
         self.dataset = dataset
         self.model = model
         self.hyperparameterspace = hyperparameterspace
         self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
         self.type = type
+        self.cv = cv
+        self.scoring = scoring
         self.budget = budget
         self.verbosity = verbosity
         self.sparse_params = sparse_params
@@ -338,13 +340,13 @@ class Optimization:
 
         if self.type == "grid_search":
             clf = GridSearchCV(
-                self.model, self.hyperparameterspace_processed, scoring='neg_mean_absolute_error', error_score='raise', verbose=self.verbosity)
+                self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
 
         elif self.type == "random_search":
 
             clf = RandomizedSearchCV(
-                self.model, self.hyperparameterspace_processed, scoring='neg_mean_absolute_error', verbose=self.verbosity, n_iter=self.budget)
+                self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, verbose=self.verbosity, n_iter=self.budget)
             return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
 
         elif self.type == "bayesian":
