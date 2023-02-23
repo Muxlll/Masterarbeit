@@ -160,7 +160,7 @@ An example can be seen in Figure \ref{fig:hierarchical_basis}.
 
 On the left, you can see the hierarchical subspaces up to level 3. All in all, combined they span the same space as $ V_3 $. In the hierarchical case, a function $ f $ can also be interpolated by its interpolant $ u $ by 
 \begin{equation}
-	f_l = \sum_{i \in I_l^h}\alpha_{l,i} \varphi_{l,i}, \forall i = 0,...,2^l: f_l(x_{l,i}) = f(x_{l,i}).
+	u = \sum_{i \in I_l^h}\alpha_{l,i} \varphi_{l,i}, \forall i = 0,...,2^l: u(x_{l,i}) = f(x_{l,i}).
 \end{equation}
 
 An example can be seen in Figure \ref{fig:weighted_sum_hierarchical}.
@@ -187,8 +187,43 @@ with the basis functions $ \varphi_{\vec{l},\vec{i}} = \prod_{j=1}^{d} \varphi_{
 \begin{equation}
 	V_n = \bigoplus_{|\vec{l}|_\infty \le n} W_l
 \end{equation}
-with $ |\vec{l}| = \max_{1 \le i \le d} |d_i| $. 
+with $ |\vec{l}| = \max_{1 \le i \le d} |d_i| $. Again, a function can be interpolated by its interpolant $ u $ with
+\begin{equation}
+	u = \sum_{|\vec{l}|_\infty \le n, \vec{i} \in I_{\vec{l}}}\alpha_{\vec{l},\vec{i}} \varphi_{\vec{l},\vec{i}}, \forall \vec{i} \in I_{\vec{l}}: u(x_{\vec{l},\vec{i}}) = f(x_{\vec{l},\vec{i}}).
+\end{equation}
 
+The resulting regular grid has then $ (2^n - 1)^d $ basis points. An example of a basis function in two dimensions can be seen in Figure \ref{fig:2d_basis}. It is constructed by the tensor product of two 1d hat functions. 
 
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.26]{figures/2d_basis.png}
+	\caption{ Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. Taken from \cite{garcke2013sparse}. }
+	\label{fig:2d_basis}
+\end{figure}
+
+In the higher dimensional case, the grid can also be constructed hierarchically. The proof that the hierarchical splitting given by 
+\begin{equation}
+	V_{\vec{l}} = \bigoplus_{\vec{m} = 0}^{\vec{l}} W_{\vec{m}}
+\end{equation}
+with $ W_{\vec{l}} = \text{span}\{\varphi_{\vec{l}, \vec{i}} | \vec{i} \in I_{\vec{l}}\}, I_{\vec{l}} = I_{l_1} \times ... \times I_{l_d} $ holds for the basis with hat functions can be found in \cite{b_splines}.
 
 \subsection{Adaptive Sparse Grids}
+The problem of regular grids is the \textit{curse of the dimensionality} because of the high number of grid points in higher dimensions. This is tackled by sparse grids \cite{bungartz2004sparse} by reducing this number. The first technique to achieve this is by just leaving out subspaces. The resulting sparse function space is given by 
+\begin{equation}
+	V_{n}^1 = \bigoplus_{|\vec{l}|_1 \le n+d-1 } W_{\vec{l}} \subset V_n.
+\end{equation}
+An example with $ n = 3 $ can be seen in Figure \ref{fig:sparse_grid}.
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.5]{figures/subspaces_twodims.png}
+	\caption{ Two dimensional example of a sparse grid with $ n = 3 $. Left, the subspaces $ W_{\vec{l}} $ can be seen and on the right is the resulting sparse grid. Taken from \cite{garcke2013sparse}. }
+	\label{fig:sparse_grid}
+\end{figure}
+
+An interpolant $ u_n $ of a function $ f $ is then constructed by
+\begin{equation}
+	u_l = \sum_{ |\vec{l}|_1 \le l+d-1 } \sum_{ \vec{i} \in I_{\vec{l}} } \varphi_{\vec{l}, \vec{i}} \alpha_{\vec{l},\vec{i}}
+\end{equation}
+where the $ \alpha_{\vec{l},\vec{i}} $ are the coefficients of the basis functions \cite{obersteiner2022spatially}.
+
+

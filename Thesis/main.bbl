@@ -634,6 +634,103 @@
       \field{type}{phdthesis}
       \field{year}{2010}
     \endentry
+    \entry{garcke2013sparse}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{fullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{bibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorbibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authornamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorfullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sparse grids and applications}
+      \field{title}{Sparse grids in a nutshell}
+      \field{year}{2013}
+      \field{pages}{57\bibrangedash 80}
+      \range{pages}{24}
+    \endentry
+    \entry{bungartz2004sparse}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6896a9c32e9b9dfde90b5c5e30d80881}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{fullhash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{bibnamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authorbibnamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authornamehash}{d0a1f27c785b7d61140590690ac47017}
+      \strng{authorfullhash}{d0a1f27c785b7d61140590690ac47017}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta numerica}
+      \field{title}{Sparse grids}
+      \field{volume}{13}
+      \field{year}{2004}
+      \field{pages}{147\bibrangedash 269}
+      \range{pages}{123}
+    \endentry
+    \entry{obersteiner2022spatially}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6039b7668c5102126e12d322f5407274}{%
+           family={Obersteiner},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{fullhash}{91fb8b4d0373238575275da07e684a49}
+      \strng{bibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorbibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sparse Grids and Applications-Munich 2018}
+      \field{title}{A spatially adaptive sparse grid combination technique for numerical quadrature}
+      \field{year}{2022}
+      \field{pages}{161\bibrangedash 185}
+      \range{pages}{25}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

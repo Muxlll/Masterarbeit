@@ -10,14 +10,14 @@
 \contentsline {subsection}{\numberline {2.1.4}Other Techniques}{5}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2}Sparse Grids}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Numerical Approximation of Functions}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Adaptive Sparse Grids}{10}{subsection.2.2.2}%
-\contentsline {chapter}{\numberline {3}Hyperparameter optimization with sparse grids}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodology}{11}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Implementation}{11}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Results}{11}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{12}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{13}{chapter*.9}%
-\contentsline {chapter}{\nonumberline List of Tables}{14}{chapter*.10}%
-\contentsline {chapter}{\nonumberline Bibliography}{15}{chapter*.11}%
+\contentsline {subsection}{\numberline {2.2.2}Adaptive Sparse Grids}{11}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Hyperparameter optimization with sparse grids}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{13}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Implementation}{13}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Results}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{14}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{15}{chapter*.11}%
+\contentsline {chapter}{\nonumberline List of Tables}{16}{chapter*.12}%
+\contentsline {chapter}{\nonumberline Bibliography}{17}{chapter*.13}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
