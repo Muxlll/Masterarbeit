@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  23 FEB 2023 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  24 FEB 2023 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1738,7 +1738,7 @@ chapter 2.
 
 
 ]
-<figures/comparison_searches.png, id=146, 1502.61375pt x 757.83125pt>
+<figures/comparison_searches.png, id=148, 1502.61375pt x 757.83125pt>
 File: figures/comparison_searches.png Graphic file (type png)
 <use figures/comparison_searches.png>
 Package pdftex.def Info: figures/comparison_searches.png  used on input line 38
@@ -1749,7 +1749,7 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
  [3 <./figures/comparison_searches.png>] [4]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 72.
-<figures/bayesian_optimization.png, id=176, 1124.2pt x 1098.1025pt>
+<figures/bayesian_optimization.png, id=178, 1124.2pt x 1098.1025pt>
 File: figures/bayesian_optimization.png Graphic file (type png)
 <use figures/bayesian_optimization.png>
 Package pdftex.def Info: figures/bayesian_optimization.png  used on input line 
@@ -1762,19 +1762,19 @@ LaTeX Font Info:    Trying to load font information for U+fplmbb on input line
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [7]
-<figures/weighted_sum.png, id=212, 835.12pt x 372.39125pt>
+<figures/weighted_sum.png, id=214, 835.12pt x 372.39125pt>
 File: figures/weighted_sum.png Graphic file (type png)
 <use figures/weighted_sum.png>
 Package pdftex.def Info: figures/weighted_sum.png  used on input line 138.
 (pdftex.def)             Requested size: 417.55898pt x 186.19516pt.
-<figures/hierarchical_basis.png, id=216, 699.61375pt x 299.1175pt>
+<figures/hierarchical_basis.png, id=218, 699.61375pt x 299.1175pt>
 File: figures/hierarchical_basis.png Graphic file (type png)
 <use figures/hierarchical_basis.png>
 Package pdftex.def Info: figures/hierarchical_basis.png  used on input line 156
 .
 (pdftex.def)             Requested size: 349.80602pt x 149.55838pt.
  [8 <./figures/weighted_sum.png>]
-<figures/weighted_sum_hierarchical.png, id=231, 757.83125pt x 317.185pt>
+<figures/weighted_sum_hierarchical.png, id=233, 757.83125pt x 317.185pt>
 File: figures/weighted_sum_hierarchical.png Graphic file (type png)
 <use figures/weighted_sum_hierarchical.png>
 Package pdftex.def Info: figures/weighted_sum_hierarchical.png  used on input l
@@ -1782,27 +1782,48 @@ ine 170.
 (pdftex.def)             Requested size: 378.9147pt x 158.5921pt.
  [9 <./figures/hierarchical_basis.png> <./figures/weighted_sum_hierarchical.png
 >]
-<figures/2d_basis.png, id=242, 1061.9675pt x 804.00375pt>
+<figures/2d_basis.png, id=244, 1061.9675pt x 804.00375pt>
 File: figures/2d_basis.png Graphic file (type png)
 <use figures/2d_basis.png>
 Package pdftex.def Info: figures/2d_basis.png  used on input line 199.
 (pdftex.def)             Requested size: 276.10504pt x 209.03604pt.
  [10 <./figures/2d_basis.png>]
-<figures/subspaces_twodims.png, id=258, 666.49pt x 447.6725pt>
+<figures/subspaces_twodims.png, id=261, 666.49pt x 447.6725pt>
 File: figures/subspaces_twodims.png Graphic file (type png)
 <use figures/subspaces_twodims.png>
 Package pdftex.def Info: figures/subspaces_twodims.png  used on input line 218.
 
 (pdftex.def)             Requested size: 333.24419pt x 223.8357pt.
- [11 <./figures/subspaces_twodims.png>]) (./chapters/03_implementation.tex [12]
-
+ [11 <./figures/subspaces_twodims.png>]
+<figures/normal_combi_technique.png, id=278, 1136.245pt x 1099.10625pt>
+File: figures/normal_combi_technique.png Graphic file (type png)
+<use figures/normal_combi_technique.png>
+Package pdftex.def Info: figures/normal_combi_technique.png  used on input line
+ 243.
+(pdftex.def)             Requested size: 204.51527pt x 197.83058pt.
+<figures/adaptive_combination_technique.png, id=279, 1141.26375pt x 1093.08376p
+t>
+File: figures/adaptive_combination_technique.png Graphic file (type png)
+<use figures/adaptive_combination_technique.png>
+Package pdftex.def Info: figures/adaptive_combination_technique.png  used on in
+put line 244.
+(pdftex.def)             Requested size: 205.41861pt x 196.74658pt.
+<figures/spatially_adaptive_combi_technique.png, id=284, 2071.74pt x 827.09pt>
+File: figures/spatially_adaptive_combi_technique.png Graphic file (type png)
+<use figures/spatially_adaptive_combi_technique.png>
+Package pdftex.def Info: figures/spatially_adaptive_combi_technique.png  used o
+n input line 254.
+(pdftex.def)             Requested size: 414.34067pt x 165.41505pt.
+ [12] [13 <./figures/normal_combi_technique.png> <./figures/adaptive_combinatio
+n_technique.png> <./figures/spatially_adaptive_combi_technique.png>]) (./chapte
+rs/03_implementation.tex [14]
 chapter 3.
-) (./chapters/05_conclusion_and_outlook.tex [13
+) (./chapters/05_conclusion_and_outlook.tex [15
 
 
 ]
 chapter 4.
-) [14
+) [16
 
 
 ]
@@ -1812,7 +1833,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 96
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [15
+ [17
 
 
 ]
@@ -1822,12 +1843,12 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 97
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [16
+ [18
 
 
 ]
 chapter without number
-[17
+[19
 
 
 ]
@@ -1843,9 +1864,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
+ [20]
 No complaints by nag.
-[18] (./main.aux)
+[21] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1853,13 +1874,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53148 strings out of 480121
- 1206241 string characters out of 5892160
- 2196426 words of memory out of 5000000
- 69659 multiletter control sequences out of 15000+600000
- 533322 words of font info for 348 fonts, out of 8000000 for 9000
+ 53248 strings out of 480121
+ 1208828 string characters out of 5892160
+ 2197309 words of memory out of 5000000
+ 69699 multiletter control sequences out of 15000+600000
+ 535331 words of font info for 373 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 115i,9n,109p,10599b,2624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,10n,109p,10599b,2624s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
 k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
@@ -1872,10 +1893,10 @@ mri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (25 pages, 1109131 bytes).
+Output written on main.pdf (28 pages, 1415681 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 95 named destinations out of 1000 (max. 500000)
- 88298 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 576 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 88321 words of extra memory for PDF output out of 89155 (max. 10000000)
 

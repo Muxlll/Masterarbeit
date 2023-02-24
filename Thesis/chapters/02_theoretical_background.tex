@@ -208,7 +208,7 @@ In the higher dimensional case, the grid can also be constructed hierarchically.
 with $ W_{\vec{l}} = \text{span}\{\varphi_{\vec{l}, \vec{i}} | \vec{i} \in I_{\vec{l}}\}, I_{\vec{l}} = I_{l_1} \times ... \times I_{l_d} $ holds for the basis with hat functions can be found in \cite{b_splines}.
 
 \subsection{Adaptive Sparse Grids}
-The problem of regular grids is the \textit{curse of the dimensionality} because of the high number of grid points in higher dimensions. This is tackled by sparse grids \cite{bungartz2004sparse} by reducing this number. The first technique to achieve this is by just leaving out subspaces. The resulting sparse function space is given by 
+The problem of regular grids is the \textit{curse of the dimensionality} because of the high number of grid points in higher dimensions. This is tackled by sparse grids \cite{zenger1991sparse, bungartz2004sparse} by reducing this number. The first technique to achieve this is by just leaving out subspaces. The resulting sparse function space is given by 
 \begin{equation}
 	V_{n}^1 = \bigoplus_{|\vec{l}|_1 \le n+d-1 } W_{\vec{l}} \subset V_n.
 \end{equation}
@@ -226,4 +226,64 @@ An interpolant $ u_n $ of a function $ f $ is then constructed by
 \end{equation}
 where the $ \alpha_{\vec{l},\vec{i}} $ are the coefficients of the basis functions \cite{obersteiner2022spatially}.
 
+A second approach for sparse grids exists. The so-called \textit{combination technique} \cite{griebel1990combination} combines anisotropic full grids to get the same subspace as the conventional sparse grid approach. This has the advantage that we can use normal full grid operations on each subspace which will then be combined. This implies the possibility of parallelization. The combined solution can be computed with 
+\begin{equation}
+	u_l^c = \sum_{ \vec{l} \in I } u_{\vec{l}} c_{\vec{l}}
+\end{equation}
+where $ \vec{l} $ is the level vector of the full grid solution $ u_{\vec{l}} $, $ c_{\vec{l}} $ is a scalar factor, and $ I $ is the set of included level vectors. For a standard sparse grid, this evaluates to 
+\begin{equation}
+	u_l^c = \sum_{ q = 0 }^{d-1} (-1)^q \binom{d-1}{q} \sum_{\vec{l} \in I_{l,q} } u_{\vec{l}}
+\end{equation}
+with $ I_{l,q} = \{ \vec{l} \in \mathbb{N}_0^d | ||\vec{l}||_1 = l+d-1-q \} $ \cite{obersteiner2021generalized}. An example of the 2-dimensional combination technique can be seen on the left side of Figure \ref{fig:combi_technique}.
 
+With the normal combination technique, this grid is still symmetric and focuses on a low global error. Especially in optimization or data driven problems where the points are not distributed equally in the domain, special regions are of interest. In the case of optimization which is our focus, the errors around the extrema have to be interpolated more exactly than other regions. This is the reason why we use \textit{refinement}. In the case of dimension-adaptive refinement \cite{hegland2002adaptive}, more grid points are added in the dimensions of higher relevance. 
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.18]{figures/normal_combi_technique.png}
+	\includegraphics[scale=0.18]{figures/adaptive_combination_technique.png}
+	\caption{ Example of the 2-dimensional combination technique. Here the blue regular grids are added and the red ones are subtracted. On the left, the normal combination technique can be seen and on the right is an dimension-adaptive version. Taken from \cite{pfluger2010spatially}. }
+	\label{fig:combi_technique}
+\end{figure}
+
+
+In contrast to the previously mentioned refinement concentrating on whole dimensions, the \textit{spatially adaptive refinement} directly adds grid points where the discretization error is still high. An example of the spatially adaptive combination technique presented by \cite{obersteiner2021generalized} can be seen in figure \ref{fig:spatially_adaptive_combi_technique}. In this example, the basis points of the component grids are no longer equidistant because refinement was already made. 
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.2]{figures/spatially_adaptive_combi_technique.png}
+	\caption{ Example of the spatially adaptive combination technique in two dimensions. Taken from \cite{obersteiner2021generalized}. }
+	\label{fig:spatially_adaptive_combi_technique}
+\end{figure}
+
+\subsection{Basis Functions for Sparse Grids}
+
+So far, we only considered the simple case of the hat function on the support points. Besides them, there are other possibilities, for example piecewise d-polynomial, wavelet, and B-spline basis functions. For the first two cases, refer to \cite{pfluger2010spatially, bungartz1998finite, bungartz2004sparse} for further readings. In this thesis, we will concentrate on the B-spline basis functions for the sparse grids \cite{b_splines}. The general cardinal B-spline with degree $ p \in \mathbb{N}_0 $ is defined by 
+\begin{equation}
+	b^p(x) = \begin{cases} 
+				\int_0^1 b^{p-1}(x-y) \text{d}y				& p \geq 1 \\
+				\chi_{[0,1[}(x) 							& p=0 \\
+			\end{cases}
+\end{equation}
+with $ \chi_{[0,1[} $ being the characteristic function of the half-open unit interval \cite{hollig2013approximation}. The $ b^p $ as defined above has the following 8 properties:
+
+\begin{enumerate}
+	\item compactly supported on $ [0, p+1] $
+	\item symmetric and $ 0 \le b^p \le 1 $
+	\item weighted combination of $ b^{p-1} $ and $ -b^{p-1} $
+	\item piecewise polynomial of degree $ p $
+	\item $ \frac{d}{dx} b^p $ is the difference of $ b^{p-1} $ and $ -b^{p-1} $
+	\item has unit integral 
+	\item is the convolution of $ b^{p-1} $ and $ b^{0} $
+	\item hat function and gaussian function are special cases
+\end{enumerate}
+
+This is the case for uniform B-splines. For adaptive grids, the distances between basis points are not always uniform. This is the reason why we need also non-uniform B-splines. Let $ m, p \in \mathbb{N}_0 $ and $ \xi = (\xi_0, ... , \xi_{m+p}) $ be an increasing sequence of real numbers called \textit{knot sequence}. For $ k=0,..., m-1 $, the non-uniform B-spline is defined by 
+\begin{equation}
+	b^p_{k,\xi}(x) = \begin{cases} 
+		\frac{x-\xi_k}{\xi_{k+p}-\xi_k}b^{p-1}_{k,\xi}(x) + \frac{\xi_{k+p+1}-x}{\xi_{k+p+1}-\xi_{k+1}}b^{p-1}_{k+1,\xi}(x)				& p \geq 1 \\
+		\chi_{[\xi_{k},\xi_{k+1}[}(x) 							& p=0 \\
+	\end{cases}
+\end{equation}
+
+This definition and the proof that the hierarchical splitting also holds for using the B-splines for restricted functions can be found in \cite{b_splines}.

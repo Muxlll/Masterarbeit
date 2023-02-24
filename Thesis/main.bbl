@@ -662,6 +662,37 @@
       \field{pages}{57\bibrangedash 80}
       \range{pages}{24}
     \endentry
+    \entry{zenger1991sparse}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=432cf1cc01338e00ab0cdb10c8339b78}{%
+           family={Zenger},
+           familyi={Z\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d16d68319ab32deb0bd277d06fe083ef}{%
+           family={Hackbusch},
+           familyi={H\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{17f1489d8b84ea47a1c7c455112402d2}
+      \strng{fullhash}{17f1489d8b84ea47a1c7c455112402d2}
+      \strng{bibnamehash}{17f1489d8b84ea47a1c7c455112402d2}
+      \strng{authorbibnamehash}{17f1489d8b84ea47a1c7c455112402d2}
+      \strng{authornamehash}{17f1489d8b84ea47a1c7c455112402d2}
+      \strng{authorfullhash}{17f1489d8b84ea47a1c7c455112402d2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Research Workshop of the Israel Science Foundation on Multiscale Phenomenon, Modelling and Computation}
+      \field{title}{Sparse grids}
+      \field{year}{1991}
+      \field{pages}{86}
+      \range{pages}{1}
+    \endentry
     \entry{bungartz2004sparse}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
@@ -721,6 +752,7 @@
       \strng{authorbibnamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
+      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -730,6 +762,163 @@
       \field{year}{2022}
       \field{pages}{161\bibrangedash 185}
       \range{pages}{25}
+    \endentry
+    \entry{griebel1990combination}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6896a9c32e9b9dfde90b5c5e30d80881}{%
+           family={Griebel},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=011cc96822d7baa0be7b01124f4ed55c}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=432cf1cc01338e00ab0cdb10c8339b78}{%
+           family={Zenger},
+           familyi={Z\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{fullhash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{bibnamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authorbibnamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authornamehash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \strng{authorfullhash}{b7bafa5f4309f3f0a84312b6a723b705}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A combination technique for the solution of sparse grid problems}
+      \field{year}{1990}
+    \endentry
+    \entry{obersteiner2021generalized}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6039b7668c5102126e12d322f5407274}{%
+           family={Obersteiner},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{fullhash}{91fb8b4d0373238575275da07e684a49}
+      \strng{bibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorbibnamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
+      \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{4}
+      \field{title}{A generalized spatially adaptive sparse grid combination technique with dimension-wise refinement}
+      \field{volume}{43}
+      \field{year}{2021}
+      \field{pages}{A2381\bibrangedash A2403}
+      \range{pages}{-1}
+    \endentry
+    \entry{hegland2002adaptive}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6022d776b216c890b7280bcfa0726029}{%
+           family={Hegland},
+           familyi={H\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6022d776b216c890b7280bcfa0726029}
+      \strng{fullhash}{6022d776b216c890b7280bcfa0726029}
+      \strng{bibnamehash}{6022d776b216c890b7280bcfa0726029}
+      \strng{authorbibnamehash}{6022d776b216c890b7280bcfa0726029}
+      \strng{authornamehash}{6022d776b216c890b7280bcfa0726029}
+      \strng{authorfullhash}{6022d776b216c890b7280bcfa0726029}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Anziam Journal}
+      \field{title}{Adaptive sparse grids}
+      \field{volume}{44}
+      \field{year}{2002}
+      \field{pages}{C335\bibrangedash C353}
+      \range{pages}{-1}
+    \endentry
+    \entry{bungartz1998finite}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26eafa3a34098b617e2a5381e1d2e42c}{%
+           family={Bungartz},
+           familyi={B\bibinitperiod},
+           given={Hans-Joachim},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technische Universität München}%
+      }
+      \strng{namehash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \strng{fullhash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \strng{bibnamehash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \strng{authorbibnamehash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \strng{authornamehash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \strng{authorfullhash}{26eafa3a34098b617e2a5381e1d2e42c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Finite elements of higher order on sparse grids}
+      \field{type}{phdthesis}
+      \field{year}{1998}
+    \endentry
+    \entry{hollig2013approximation}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d349351d4fc3afe7304f148a6b7fa4f5}{%
+           family={Höllig},
+           familyi={H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ca779db31ec0be8dd1bdd6577086904}{%
+           family={Hörner},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{57f79f590d6c2235e42127c6f6c5e557}
+      \strng{fullhash}{57f79f590d6c2235e42127c6f6c5e557}
+      \strng{bibnamehash}{57f79f590d6c2235e42127c6f6c5e557}
+      \strng{authorbibnamehash}{57f79f590d6c2235e42127c6f6c5e557}
+      \strng{authornamehash}{57f79f590d6c2235e42127c6f6c5e557}
+      \strng{authorfullhash}{57f79f590d6c2235e42127c6f6c5e557}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Approximation and modeling with B-splines}
+      \field{year}{2013}
     \endentry
   \enddatalist
 \endrefsection

@@ -9,6 +9,8 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the hierarchical basis. Level of the grid is 3 and hat functions are used. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}.\relax }}{9}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. Taken from \blx@tocontentsinit {0}\cite {garcke2013sparse}. \relax }}{10}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Two dimensional example of a sparse grid with $ n = 3 $. Left, the subspaces $ W_{\vec {l}} $ can be seen and on the right is the resulting sparse grid. Taken from \blx@tocontentsinit {0}\cite {garcke2013sparse}. \relax }}{11}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Example of the 2-dimensional combination technique. Here the blue regular grids are added and the red ones are subtracted. On the left, the normal combination technique can be seen and on the right is an dimension-adaptive version. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}. \relax }}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the spatially adaptive combination technique in two dimensions. Taken from \blx@tocontentsinit {0}\cite {obersteiner2021generalized}. \relax }}{13}{figure.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
