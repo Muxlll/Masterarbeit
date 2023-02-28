@@ -11,6 +11,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+from sklearn.model_selection import cross_val_score
+
 import numpy as np
 import keras
 
@@ -46,9 +48,10 @@ X = X.reshape(-1, 1)
 
 dataset = HPO.Dataset(X, Y)
 
-BUDGET = 100
+BUDGET = 300
 VERBOSE = 2
-
+CV = 2
+SCORING = 'neg_mean_squared_error'
 
 hyperparameterspace = {
     'loss': ["list", 'binary_crossentropy', 'categorical_crossentropy', 'binary_crossentropy', 'mean_squared_error', 'mean_absolute_error'],
@@ -58,7 +61,7 @@ hyperparameterspace = {
 
 ##################### Model for grid and random search #####################
 
-# Function to create model, required for KerasClassifier
+#Function to create model, required for KerasClassifier
 def create_model():
     # create model
     model = Sequential()
@@ -69,24 +72,29 @@ def create_model():
     model.add(Dense(10, activation='relu'))
     model.add(Dense(1, activation=None))
     # Compile model
-    model.compile(loss='mean_squared_error',
-                  optimizer='adam', metrics=['mean_squared_error'])
+    #model.compile(loss='binary_crossentropy',
+    #              optimizer='adam', metrics=['mean_squared_error'])
     return model
+
+model = KerasRegressor(model=create_model, verbose=0)
+
 
 ##################### Blackbox function for bayesian optimization #####################
 
+hyperparameterspace_special = {}
+for key in hyperparameterspace.keys():
+    liste = []
+    for i in range(1, len(hyperparameterspace[key])):
+        liste.append(hyperparameterspace[key][i])
+    hyperparameterspace_special[key] = liste
 
-hyperparameterspace_special = {
-    'loss': ['binary_crossentropy', 'categorical_crossentropy', 'binary_crossentropy', 'mean_squared_error', 'mean_absolute_error'],
-    'epochs': [1, 400]
-}
+
 
 def blackboxfunction(params):
-    index = int(params[0]*(len(hyperparameterspace_special["loss"]))-1)
+    index = int(params[0]*(len(hyperparameterspace_special["loss"])-1))
     loss = hyperparameterspace_special["loss"][index]
     
     epochs = int(params[1])
-
 
     # Function to create model, required for KerasClassifier
     def create_model():
@@ -104,11 +112,14 @@ def blackboxfunction(params):
 
     model = KerasRegressor(model=create_model, verbose=0)
 
-    model.fit(X, Y, epochs=epochs)
+    #scores = cross_val_score(model, dataset.get_X(), dataset.get_Y(), cv=CV, scoring=SCORING)
 
-    Y_predicted = model.predict(X)
+    #return -scores.mean()
+    model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=epochs)
 
-    return -sklearn.metrics.mean_squared_error(Y, Y_predicted)
+    Y_predicted = model.predict(dataset.get_X_test())
+
+    return -sklearn.metrics.mean_squared_error(dataset.get_Y_test(), Y_predicted)
     
 
 ##################### Function for sparse grid search #####################
@@ -140,15 +151,29 @@ class ExampleFunction(pysgpp.ScalarFunction):
 
         model = KerasRegressor(model=create_model, verbose=0)
 
-        model.fit(X, Y, epochs=epochs)
-        Y_predicted = model.predict(X)
+        # scores = cross_val_score(model, dataset.get_X(), dataset.get_Y(), cv=CV, scoring=SCORING)
 
-        return sklearn.metrics.mean_squared_error(Y.tolist(), Y_predicted.tolist())
+        # return -scores.mean()
+
+        model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=epochs)
+
+        Y_predicted = model.predict(dataset.get_X_test())
+
+        print(dataset.get_Y_test().numpy())
+        print(Y_predicted)
+
+        return -sklearn.metrics.mean_squared_error(dataset.get_Y_test().tolist(), Y_predicted)
+
+
+
+
 
 
 
 
 f = ExampleFunction()
 
-optimization = HPO.Optimization(dataset, f, hyperparameterspace, type="sparse", budget=10, verbosity=VERBOSE)
+optimization = HPO.Optimization(dataset, f, hyperparameterspace, type="sparse", budget=BUDGET, verbosity=VERBOSE)
 result = optimization.fit()
+
+

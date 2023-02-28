@@ -370,7 +370,6 @@ class Optimization:
                 f, grid, N, gamma)
 
             functionValues = gridGen.getFunctionValues()
-
             if not gridGen.generate():
                 print("Grid generation failed, exiting.")
                 sys.exit(-1)

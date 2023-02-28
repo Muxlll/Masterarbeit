@@ -1,7 +1,32 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in somexcv editors.
 
-\chapter{Related Work}\label{chapter:theoretical_background}
+\chapter{Theoretical Background}\label{chapter:theoretical_background}
+
+Machine Learning \cite{wang2016machine, mahesh2020machine} is a rapidly evolving field of artificial intelligence. There are different types of algorithms that are used for specific tasks involving supervised learning where the algorithm maps inputs to the given labels, unsupervised learning where the labels to the input are not available, and semi-supervised learning which combines labeled and unlabeled data. Additionally, there is reinforcement learning where the model learns by observing the environment \cite{ayodele2010types}. Specific tasks are e.g. classification where input has to be assigned to specific classes, regression where input has to be assigned to a continuous value (both supervised) and clustering (unsupervised) where the goal is to group the input. 
+
+There are many different algorithms that accomplish these goals, for example support vector machines \cite{noble2006support}, the tsetlin machine \cite{granmo2018tsetlin}, and decision trees \cite{rokach2005decision}. One very important class of algorithms is \textit{artificial neural networks} \ref{sec:neural_networks}. After the introduction to neural networks, the hyperparameter optimization is presented with different techniques to improve machine learning models. In the following, sparse grids are presented which will be needed as foundation to hyperparameter optimization of neural networks with sparse grids. 
+
+\section{Introduction to Neural Networks}\label{sec:neural_networks}
+
+Neural networks \cite{bishop1994neural, da2017artificial} are very  powerful for using various tasks. They are very versatile and they exist in very different variations, ranging from a very small size up to very large networks for more complex tasks.
+
+The smallest part of a neural network is the \textit{perceptron}. A network consisting only of one perceptron can be seen in Figure \ref{fig:perceptron}.
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.18]{figures/perceptron.png}
+	\caption{ Neural network consisting of only one perceptron. Taken from \cite{da2017artificial}. }
+	\label{fig:perceptron}
+\end{figure}
+
+The output $ y $ is computed with 
+
+\begin{equation}
+	u = \sum_{i=1}^n w_i \cdot x_i - \theta  \text{,   } y = g(u).
+\end{equation}
+
+The network has $ n $ inputs $ x_i $ and weights $ w_i $. $ \theta $ is the activation threshold (also called bias), $ g $ is the activation function, and $ u $ is the activation potential \cite{da2017artificial}. 
 
 \section{Hyperparameter Optimization}
 
@@ -11,7 +36,7 @@ Most machine learning models have parameters that have to be defined before the 
 	\lambda_{min} = \text{arg} \min_{\lambda \in \Lambda} f(\lambda) .
 \end{equation}
 
-In our case, the function f is a machine learning algorithm that is trained on a training set and evaluated on a testing set. With this, the minimization of e.g. the loss of the model optimizes the decisions it is making which leads to better prediction results. Note that one function evaluation of f is usually very expensive as the training of a machine learning model with many parameters and weights takes much time. The data set consists of $ \{ (x_i, y_i) | x_i \in X, y_i \in Y, 0 \le i \le m \} $ with m being the number of data samples. The $ x_i $ is the input data to the model and the goal is that 
+In our case, the function f is a machine learning algorithm that is trained on a training set and evaluated on a test set. With this, the minimization of e.g. the loss of the model optimizes the decisions it is making which leads to better prediction results. Note that one function evaluation of f is usually very expensive as the training of a machine learning model with many parameters and weights takes much time. The data set consists of $ \{ (x_i, y_i) | x_i \in X, y_i \in Y, 0 \le i \le m \} $ with m being the number of data samples. The $ x_i $ is the input data to the model and the goal is that 
 \begin{equation}
 	\forall i: M(x_i) = y_i.
 \end{equation}
@@ -27,7 +52,7 @@ The idea of the first approach for the optimization is to discretize the domains
 
 One advantage of this method is that it is easy to implement and very simple. Also, the whole search space is explored evenly.
 
-On the other hand, the curse of the dimensionality makes it very slow if the function evaluations are very expensive. This is the case for most machine learning algorithms because the training phase of the model takes much time. Another drawback is that each hyperparameter only takes $ n $ different values.
+On the other hand, the curse of the dimensionality makes it very slow if the function evaluations are very expensive which is the case for most machine learning algorithms. Another drawback is that each hyperparameter only takes $ n $ different values. The comparison to random search can be seen in Figure \ref{fig:comparison_searches}.
 
 
 \subsection{Random Search}
@@ -248,6 +273,25 @@ With the normal combination technique, this grid is still symmetric and focuses 
 
 
 In contrast to the previously mentioned refinement concentrating on whole dimensions, the \textit{spatially adaptive refinement} directly adds grid points where the discretization error is still high. An example of the spatially adaptive combination technique presented by \cite{obersteiner2021generalized} can be seen in figure \ref{fig:spatially_adaptive_combi_technique}. In this example, the basis points of the component grids are no longer equidistant because refinement was already made. 
+\\
+
+All in all, Table \ref{tab:comparison_grids} shows the comparison of full grids, sparse grids, and the combination technique in terms of number of points and interpolation accuracy \cite{pfluger2010spatially}.
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c c c|} 
+		\hline
+		Grid & Number grid points & Accuracy \\
+		\hline
+		Full grid & $ \mathcal{O}(h_n^2) $ & $ \mathcal{O}(2^{nd}) $ \\
+		Sparse grid & $ \mathcal{O}(h_n^{-1}(\text{log } h_n^{-1})^{d-1}) $ & $ \mathcal{O}(h_n^{2}(\text{log } h_n^{-1})^{d-1}) $ \\
+		Combination technique & $ \mathcal{O}(d(\text{log } h_n^{-1})^{d-1}) \times  \mathcal{O}(h_n^{-1}) $ & $ \mathcal{O}(h_n^{2}(\text{log } h_n^{-1})^{d-1}) $\\
+		\hline
+	\end{tabular}
+	\caption{ Comparison of sparse grids, full grids, and the combination technique in terms of number of grid points and the accuracy.}
+	\label{tab:comparison_grids}
+\end{table}
 
 \begin{figure}[htbp!]
 	\centering
@@ -258,7 +302,7 @@ In contrast to the previously mentioned refinement concentrating on whole dimens
 
 \subsection{Basis Functions for Sparse Grids}
 
-So far, we only considered the simple case of the hat function on the support points. Besides them, there are other possibilities, for example piecewise d-polynomial, wavelet, and B-spline basis functions. For the first two cases, refer to \cite{pfluger2010spatially, bungartz1998finite, bungartz2004sparse} for further readings. In this thesis, we will concentrate on the B-spline basis functions for the sparse grids \cite{b_splines}. The general cardinal B-spline with degree $ p \in \mathbb{N}_0 $ is defined by 
+So far, we only considered the simple case of the hat function on the support points. Besides them, there are other possibilities, for example piecewise d-polynomial, wavelet, and B-spline basis functions. For the first two cases, refer to \cite{pfluger2010spatially, bungartz1998finite, bungartz2004sparse} for further readings. In this thesis, we will concentrate on the B-spline basis for the sparse grids as the hat function is not continuously differentiable \cite{b_splines}. This is the reason why we can not compute globally continuous gradients which is a problem for the optimization. The general cardinal B-spline with degree $ p \in \mathbb{N}_0 $ is defined by 
 \begin{equation}
 	b^p(x) = \begin{cases} 
 				\int_0^1 b^{p-1}(x-y) \text{d}y				& p \geq 1 \\
