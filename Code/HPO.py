@@ -282,8 +282,6 @@ def from_standard(lower, upper, value):
         verbosity:              verbosity for output
         sparse_params:          list of values: [B-spline_degree, adaptivity]
 """
-
-
 class Optimization:
     def __init__(self, dataset, model, hyperparameterspace, type="grid_search", cv=5, scoring='neg_mean_squared_error', budget=100, verbosity=1, sparse_params=[3, 0.95]) -> None:
         self.dataset = dataset
@@ -337,7 +335,6 @@ class Optimization:
             for key in self.hyperparameterspace.keys():
                 self.hyperparameterspace_processed.get(key).pop(0)
 
-
     def fit(self):
 
         if self.type == "grid_search":
@@ -376,17 +373,18 @@ class Optimization:
                 print("Grid generation failed, exiting.")
                 sys.exit(-1)
 
-            gridStorage = grid.getStorage()
+            if d == 2:
+                gridStorage = grid.getStorage()
 
-            x_values = []
-            y_values = []
-            for i in range(gridStorage.getSize()):
-                gp = gridStorage.getPoint(i)
-                x_values.append(gp.getStandardCoordinate(0))
-                y_values.append(gp.getStandardCoordinate(1))
+                x_values = []
+                y_values = []
+                for i in range(gridStorage.getSize()):
+                    gp = gridStorage.getPoint(i)
+                    x_values.append(gp.getStandardCoordinate(0))
+                    y_values.append(gp.getStandardCoordinate(1))
 
-            if self.verbosity >= 1:
-                plt.plot(x_values, y_values, 'bo')
+                if self.verbosity >= 1:
+                    plt.plot(x_values, y_values, 'bo')
 
             ######################################## grid functions ########################################
             # Hierarchization

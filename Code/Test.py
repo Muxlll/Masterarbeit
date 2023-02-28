@@ -1,5 +1,7 @@
 import HPO
 
+import pandas as pd
+
 import pysgpp
 
 import sys
@@ -7,14 +9,10 @@ import sys
 import math
 import matplotlib.pyplot as plt
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
 
 from sklearn.model_selection import cross_val_score
 
 import numpy as np
-import keras
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -29,22 +27,18 @@ def to_standard(lower, upper, value):
 def from_standard(lower, upper, value):
     return value*(upper-lower)+lower
 
-X = []
-Y = []
 
-num_samples = 100
+dataset = np.loadtxt("pima-indians-diabetes.csv", delimiter=",")
+print(dataset.shape)
+# separate the data from the target attributes
+X = dataset[:,0:7]
+Y = dataset[:,8]
 
-for i in range(1, num_samples):
-    X.append(2.0*math.pi/num_samples * float(i))
-    Y.append(math.sin(2.0*math.pi/num_samples * float(i)))
+Test = []
 
-plt.plot(X, Y)
-plt.show()
-
-X = torch.Tensor(X)
-Y = torch.Tensor(Y)
-
-X = X.reshape(-1, 1)
+for i in X:
+    if np.isnan(i).any():
+        print("Treffer")
 
 dataset = HPO.Dataset(X, Y)
 
