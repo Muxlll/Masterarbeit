@@ -21,12 +21,12 @@
   \datalist[entry]{none/global//global/global}
     \entry{wang2016machine}{article}{}
       \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=39856f0439f35f79a8eed8b12d26166c}{%
+        {{un=1,uniquepart=given,hash=39856f0439f35f79a8eed8b12d26166c}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={H},
            giveni={H\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=9ed1434ce0d9e5997f79541d9bfa5a82}{%
            family={Lei},
            familyi={L\bibinitperiod},
@@ -328,6 +328,261 @@
       \field{title}{Artificial neural network architectures and training processes}
       \field{year}{2017}
     \endentry
+    \entry{medsker2001recurrent}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1968092e2c0ab8bf5f4846ab4fe184b5}{%
+           family={Medsker},
+           familyi={M\bibinitperiod},
+           given={Larry\bibnamedelima R},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c73c4a88b0645968504b91976af5d495}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={LC},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \strng{fullhash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \strng{bibnamehash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \strng{authorbibnamehash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \strng{authornamehash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \strng{authorfullhash}{39b99a1f3b42a6e6897364c3965b66d8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Design and Applications}
+      \field{title}{Recurrent neural networks}
+      \field{volume}{5}
+      \field{year}{2001}
+      \field{pages}{64\bibrangedash 67}
+      \range{pages}{4}
+    \endentry
+    \entry{li2021survey}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=693dfc50c48b04de716d7c709c7caa80}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zewen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=9419610d270972bdd30e81d791d61b96}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=ee5c593d1df705b04d415b2b51c3c461}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Wenjie},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=db5dbc87671e893ede1502d00ee0a37a}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Shouheng},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21b6969d672728cb4ea4381d1d8706b5}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b801549f5abe18d7d48da188f79c7dd4}
+      \strng{fullhash}{41b3108995a1e1f78624a8a97d60ac03}
+      \strng{bibnamehash}{41b3108995a1e1f78624a8a97d60ac03}
+      \strng{authorbibnamehash}{41b3108995a1e1f78624a8a97d60ac03}
+      \strng{authornamehash}{b801549f5abe18d7d48da188f79c7dd4}
+      \strng{authorfullhash}{41b3108995a1e1f78624a8a97d60ac03}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on neural networks and learning systems}
+      \field{title}{A survey of convolutional neural networks: analysis, applications, and prospects}
+      \field{year}{2021}
+    \endentry
+    \entry{gu2018recent}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=75773f34c6c6b4a5992acbd1a91d6287}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Jiuxiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=5c092e58f3e1da1e6b0175fb4a5aa0f6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhenhua},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c3451a708164d99ff770297eecf21c42}{%
+           family={Kuen},
+           familyi={K\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08272f0ac6b8c00bba415379bd484c6b}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Lianyang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd9806e2b6a75a8882c14bb84deef5aa}{%
+           family={Shahroudy},
+           familyi={S\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee574291a2e6dd5157584042680e1ce3}{%
+           family={Shuai},
+           familyi={S\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=df4100f4c9320162410d3ddcc9257d55}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ting},
+           giveni={T\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=0f6b99511b4eb671fcf7f29d8684970d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xingxing},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=3d33b99ab2b9fa2c7987e1d7f5873222}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c75d31462b261e5c21d1421d64679934}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Jianfei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d33a7c799257d00f01ee339d5474eb1e}
+      \strng{fullhash}{6b174d69bc078e0c8220cf8922a07b9d}
+      \strng{bibnamehash}{6b174d69bc078e0c8220cf8922a07b9d}
+      \strng{authorbibnamehash}{6b174d69bc078e0c8220cf8922a07b9d}
+      \strng{authornamehash}{d33a7c799257d00f01ee339d5474eb1e}
+      \strng{authorfullhash}{6b174d69bc078e0c8220cf8922a07b9d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern recognition}
+      \field{title}{Recent advances in convolutional neural networks}
+      \field{volume}{77}
+      \field{year}{2018}
+      \field{pages}{354\bibrangedash 377}
+      \range{pages}{24}
+    \endentry
+    \entry{o2015introduction}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f92af5765968c6de4c1e42d397224c9c}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Keiron},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1511.08458}
+      \field{title}{An introduction to convolutional neural networks}
+      \field{year}{2015}
+    \endentry
+    \entry{liu2017survey}{article}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=668b5e9e856d2fe30945a33c60824d2f}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Weibo},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=1adac8411013657f7cd29b1217d72074}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zidong},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=17a1772c22ce40a67db8f54dafaeb701}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaohui},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=ca1a9b3b1b56c9242207c566693cb666}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Nianyin},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4460491b1fdb7f49c06c0fa378ce11aa}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yurong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19c90a24961a5f5989d8e4affbaab306}{%
+           family={Alsaadi},
+           familyi={A\bibinitperiod},
+           given={Fuad\bibnamedelima E},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{131376fe3a8fd8923fd0e6e58a2c3f48}
+      \strng{fullhash}{56515826b513633ffab9f95cd0c666fe}
+      \strng{bibnamehash}{56515826b513633ffab9f95cd0c666fe}
+      \strng{authorbibnamehash}{56515826b513633ffab9f95cd0c666fe}
+      \strng{authornamehash}{131376fe3a8fd8923fd0e6e58a2c3f48}
+      \strng{authorfullhash}{56515826b513633ffab9f95cd0c666fe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurocomputing}
+      \field{title}{A survey of deep neural network architectures and their applications}
+      \field{volume}{234}
+      \field{year}{2017}
+      \field{pages}{11\bibrangedash 26}
+      \range{pages}{16}
+    \endentry
     \entry{supervised_learning}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=a5322941b8332d56c20676583a7faa35}{%
@@ -358,8 +613,8 @@
       \strng{authorbibnamehash}{2b43ebb17ffccf302b81581e395b981a}
       \strng{authornamehash}{2b43ebb17ffccf302b81581e395b981a}
       \strng{authorfullhash}{2b43ebb17ffccf302b81581e395b981a}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine learning techniques for multimedia: case studies on organization and retrieval}
@@ -392,8 +647,8 @@
       \strng{authorbibnamehash}{b354f633c98aba5a037e655b4d3514b1}
       \strng{authornamehash}{b354f633c98aba5a037e655b4d3514b1}
       \strng{authorfullhash}{b354f633c98aba5a037e655b4d3514b1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Automated machine learning: Methods, systems, challenges}
@@ -476,8 +731,8 @@
       \strng{authorbibnamehash}{06c9841b6c792ff88510f6539d206469}
       \strng{authornamehash}{6c8a87765fd30c86b6505d02369b32f2}
       \strng{authorfullhash}{06c9841b6c792ff88510f6539d206469}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery}
@@ -510,8 +765,8 @@
       \strng{authorbibnamehash}{fe94961415bbb2dc0eb174c499655848}
       \strng{authornamehash}{fe94961415bbb2dc0eb174c499655848}
       \strng{authorfullhash}{fe94961415bbb2dc0eb174c499655848}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Neurocomputing}
@@ -542,8 +797,8 @@
       \strng{authorbibnamehash}{a05cf9842110d2caa7fbdda862c52ff8}
       \strng{authornamehash}{a05cf9842110d2caa7fbdda862c52ff8}
       \strng{authorfullhash}{a05cf9842110d2caa7fbdda862c52ff8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of machine learning research}
@@ -579,8 +834,8 @@
       \strng{authorbibnamehash}{8ec3cd03032d713954b0895ecd0d8292}
       \strng{authornamehash}{8ec3cd03032d713954b0895ecd0d8292}
       \strng{authorfullhash}{8ec3cd03032d713954b0895ecd0d8292}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -606,8 +861,8 @@
       \strng{authorbibnamehash}{2a56da0e6c116c9850c73b287754d07e}
       \strng{authornamehash}{2a56da0e6c116c9850c73b287754d07e}
       \strng{authorfullhash}{2a56da0e6c116c9850c73b287754d07e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Membrane Computing}
@@ -642,8 +897,8 @@
       \strng{authorbibnamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
       \strng{authornamehash}{e744f1e1d334f8dd7d249e69333d3a7a}
       \strng{authorfullhash}{e744f1e1d334f8dd7d249e69333d3a7a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Neurocomputing}
@@ -683,8 +938,8 @@
       \strng{authorbibnamehash}{e6d2f0960d0b5f32376938e9781bcac2}
       \strng{authornamehash}{e6d2f0960d0b5f32376938e9781bcac2}
       \strng{authorfullhash}{e6d2f0960d0b5f32376938e9781bcac2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Learning and Intelligent Optimization: 5th International Conference, LION 5, Rome, Italy, January 17-21, 2011. Selected Papers 5}
@@ -720,8 +975,8 @@
       \strng{authorbibnamehash}{870dc43c19021ea6a57c74c8ae99177a}
       \strng{authornamehash}{870dc43c19021ea6a57c74c8ae99177a}
       \strng{authorfullhash}{870dc43c19021ea6a57c74c8ae99177a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -753,8 +1008,8 @@
       \strng{authorbibnamehash}{8d73e62313e285b2d14f05516bbefeff}
       \strng{authornamehash}{8d73e62313e285b2d14f05516bbefeff}
       \strng{authorfullhash}{8d73e62313e285b2d14f05516bbefeff}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Artificial intelligence and statistics}
@@ -796,8 +1051,8 @@
       \strng{authorbibnamehash}{1a91ba9601fe183a3a75f1779ff35d1f}
       \strng{authornamehash}{1a91ba9601fe183a3a75f1779ff35d1f}
       \strng{authorfullhash}{1a91ba9601fe183a3a75f1779ff35d1f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IBM Journal of Research and Development}
@@ -847,8 +1102,8 @@
       \strng{authorbibnamehash}{3355e00423580cbb5adeb2cdc35d2223}
       \strng{authornamehash}{3355e00423580cbb5adeb2cdc35d2223}
       \strng{authorfullhash}{3355e00423580cbb5adeb2cdc35d2223}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}
@@ -878,8 +1133,8 @@
       \strng{authorbibnamehash}{b308ccb07134a06ec3735828ac4f15e2}
       \strng{authornamehash}{b308ccb07134a06ec3735828ac4f15e2}
       \strng{authorfullhash}{b308ccb07134a06ec3735828ac4f15e2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1604.07269}
@@ -901,8 +1156,8 @@
       \strng{authorbibnamehash}{06a62916f96f396a2a807520c092d764}
       \strng{authornamehash}{06a62916f96f396a2a807520c092d764}
       \strng{authorfullhash}{06a62916f96f396a2a807520c092d764}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{B-splines for sparse grids : algorithms and application to higher-dimensional optimization}
@@ -935,8 +1190,8 @@
       \strng{authorbibnamehash}{33c391612cc957b953f1bed8dc793cda}
       \strng{authornamehash}{33c391612cc957b953f1bed8dc793cda}
       \strng{authorfullhash}{33c391612cc957b953f1bed8dc793cda}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Spatially adaptive sparse grids for high-dimensional problems}
@@ -961,8 +1216,8 @@
       \strng{authorbibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
       \strng{authornamehash}{d39d9fc432faacc56d2c3c532e1808a0}
       \strng{authorfullhash}{d39d9fc432faacc56d2c3c532e1808a0}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse grids and applications}
@@ -992,8 +1247,8 @@
       \strng{authorbibnamehash}{17f1489d8b84ea47a1c7c455112402d2}
       \strng{authornamehash}{17f1489d8b84ea47a1c7c455112402d2}
       \strng{authorfullhash}{17f1489d8b84ea47a1c7c455112402d2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Research Workshop of the Israel Science Foundation on Multiscale Phenomenon, Modelling and Computation}
@@ -1026,8 +1281,8 @@
       \strng{authorbibnamehash}{d0a1f27c785b7d61140590690ac47017}
       \strng{authornamehash}{d0a1f27c785b7d61140590690ac47017}
       \strng{authorfullhash}{d0a1f27c785b7d61140590690ac47017}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta numerica}
@@ -1062,8 +1317,8 @@
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse Grids and Applications-Munich 2018}
@@ -1134,8 +1389,8 @@
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM Journal on Scientific Computing}
@@ -1161,8 +1416,8 @@
       \strng{authorbibnamehash}{6022d776b216c890b7280bcfa0726029}
       \strng{authornamehash}{6022d776b216c890b7280bcfa0726029}
       \strng{authorfullhash}{6022d776b216c890b7280bcfa0726029}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Anziam Journal}
@@ -1190,8 +1445,8 @@
       \strng{authorbibnamehash}{26eafa3a34098b617e2a5381e1d2e42c}
       \strng{authornamehash}{26eafa3a34098b617e2a5381e1d2e42c}
       \strng{authorfullhash}{26eafa3a34098b617e2a5381e1d2e42c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Finite elements of higher order on sparse grids}
@@ -1222,8 +1477,8 @@
       \strng{authorbibnamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authornamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authorfullhash}{57f79f590d6c2235e42127c6f6c5e557}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Approximation and modeling with B-splines}

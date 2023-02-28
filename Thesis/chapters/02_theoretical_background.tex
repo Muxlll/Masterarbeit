@@ -28,7 +28,41 @@ The output $ y $ is computed with
 
 The network has $ n $ inputs $ x_i $ and weights $ w_i $. $ \theta $ is the activation threshold (also called bias), $ g $ is the activation function, and $ u $ is the activation potential \cite{da2017artificial}. 
 
-\section{Hyperparameter Optimization}
+This basis building block can then be used to build a more complex architecture with multiple layers. All neural networks have an input layer consisting of $ n \in \mathbb{N}$ input neurons and an output layer with $ m \in \mathbb{N} $ output values. Between them, there can be multiple hidden neural layers. In deep neural networks, this number of layers is very high as the name suggests. Each neuron of each layer again has weights of the corresponding input and bias. The concrete values for them are important for the behavior of the model and determines the performance. These values are learned during the training phase of the model. There are two stages (forward and backward stage) during the training phase as it can be seen in Figure \ref{fig:network}.
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.18]{figures/network.png}
+	\caption{ Neural network consisting of two hidden layers. Taken from \cite{da2017artificial}. }
+	\label{fig:network}
+\end{figure}
+
+The figure shows a schematic neural network with two hidden layers and $ n_1 $ neurons in the first layer and $ n_2 $ ones in the second layer. The straight line is the forward stage where an input $ x \in \mathbb{R}^n $ is put into the network and the output is computed by computing the corresponding output of each neuron and feeding it into the next layer according to the arrows. This output is then taken to update the weights of all neurons. In the simple case depicted in Figure \ref{fig:perceptron} with only one perceptron, the weights are updated with  
+
+\begin{equation}
+	\label{eq:weights_update}
+	w_{current} = w_{previous} + \eta \cdot (d^{(k)} - y) \cdot x^{(k)}
+\end{equation}
+
+where $ w = [\theta \text{ } w_1 \text{ } ... w_n]^T $ is the vector with all weights and the bias, $ x = [-1 \text{ } x_1^{(k)} \text{ } ... x_n^{(k)}]^T $ is the $ \text{k}^{\text{th}} $ training sample, $ d^{k} $ the desired label, $ y $ the output of the perceptron and $ \eta $ the learning rate. The choice of $ \eta $ is fixed before training and usually $ 0 < \eta < 1 $. For the update of the weights of networks with multiple layers, refer to \cite{da2017artificial}. 
+
+The perceptron and its training is the basic building block for most neural networks. Based on this, the concrete architecture can still be adjusted. One first thing is to increase the number of layers or neurons per layer. But also the choice of connections between layers can improve the performance of the network. Other things that can be done is to introduce connections from higher layers to lower layers which makes it a recurrent neural network. They are especially suited for sequential or time-varying patterns \cite{medsker2001recurrent}. There is also a specific architecture for grid structured data like images. For them, convolutional neural networks are used to extract features \cite{li2021survey, gu2018recent, o2015introduction}. For further readings on architecture choices, refer to \cite{liu2017survey}.
+
+In all cases, the weights of the network are updated automatically and it is impossible to understand the concrete decision making of the model. The weights are called parameters of the network. Besides them there are the hyperparameters that have to be fixed before training. They are design decisions how the network should behave. For some of them, experience can show which choices lead to better performances of the model but in all cases, they can be optimized which will be discussed in the following section \ref{sec:hyperparameter_optimization}. Some of the hyperparameters are
+\begin{itemize}
+	\item Epochs: Number of times the training data is fed into the network and the weights are updated
+	\item Learning rate: $ \eta $ of Equation \ref{eq:weights_update} defining how fast the model should learn
+	\item Optimizer: Optimizer used to update the weights of the network
+	\item Loss function: Concrete loss metric how the label and the output are compared in Equation \ref{eq:weights_update}
+	\item Batch size: Number of data samples processed in a batch
+	\item Number of layers of the network
+	\item Number of neurons in each layer
+\end{itemize}
+
+All these parameters can drastically influence the model performance. Some of them are independent and some of them depend each other. For example the number of epochs and learning rate are dependent because with higher number of epochs, the learning rate can be decreased as longer time to learn the data is available. 
+
+
+\section{Hyperparameter Optimization}\label{sec:hyperparameter_optimization}
 
 Most machine learning models have parameters that have to be defined before the learning phase. They are called hyperparameters and strongly influence the behavior of the model. One example is the number of epochs of the learning phase of a neural network. There are different techniques for the optimization of hyperparameters and they all define the machine learning model as a black box function $ f $ with the hyperparameters as input and the resulting performance as output. The overall goal is to find a configuration $ \lambda_{min} $ from $ \Lambda = \Lambda_1 \times \Lambda_2 \times ... \times \Lambda_N $ that minimizes the function $ f $ with $ N $ hyperparameters with 
 \begin{equation}

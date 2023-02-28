@@ -257,6 +257,8 @@ def bayesian_optimisation(X, Y, n_iters, sample_loss, bounds, x0=None, n_pre_sam
 
         update_progress(percentage, (endtime-starttime),
                         remaining_time_prediction)
+        
+    print("Iterations took", time, "seconds")
 
     return xp, yp
 
