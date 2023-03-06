@@ -373,9 +373,9 @@ class Optimization:
                 print("Grid generation failed, exiting.")
                 sys.exit(-1)
 
+            
+            gridStorage = grid.getStorage()
             if d == 2:
-                gridStorage = grid.getStorage()
-
                 x_values = []
                 y_values = []
                 for i in range(gridStorage.getSize()):

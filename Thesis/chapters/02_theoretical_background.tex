@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in somexcv editors.
 
-\chapter{Theoretical Background}\label{chapter:theoretical_background}
+\chapter{State of the Art}\label{chapter:theoretical_background}
 
 Machine Learning \cite{wang2016machine, mahesh2020machine} is a rapidly evolving field of artificial intelligence. There are different types of algorithms that are used for specific tasks involving supervised learning where the algorithm maps inputs to the given labels, unsupervised learning where the labels to the input are not available, and semi-supervised learning which combines labeled and unlabeled data. Additionally, there is reinforcement learning where the model learns by observing the environment \cite{ayodele2010types}. Specific tasks are e.g. classification where input has to be assigned to specific classes, regression where input has to be assigned to a continuous value (both supervised) and clustering (unsupervised) where the goal is to group the input. 
 
@@ -9,7 +9,7 @@ There are many different algorithms that accomplish these goals, for example sup
 
 \section{Introduction to Neural Networks}\label{sec:neural_networks}
 
-Neural networks \cite{bishop1994neural, da2017artificial} are very  powerful for using various tasks. They are very versatile and they exist in very different variations, ranging from a very small size up to very large networks for more complex tasks.
+Neural networks \cite{bishop1994neural, da2017artificial} are very  powerful for solving various tasks. They are very versatile and they exist in very different variations, ranging from a very small size up to very large networks for more complex tasks.
 
 The smallest part of a neural network is the \textit{perceptron}. A network consisting only of one perceptron can be seen in Figure \ref{fig:perceptron}.
 
@@ -46,7 +46,7 @@ The figure shows a schematic neural network with two hidden layers and $ n_1 $ n
 
 where $ w = [\theta \text{ } w_1 \text{ } ... w_n]^T $ is the vector with all weights and the bias, $ x = [-1 \text{ } x_1^{(k)} \text{ } ... x_n^{(k)}]^T $ is the $ \text{k}^{\text{th}} $ training sample, $ d^{k} $ the desired label, $ y $ the output of the perceptron and $ \eta $ the learning rate. The choice of $ \eta $ is fixed before training and usually $ 0 < \eta < 1 $. For the update of the weights of networks with multiple layers, refer to \cite{da2017artificial}. 
 
-The perceptron and its training is the basic building block for most neural networks. Based on this, the concrete architecture can still be adjusted. One first thing is to increase the number of layers or neurons per layer. But also the choice of connections between layers can improve the performance of the network. Other things that can be done is to introduce connections from higher layers to lower layers which makes it a recurrent neural network. They are especially suited for sequential or time-varying patterns \cite{medsker2001recurrent}. There is also a specific architecture for grid structured data like images. For them, convolutional neural networks are used to extract features \cite{li2021survey, gu2018recent, o2015introduction}. For further readings on architecture choices, refer to \cite{liu2017survey}.
+The perceptron and its training is the basic building block for most neural networks. Based on this, the concrete architecture can still be adjusted. One first thing is to increase the number of layers or neurons per layer. But also the choice of connections between layers can improve the performance of the network. Other things that can be done is to introduce connections from higher layers to lower layers which makes it a recurrent neural network. They are especially suited for sequential or time-varying patterns \cite{medsker2001recurrent}. There is also a specific architecture for grid structured data like images. For them, convolutional neural networks are used to extract features \cite{li2021survey, gu2018recent, o2015introduction}. For further readings on different architecture choices, refer to \cite{liu2017survey}.
 
 In all cases, the weights of the network are updated automatically and it is impossible to understand the concrete decision making of the model. The weights are called parameters of the network. Besides them there are the hyperparameters that have to be fixed before training. They are design decisions how the network should behave. For some of them, experience can show which choices lead to better performances of the model but in all cases, they can be optimized which will be discussed in the following section \ref{sec:hyperparameter_optimization}. Some of the hyperparameters are
 \begin{itemize}
@@ -59,7 +59,7 @@ In all cases, the weights of the network are updated automatically and it is imp
 	\item Number of neurons in each layer
 \end{itemize}
 
-All these parameters can drastically influence the model performance. Some of them are independent and some of them depend each other. For example the number of epochs and learning rate are dependent because with higher number of epochs, the learning rate can be decreased as longer time to learn the data is available. 
+All these parameters can drastically influence the model performance. In the following section, different techniques for the optimization are presented.
 
 
 \section{Hyperparameter Optimization}\label{sec:hyperparameter_optimization}
@@ -70,7 +70,7 @@ Most machine learning models have parameters that have to be defined before the 
 	\lambda_{min} = \text{arg} \min_{\lambda \in \Lambda} f(\lambda) .
 \end{equation}
 
-In our case, the function f is a machine learning algorithm that is trained on a training set and evaluated on a test set. With this, the minimization of e.g. the loss of the model optimizes the decisions it is making which leads to better prediction results. Note that one function evaluation of f is usually very expensive as the training of a machine learning model with many parameters and weights takes much time. The data set consists of $ \{ (x_i, y_i) | x_i \in X, y_i \in Y, 0 \le i \le m \} $ with m being the number of data samples. The $ x_i $ is the input data to the model and the goal is that 
+In our case, the function f is a machine learning algorithm that is trained on a training set and evaluated on a validation set. With this, the minimization of e.g. the loss of the model optimizes the decisions it is making which leads to better prediction results. Note that one function evaluation of f is usually very expensive as the training of a machine learning model with many parameters and weights takes much time. The data set consists of $ \{ (x_i, y_i) | x_i \in X, y_i \in Y, 0 \le i \le m \} $ with m being the number of data samples. The $ x_i $ is the input data to the model and the goal is that 
 \begin{equation}
 	\forall i: M(x_i) = y_i.
 \end{equation}
@@ -99,7 +99,7 @@ The next technique \cite{random_search} is similar to the grid search because th
 	\label{fig:comparison_searches}
 \end{figure}
 
-In this figure, a two dimensional setting is depicted. For both techniques, 9 different combinations are evaluated. In the case of grid search, only 3 distinct values are taken for each hyperparameter while there are 9 different ones in the random search. In this example, the better result is found in random search as more distinct values are taken for the important parameter. Note that this is not always the case. 
+In this figure, a two dimensional setting is depicted. For both techniques, 9 different combinations are evaluated. In the case of grid search, only 3 distinct values are taken for each hyperparameter while there are 9 different ones in the random search. In this example, the better result is found in random search as more distinct values are taken for the important parameter. Note that it is not always the case that random search leads to better results.
 
 Compared to the normal grid search, this is one advantage. For each hyperparameter, $ b $ (budget) different values are taken into consideration which is much more compared to the grid search with the same overall number of combinations. Additionally, this technique is also easy to implement and relatively simple. 
 
@@ -165,7 +165,6 @@ Sparse grids are a useful tool to mitigate the \textit{curse of the dimensionali
 
 \subsection{Numerical Approximation of Functions}
 
-\cite{b_splines}
 Let $ f: \Omega \rightarrow R $ be a function defined on the unit interval $ \Omega = [0,1]^d $ in $ d $ dimensions. For simplicity, we first set $ d=1$. Now this function can be represented on a grid of level $ l \in \mathbb{N}_0 $ with $ 2^l + 1 $ grid points which are 
 \begin{equation}
 	x_{l,i} = i*h_l, \text{   } i = 0,...,2^l,
@@ -217,7 +216,7 @@ An example can be seen in Figure \ref{fig:hierarchical_basis}.
 	\label{fig:hierarchical_basis}
 \end{figure}
 
-On the left, you can see the hierarchical subspaces up to level 3. All in all, combined they span the same space as $ V_3 $. In the hierarchical case, a function $ f $ can also be interpolated by its interpolant $ u $ by 
+On the left, the hierarchical subspaces up to level 3 can be seen. All in all, combined they span the same space as $ V_3 $. In the hierarchical case, a function $ f $ can also be interpolated by its interpolant $ u $ by 
 \begin{equation}
 	u = \sum_{i \in I_l^h}\alpha_{l,i} \varphi_{l,i}, \forall i = 0,...,2^l: u(x_{l,i}) = f(x_{l,i}).
 \end{equation}
@@ -309,7 +308,7 @@ With the normal combination technique, this grid is still symmetric and focuses 
 In contrast to the previously mentioned refinement concentrating on whole dimensions, the \textit{spatially adaptive refinement} directly adds grid points where the discretization error is still high. An example of the spatially adaptive combination technique presented by \cite{obersteiner2021generalized} can be seen in figure \ref{fig:spatially_adaptive_combi_technique}. In this example, the basis points of the component grids are no longer equidistant because refinement was already made. 
 \\
 
-All in all, Table \ref{tab:comparison_grids} shows the comparison of full grids, sparse grids, and the combination technique in terms of number of points and interpolation accuracy \cite{pfluger2010spatially}.
+In summary, Table \ref{tab:comparison_grids} shows the comparison of full grids, sparse grids, and the combination technique in terms of number of points and interpolation accuracy \cite{pfluger2010spatially}.
 
 
 \begin{table}[h!]
@@ -365,3 +364,8 @@ This is the case for uniform B-splines. For adaptive grids, the distances betwee
 \end{equation}
 
 This definition and the proof that the hierarchical splitting also holds for using the B-splines for restricted functions can be found in \cite{b_splines}.
+
+\subsection{Hyperparameter Optimization with Sparse Grids}
+
+TODO: Optimization with Sparse grids
+

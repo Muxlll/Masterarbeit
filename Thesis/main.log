@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  28 FEB 2023 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  6 MAR 2023 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1780,96 +1780,90 @@ Package pdftex.def Info: figures/comparison_searches.png  used on input line 97
  [6 <./figures/comparison_searches.png>] [7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 131.
-<figures/bayesian_optimization.png, id=242, 1124.2pt x 1098.1025pt>
+<figures/bayesian_optimization.png, id=241, 1124.2pt x 1098.1025pt>
 File: figures/bayesian_optimization.png Graphic file (type png)
 <use figures/bayesian_optimization.png>
 Package pdftex.def Info: figures/bayesian_optimization.png  used on input line 
 150.
 (pdftex.def)             Requested size: 393.47589pt x 384.34163pt.
  [8] [9 <./figures/bayesian_optimization.png>] [10]
-<figures/weighted_sum.png, id=275, 835.12pt x 372.39125pt>
+<figures/weighted_sum.png, id=272, 835.12pt x 372.39125pt>
 File: figures/weighted_sum.png Graphic file (type png)
 <use figures/weighted_sum.png>
-Package pdftex.def Info: figures/weighted_sum.png  used on input line 197.
+Package pdftex.def Info: figures/weighted_sum.png  used on input line 196.
 (pdftex.def)             Requested size: 417.55898pt x 186.19516pt.
-<figures/hierarchical_basis.png, id=279, 699.61375pt x 299.1175pt>
+<figures/hierarchical_basis.png, id=276, 699.61375pt x 299.1175pt>
 File: figures/hierarchical_basis.png Graphic file (type png)
 <use figures/hierarchical_basis.png>
-Package pdftex.def Info: figures/hierarchical_basis.png  used on input line 215
+Package pdftex.def Info: figures/hierarchical_basis.png  used on input line 214
 .
 (pdftex.def)             Requested size: 349.80602pt x 149.55838pt.
  [11 <./figures/weighted_sum.png>]
-<figures/weighted_sum_hierarchical.png, id=294, 757.83125pt x 317.185pt>
+<figures/weighted_sum_hierarchical.png, id=291, 757.83125pt x 317.185pt>
 File: figures/weighted_sum_hierarchical.png Graphic file (type png)
 <use figures/weighted_sum_hierarchical.png>
 Package pdftex.def Info: figures/weighted_sum_hierarchical.png  used on input l
-ine 229.
+ine 228.
 (pdftex.def)             Requested size: 378.9147pt x 158.5921pt.
- [12 <./figures/hierarchical_basis.png> <./figures/weighted_sum_hierarchical.pn
-g>]
-<figures/2d_basis.png, id=305, 1061.9675pt x 804.00375pt>
+ [12 <./figures/hierarchical_basis.png>]
+<figures/2d_basis.png, id=306, 1061.9675pt x 804.00375pt>
 File: figures/2d_basis.png Graphic file (type png)
 <use figures/2d_basis.png>
-Package pdftex.def Info: figures/2d_basis.png  used on input line 258.
+Package pdftex.def Info: figures/2d_basis.png  used on input line 257.
 (pdftex.def)             Requested size: 276.10504pt x 209.03604pt.
- [13 <./figures/2d_basis.png>]
-<figures/subspaces_twodims.png, id=322, 666.49pt x 447.6725pt>
+ [13 <./figures/weighted_sum_hierarchical.png>]
+<figures/subspaces_twodims.png, id=323, 666.49pt x 447.6725pt>
 File: figures/subspaces_twodims.png Graphic file (type png)
 <use figures/subspaces_twodims.png>
-Package pdftex.def Info: figures/subspaces_twodims.png  used on input line 277.
+Package pdftex.def Info: figures/subspaces_twodims.png  used on input line 276.
 
 (pdftex.def)             Requested size: 333.24419pt x 223.8357pt.
- [14 <./figures/subspaces_twodims.png>]
-<figures/normal_combi_technique.png, id=340, 1136.245pt x 1099.10625pt>
+ [14 <./figures/2d_basis.png>]
+<figures/normal_combi_technique.png, id=343, 1136.245pt x 1099.10625pt>
 File: figures/normal_combi_technique.png Graphic file (type png)
 <use figures/normal_combi_technique.png>
 Package pdftex.def Info: figures/normal_combi_technique.png  used on input line
- 302.
+ 301.
 (pdftex.def)             Requested size: 204.51527pt x 197.83058pt.
-<figures/adaptive_combination_technique.png, id=341, 1141.26375pt x 1093.08376p
+<figures/adaptive_combination_technique.png, id=344, 1141.26375pt x 1093.08376p
 t>
 File: figures/adaptive_combination_technique.png Graphic file (type png)
 <use figures/adaptive_combination_technique.png>
 Package pdftex.def Info: figures/adaptive_combination_technique.png  used on in
-put line 303.
+put line 302.
 (pdftex.def)             Requested size: 205.41861pt x 196.74658pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--311
+Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+eus on input line 321
+[15 <./figures/subspaces_twodims.png>]
+LaTeX Font Info:    Trying to load font information for U+eus on input line 320
 .
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/spatially_adaptive_combi_technique.png, id=348, 2071.74pt x 827.09pt>
+<figures/spatially_adaptive_combi_technique.png, id=360, 2071.74pt x 827.09pt>
 File: figures/spatially_adaptive_combi_technique.png Graphic file (type png)
 <use figures/spatially_adaptive_combi_technique.png>
 Package pdftex.def Info: figures/spatially_adaptive_combi_technique.png  used o
-n input line 332.
+n input line 331.
 (pdftex.def)             Requested size: 414.34067pt x 165.41505pt.
-[15] [16 <./figures/normal_combi_technique.png> <./figures/adaptive_combination
-_technique.png> <./figures/spatially_adaptive_combi_technique.png>] [17])
-(./chapters/03_related_work.tex [18]
+ [16 <./figures/normal_combi_technique.png> <./figures/adaptive_combination_tec
+hnique.png>]
+[17 <./figures/spatially_adaptive_combi_technique.png>])
+(./chapters/04_hyperparameter_optimization.tex [18]
 chapter 3.
-) (./chapters/04_hyperparameter_optimization.tex [19
+) (./chapters/05_conclusion_and_outlook.tex [19
 
 
 ]
 chapter 4.
-) (./chapters/05_conclusion_and_outlook.tex [20
-
-
-]
-chapter 5.
-) [21
+) [20
 
 
 ]
@@ -1879,7 +1873,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 96
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [22
+ [21
 
 
 ]
@@ -1889,7 +1883,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 97
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [23
+ [22
 
 
 ]
@@ -1901,7 +1895,7 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[24
+[23
 
 
 ]
@@ -1917,23 +1911,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [25]
+ [24]
 No complaints by nag.
-[26] (./main.aux)
+[25] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53415 strings out of 480121
- 1213153 string characters out of 5892160
- 2200730 words of memory out of 5000000
- 69808 multiletter control sequences out of 15000+600000
- 538076 words of font info for 389 fonts, out of 8000000 for 9000
+ 53403 strings out of 480121
+ 1212923 string characters out of 5892160
+ 2198652 words of memory out of 5000000
+ 69804 multiletter control sequences out of 15000+600000
+ 537935 words of font info for 386 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 115i,13n,109p,10599b,2624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,13n,109p,10599b,2626s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
 k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
@@ -1947,10 +1949,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (33 pages, 1756093 bytes).
+Output written on main.pdf (32 pages, 1755495 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
- 528 compressed objects within 6 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 143 named destinations out of 1000 (max. 500000)
  92443 words of extra memory for PDF output out of 106986 (max. 10000000)
 
