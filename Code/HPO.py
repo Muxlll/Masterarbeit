@@ -57,18 +57,28 @@ class Dataset:
         X, Y = shuffle(X, Y)
 
         self.X_train = torch.Tensor(X[:int(len(X) * ratio)])
+        self.X_validation = torch.Tensor(self.X_train[int(len(self.X_train) * ratio):])
+        self.X_train = torch.Tensor(self.X_train[:int(len(self.X_train) * ratio)])
         self.X_test = torch.Tensor(X[int(len(X) * ratio):])
         self.Y_train = torch.Tensor(Y[:int(len(Y) * ratio)])
+        self.Y_validation = torch.Tensor(self.Y_train[int(len(self.Y_train) * ratio):])
+        self.Y_train = torch.Tensor(self.Y_train[:int(len(self.Y_train) * ratio)])
         self.Y_test = torch.Tensor(Y[int(len(Y) * ratio):])
 
     def get_X_train(self):
         return self.X_train
 
+    def get_X_validation(self):
+        return self.X_validation
+    
     def get_X_test(self):
         return self.X_test
 
     def get_Y_train(self):
         return self.Y_train
+    
+    def get_Y_validation(self):
+        return self.Y_validation
 
     def get_Y_test(self):
         return self.Y_test
@@ -340,13 +350,17 @@ class Optimization:
         if self.type == "grid_search":
             clf = GridSearchCV(
                 self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
-            return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
+            X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
+            Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
+            return clf.fit(X_fit, Y_fit)
 
         elif self.type == "random_search":
 
             clf = RandomizedSearchCV(
                 self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, verbose=self.verbosity, n_iter=self.budget)
-            return clf.fit(self.dataset.get_X(), self.dataset.get_Y())
+            X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
+            Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
+            return clf.fit(X_fit, Y_fit)
 
         elif self.type == "bayesian":
             return bayesian_optimisation(self.dataset.get_X(), self.dataset.get_Y(), self.budget, self.model, self.hyperparameterspace_processed)
@@ -378,13 +392,22 @@ class Optimization:
             if d == 2:
                 x_values = []
                 y_values = []
+                z_values = []
                 for i in range(gridStorage.getSize()):
                     gp = gridStorage.getPoint(i)
                     x_values.append(gp.getStandardCoordinate(0))
                     y_values.append(gp.getStandardCoordinate(1))
+                    z_values.append(functionValues[i])
+
+                #if self.verbosity >= 1:
+                #    plt.plot(x_values, y_values, 'bo')
 
                 if self.verbosity >= 1:
-                    plt.plot(x_values, y_values, 'bo')
+                    fig = plt.figure()
+                    ax = plt.axes(projection='3d')
+
+                    ax.plot_trisurf(x_values, y_values, z_values)
+                    plt.show()
 
             ######################################## grid functions ########################################
             # Hierarchization
@@ -455,6 +478,6 @@ class Optimization:
                 print("Resulting loss (Optimal point evaluated):")
                 print(fXOpt)
 
-            return xOpt
+            return x0
         else:
             AssertionError("Type not specified correctly")
