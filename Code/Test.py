@@ -1,3 +1,4 @@
+
 import HPO
 
 import pysgpp
@@ -21,6 +22,8 @@ from tensorflow.keras.layers import Dense
 from scikeras.wrappers import KerasRegressor
 
 import sklearn.metrics
+
+import timeit
 
 def to_standard(lower, upper, value):
     return (value-lower)/(upper-lower)
@@ -48,18 +51,26 @@ X = X.reshape(-1, 1)
 
 dataset = HPO.Dataset(X, Y)
 
-BUDGET = 1
-VERBOSE = 2
+BUDGET = 2
+VERBOSE = 0
 CV = 2
 SCORING = 'neg_mean_squared_error'
 TESTING = False
 
+ITER = 10
 
-GRID_RESULT = 0.0
-RANDOM_RESULT = 0.0
-BAYESIAN_RESULT = 0.0
-SPARSE_RESULT = 0.0
+BUDGETS = [i*10 for i in range(1, ITER+1)]
 
+GRID_RESULT = []
+RANDOM_RESULT = []
+BAYESIAN_RESULT = []
+SPARSE_RESULT = []
+SPARSE_RESULT_OPTIMIZED = []
+
+GRID_TIME = []
+RANDOM_TIME = []
+BAYESIAN_TIME = []
+SPARSE_TIME = []
 
 
 hyperparameterspace = {
@@ -171,11 +182,27 @@ class ExampleFunction(pysgpp.ScalarFunction):
             return sklearn.metrics.mean_squared_error(dataset.get_Y_validation().tolist(), Y_predicted)
         
 
-f = ExampleFunction()
 
-optimization = HPO.Optimization(dataset, f, hyperparameterspace, type="sparse", budget=BUDGET, verbosity=VERBOSE)
-result = optimization.fit()
 
-TESTING = True
-SPARSE_RESULT = f.eval(result)
-TESTING = False
+
+
+BUDGET = 10
+for i in range(1, ITER+1):
+    BUDGET = 10*i
+
+    f = ExampleFunction()
+
+    optimization = HPO.Optimization(dataset, f, hyperparameterspace, type="sparse", budget=BUDGET, verbosity=VERBOSE)
+
+    starttime = timeit.default_timer()
+    result = optimization.fit()
+    endtime = timeit.default_timer()
+
+    print(result)
+
+    TESTING = True
+    SPARSE_RESULT.append(f.eval(result[0]))
+    SPARSE_RESULT_OPTIMIZED.append(f.eval(result[1]))
+    TESTING = False
+
+    SPARSE_TIME.append(endtime - starttime)

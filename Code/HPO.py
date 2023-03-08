@@ -290,10 +290,13 @@ def from_standard(lower, upper, value):
         type:                   available ones: "grid_search", "random_search", "bayesian", "sparse"
         budget:                 upper bound for number of model evaluations
         verbosity:              verbosity for output
-        sparse_params:          list of values: [B-spline_degree, adaptivity]
+        sparse_params:          list of values: [B-spline_degree, adaptivity, optimizer] 
+                                        optimizers: one of ["adaptive_gradient_descent", "adaptive_newton", "bfgs", "cmaes", 
+                                                            "differential_evolution", "gradient_descent", "nlcg", "nelder_mead", 
+                                                            "newton", "rprop"]
 """
 class Optimization:
-    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", cv=5, scoring='neg_mean_squared_error', budget=100, verbosity=1, sparse_params=[3, 0.95]) -> None:
+    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", cv=5, scoring='neg_mean_squared_error', budget=100, verbosity=1, sparse_params=[3, 0.95, "gradient_descent"]) -> None:
         self.dataset = dataset
         self.model = model
         self.hyperparameterspace = hyperparameterspace
@@ -377,6 +380,8 @@ class Optimization:
             N = self.budget
             # adaptivity of grid generation
             gamma = self.sparse_params[1]
+            # choice of optimizer
+            optimizer_choice = self.sparse_params[2]
 
             grid = pysgpp.Grid.createModBsplineGrid(d, p)
             gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(
@@ -423,9 +428,33 @@ class Optimization:
             # define interpolant and gradient
             ft = pysgpp.InterpolantScalarFunction(grid, coeffs)
             ftGradient = pysgpp.InterpolantScalarFunctionGradient(grid, coeffs)
-            gradientDescent = pysgpp.OptGradientDescent(ft, ftGradient)
             x0 = pysgpp.DataVector(d)
+            hessian = pysgpp.InterpolantScalarFunctionHessian(grid, coeffs)
+            
 
+            if optimizer_choice == "adaptive_gradient_descent":
+                optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
+            elif optimizer_choice == "adaptive_newton":
+                optimizer = pysgpp.OptAdaptiveNewton(ft, hessian)
+            elif optimizer_choice == "bfgs":
+                optimizer = pysgpp.OptBFGS(ft, ftGradient)
+            elif optimizer_choice == "cmaes":
+                optimizer = pysgpp.OptCMAES(ft, 100)
+            elif optimizer_choice == "differential_evolution":
+                optimizer = pysgpp.OptDifferentialEvolution(ft)
+            elif optimizer_choice == "gradient_descent":
+                optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
+            elif optimizer_choice == "":
+                optimizer = pysgpp.OptMultiStart() # default: NelderMead 
+            elif optimizer_choice == "nlcg":
+                optimizer = pysgpp.OptNLCG(ft, ftGradient)
+            elif optimizer_choice == "nelder_mead":
+                optimizer = pysgpp.OptNelderMead(ft)
+            elif optimizer_choice == "newton":
+                optimizer = pysgpp.OptNewton(ft, hessian)
+            elif optimizer_choice == "rprop":
+                optimizer = pysgpp.OptRprop(ft, ftGradient)
+            
             ##################### find point with minimal loss (which are already evaluated) #################
 
             # find point with smallest value as start point for gradient descent
@@ -456,10 +485,10 @@ class Optimization:
             ################################## Optimize with gradient descent ##################################
 
             # We apply the gradient method and print the results.
-            gradientDescent.setStartingPoint(x0)
-            gradientDescent.optimize()
-            xOpt = gradientDescent.getOptimalPoint()
-            ftXOpt = gradientDescent.getOptimalValue()
+            optimizer.setStartingPoint(x0)
+            optimizer.optimize()
+            xOpt = optimizer.getOptimalPoint()
+            ftXOpt = optimizer.getOptimalValue()
 
             fXOpt = f.eval(xOpt)
             if self.verbosity > 0:
@@ -477,7 +506,13 @@ class Optimization:
                 print(ftXOpt)
                 print("Resulting loss (Optimal point evaluated):")
                 print(fXOpt)
+            
+            x0_vec = []
+            xOpt_vec = []
+            for i in range(len(x0)):
+                x0_vec.append(x0[i])
+                xOpt_vec.append(xOpt[i])
 
-            return x0
+            return x0_vec, xOpt_vec
         else:
             AssertionError("Type not specified correctly")

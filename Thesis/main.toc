@@ -13,8 +13,8 @@
 \contentsline {subsection}{\numberline {2.3.1}Numerical Approximation of Functions}{10}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{13}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{16}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Hyperparameter Optimization with Sparse Grids}{18}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}Main Part}{19}{chapter.3}%
+\contentsline {subsection}{\numberline {2.3.4}Optimization with Sparse Grids}{18}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Methodology}{19}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{19}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{19}{subsection.3.1.2}%
