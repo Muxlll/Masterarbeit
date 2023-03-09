@@ -367,5 +367,72 @@ This definition and the proof that the hierarchical splitting also holds for usi
 
 \subsection{Optimization with Sparse Grids}
 
+In general, an optimization problem can be constrained or unconstrained. In the first case, additionally to finding an optimum, there is a constraint that has to be fulfilled. In the case of sparse grids within the standard hypercube, the input values are restricted to the interval $ [0,1] $. The optimization problem which is called \textit{box-constrained} can be solved by defining the function outside the box as infinity with $ f(x) = +\infty $ for all $ x \notin \Omega = [0,1]^d $. 
+
+Depending on whether the optimization algorithm uses the gradient or not, it is called a gradient-based method or gradient-free method, respectively. In the following, algorithms of both types are presented \cite{b_splines}.
+
+\paragraph{Gradient-Free Methods}
+
+\subparagraph{Nelder Mead Method}
+This iterative algorithm stores $ d+1 $ vertices of a $ d $-dimensional simplex in ascending order of function values. In each round, either reflection, expansion, outer contraction, inner contraction or shrinking is performed on the vertices. In this way, the simplex contracts around the optimum.
+
+\subparagraph{Differential Evolution}
+This algorithm maintains a list of points which are iteratively updated by the weighted sum of the previous generation. The mutated vector is \textit{crossed over} with the original vector entry by entry and the resulting points are only accepted if they have better function values. 
+
+\subparagraph{CMA-ES}
+CMA-ES (covariance matrix adaption, evolution strategy) keeps track of the covariance matrix of the Gaussian search distribution. After sampling $ m $ points from the current distribution, the $ k $ best samples are used to calculate the distribution of the next iteration as the weighted mean of them. Then the covariance matrix is updated.
+
+\paragraph{Gradient-Based Methods}
+Important values for the following methods are the \textit{gradient} $ \nabla_x f(x_k) $ and the \textit{Hessian} $ \nabla_x^2 f(x_k) $. Most methods of this type update the current position in each iteration with 
+\begin{equation}
+	x_{k+1} = x_k + \delta_k d_k 	
+\end{equation}
+where $ \delta_k $ is the step size and $ d_k $ is the search direction.
+
+\subparagraph{Gradient Descent}
+This method uses the gradient and sets the search direction to the standardized negative gradient at this point with $ d_k \propto -\nabla_x f(x_k) $. If the Hessian is ill-conditioned, then the convergence is slow. 
+
+\subparagraph{NLCG}
+NLCG (non-linear conjugate gradients) is equivalent to the conjugate gradient method when optimizing function of the form $ f(x) = \frac{1}{2} x^T A x - b^T x $. It finds the optimum after $ d $ steps for strictly convex quadratic functions. According to the Taylor theorem, it converges also for non-convex functions that are three times continuously differentiable with positive definite Hessian because those functions are similar to strictly convex quadratic function in a the region of the optimum.
+
+\subparagraph{Newton}
+This method replaces the objective function with the second-order Taylor approximation $ f(x_k + d_k) \approx f(x_k) + (\nabla_x f(x_k))^T d_k + \frac{1}{2}(d_k)^T(\nabla_x^2) f(x_k)) d_k $ and sets the search direction to $ d_k \propto-( \nabla_x^2 f(x_k))^{-1} \nabla_x f(x_k)$. This way $ x_k + d_k $ is the minimum of the approximation. 
+
+\subparagraph{BFGS}
+BFGS (Broyden, Fletcher, Goldfarb, Shanno) is a quasi-newton method. The previous technique has the disadvantage that the Hessian has to be evaluated which is expensive. BFGS approximate this matrix by a solution of $  \nabla_x^2 f(x_k)( x_k - x_{k-1} ) \approx \nabla_x f(x_k) - \nabla_x f(x_{k-1}) $.
+
+\subparagraph{Rprop}
+Rprop (resilient propagation) is not dependent of the exact direction of the gradient of the function but often works robustly in machine learning scenarios. The gradient entries are considered separately for each dimension and the entries of the current point $ x_k $ are updated depending on the sign of the gradient entry. Also the step size is adapted dimension-wise. \newline 
+
+For constrained optimization methods, refer to \cite{b_splines}. There, the optimal point has to be found while constraining another function $ g $ with $ x_{opt} = arg min f(x), \text{ such that } g(x) \ge 0 $. 
+\newline 
+
+One application of the optimization with sparse grids is presented in \cite{valentin2018gradient}. The goal was to solve forward-dynamics simulations of three-dimensional, continuum-mechanical musculoskeletal system models. The authors use B-splines on sparse grids for surrogates of the muscle model and use it in simulations that are subject to constraint optimization. 
+\newline 
+
+An alternative approach for global optimization of a function is presented by \cite{novak1996global}. One application is dealing with induction motor parameter estimation \cite{duan2016induction}. There, the search space is discretized using the hyperbolic cross points (HPC). In one dimension, the points of level $ k $ are defined with 
+\begin{equation}
+	x = \pm \sum_{j=1}^{k} a_j 2^{-j}, a_j \in {0,1}.
+\end{equation}
+The representation of those points (but not $ 0 $) is unique, for example $ 0.375 = 0 \times 2^{-1} + 1 \times 2^{-2} + 1 \times 2 ^{-3} $. The level of a three-dimensional point $ [0.25, 0.375, 0] $ is $ 5 $. Figure \ref{fig:hyperbolic} shows the HPC for $ k = 5 $.
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.18]{figures/hyperbolic.png}
+	\caption{ HPC of level $ k = 5 $ (red stars) and full grid (black dots). A full grid would have $ 33^2 = 1089 $ and this grid has $ 147 $ points. Taken from \cite{duan2016induction}.}
+	\label{fig:hyperbolic}
+\end{figure}
+
+A full grid of this level has $ 1089 $ points, whereas the number of HPCs is $ 147 $ which is much less, although the aacuray is nearly as good as the full grid with $ \mathcal{O}(N^{-2} \cdot (\text{log}N)^{d-1}) $ with N being the number of grid points in one dimension. Now with the reduced number of search points, the optimization is made faster while still getting accurate results. 
+\newline 
+
+The optimization problem generally applies in various scientific fields. The authors of \cite{saska2007path} present an application for path planning of car-like robots. The same global minimization approach based on sparse grids is used as in the previous application using the HPCs \cite{duan2016induction, novak1996global}.
+\newline 
+
+Another method for optimization is presented in \cite{hulsmann2013spagrow}. The authors introduce an optimization scheme based on sparse grids and smoothing that is derivative-free. It is an iterative algorithm for finding a local optimum.
+
+Similar to this method, the authors of \cite{chen2013derivative} also present a derivative-free optimization based on sparse grid numerical integration. Their technique applies to smooth nonlinear objective functions where the gradient is not available and point evaluations are very expensive.
+
+Also the authors of \cite{sankaran2009stochastic} present an optimization with the help of sparse grids. They concentrate on computing a probability density function (PDF) where the presence of uncertainties in boundary conditions and material properties make it more complicated.
 
 

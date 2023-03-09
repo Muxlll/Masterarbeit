@@ -13,6 +13,7 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Two dimensional example of a sparse grid with $ n = 3 $. Left, the subspaces $ W_{\vec {l}} $ can be seen and on the right is the resulting sparse grid. Taken from \blx@tocontentsinit {0}\cite {garcke2013sparse}. \relax }}{15}{figure.caption.12}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Example of the 2-dimensional combination technique. Here the blue regular grids are added and the red ones are subtracted. On the left, the normal combination technique can be seen and on the right is an dimension-adaptive version. Taken from \blx@tocontentsinit {0}\cite {pfluger2010spatially}. \relax }}{16}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Example of the spatially adaptive combination technique in two dimensions. Taken from \blx@tocontentsinit {0}\cite {obersteiner2021generalized}. \relax }}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces HPC of level $ k = 5 $ (red stars) and full grid (black dots). A full grid would have $ 33^2 = 1089 $ and this grid has $ 147 $ points. Taken from \blx@tocontentsinit {0}\cite {duan2016induction}.\relax }}{20}{figure.caption.36}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

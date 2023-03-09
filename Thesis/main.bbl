@@ -1141,45 +1141,14 @@
       \field{title}{CMA-ES for hyperparameter optimization of deep neural networks}
       \field{year}{2016}
     \endentry
-    \entry{b_splines}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=06a62916f96f396a2a807520c092d764}{%
-           family={Valentin},
-           familyi={V\bibinitperiod},
-           given={Julian},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{06a62916f96f396a2a807520c092d764}
-      \strng{fullhash}{06a62916f96f396a2a807520c092d764}
-      \strng{bibnamehash}{06a62916f96f396a2a807520c092d764}
-      \strng{authorbibnamehash}{06a62916f96f396a2a807520c092d764}
-      \strng{authornamehash}{06a62916f96f396a2a807520c092d764}
-      \strng{authorfullhash}{06a62916f96f396a2a807520c092d764}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{B-splines for sparse grids : algorithms and application to higher-dimensional optimization}
-      \field{year}{2019}
-      \verb{doi}
-      \verb http://dx.doi.org/10.18419/opus-10504
-      \endverb
-      \verb{urlraw}
-      \verb http://nbn-resolving.de/urn:nbn:de:bsz:93-opus-ds-105215
-      \endverb
-      \verb{url}
-      \verb http://nbn-resolving.de/urn:nbn:de:bsz:93-opus-ds-105215
-      \endverb
-    \endentry
     \entry{pfluger2010spatially}{thesis}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=33c391612cc957b953f1bed8dc793cda}{%
+        {{un=1,uniquepart=given,hash=33c391612cc957b953f1bed8dc793cda}{%
            family={Pflüger},
            familyi={P\bibinitperiod},
            given={Dirk\bibnamedelima Michael},
            giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{institution}{1}{%
         {Technische Universität München}%
@@ -1225,6 +1194,29 @@
       \field{year}{2013}
       \field{pages}{57\bibrangedash 80}
       \range{pages}{24}
+    \endentry
+    \entry{b_splines}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=06a62916f96f396a2a807520c092d764}{%
+           family={Valentin},
+           familyi={V\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{06a62916f96f396a2a807520c092d764}
+      \strng{fullhash}{06a62916f96f396a2a807520c092d764}
+      \strng{bibnamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authorbibnamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authornamehash}{06a62916f96f396a2a807520c092d764}
+      \strng{authorfullhash}{06a62916f96f396a2a807520c092d764}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1910.05379}
+      \field{title}{B-splines for sparse grids: Algorithms and application to higher-dimensional optimization}
+      \field{year}{2019}
     \endentry
     \entry{zenger1991sparse}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1389,8 +1381,8 @@
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM Journal on Scientific Computing}
@@ -1477,11 +1469,319 @@
       \strng{authorbibnamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authornamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authorfullhash}{57f79f590d6c2235e42127c6f6c5e557}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Approximation and modeling with B-splines}
+      \field{year}{2013}
+    \endentry
+    \entry{valentin2018gradient}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=52a04628c37cf0a472025cd8a7618aaf}{%
+           family={Valentin},
+           familyi={V\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12a0881920fbeb31718402fe2ca7f589}{%
+           family={Sprenger},
+           familyi={S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=8a8b143f5f50ccd94134c763a0d0d527}{%
+           family={Pflüger},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=37badbc52c2f28e830996edc1505b496}{%
+           family={Röhrle},
+           familyi={R\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5e2003a754fd2e436ade2acdca17e046}
+      \strng{fullhash}{5e2003a754fd2e436ade2acdca17e046}
+      \strng{bibnamehash}{5e2003a754fd2e436ade2acdca17e046}
+      \strng{authorbibnamehash}{5e2003a754fd2e436ade2acdca17e046}
+      \strng{authornamehash}{5e2003a754fd2e436ade2acdca17e046}
+      \strng{authorfullhash}{5e2003a754fd2e436ade2acdca17e046}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Approximation and modeling with B-splines}
+      \field{journaltitle}{International journal for numerical methods in biomedical engineering}
+      \field{number}{5}
+      \field{title}{Gradient-based optimization with b-splines on sparse grids for solving forward-dynamics simulations of three-dimensional, continuum-mechanical musculoskeletal system models}
+      \field{volume}{34}
+      \field{year}{2018}
+      \field{pages}{e2965}
+      \range{pages}{-1}
+    \endentry
+    \entry{novak1996global}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b921f8d0f55cbd9ffb8bc589460082f9}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4ada04a4ca5499333195c24dfce4878}{%
+           family={Ritter},
+           familyi={R\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f54e400205446843acf6022e87953c76}
+      \strng{fullhash}{f54e400205446843acf6022e87953c76}
+      \strng{bibnamehash}{f54e400205446843acf6022e87953c76}
+      \strng{authorbibnamehash}{f54e400205446843acf6022e87953c76}
+      \strng{authornamehash}{f54e400205446843acf6022e87953c76}
+      \strng{authorfullhash}{f54e400205446843acf6022e87953c76}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{State of the art in global optimization: computational methods and applications}
+      \field{title}{Global optimization using hyperbolic cross points}
+      \field{year}{1996}
+      \field{pages}{19\bibrangedash 33}
+      \range{pages}{15}
+    \endentry
+    \entry{duan2016induction}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6638dedb5ebae9de09d926c74521c3b6}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Fang},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6b81f6f7b107f1c3ebd280df415fcc2}{%
+           family={Živanović},
+           familyi={Ž\bibinitperiod},
+           given={Rastko},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9c46a3fd510c87cb6083dfc44513a39}{%
+           family={Al-Sarawi},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Said},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4238bf6f0b77e939c556690fa0fec7a2}{%
+           family={Mba},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \strng{fullhash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \strng{bibnamehash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \strng{authorbibnamehash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \strng{authornamehash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \strng{authorfullhash}{5e08d14637d0d8068f56416afd0e1f2a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Informatics}
+      \field{number}{4}
+      \field{title}{Induction motor parameter estimation using sparse grid optimization algorithm}
+      \field{volume}{12}
+      \field{year}{2016}
+      \field{pages}{1453\bibrangedash 1461}
+      \range{pages}{9}
+    \endentry
+    \entry{donahue2009robust}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=66574ffdfaa9337cfd31ad5995de456c}{%
+           family={Donahue},
+           familyi={D\bibinitperiod},
+           given={Maia\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fd57869e5d24705f27babb11cdf4030}{%
+           family={Buzzard},
+           familyi={B\bibinitperiod},
+           given={Gregery\bibnamedelima T},
+           giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=270727a52fc52985e91660fbf5a0f1be}{%
+           family={Rundell},
+           familyi={R\bibinitperiod},
+           given={Ann\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \strng{fullhash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \strng{bibnamehash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \strng{authorbibnamehash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \strng{authornamehash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \strng{authorfullhash}{8517a8857d7b151bad4e67d9fcd6feca}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 American Control Conference}
+      \field{title}{Robust parameter identification with adaptive sparse grid-based optimization for nonlinear systems biology models}
+      \field{year}{2009}
+      \field{pages}{5055\bibrangedash 5060}
+      \range{pages}{6}
+    \endentry
+    \entry{saska2007path}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=1c4a0f082712290a68f2e5fbdb3a8b74}{%
+           family={Saska},
+           familyi={S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ee641ab7c166dd542f2e20e2feb0367}{%
+           family={Ferenczi},
+           familyi={F\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f90a5b9cf42dca80d19a2a623114a3e2}{%
+           family={Hess},
+           familyi={H\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9357ac779f048b3512ec95aad9a80930}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \strng{fullhash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \strng{bibnamehash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \strng{authorbibnamehash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \strng{authornamehash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \strng{authorfullhash}{494cae74b7990cd042e76f4c74e0b6f2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. of The 13th IASTED International Conference on Robotics and Applications (RA 2007)}
+      \field{title}{Path planning for formations using global optimization with sparse grids}
+      \field{year}{2007}
+    \endentry
+    \entry{hulsmann2013spagrow}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=65b258126d1fc6171ad87baaa6e5d258}{%
+           family={Hülsmann},
+           familyi={H\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c6813f6a488f5492769c8178d8c8227}{%
+           family={Reith},
+           familyi={R\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{54ded902baa89791ba22380a77373ae3}
+      \strng{fullhash}{54ded902baa89791ba22380a77373ae3}
+      \strng{bibnamehash}{54ded902baa89791ba22380a77373ae3}
+      \strng{authorbibnamehash}{54ded902baa89791ba22380a77373ae3}
+      \strng{authornamehash}{54ded902baa89791ba22380a77373ae3}
+      \strng{authorfullhash}{54ded902baa89791ba22380a77373ae3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Entropy}
+      \field{number}{9}
+      \field{title}{SpaGrOW—A derivative-free optimization scheme for intermolecular force field parameters based on sparse grid methods}
+      \field{volume}{15}
+      \field{year}{2013}
+      \field{pages}{3640\bibrangedash 3687}
+      \range{pages}{48}
+    \endentry
+    \entry{sankaran2009stochastic}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9fb22a0f23a43f9a2bcd30894e0e1e83}{%
+           family={Sankaran},
+           familyi={S\bibinitperiod},
+           given={Sethuraman},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \strng{fullhash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \strng{bibnamehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \strng{authorbibnamehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \strng{authornamehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \strng{authorfullhash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Probabilistic engineering mechanics}
+      \field{number}{3}
+      \field{title}{Stochastic optimization using a sparse grid collocation scheme}
+      \field{volume}{24}
+      \field{year}{2009}
+      \field{pages}{382\bibrangedash 396}
+      \range{pages}{15}
+    \endentry
+    \entry{chen2013derivative}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7ee198e6ce8a5d7c1de1e44025618691}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shengyuan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=e88500bd6ca50746707a22554761b61a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaogang},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific Research Publishing}%
+      }
+      \strng{namehash}{c8fbe7650361f8337771821fd34ef1d3}
+      \strng{fullhash}{c8fbe7650361f8337771821fd34ef1d3}
+      \strng{bibnamehash}{c8fbe7650361f8337771821fd34ef1d3}
+      \strng{authorbibnamehash}{c8fbe7650361f8337771821fd34ef1d3}
+      \strng{authornamehash}{c8fbe7650361f8337771821fd34ef1d3}
+      \strng{authorfullhash}{c8fbe7650361f8337771821fd34ef1d3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A derivative-free optimization algorithm using sparse grid integration}
       \field{year}{2013}
     \endentry
   \enddatalist

@@ -14,13 +14,23 @@
 \contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{13}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{16}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Optimization with Sparse Grids}{18}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodology}{19}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{19}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Implementation}{19}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Results}{19}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{20}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{21}{chapter*.16}%
-\contentsline {chapter}{\nonumberline List of Tables}{22}{chapter*.17}%
-\contentsline {chapter}{\nonumberline Bibliography}{23}{chapter*.18}%
+\contentsline {paragraph}{\nonumberline Gradient-Free Methods}{18}{paragraph*.17}%
+\contentsline {subparagraph}{\nonumberline Nelder Mead Method}{18}{subparagraph*.19}%
+\contentsline {subparagraph}{\nonumberline Differential Evolution}{18}{subparagraph*.21}%
+\contentsline {subparagraph}{\nonumberline CMA-ES}{18}{subparagraph*.23}%
+\contentsline {paragraph}{\nonumberline Gradient-Based Methods}{19}{paragraph*.25}%
+\contentsline {subparagraph}{\nonumberline Gradient Descent}{19}{subparagraph*.27}%
+\contentsline {subparagraph}{\nonumberline NLCG}{19}{subparagraph*.29}%
+\contentsline {subparagraph}{\nonumberline Newton}{19}{subparagraph*.31}%
+\contentsline {subparagraph}{\nonumberline BFGS}{19}{subparagraph*.33}%
+\contentsline {subparagraph}{\nonumberline Rprop}{19}{subparagraph*.35}%
+\contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology}{22}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Results}{22}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{23}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{24}{chapter*.37}%
+\contentsline {chapter}{\nonumberline List of Tables}{26}{chapter*.38}%
+\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.39}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
