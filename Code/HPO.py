@@ -168,7 +168,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
     return best_x
 
 
-def bayesian_optimisation(X, Y, n_iters, sample_loss, bounds, x0=None, n_pre_samples=5,
+def bayesian_optimisation(n_iters, sample_loss, bounds, x0=None, n_pre_samples=5,
                           gp_params=None, random_search=False, alpha=1e-5, epsilon=1e-7):
     """ bayesian_optimisation
     Uses Gaussian Processes to optimise the loss function `sample_loss`.
@@ -288,6 +288,8 @@ def from_standard(lower, upper, value):
         model:                  model to find the best params for (can be model or blackbox function depending on type)
         hyperparameterspace:    definition of hyperparameter space (dict with "list" or "interval" as first element of list)
         type:                   available ones: "grid_search", "random_search", "bayesian", "sparse"
+        cv:                     k parameter for cross validation (k-fold cv)
+        scoring:                metric for evaluating model
         budget:                 upper bound for number of model evaluations
         verbosity:              verbosity for output
         sparse_params:          list of values: [B-spline_degree, adaptivity, optimizer] 
@@ -296,7 +298,18 @@ def from_standard(lower, upper, value):
                                                             "newton", "rprop"]
 """
 class Optimization:
-    def __init__(self, dataset, model, hyperparameterspace, type="grid_search", cv=5, scoring='neg_mean_squared_error', budget=100, verbosity=1, sparse_params=[3, 0.95, "gradient_descent"]) -> None:
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 type: str = "grid_search", 
+                 cv: int = 5, 
+                 scoring: str = 'neg_mean_squared_error', 
+                 budget: int = 100, 
+                 verbosity: int = 1, 
+                 sparse_params: list = [3, 0.95, "gradient_descent"]) -> None:
+        
+
         self.dataset = dataset
         self.model = model
         self.hyperparameterspace = hyperparameterspace
@@ -366,7 +379,7 @@ class Optimization:
             return clf.fit(X_fit, Y_fit)
 
         elif self.type == "bayesian":
-            return bayesian_optimisation(self.dataset.get_X(), self.dataset.get_Y(), self.budget, self.model, self.hyperparameterspace_processed)
+            return bayesian_optimisation(self.budget, self.model, self.hyperparameterspace_processed)
         
         elif self.type == "sparse":
 
@@ -454,6 +467,9 @@ class Optimization:
                 optimizer = pysgpp.OptNewton(ft, hessian)
             elif optimizer_choice == "rprop":
                 optimizer = pysgpp.OptRprop(ft, ftGradient)
+            else:
+                print("Please specify optimizer!")
+                sys.exit(1)
             
             ##################### find point with minimal loss (which are already evaluated) #################
 
