@@ -367,7 +367,7 @@ This definition and the proof that the hierarchical splitting also holds for usi
 
 \subsection{Optimization with Sparse Grids}
 
-In general, an optimization problem can be constrained or unconstrained. In the first case, additionally to finding an optimum, there is a constraint that has to be fulfilled. In the case of sparse grids within the standard hypercube, the input values are restricted to the interval $ [0,1] $. The optimization problem which is called \textit{box-constrained} can be solved by defining the function outside the box as infinity with $ f(x) = +\infty $ for all $ x \notin \Omega = [0,1]^d $. 
+In general, an optimization problem can be constrained or unconstrained. In the first case, additionally to finding an optimum, there is a constraint that has to be fulfilled. In the case of sparse grids within the standard hypercube, the input values are restricted to the interval $ [0,1]^d $. The optimization problem which is called \textit{box-constrained} can be solved by defining the function outside the box as infinity with $ f(x) = +\infty $ for all $ x \notin \Omega = [0,1]^d $. 
 
 Depending on whether the optimization algorithm uses the gradient or not, it is called a gradient-based method or gradient-free method, respectively. In the following, algorithms of both types are presented \cite{b_splines}.
 
@@ -423,7 +423,7 @@ The representation of those points (but not $ 0 $) is unique, for example $ 0.37
 	\label{fig:hyperbolic}
 \end{figure}
 
-A full grid of this level has $ 1089 $ points, whereas the number of HPCs is $ 147 $ which is much less, although the aacuray is nearly as good as the full grid with $ \mathcal{O}(N^{-2} \cdot (\text{log}N)^{d-1}) $ with N being the number of grid points in one dimension. Now with the reduced number of search points, the optimization is made faster while still getting accurate results. 
+A full grid of this level has $ 1089 $ points, whereas the number of HPCs is $ 147 $ which is much less, although the accuracy is nearly as good as using the full grid with $ \mathcal{O}(N^{-2} \cdot (\text{log}N)^{d-1}) $ with N being the number of grid points in one dimension. Now with the reduced number of search points, the optimization is made faster while still getting accurate results. 
 \newline 
 
 The optimization problem generally applies in various scientific fields. The authors of \cite{saska2007path} present an application for path planning of car-like robots. The same global minimization approach based on sparse grids is used as in the previous application using the HPCs \cite{duan2016induction, novak1996global}.
@@ -433,6 +433,6 @@ Another method for optimization is presented in \cite{hulsmann2013spagrow}. The 
 
 Similar to this method, the authors of \cite{chen2013derivative} also present a derivative-free optimization based on sparse grid numerical integration. Their technique applies to smooth nonlinear objective functions where the gradient is not available and point evaluations are very expensive.
 
-Also the authors of \cite{sankaran2009stochastic} present an optimization with the help of sparse grids. They concentrate on computing a probability density function (PDF) where the presence of uncertainties in boundary conditions and material properties make it more complicated.
+Also the authors of \cite{sankaran2009stochastic} present an optimization algorithm with the help of sparse grids. They use the collocation scheme and it can be used in a wide range of applications. Examples that are presented include stochastic inverse heat conduction problems and contamination source identification problems.
 
 
