@@ -500,7 +500,7 @@ class Optimization:
 
             ################################## Optimize with gradient descent ##################################
 
-            # We apply the gradient method and print the results.
+            # apply the gradient method and print the results.
             optimizer.setStartingPoint(x0)
             optimizer.optimize()
             xOpt = optimizer.getOptimalPoint()

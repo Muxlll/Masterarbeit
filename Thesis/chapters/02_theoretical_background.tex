@@ -15,8 +15,9 @@ The smallest part of a neural network is the \textit{perceptron}. A network cons
 
 \begin{figure}[htbp!]
 	\centering
-	\includegraphics[scale=0.18]{figures/perceptron.png}
-	\caption{ Neural network consisting of only one perceptron. Taken from \cite{da2017artificial}. }
+	\def\svgscale{0.5}
+	\input{figures/drawing.pdf_tex}
+	\caption{ Neural network consisting of only one perceptron. }
 	\label{fig:perceptron}
 \end{figure}
 
@@ -41,7 +42,7 @@ The figure shows a schematic neural network with two hidden layers and $ n_1 $ n
 
 \begin{equation}
 	\label{eq:weights_update}
-	w_{current} = w_{previous} + \eta \cdot (d^{(k)} - y) \cdot x^{(k)}
+	w_{current} = w_{previous} + \eta \cdot \left(d^{(k)} - y\right) \cdot x^{(k)}
 \end{equation}
 
 where $ w = [\theta \text{ } w_1 \text{ } ... w_n]^T $ is the vector with all weights and the bias, $ x = [-1 \text{ } x_1^{(k)} \text{ } ... x_n^{(k)}]^T $ is the $ \text{k}^{\text{th}} $ training sample, $ d^{k} $ the desired label, $ y $ the output of the perceptron and $ \eta $ the learning rate. The choice of $ \eta $ is fixed before training and usually $ 0 < \eta < 1 $. For the update of the weights of networks with multiple layers, refer to \cite{da2017artificial}. 
@@ -111,13 +112,13 @@ One disadvantage is that it is also very expensive if the budget is high because
 Another possible technique for finding the best hyperparameters of machine learning models is called bayesian optimization (BO) \cite{snoek2012practical}. This is an iterative approach for optimizing the expensive black box function by modeling it based on observations. A so-called \textit{surrogate model} $ \hat{f} $ is made with the help of the \textit{archive} $ A $ which contains observed function evaluations. This surrogate model is created by regression and the technique which is most often used is the Gaussian process \cite{bischl2021hyperparameter} which is only suitable if the number of hyperparameters is not too high \cite{andonie2019hyperparameter}. The problem of this technique arises when some hyperparameters are categorical or integer-valued which is the reason why extra approximations can lead to worse results and special treatment is needed \cite{garrido2020dealing}. Another possible technique for the surrogate model is using random forests \cite{hutter2011sequential}. All in all, this function estimates the machine learning model depending on the hyperparameter configuration and also the prediction uncertainty $ \sigma(\lambda) $. A second function called \textit{acquisition function} $ u(\lambda)$ is built based on the prediction distribution. This $ u $ is responsible for the trade-off between exploitation and exploration. This means that configurations that lead to better model performances are exploited and values where no much information is gathered are explored. There are many numerous different possibilities for this function  \cite{wilson2018maximizing} but the most used one is the \textit{expected improvement} (EI) which is calculated with
 
 \begin{equation}
-	E[I(\lambda)] = E[max(f_{min}-y), 0].
+	E[I(\lambda)] = E\left[max\left(f_{min}-y\right), 0\right].
 \end{equation}
 
 If the model prediction y with configuration $ \lambda $ follows a normal distribution \cite{feurer2019hyperparameter}, it leads to 
 
 \begin{equation}
-	E[max(f_{min}-y), 0] = (f_{min}-\mu(\lambda)) \Phi(\frac{f_{min}-\mu(\lambda)}{\sigma}) + \sigma \phi (\frac{f_{min}-\mu(\lambda)}{\sigma})
+	E[max\left(f_{min}-y\right), 0] = \left(f_{min}-\mu(\lambda)\right) \Phi\left(\frac{f_{min}-\mu(\lambda)}{\sigma}\right) + \sigma \phi \left(\frac{f_{min}-\mu(\lambda)}{\sigma}\right)
 \end{equation}
 
 with $ \phi $ and $ \Phi $ being the standard normal density and standard normal distribution and $ f_{min} $ the best result so far. 
@@ -131,14 +132,14 @@ The exact steps are presented in Algorithm \ref{alg:bayesian_opt} and Figure \re
 	\caption{Bayesian Optimization}\label{alg:bayesian_opt}
 	\begin{algorithmic}
 		\State Generate initial $\lambda^{(1)}, ..., \lambda^{(k)} $
-		\State Initialize archive $A^{[0]} \gets ((\lambda^{(1)}, f(\lambda^{(1)})), ..., (\lambda^{(k)}, f(\lambda^{(k)})))$
+		\State Initialize archive $A^{[0]} \gets \left(\left(\lambda^{(1)}, f\left(\lambda^{(1)}\right)\right), ..., \left(\lambda^{(k)}, f\left(\lambda^{(k)}\right)\right)\right)$
 		\State $ t \gets 1 $ 
 		\While{Stopping criterion not met}
-			\State Fit surrogate model $ (f(\lambda), \sigma(\lambda)) $ on $ A^{[t-1]} $
-			\State Build acquisition function $ u(\lambda) $ from $ (\hat{f}(\lambda), \sigma(\lambda)) $
+			\State Fit surrogate model $ \left(f(\lambda), \sigma(\lambda)\right) $ on $ A^{[t-1]} $
+			\State Build acquisition function $ u(\lambda) $ from $ \left(\hat{f}\left(\lambda\right), \sigma(\lambda)\right) $
 			\State Obtain proposal $ \lambda^{+} $ by optimizing $ u: \lambda^+ \in arg\max_{\lambda \in \Lambda} u(\lambda) $
-			\State Evaluate $ f(\lambda^+)$
-			\State Obtain $A^[t]$ by augmenting $ A^{[t-1]} $ with $ (\lambda^{(+)}, f(\lambda^{(+)})) $
+			\State Evaluate $ f\left(\lambda^+\right)$
+			\State Obtain $A^[t]$ by augmenting $ A^{[t-1]} $ with $ \left(\lambda^{(+)}, f\left(\lambda^{(+)}\right)\right) $
 			\State $ t \gets t+1 $
 		\EndWhile
 		\State return $ \lambda_{best} $: Best-performing $\lambda$ from archive or according to surrogates prediction
@@ -177,11 +178,11 @@ with i being the index and $ h_l = 2^{-l} $ being the distance between the grid 
 
 There are different possibilities for the basis functions which will be presented later. For the simplicity, we present a simple example being the hat function defined by
 \begin{equation}
-	\varphi_{l,i}(x) = \max(1- |\frac{x}{h_l}-i|, 0).
+	\varphi_{l,i}(x) = \max\left(1- \left|\frac{x}{h_l}-i\right|, 0\right).
 \end{equation}
 All in all, the space of functions that can be presented exactly by a linear combination is called the \textit{nodal space} $V_l$ with the assumption that the basis functions form a basis:
 \begin{equation}
-	V_l = \text{span}\{ \varphi_{l,i} | i = 0,...,2^l\}. 
+	V_l = \text{span}\left\{ \varphi_{l,i} | i = 0,...,2^l\right\}. 
 \end{equation}
 
 Every function $f: [0,1] \rightarrow \mathbb{R}$ can be interpolated by a the interpolant $ u $ defined by
@@ -198,9 +199,9 @@ for constants $ \alpha_{l,i} \in \mathbb{R} $. An example can be seen in Figure 
 	\label{fig:interpolant}
 \end{figure}
 
-On the left side, the function f (black line) can be seen with a grid of level 3. On the right side, the interpolant u as a linear combination of the basis functions (hat functions centered on the grid points) can be seen. This approach is the nodal basis. The second possibility is called hierarchical basis and the index set is $I_l^h = \{i \in \mathbb{N} | 1 \le i \le i \le s^l-1, i \text{odd}\}$. The hierarchical subspaces are then 
+On the left side, the function f (black line) can be seen with a grid of level 3. On the right side, the interpolant u as a linear combination of the basis functions (hat functions centered on the grid points) can be seen. This approach is the nodal basis. The second possibility is called hierarchical basis and the index set is $I_l^h = \{i \in \mathbb{N} | 1 \le i \le i \le s^l-1, i \text{ odd}\}$. The hierarchical subspaces are then 
 \begin{equation}
-	W_l = \text{span}\{ \varphi_{l,i}(x) | i \in I_l^h\}.
+	W_l = \text{span}\left\{ \varphi_{l,i}(x) | i \in I_l^h\right\}.
 \end{equation}
 
 The same nodal space $ V_l $ can be obtained with the hierarchical subspaces with 
@@ -232,22 +233,22 @@ An example can be seen in Figure \ref{fig:weighted_sum_hierarchical}.
 
 To get into higher dimensions $ d > 1 $, we use the tensor product. The domain is now $ \Omega = [0,1]^d $ and the level is defined by the level per dimension meaning $ \vec{l} = (l_1, ..., l_d) \in \mathbb{N}_0^d $. The index set is then
 \begin{equation}
-	I_{\vec{l}} = \{ \vec{i} | 1 \le i_j \le 2^{l_j} -1 , i_j \text{odd}, 1 \le j \le d \}
+	I_{\vec{l}} = \left\{ \vec{i} | 1 \le i_j \le 2^{l_j} -1 , i_j \text{odd}, 1 \le j \le d \right\}
 \end{equation}
 
 and the subspaces 
 
 \begin{equation}
-	W_{\vec{l}} = \text{span}\{ \varphi_{\vec{l},\vec{i}}( \vec{x} ) | \vec{i} \in I_{\vec{l}}\}
+	W_{\vec{l}} = \text{span}\left\{ \varphi_{\vec{l},\vec{i}}( \vec{x} ) | \vec{i} \in I_{\vec{l}}\right\}
 \end{equation}
 
 with the basis functions $ \varphi_{\vec{l},\vec{i}} = \prod_{j=1}^{d} \varphi_{l_j,i_j}(x_j) $ which are constructed with the tensor product. The function space $ V_n $ is constructed by
 \begin{equation}
-	V_n = \bigoplus_{|\vec{l}|_\infty \le n} W_l
+	V_n = \bigoplus_{\left|\vec{l}\right|_\infty \le n} W_l
 \end{equation}
-with $ |\vec{l}| = \max_{1 \le i \le d} |d_i| $. Again, a function can be interpolated by its interpolant $ u $ with
+with $ \left|\vec{l}\right| = \max_{1 \le i \le d} |d_i| $. Again, a function can be interpolated by its interpolant $ u $ with
 \begin{equation}
-	u = \sum_{|\vec{l}|_\infty \le n, \vec{i} \in I_{\vec{l}}}\alpha_{\vec{l},\vec{i}} \varphi_{\vec{l},\vec{i}}, \forall \vec{i} \in I_{\vec{l}}: u(x_{\vec{l},\vec{i}}) = f(x_{\vec{l},\vec{i}}).
+	u = \sum_{\left|\vec{l}\right|_\infty \le n, \vec{i} \in I_{\vec{l}}}\alpha_{\vec{l},\vec{i}} \varphi_{\vec{l},\vec{i}}, \forall \vec{i} \in I_{\vec{l}}: u\left(x_{\vec{l},\vec{i}}\right) = f\left(x_{\vec{l},\vec{i}}\right).
 \end{equation}
 
 The resulting regular grid has then $ (2^n - 1)^d $ basis points. An example of a basis function in two dimensions can be seen in Figure \ref{fig:2d_basis}. It is constructed by the tensor product of two 1d hat functions. 
@@ -263,12 +264,12 @@ In the higher dimensional case, the grid can also be constructed hierarchically.
 \begin{equation}
 	V_{\vec{l}} = \bigoplus_{\vec{m} = 0}^{\vec{l}} W_{\vec{m}}
 \end{equation}
-with $ W_{\vec{l}} = \text{span}\{\varphi_{\vec{l}, \vec{i}} | \vec{i} \in I_{\vec{l}}\}, I_{\vec{l}} = I_{l_1} \times ... \times I_{l_d} $ holds for the basis with hat functions can be found in \cite{b_splines}.
+with $ W_{\vec{l}} = \text{span}\left\{\varphi_{\vec{l}, \vec{i}} | \vec{i} \in I_{\vec{l}}\right\}, I_{\vec{l}} = I_{l_1} \times ... \times I_{l_d} $ holds for the basis with hat functions can be found in \cite{b_splines}.
 
 \subsection{Adaptive Sparse Grids}
 The problem of regular grids is the \textit{curse of the dimensionality} because of the high number of grid points in higher dimensions. This is tackled by sparse grids \cite{zenger1991sparse, bungartz2004sparse} by reducing this number. The first technique to achieve this is by just leaving out subspaces. The resulting sparse function space is given by 
 \begin{equation}
-	V_{n}^1 = \bigoplus_{|\vec{l}|_1 \le n+d-1 } W_{\vec{l}} \subset V_n.
+	V_{n}^1 = \bigoplus_{\left|\vec{l}\right|_1 \le n+d-1 } W_{\vec{l}} \subset V_n.
 \end{equation}
 An example with $ n = 3 $ can be seen in Figure \ref{fig:sparse_grid}.
 \begin{figure}[htbp!]
@@ -280,7 +281,7 @@ An example with $ n = 3 $ can be seen in Figure \ref{fig:sparse_grid}.
 
 An interpolant $ u_n $ of a function $ f $ is then constructed by
 \begin{equation}
-	u_l = \sum_{ |\vec{l}|_1 \le l+d-1 } \sum_{ \vec{i} \in I_{\vec{l}} } \varphi_{\vec{l}, \vec{i}} \alpha_{\vec{l},\vec{i}}
+	u_l = \sum_{ \left|\vec{l}\right|_1 \le l+d-1 } \sum_{ \vec{i} \in I_{\vec{l}} } \varphi_{\vec{l}, \vec{i}} \alpha_{\vec{l},\vec{i}}
 \end{equation}
 where the $ \alpha_{\vec{l},\vec{i}} $ are the coefficients of the basis functions \cite{obersteiner2022spatially}.
 
@@ -292,7 +293,7 @@ where $ \vec{l} $ is the level vector of the full grid solution $ u_{\vec{l}} $,
 \begin{equation}
 	u_l^c = \sum_{ q = 0 }^{d-1} (-1)^q \binom{d-1}{q} \sum_{\vec{l} \in I_{l,q} } u_{\vec{l}}
 \end{equation}
-with $ I_{l,q} = \{ \vec{l} \in \mathbb{N}_0^d | ||\vec{l}||_1 = l+d-1-q \} $ \cite{obersteiner2021generalized}. An example of the 2-dimensional combination technique can be seen on the left side of Figure \ref{fig:combi_technique}.
+with $ I_{l,q} = \left\{ \vec{l} \in \mathbb{N}_0^d : \left|\left|\vec{l}\right|\right|_1 = l+d-1-q \right\} $ \cite{obersteiner2021generalized}. An example of the 2-dimensional combination technique can be seen on the left side of Figure \ref{fig:combi_technique}.
 
 With the normal combination technique, this grid is still symmetric and focuses on a low global error. Especially in optimization or data driven problems where the points are not distributed equally in the domain, special regions are of interest. In the case of optimization which is our focus, the errors around the extrema have to be interpolated more exactly than other regions. This is the reason why we use \textit{refinement}. In the case of dimension-adaptive refinement \cite{hegland2002adaptive}, more grid points are added in the dimensions of higher relevance. 
 
@@ -317,9 +318,9 @@ In summary, Table \ref{tab:comparison_grids} shows the comparison of full grids,
 		\hline
 		Grid & Number grid points & Accuracy \\
 		\hline
-		Full grid & $ \mathcal{O}(h_n^2) $ & $ \mathcal{O}(2^{nd}) $ \\
-		Sparse grid & $ \mathcal{O}(h_n^{-1}(\text{log } h_n^{-1})^{d-1}) $ & $ \mathcal{O}(h_n^{2}(\text{log } h_n^{-1})^{d-1}) $ \\
-		Combination technique & $ \mathcal{O}(d(\text{log } h_n^{-1})^{d-1}) \times  \mathcal{O}(h_n^{-1}) $ & $ \mathcal{O}(h_n^{2}(\text{log } h_n^{-1})^{d-1}) $\\
+		Full grid & $ \mathcal{O}\left(h_n^2\right) $ & $ \mathcal{O}\left(2^{nd}\right) $ \\
+		Sparse grid & $ \mathcal{O}\left(h_n^{-1}\left(\text{log } h_n^{-1}\right)^{d-1}\right) $ & $ \mathcal{O}\left(h_n^{2}\left(\text{log } h_n^{-1}\right)^{d-1}\right) $ \\
+		Combination technique & $ \mathcal{O}\left(d\left(\text{log } h_n^{-1}\right)^{d-1}\right) \times  \mathcal{O}\left(h_n^{-1}\right) $ & $ \mathcal{O}\left(h_n^{2}\left(\text{log } h_n^{-1}\right)^{d-1}\right) $\\
 		\hline
 	\end{tabular}
 	\caption{ Comparison of sparse grids, full grids, and the combination technique in terms of number of grid points and the accuracy.}
@@ -355,7 +356,7 @@ with $ \chi_{[0,1[} $ being the characteristic function of the half-open unit in
 	\item hat function and gaussian function are special cases
 \end{enumerate}
 
-This is the case for uniform B-splines. For adaptive grids, the distances between basis points are not always uniform. This is the reason why we need also non-uniform B-splines. Let $ m, p \in \mathbb{N}_0 $ and $ \xi = (\xi_0, ... , \xi_{m+p}) $ be an increasing sequence of real numbers called \textit{knot sequence}. For $ k=0,..., m-1 $, the non-uniform B-spline is defined by 
+This is the case for uniform B-splines. For adaptive grids, the distances between basis points are not always uniform. This is the reason why we need also non-uniform B-splines. Let $ m, p \in \mathbb{N}_0 $ and $ \xi = \left(\xi_0, ... , \xi_{m+p}\right) $ be an increasing sequence of real numbers called \textit{knot sequence}. For $ k=0,..., m-1 $, the non-uniform B-spline is defined by 
 \begin{equation}
 	b^p_{k,\xi}(x) = \begin{cases} 
 		\frac{x-\xi_k}{\xi_{k+p}-\xi_k}b^{p-1}_{k,\xi}(x) + \frac{\xi_{k+p+1}-x}{\xi_{k+p+1}-\xi_{k+1}}b^{p-1}_{k+1,\xi}(x)				& p \geq 1 \\
@@ -383,7 +384,7 @@ This algorithm maintains a list of points which are iteratively updated by the w
 CMA-ES (covariance matrix adaption, evolution strategy) keeps track of the covariance matrix of the Gaussian search distribution. After sampling $ m $ points from the current distribution, the $ k $ best samples are used to calculate the distribution of the next iteration as the weighted mean of them. Then the covariance matrix is updated.
 
 \paragraph{Gradient-Based Methods}
-Important values for the following methods are the \textit{gradient} $ \nabla_x f(x_k) $ and the \textit{Hessian} $ \nabla_x^2 f(x_k) $. Most methods of this type update the current position in each iteration with 
+Important values for the following methods are the \textit{gradient} $ \nabla_x f\left(x_k\right) $ and the \textit{Hessian} $ \nabla_x^2 f\left(x_k\right) $. Most methods of this type update the current position in each iteration with 
 \begin{equation}
 	x_{k+1} = x_k + \delta_k d_k 	
 \end{equation}
@@ -393,13 +394,13 @@ where $ \delta_k $ is the step size and $ d_k $ is the search direction.
 This method uses the gradient and sets the search direction to the standardized negative gradient at this point with $ d_k \propto -\nabla_x f(x_k) $. If the Hessian is ill-conditioned, then the convergence is slow. 
 
 \subparagraph{NLCG}
-NLCG (non-linear conjugate gradients) is equivalent to the conjugate gradient method when optimizing function of the form $ f(x) = \frac{1}{2} x^T A x - b^T x $. It finds the optimum after $ d $ steps for strictly convex quadratic functions. According to the Taylor theorem, it converges also for non-convex functions that are three times continuously differentiable with positive definite Hessian because those functions are similar to strictly convex quadratic function in a the region of the optimum.
+NLCG (non-linear conjugate gradients) is equivalent to the conjugate gradient method when optimizing function of the form $ f(x) = \frac{1}{2} x^T A x - b^T x $. It finds the optimum after $ d $ steps for strictly convex quadratic functions. According to the Taylor theorem, it converges also for non-convex functions that are three times continuously differentiable with positive definite Hessian because those functions are similar to strictly convex quadratic function in the region of the optimum.
 
 \subparagraph{Newton}
-This method replaces the objective function with the second-order Taylor approximation $ f(x_k + d_k) \approx f(x_k) + (\nabla_x f(x_k))^T d_k + \frac{1}{2}(d_k)^T(\nabla_x^2) f(x_k)) d_k $ and sets the search direction to $ d_k \propto-( \nabla_x^2 f(x_k))^{-1} \nabla_x f(x_k)$. This way $ x_k + d_k $ is the minimum of the approximation. 
+This method replaces the objective function with the second-order Taylor approximation $ f\left(x_k + d_k\right) \approx f\left(x_k\right) + \left(\nabla_x f\left(x_k\right)\right)^T d_k + \frac{1}{2}\left(d_k\right)^T\left(\nabla_x^2\right) f\left(x_k\right) d_k $ and sets the search direction to $ d_k \propto- \left( \nabla_x^2 f\left(x_k\right)\right)^{-1} \nabla_x f \left(x_k\right)$. This way $ x_k + d_k $ is the minimum of the approximation. 
 
 \subparagraph{BFGS}
-BFGS (Broyden, Fletcher, Goldfarb, Shanno) is a quasi-newton method. The previous technique has the disadvantage that the Hessian has to be evaluated which is expensive. BFGS approximate this matrix by a solution of $  \nabla_x^2 f(x_k)( x_k - x_{k-1} ) \approx \nabla_x f(x_k) - \nabla_x f(x_{k-1}) $.
+BFGS (Broyden, Fletcher, Goldfarb, Shanno) is a quasi-newton method. The previous technique has the disadvantage that the Hessian has to be evaluated which is expensive. BFGS approximates this matrix by a solution of $  \nabla_x^2 f\left(x_k\right) \left( x_k - x_{k-1} \right) \approx \nabla_x f\left(x_k\right) - \nabla_x f\left(x_{k-1}\right) $.
 
 \subparagraph{Rprop}
 Rprop (resilient propagation) is not dependent of the exact direction of the gradient of the function but often works robustly in machine learning scenarios. The gradient entries are considered separately for each dimension and the entries of the current point $ x_k $ are updated depending on the sign of the gradient entry. Also the step size is adapted dimension-wise. \newline 
@@ -423,7 +424,7 @@ The representation of those points (but not $ 0 $) is unique, for example $ 0.37
 	\label{fig:hyperbolic}
 \end{figure}
 
-A full grid of this level has $ 1089 $ points, whereas the number of HPCs is $ 147 $ which is much less, although the accuracy is nearly as good as using the full grid with $ \mathcal{O}(N^{-2} \cdot (\text{log}N)^{d-1}) $ with N being the number of grid points in one dimension. Now with the reduced number of search points, the optimization is made faster while still getting accurate results. 
+A full grid of this level has $ 1089 $ points, whereas the number of HPCs is $ 147 $ which is much less, although the accuracy is nearly as good as using the full grid with $ \mathcal{O}\left(N^{-2} \cdot \left(\text{log }N\right)^{d-1}\right) $ with N being the number of grid points in one dimension. Now with the reduced number of search points, the optimization is made faster while still getting accurate results. 
 \newline 
 
 The optimization problem generally applies in various scientific fields. The authors of \cite{saska2007path} present an application for path planning of car-like robots. The same global minimization approach based on sparse grids is used as in the previous application using the HPCs \cite{duan2016induction, novak1996global}.
