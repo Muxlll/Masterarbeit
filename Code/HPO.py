@@ -297,7 +297,7 @@ def from_standard(lower, upper, value):
                                                             "differential_evolution", "gradient_descent", "nlcg", "nelder_mead", 
                                                             "newton", "rprop"]
 """
-class Optimization:
+class OldOptimization:
     def __init__(self, 
                  dataset: Dataset, 
                  model, 
@@ -362,7 +362,6 @@ class Optimization:
                 self.hyperparameterspace_processed.get(key).pop(0)
 
     def fit(self):
-
         if self.type == "grid_search":
             clf = GridSearchCV(
                 self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
@@ -532,3 +531,373 @@ class Optimization:
             return x0_vec, xOpt_vec
         else:
             AssertionError("Type not specified correctly")
+
+
+
+
+"""
+    Optimization class 
+    Params:
+        dataset:                data of the class Dataset
+        model:                  model to find the best params for (can be model or blackbox function depending on type)
+        hyperparameterspace:    definition of hyperparameter space (dict with "list" or "interval" as first element of list)
+        budget:                 upper bound for number of model evaluations
+        verbosity:              verbosity for output
+"""
+class Optimization:
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 budget: int = 100, 
+                 verbosity: int = 1):
+        
+
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+
+
+    def fit(self):
+        pass
+
+
+
+"""
+    Grid Search Optimization class 
+    Params:
+        cv:             k-fold crossvalidation parameter
+        scoring:        metric for evaluation
+"""
+class GridSearchOptimization(Optimization):
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 budget: int = 100, 
+                 verbosity: int = 1,
+                 cv: int = 5, 
+                 scoring: str = 'neg_mean_squared_error'):
+        
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+        self.cv = cv
+        self.scoring = scoring
+
+        param_dimension = len(self.hyperparameterspace)
+        param_per_dimension = int(self.budget**(1/param_dimension))
+
+        for key in self.hyperparameterspace.keys():
+            if self.hyperparameterspace.get(key)[0] == "list":
+                self.hyperparameterspace_processed.get(key).pop(0)
+                self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(key)
+            elif self.hyperparameterspace.get(key)[0] == "interval":
+                param_list = []
+                for i in range(param_per_dimension):
+                    upper = self.hyperparameterspace.get(key)[2]
+                    lower = self.hyperparameterspace.get(key)[1]
+                    param_list.append(
+                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
+                self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                param_list = []
+                for i in range(param_per_dimension):
+                    upper = self.hyperparameterspace.get(key)[2]
+                    lower = self.hyperparameterspace.get(key)[1]
+                    param_list.append(int(
+                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
+                self.hyperparameterspace_processed[key] = param_list
+            else:
+                print("Need to specify the type of list")
+
+
+    def fit(self):
+        clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
+        X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
+        Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
+        return clf.fit(X_fit, Y_fit)
+
+
+
+
+"""
+    Random Search Optimization class 
+    Params:
+        cv:             k-fold crossvalidation parameter
+        scoring:        metric for evaluation
+"""
+class RandomSearchOptimization(Optimization):
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 budget: int = 100, 
+                 verbosity: int = 1,
+                 cv: int = 5, 
+                 scoring: str = 'neg_mean_squared_error'):
+        
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+        self.cv = cv
+        self.scoring = scoring
+
+        param_dimension = len(self.hyperparameterspace)
+        param_per_dimension = int(self.budget**(1/param_dimension))
+
+        for key in self.hyperparameterspace.keys():
+            if self.hyperparameterspace.get(key)[0] == "list":
+                self.hyperparameterspace_processed.get(key).pop(0)
+                self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(key)
+            elif self.hyperparameterspace.get(key)[0] == "interval":
+                param_list = []
+                for i in range(param_per_dimension):
+                    upper = self.hyperparameterspace.get(key)[2]
+                    lower = self.hyperparameterspace.get(key)[1]
+                    param_list.append(
+                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
+                self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                param_list = []
+                for i in range(param_per_dimension):
+                    upper = self.hyperparameterspace.get(key)[2]
+                    lower = self.hyperparameterspace.get(key)[1]
+                    param_list.append(int(
+                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
+                self.hyperparameterspace_processed[key] = param_list
+            else:
+                print("Need to specify the type of list")
+
+
+    def fit(self):
+        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
+        X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
+        Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
+        return clf.fit(X_fit, Y_fit)
+    
+
+"""
+    Bayesian Optimization class 
+    Params:
+        only the ones for the Optimization class
+"""
+class BayesianOptimization(Optimization):
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 budget: int = 100, 
+                 verbosity: int = 1):
+        
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+
+        list = []
+        for key in self.hyperparameterspace.keys():
+            if self.hyperparameterspace.get(key)[0] != 'list':
+                self.hyperparameterspace_processed.get(key).pop(0)
+                list.append(self.hyperparameterspace_processed.get(key))
+            else: 
+                list.append([0,1])
+        self.hyperparameterspace_processed = np.array(list)
+
+
+
+    def fit(self):
+        return bayesian_optimisation(self.budget, self.model, self.hyperparameterspace_processed)
+
+
+"""
+    Sparse Grid Search Optimization class 
+    Params:
+        
+"""
+class SparseGridSearchOptimization(Optimization):
+    def __init__(self, 
+                 dataset: Dataset, 
+                 model, 
+                 hyperparameterspace: dict, 
+                 budget: int = 100, 
+                 verbosity: int = 1,
+                 degree: int = 2,
+                 adaptivity: float = 0.95,
+                 optimizer: str = "gradient_descent"):
+        
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+
+        self.degree = degree
+        self.adaptivity = adaptivity
+        self.optimizer = optimizer
+
+        for key in self.hyperparameterspace.keys():
+            self.hyperparameterspace_processed.get(key).pop(0)
+
+
+    def fit(self):
+        f = self.model
+
+        # dimension of domain
+        d = f.getNumberOfParameters()
+        # B-spline degree
+        p = self.degree
+        # maximal number of grid points
+        N = self.budget
+        # adaptivity of grid generation
+        gamma = self.adaptivity
+        # choice of optimizer
+        optimizer_choice = self.optimizer
+
+        grid = pysgpp.Grid.createModBsplineGrid(d, p)
+        gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(
+            f, grid, N, gamma)
+
+        functionValues = gridGen.getFunctionValues()
+        if not gridGen.generate():
+            print("Grid generation failed, exiting.")
+            sys.exit(-1)
+
+        
+        gridStorage = grid.getStorage()
+        if d == 2:
+            x_values = []
+            y_values = []
+            z_values = []
+            for i in range(gridStorage.getSize()):
+                gp = gridStorage.getPoint(i)
+                x_values.append(gp.getStandardCoordinate(0))
+                y_values.append(gp.getStandardCoordinate(1))
+                z_values.append(functionValues[i])
+
+            #if self.verbosity >= 1:
+            #    plt.plot(x_values, y_values, 'bo')
+
+            if self.verbosity >= 1:
+                fig = plt.figure()
+                ax = plt.axes(projection='3d')
+
+                ax.plot_trisurf(x_values, y_values, z_values)
+                plt.show()
+
+        ######################################## grid functions ########################################
+        # Hierarchization
+        functionValues = gridGen.getFunctionValues()
+        coeffs = pysgpp.DataVector(len(functionValues))
+        hierSLE = pysgpp.HierarchisationSLE(grid)
+        sleSolver = pysgpp.AutoSLESolver()
+
+        if not sleSolver.solve(hierSLE, gridGen.getFunctionValues(), coeffs):
+            print("Solving failed, exiting.")
+            sys.exit(1)
+
+        # define interpolant and gradient
+        ft = pysgpp.InterpolantScalarFunction(grid, coeffs)
+        ftGradient = pysgpp.InterpolantScalarFunctionGradient(grid, coeffs)
+        x0 = pysgpp.DataVector(d)
+        hessian = pysgpp.InterpolantScalarFunctionHessian(grid, coeffs)
+        
+
+        if optimizer_choice == "adaptive_gradient_descent":
+            optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
+        elif optimizer_choice == "adaptive_newton":
+            optimizer = pysgpp.OptAdaptiveNewton(ft, hessian)
+        elif optimizer_choice == "bfgs":
+            optimizer = pysgpp.OptBFGS(ft, ftGradient)
+        elif optimizer_choice == "cmaes":
+            optimizer = pysgpp.OptCMAES(ft, 100)
+        elif optimizer_choice == "differential_evolution":
+            optimizer = pysgpp.OptDifferentialEvolution(ft)
+        elif optimizer_choice == "gradient_descent":
+            optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
+        elif optimizer_choice == "":
+            optimizer = pysgpp.OptMultiStart() # default: NelderMead 
+        elif optimizer_choice == "nlcg":
+            optimizer = pysgpp.OptNLCG(ft, ftGradient)
+        elif optimizer_choice == "nelder_mead":
+            optimizer = pysgpp.OptNelderMead(ft)
+        elif optimizer_choice == "newton":
+            optimizer = pysgpp.OptNewton(ft, hessian)
+        elif optimizer_choice == "rprop":
+            optimizer = pysgpp.OptRprop(ft, ftGradient)
+        else:
+            print("Please specify optimizer!")
+            sys.exit(1)
+        
+        ##################### find point with minimal loss (which are already evaluated) #################
+
+        # find point with smallest value as start point for gradient descent
+        x0Index = 0
+        fX0 = functionValues[0]
+        for i in range(1, len(functionValues)):
+            if functionValues[i] < fX0:
+                fX0 = functionValues[i]
+                x0Index = i
+
+        x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
+        ftX0 = ft.eval(x0)
+
+        if self.verbosity > 0:
+            print("\nOptimal hyperparameters so far:")
+            i = 0
+            for key in self.hyperparameterspace.keys():
+                if self.hyperparameterspace[key][0] == "list":
+                    index = int(x0[i]*(len(self.hyperparameterspace_processed[key])-2))
+                    print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
+                else:
+                    print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                i += 1
+
+            print("Resulting loss:")
+            print(ftX0)
+
+        ################################## Optimize with gradient descent ##################################
+
+        # apply the gradient method and print the results.
+        optimizer.setStartingPoint(x0)
+        optimizer.optimize()
+        xOpt = optimizer.getOptimalPoint()
+        ftXOpt = optimizer.getOptimalValue()
+
+        fXOpt = f.eval(xOpt)
+        if self.verbosity > 0:
+            # print(xOpt)
+            print("\nOptimal hyperparameters after optimization:")
+            i = 0
+            for key in self.hyperparameterspace.keys():
+                if self.hyperparameterspace[key][0] == "list":
+                    index = int(xOpt[i]*(len(self.hyperparameterspace_processed[key])-2))
+                    print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
+                else:
+                    print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
+                i += 1
+            print("Resulting loss (Optimal value from optimization):")
+            print(ftXOpt)
+            print("Resulting loss (Optimal point evaluated):")
+            print(fXOpt)
+        
+        x0_vec = []
+        xOpt_vec = []
+        for i in range(len(x0)):
+            x0_vec.append(x0[i])
+            xOpt_vec.append(xOpt[i])
+
+        return x0_vec, xOpt_vec
+    

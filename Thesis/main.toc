@@ -8,16 +8,16 @@
 \contentsline {subsection}{\numberline {2.2.1}Grid Search}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Random Search}{6}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Bayesian Optimization}{7}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Other Techniques}{8}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}Other Techniques}{10}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Sparse Grids}{10}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Numerical Approximation of Functions}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{16}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{17}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Optimization with Sparse Grids}{18}{subsection.2.3.4}%
 \contentsline {paragraph}{\nonumberline Gradient-Free Methods}{18}{paragraph*.17}%
 \contentsline {subparagraph}{\nonumberline Nelder Mead Method}{18}{subparagraph*.19}%
 \contentsline {subparagraph}{\nonumberline Differential Evolution}{18}{subparagraph*.21}%
-\contentsline {subparagraph}{\nonumberline CMA-ES}{18}{subparagraph*.23}%
+\contentsline {subparagraph}{\nonumberline CMA-ES}{19}{subparagraph*.23}%
 \contentsline {paragraph}{\nonumberline Gradient-Based Methods}{19}{paragraph*.25}%
 \contentsline {subparagraph}{\nonumberline Gradient Descent}{19}{subparagraph*.27}%
 \contentsline {subparagraph}{\nonumberline NLCG}{19}{subparagraph*.29}%
