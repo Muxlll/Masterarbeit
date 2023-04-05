@@ -265,8 +265,8 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, x0=None, n_pre_samples=5
 
         remaining_time_prediction = (time/(n+1))*n_iters - time
 
-        update_progress(percentage, (endtime-starttime),
-                        remaining_time_prediction)
+        #update_progress(percentage, (endtime-starttime),
+        #                remaining_time_prediction)
         
     print("Iterations took", time, "seconds")
 
@@ -371,8 +371,12 @@ class GridSearchOptimization(Optimization):
         clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
-        return clf.fit(X_fit, Y_fit)
 
+        cost = 1
+        for key in self.hyperparameterspace_processed.keys():
+            cost *= len(self.hyperparameterspace_processed.get(key))
+
+        return clf.fit(X_fit, Y_fit), cost
 
 
 
@@ -432,7 +436,13 @@ class RandomSearchOptimization(Optimization):
         clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
-        return clf.fit(X_fit, Y_fit)
+
+        cost = 1
+        for key in self.hyperparameterspace_processed.keys():
+            cost *= len(self.hyperparameterspace_processed.get(key))
+
+
+        return clf.fit(X_fit, Y_fit), cost
     
 
 """
@@ -617,7 +627,7 @@ class SparseGridSearchOptimization(Optimization):
             print("Resulting loss:")
             print(ftX0)
 
-        ################################## Optimize with gradient descent ##################################
+        ################################## Optimize with specified optimizer ##################################
 
         # apply the gradient method and print the results.
         optimizer.setStartingPoint(x0)
