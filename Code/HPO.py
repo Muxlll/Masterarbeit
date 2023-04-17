@@ -24,10 +24,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import time
+import math
 import sys
 from IPython.display import clear_output
 
 import pysgpp
+
+import openml
+
+from openml import tasks
+
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
 def update_progress(progress, time, remaining_time):
@@ -51,7 +58,36 @@ def update_progress(progress, time, remaining_time):
 
 
 class Dataset:
-    def __init__(self, X, Y, ratio=0.8) -> None:
+    def __init__(self, X=None, Y=None, ratio=0.8, task_id=None) -> None:
+        if not (task_id == None):
+            task = tasks.get_task(task_id)
+            dataset = task.get_dataset()
+
+            # Get the data itself as a dataframe (or otherwise)
+            data, target, categorical_indicator, names = dataset.get_data(dataset.default_target_attribute, dataset_format="array")
+
+            # split into categorical and numerical features
+            categorical_features = [[x[i] for i in range(len(x)) if categorical_indicator[i]] for x in data]
+            numerical_features = [[x[i] for i in range(len(x)) if not categorical_indicator[i]] for x in data]
+
+            # one hot encoding of the categorical one
+            encoder = OneHotEncoder(sparse_output=False).fit(categorical_features)
+            transformed = encoder.transform(categorical_features)
+
+            # additional scaling of numerical features
+            scaler = StandardScaler().fit(numerical_features)
+            numerical_features = scaler.transform(numerical_features)
+
+            # bring back together
+            data = [numerical_features[i].tolist() + transformed[i].tolist() for i in range(len(numerical_features))]#
+
+            scaler = StandardScaler().fit(target.reshape(-1,1))
+            target = scaler.transform(target.reshape(-1,1))
+
+            X = torch.Tensor(data)
+            Y = torch.Tensor(target)
+            
+
         self.X = torch.Tensor(X)
         self.Y = torch.Tensor(Y)
         X, Y = shuffle(X, Y)
@@ -64,6 +100,7 @@ class Dataset:
         self.Y_validation = torch.Tensor(self.Y_train[int(len(self.Y_train) * ratio):])
         self.Y_train = torch.Tensor(self.Y_train[:int(len(self.Y_train) * ratio)])
         self.Y_test = torch.Tensor(Y[int(len(Y) * ratio):])
+
 
     def get_X_train(self):
         return self.X_train
@@ -357,12 +394,23 @@ class GridSearchOptimization(Optimization):
                 self.hyperparameterspace_processed[key] = param_list
             elif self.hyperparameterspace.get(key)[0] == "interval-int":
                 param_list = []
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
                 for i in range(param_per_dimension):
-                    upper = self.hyperparameterspace.get(key)[2]
-                    lower = self.hyperparameterspace.get(key)[1]
                     param_list.append(int(
                         (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
                 self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-log":
+                param_list = []
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                if param_per_dimension == 1:
+                    self.hyperparameterspace_processed[key] = [(upper+lower)/2]
+                else:
+                    step = (math.log(upper)-math.log(lower))/(param_per_dimension - 1) 
+                    for i in range(param_per_dimension):
+                        param_list.append(math.exp(math.log(lower) + i * step))
+                    self.hyperparameterspace_processed[key] = param_list
             else:
                 print("Need to specify the type of list")
 
@@ -428,6 +476,17 @@ class RandomSearchOptimization(Optimization):
                     param_list.append(int(
                         (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
                 self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-log":
+                param_list = []
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                if param_per_dimension == 1:
+                    self.hyperparameterspace_processed[key] = [(upper+lower)/2]
+                else:
+                    step = (math.log(upper)-math.log(lower))/(param_per_dimension - 1) 
+                    for i in range(param_per_dimension):
+                        param_list.append(math.exp(math.log(lower) + i * step))
+                    self.hyperparameterspace_processed[key] = param_list
             else:
                 print("Need to specify the type of list")
 
