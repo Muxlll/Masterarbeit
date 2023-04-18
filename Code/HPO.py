@@ -32,6 +32,9 @@ import pysgpp
 
 import openml
 
+import scipy.stats as stats
+from sklearn.utils.fixes import loguniform
+
 from openml import tasks
 
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -65,21 +68,28 @@ class Dataset:
 
             # Get the data itself as a dataframe (or otherwise)
             data, target, categorical_indicator, names = dataset.get_data(dataset.default_target_attribute, dataset_format="array")
+            if all(categorical_indicator):
+                encoder = OneHotEncoder(sparse_output=False).fit(data)
+                data = encoder.transform(data)
+            elif any(categorical_indicator):
+                # split into categorical and numerical features
+                categorical_features = [[x[i] for i in range(len(x)) if categorical_indicator[i]] for x in data]
+                numerical_features = [[x[i] for i in range(len(x)) if not categorical_indicator[i]] for x in data]
 
-            # split into categorical and numerical features
-            categorical_features = [[x[i] for i in range(len(x)) if categorical_indicator[i]] for x in data]
-            numerical_features = [[x[i] for i in range(len(x)) if not categorical_indicator[i]] for x in data]
+                # one hot encoding of the categorical one
+                encoder = OneHotEncoder(sparse_output=False).fit(categorical_features)
+                transformed = encoder.transform(categorical_features)
 
-            # one hot encoding of the categorical one
-            encoder = OneHotEncoder(sparse_output=False).fit(categorical_features)
-            transformed = encoder.transform(categorical_features)
+                # additional scaling of numerical features
+                scaler = StandardScaler().fit(numerical_features)
+                numerical_features = scaler.transform(numerical_features)
 
-            # additional scaling of numerical features
-            scaler = StandardScaler().fit(numerical_features)
-            numerical_features = scaler.transform(numerical_features)
+                # bring back together
+                data = [numerical_features[i].tolist() + transformed[i].tolist() for i in range(len(numerical_features))]#
+            else:
+                scaler = StandardScaler().fit(data)
+                data = scaler.transform(data)
 
-            # bring back together
-            data = [numerical_features[i].tolist() + transformed[i].tolist() for i in range(len(numerical_features))]#
 
             scaler = StandardScaler().fit(target.reshape(-1,1))
             target = scaler.transform(target.reshape(-1,1))
@@ -320,17 +330,17 @@ def from_standard(lower, upper, value):
 
 
 
-
-"""
-    Optimization class 
-    Params:
-        dataset:                data of the class Dataset
-        model:                  model to find the best params for (can be model or blackbox function depending on type)
-        hyperparameterspace:    definition of hyperparameter space (dict with "list" or "interval" as first element of list)
-        budget:                 upper bound for number of model evaluations
-        verbosity:              verbosity for output
-"""
 class Optimization:
+    """
+        Optimization class 
+        Params:
+            dataset:                data of the class Dataset
+            model:                  model to find the best params for (can be model or blackbox function depending on type)
+            hyperparameterspace:    definition of hyperparameter space (dict with "list" or "interval" as first element of list)
+            budget:                 upper bound for number of model evaluations
+            verbosity:              verbosity for output
+    """
+
     def __init__(self, 
                  dataset: Dataset, 
                  model, 
@@ -352,13 +362,15 @@ class Optimization:
 
 
 
-"""
-    Grid Search Optimization class 
-    Params:
-        cv:             k-fold crossvalidation parameter
-        scoring:        metric for evaluation
-"""
+
 class GridSearchOptimization(Optimization):
+    """
+        Grid Search Optimization class 
+        Params:
+            cv:             k-fold crossvalidation parameter
+            scoring:        metric for evaluation
+    """
+
     def __init__(self, 
                  dataset: Dataset, 
                  model, 
@@ -381,32 +393,34 @@ class GridSearchOptimization(Optimization):
         param_per_dimension = int(self.budget**(1/param_dimension))
 
         for key in self.hyperparameterspace.keys():
+            upper = self.hyperparameterspace.get(key)[2]
+            lower = self.hyperparameterspace.get(key)[1]
             if self.hyperparameterspace.get(key)[0] == "list":
                 self.hyperparameterspace_processed.get(key).pop(0)
                 self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(key)
             elif self.hyperparameterspace.get(key)[0] == "interval":
-                param_list = []
-                for i in range(param_per_dimension):
-                    upper = self.hyperparameterspace.get(key)[2]
-                    lower = self.hyperparameterspace.get(key)[1]
-                    param_list.append(
-                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
-                self.hyperparameterspace_processed[key] = param_list
-            elif self.hyperparameterspace.get(key)[0] == "interval-int":
-                param_list = []
-                upper = self.hyperparameterspace.get(key)[2]
-                lower = self.hyperparameterspace.get(key)[1]
-                for i in range(param_per_dimension):
-                    param_list.append(int(
-                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
-                self.hyperparameterspace_processed[key] = param_list
-            elif self.hyperparameterspace.get(key)[0] == "interval-log":
-                param_list = []
-                upper = self.hyperparameterspace.get(key)[2]
-                lower = self.hyperparameterspace.get(key)[1]
-                if param_per_dimension == 1:
+                if param_per_dimension <= 1:
                     self.hyperparameterspace_processed[key] = [(upper+lower)/2]
                 else:
+                    param_list = []
+                    for i in range(param_per_dimension):
+                        param_list.append(
+                            (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
+                    self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                if param_per_dimension <= 1:
+                    self.hyperparameterspace_processed[key] = [int((upper+lower)/2)]
+                else:    
+                    param_list = []
+                    for i in range(param_per_dimension):
+                        param_list.append(int(
+                            (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
+                    self.hyperparameterspace_processed[key] = param_list
+            elif self.hyperparameterspace.get(key)[0] == "interval-log":
+                if param_per_dimension <= 1:
+                    self.hyperparameterspace_processed[key] = [(upper+lower)/2]
+                else:
+                    param_list = []
                     step = (math.log(upper)-math.log(lower))/(param_per_dimension - 1) 
                     for i in range(param_per_dimension):
                         param_list.append(math.exp(math.log(lower) + i * step))
@@ -416,7 +430,10 @@ class GridSearchOptimization(Optimization):
 
 
     def fit(self):
-        clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
+        n_jobs = 1
+        #if os.cpu_count() != None:
+        #    n_jobs = 2#os.cpu_count()
+        clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
 
@@ -428,13 +445,15 @@ class GridSearchOptimization(Optimization):
 
 
 
-"""
-    Random Search Optimization class 
-    Params:
-        cv:             k-fold crossvalidation parameter
-        scoring:        metric for evaluation
-"""
+
 class RandomSearchOptimization(Optimization):
+    """
+        Random Search Optimization class 
+        Params:
+            cv:             k-fold crossvalidation parameter
+            scoring:        metric for evaluation
+    """
+
     def __init__(self, 
                  dataset: Dataset, 
                  model, 
@@ -453,63 +472,45 @@ class RandomSearchOptimization(Optimization):
         self.cv = cv
         self.scoring = scoring
 
-        param_dimension = len(self.hyperparameterspace)
-        param_per_dimension = int(self.budget**(1/param_dimension))
-
         for key in self.hyperparameterspace.keys():
             if self.hyperparameterspace.get(key)[0] == "list":
                 self.hyperparameterspace_processed.get(key).pop(0)
                 self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(key)
             elif self.hyperparameterspace.get(key)[0] == "interval":
-                param_list = []
-                for i in range(param_per_dimension):
-                    upper = self.hyperparameterspace.get(key)[2]
-                    lower = self.hyperparameterspace.get(key)[1]
-                    param_list.append(
-                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2)
-                self.hyperparameterspace_processed[key] = param_list
-            elif self.hyperparameterspace.get(key)[0] == "interval-int":
-                param_list = []
-                for i in range(param_per_dimension):
-                    upper = self.hyperparameterspace.get(key)[2]
-                    lower = self.hyperparameterspace.get(key)[1]
-                    param_list.append(int(
-                        (lower)+i*((upper-lower)/param_per_dimension) + (upper-lower)/param_per_dimension/2))
-                self.hyperparameterspace_processed[key] = param_list
-            elif self.hyperparameterspace.get(key)[0] == "interval-log":
-                param_list = []
                 upper = self.hyperparameterspace.get(key)[2]
                 lower = self.hyperparameterspace.get(key)[1]
-                if param_per_dimension == 1:
-                    self.hyperparameterspace_processed[key] = [(upper+lower)/2]
-                else:
-                    step = (math.log(upper)-math.log(lower))/(param_per_dimension - 1) 
-                    for i in range(param_per_dimension):
-                        param_list.append(math.exp(math.log(lower) + i * step))
-                    self.hyperparameterspace_processed[key] = param_list
+                self.hyperparameterspace_processed[key] = stats.uniform(lower, upper)
+            elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                self.hyperparameterspace_processed[key] = stats.randint(lower, upper)
+            elif self.hyperparameterspace.get(key)[0] == "interval-log":
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                self.hyperparameterspace_processed[key] = loguniform(lower, upper)
             else:
                 print("Need to specify the type of list")
 
 
     def fit(self):
-        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, error_score='raise', verbose=self.verbosity)
+        n_jobs = 1
+        #if os.cpu_count() != None:
+        #    n_jobs = 2#os.cpu_count()
+        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
 
-        cost = 1
-        for key in self.hyperparameterspace_processed.keys():
-            cost *= len(self.hyperparameterspace_processed.get(key))
-
-
-        return clf.fit(X_fit, Y_fit), cost
+        return clf.fit(X_fit, Y_fit), self.budget
     
 
-"""
-    Bayesian Optimization class 
-    Params:
-        only the ones for the Optimization class
-"""
+
 class BayesianOptimization(Optimization):
+    """
+        Bayesian Optimization class 
+        Params:
+            only the ones for the Optimization class
+    """
+
     def __init__(self, 
                  dataset: Dataset, 
                  model, 
@@ -539,12 +540,16 @@ class BayesianOptimization(Optimization):
         return bayesian_optimisation(self.budget, self.model, self.hyperparameterspace_processed)
 
 
-"""
-    Sparse Grid Search Optimization class 
-    Params:
-        
-"""
+
 class SparseGridSearchOptimization(Optimization):
+    """
+        Sparse Grid Search Optimization class 
+        Params of the sparse grid settings:
+            degree
+            adaptivity
+            optimizer
+    """
+
     def __init__(self, 
                  dataset: Dataset, 
                  model, 

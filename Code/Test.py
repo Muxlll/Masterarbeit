@@ -104,14 +104,11 @@ def create_model():
 
 model = KerasRegressor(model=create_model, verbose=0)
 
-history = model.fit(dataset.get_X(), dataset.get_Y(), epochs=40)
+history = model.fit(dataset.get_X(), dataset.get_Y(), epochs=30)
 
-print(history.history_.keys())
-print(history.history_['loss'])
 plt.plot(history.history_['loss'])
 plt.title('model accuracy')
 plt.ylabel('loss')
 plt.xlabel('epoch')
-#plt.yscale("log")
 plt.legend(['train'], loc='upper left')
 plt.show()
