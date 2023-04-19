@@ -177,7 +177,7 @@ def expected_improvement(x, gaussian_process, evaluated_loss, greater_is_better=
 
 
 def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_loss, greater_is_better=False,
-                               bounds=(0, 10), n_restarts=25):
+                               bounds=(0, 10), n_restarts=5):
     """ sample_next_hyperparameter
     Proposes the next hyperparameter to sample the loss function for.
     Arguments:
@@ -215,7 +215,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
     return best_x
 
 
-def bayesian_optimisation(n_iters, sample_loss, bounds, x0=None, n_pre_samples=5,
+def bayesian_optimisation(n_iters, sample_loss, bounds, x0=None, n_pre_samples=1,
                           gp_params=None, random_search=False, alpha=1e-5, epsilon=1e-7):
     """ bayesian_optimisation
     Uses Gaussian Processes to optimise the loss function `sample_loss`.
@@ -614,18 +614,47 @@ class SparseGridSearchOptimization(Optimization):
             z_values = []
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
-                x_values.append(gp.getStandardCoordinate(0))
-                y_values.append(gp.getStandardCoordinate(1))
+                keys = list(self.hyperparameterspace.keys())
+                if self.hyperparameterspace[keys[0]][0] == "list" or self.hyperparameterspace[keys[0]][0] == "interval-int":
+                    x_values.append(from_standard(self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
+                else:
+                    x_values.append(from_standard_log(self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
+                
+                if self.hyperparameterspace[keys[1]][0] == "list" or self.hyperparameterspace[keys[1]][0] == "interval-int":
+                    y_values.append(from_standard(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                else:
+                    y_values.append(from_standard_log(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                
                 z_values.append(functionValues[i])
 
             if self.verbosity >= 1:
                 plt.plot(x_values, y_values, 'bo')
+                # ax = plt.axes()
+                plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                # keys = list(self.hyperparameterspace.keys())
+                # if self.hyperparameterspace[keys[0]][0] == "interval-log":
+                #     ax.set_xscale('log')
+                # else:
+                #     ax.set_xscale('linear')
+                # if self.hyperparameterspace[keys[0]][1] == "interval-log":
+                #     ax.set_yscale('log')
+                # else:
+                #     ax.set_xscale('linear')
+                # plt.show()
+
 
             if self.verbosity >= 1:
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
 
                 ax.scatter(x_values, y_values, z_values, c=z_values, cmap='viridis')#, rstride=1, cstride=1, cmap='viridis', edgecolor='none')
+                # if self.hyperparameterspace[keys[0]][0] == "interval-log":
+                #     ax.set_xscale('log')
+                # if self.hyperparameterspace[keys[0]][1] == "interval-log":
+                #     ax.set_yscale('log')
+                plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                plt.ylabel(list(self.hyperparameterspace.keys())[1])
                 plt.show()
 
         ######################################## grid functions ########################################
