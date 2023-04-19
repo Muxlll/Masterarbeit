@@ -496,7 +496,7 @@ class RandomSearchOptimization(Optimization):
         n_jobs = 1
         #if os.cpu_count() != None:
         #    n_jobs = 2#os.cpu_count()
-        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
+        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, n_iter=self.budget, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
 
