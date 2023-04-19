@@ -328,6 +328,13 @@ def from_standard(lower, upper, value):
     return value*(upper-lower)+lower
 
 
+def to_standard_log(lower, upper, value):
+    a = math.log10(upper/lower)
+    return math.log10(value/lower) / a
+
+def from_standard_log(lower, upper, value):
+    a = math.log10(upper/lower)
+    return lower * 10**(a*value)
 
 
 class Optimization:
@@ -611,14 +618,14 @@ class SparseGridSearchOptimization(Optimization):
                 y_values.append(gp.getStandardCoordinate(1))
                 z_values.append(functionValues[i])
 
-            #if self.verbosity >= 1:
-            #    plt.plot(x_values, y_values, 'bo')
+            if self.verbosity >= 1:
+                plt.plot(x_values, y_values, 'bo')
 
             if self.verbosity >= 1:
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
 
-                ax.plot_trisurf(x_values, y_values, z_values)
+                ax.scatter(x_values, y_values, z_values, c=z_values, cmap='viridis')#, rstride=1, cstride=1, cmap='viridis', edgecolor='none')
                 plt.show()
 
         ######################################## grid functions ########################################
@@ -685,8 +692,12 @@ class SparseGridSearchOptimization(Optimization):
                 if self.hyperparameterspace[key][0] == "list":
                     index = int(x0[i]*(len(self.hyperparameterspace_processed[key])-2))
                     print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
-                else:
+                elif self.hyperparameterspace[key][0] == "interval-int":
                     print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                elif self.hyperparameterspace[key][0] == "interval-log":
+                    print(key + ": " + str(from_standard_log(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                else:
+                    print("Key of the hyperparameterspace not found while printing results")
                 i += 1
 
             print("Resulting loss:")
@@ -709,8 +720,12 @@ class SparseGridSearchOptimization(Optimization):
                 if self.hyperparameterspace[key][0] == "list":
                     index = int(xOpt[i]*(len(self.hyperparameterspace_processed[key])-2))
                     print(key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
-                else:
+                elif self.hyperparameterspace[key][0] == "interval-int":
                     print(key + ": " + str(from_standard(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
+                elif self.hyperparameterspace[key][0] == "interval-log":
+                    print(key + ": " + str(from_standard_log(self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                else:
+                    print("Key of the hyperparameterspace not found while printing results")
                 i += 1
             print("Resulting loss (Optimal value from optimization):")
             print(ftXOpt)

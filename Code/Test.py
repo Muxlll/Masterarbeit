@@ -77,7 +77,7 @@ for key in hyperparameterspace.keys():
 # X = torch.Tensor(data)
 # Y = torch.Tensor(target)
 
-dataset = HPO.Dataset(task_id=233211)
+dataset = HPO.Dataset(task_id=233214)
 
 print(len(dataset.get_X_train()))
 print(len(dataset.get_X_validation()))
@@ -97,14 +97,14 @@ def create_model():
     model.add(Dense(1, activation=None))
     # Compile model
     
-    optimizer = keras.optimizers.Adam(learning_rate=0.00001)
+    optimizer = keras.optimizers.Adam(learning_rate=0.004937375642917827)
 
     model.compile(loss='mean_squared_error', optimizer=optimizer)
     return model
 
 model = KerasRegressor(model=create_model, verbose=0)
 
-history = model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=30)
+history = model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=6)
 
 plt.plot(history.history_['loss'])
 plt.title('model accuracy')
