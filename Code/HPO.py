@@ -418,7 +418,8 @@ class GridSearchOptimization(Optimization):
                     self.hyperparameterspace_processed[key] = param_list
             elif self.hyperparameterspace.get(key)[0] == "interval-log":
                 if param_per_dimension <= 1:
-                    self.hyperparameterspace_processed[key] = [(upper+lower)/2]
+                    step = (math.log(upper)-math.log(lower))/(2) 
+                    self.hyperparameterspace_processed[key] = [math.exp(math.log(lower) + step)]
                 else:
                     param_list = []
                     step = (math.log(upper)-math.log(lower))/(param_per_dimension - 1) 

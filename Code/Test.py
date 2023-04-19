@@ -97,14 +97,14 @@ def create_model():
     model.add(Dense(1, activation=None))
     # Compile model
     
-    optimizer = keras.optimizers.Adam(learning_rate=0.0001)
+    optimizer = keras.optimizers.Adam(learning_rate=0.00001)
 
-    model.compile(loss='mean_absolute_error', optimizer=optimizer)
+    model.compile(loss='mean_squared_error', optimizer=optimizer)
     return model
 
 model = KerasRegressor(model=create_model, verbose=0)
 
-history = model.fit(dataset.get_X(), dataset.get_Y(), epochs=30)
+history = model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=30)
 
 plt.plot(history.history_['loss'])
 plt.title('model accuracy')
@@ -112,3 +112,12 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train'], loc='upper left')
 plt.show()
+
+
+Y_predicted_train = model.predict(dataset.get_X_train())
+
+print("Training error:", sklearn.metrics.mean_squared_error(dataset.get_Y_train(), Y_predicted_train))
+
+Y_predicted_test = model.predict(dataset.get_X_test())
+
+print("Testing error:", sklearn.metrics.mean_squared_error(dataset.get_Y_test(), Y_predicted_test))
