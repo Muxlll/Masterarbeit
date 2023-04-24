@@ -283,11 +283,11 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, x0=None, n_pre_samples=1
             x_random = np.random.uniform(
                 bounds[:, 0], bounds[:, 1], size=(random_search, n_params))
             ei = -1 * expected_improvement(x_random, model,
-                                           yp, greater_is_better=True, n_params=n_params)
+                                           yp, greater_is_better=False, n_params=n_params)
             next_sample = x_random[np.argmax(ei), :]
         else:
             next_sample = sample_next_hyperparameter(
-                expected_improvement, model, yp, greater_is_better=True, bounds=bounds, n_restarts=100)
+                expected_improvement, model, yp, greater_is_better=False, bounds=bounds, n_restarts=100)
 
         # Duplicates will break the GP. In case of a duplicate, we will randomly sample a next query point.
         if np.any(np.abs(next_sample - xp) <= epsilon):
@@ -440,7 +440,7 @@ class GridSearchOptimization(Optimization):
     def fit(self):
         n_jobs = 1
         #if os.cpu_count() != None:
-        #    n_jobs = 2#os.cpu_count()
+        #    n_jobs = os.cpu_count()
         clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
@@ -503,7 +503,7 @@ class RandomSearchOptimization(Optimization):
     def fit(self):
         n_jobs = 1
         #if os.cpu_count() != None:
-        #    n_jobs = 2#os.cpu_count()
+        #    n_jobs = os.cpu_count()
         clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, n_iter=self.budget, cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
         X_fit = torch.cat((self.dataset.get_X_train(), self.dataset.get_X_validation()))
         Y_fit = torch.cat((self.dataset.get_Y_train(), self.dataset.get_Y_validation()))
@@ -600,6 +600,11 @@ class SparseGridSearchOptimization(Optimization):
         grid = pysgpp.Grid.createModBsplineGrid(d, p)
         gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(
             f, grid, N, gamma)
+        
+        print("Initial level of sparse grid: ", gridGen.getInitialLevel())
+        gridGen.setInitialLevel(1)
+        print("Initial level changed!")
+
 
         functionValues = gridGen.getFunctionValues()
         if not gridGen.generate():
@@ -615,16 +620,20 @@ class SparseGridSearchOptimization(Optimization):
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
                 keys = list(self.hyperparameterspace.keys())
-                if self.hyperparameterspace[keys[0]][0] == "list" or self.hyperparameterspace[keys[0]][0] == "interval-int":
+                if self.hyperparameterspace[keys[0]][0] == "interval-int":
                     x_values.append(from_standard(self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
-                else:
+                elif self.hyperparameterspace[keys[1]][0] == "interval-log":
                     x_values.append(from_standard_log(self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
-                
-                if self.hyperparameterspace[keys[1]][0] == "list" or self.hyperparameterspace[keys[1]][0] == "interval-int":
-                    y_values.append(from_standard(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 else:
-                    y_values.append(from_standard_log(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                    x_values.append(gp.getStandardCoordinate(0))
                 
+                if self.hyperparameterspace[keys[1]][0] == "interval-int":
+                    y_values.append(from_standard(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                elif self.hyperparameterspace[keys[1]][0] == "interval-log":
+                    y_values.append(from_standard_log(self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                else:
+                    y_values.append(gp.getStandardCoordinate(1))
+
                 z_values.append(functionValues[i])
 
             if self.verbosity >= 1:
@@ -767,5 +776,5 @@ class SparseGridSearchOptimization(Optimization):
             x0_vec.append(x0[i])
             xOpt_vec.append(xOpt[i])
 
-        return x0_vec, xOpt_vec
+        return x0_vec, xOpt_vec, len(functionValues)
     

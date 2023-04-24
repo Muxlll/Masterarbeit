@@ -17,12 +17,14 @@ import torch.optim as optim
 
 import sklearn.metrics
 
-from sklearn.model_selection import cross_val_score
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+import tensorflow as tf
 import numpy as np
 import keras
 from keras import backend as K
+
+from sklearn.model_selection import KFold, cross_val_score
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, BatchNormalization
@@ -104,20 +106,33 @@ def create_model():
 
 model = KerasRegressor(model=create_model, verbose=0)
 
-history = model.fit(dataset.get_X_train(), dataset.get_Y_train(), epochs=6)
+kfold = KFold(n_splits=10)
 
-plt.plot(history.history_['loss'])
-plt.title('model accuracy')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train'], loc='upper left')
-plt.show()
+X = dataset.get_X_train().tolist() + dataset.get_X_validation().tolist()
+Y = dataset.get_Y_train().tolist() + dataset.get_Y_validation().tolist()
+
+X = np.array(X)
+Y = np.array(Y)
+
+split = (kfold.split(X, Y))
+
+values = []
+
+for i, (train_index, test_index) in enumerate(split):
+    X_train = X[train_index]
+    Y_train = Y[train_index]
+
+    X_val = X[test_index]
+    Y_val = Y[test_index]
+
+    model.fit(X_train, Y_train, epochs = 20)
+
+    Y_predicted = model.predict(X_val)
+    error = sklearn.metrics.mean_squared_error(Y_predicted, Y_val)
+    values.append(error)
 
 
-Y_predicted_train = model.predict(dataset.get_X_train())
+print(values)
 
-print("Training error:", sklearn.metrics.mean_squared_error(dataset.get_Y_train(), Y_predicted_train))
-
-Y_predicted_test = model.predict(dataset.get_X_test())
-
-print("Testing error:", sklearn.metrics.mean_squared_error(dataset.get_Y_test(), Y_predicted_test))
+result = sum(values)/len(values)
+print(result)
