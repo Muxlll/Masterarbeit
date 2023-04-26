@@ -80,37 +80,90 @@ for key in hyperparameterspace.keys():
 # X = torch.Tensor(data)
 # Y = torch.Tensor(target)
 
-dataset = HPO.Dataset(ratio=0.9,task_id=233214)
+ids = [233211, 359935, 359952, 359931, 359949, 359938]
+#[359940, 317614, 359934, 359946, 359932, 233214, 359943]
 
-def relu_advanced(x):
-    return K.relu(x)
+for id in ids:
+    dataset = HPO.Dataset(ratio=0.9,task_id=id)
 
-ACTIVATION_FUNCTION = relu_advanced
-initializer = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.6,seed=42)
+    def relu_advanced(x):
+        return K.relu(x)
 
-def create_model():
-    # create model
-    model = Sequential()
-    model.add(Dense(40, input_shape=(len(dataset.get_X()[0]),), activation=ACTIVATION_FUNCTION, 
-              kernel_initializer=initializer, bias_initializer=initializer))
-    for _ in range(2):
-        model.add(Dense(40, activation=ACTIVATION_FUNCTION, kernel_initializer=initializer, bias_initializer=initializer))
-    model.add(Dense(1, activation=None))
-    # Compile model
+    ACTIVATION_FUNCTION = relu_advanced
+    INITIALIZER = tf.keras.initializers.RandomNormal(mean=0.0, stddev=1,seed=42)
+
+
+    def evaluate_model(loss, epochs, batch_size, model_learning_rate, neurons_per_layer, number_of_layers):
+        # Function to create model, required for KerasClassifier
+        def create_model():
+            # create model
+            model = Sequential()
+            model.add(Dense(neurons_per_layer, input_shape=(len(dataset.get_X()[0]),), activation=ACTIVATION_FUNCTION, kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
+            for _ in range(number_of_layers):
+                model.add(Dense(neurons_per_layer, activation=ACTIVATION_FUNCTION, kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
+            model.add(Dense(1, activation=None))
+            # Compile model
+            
+            optimizer = keras.optimizers.Adam(learning_rate=model_learning_rate)
+
+            model.compile(loss=loss, optimizer=optimizer)
+            return model
+
+
+        kfold = KFold(n_splits=4)
+
+        X = dataset.get_X_train().tolist() + dataset.get_X_validation().tolist()
+        Y = dataset.get_Y_train().tolist() + dataset.get_Y_validation().tolist()
+        
     
-    optimizer = keras.optimizers.Adam(learning_rate=0.001)
+        X += dataset.get_X_test().tolist()
+        Y += dataset.get_Y_test().tolist()
 
-    model.compile(loss="mean_squared_error", optimizer=optimizer)
-    return model
+        X = np.array(X)
+        Y = np.array(Y)
+
+        split = (kfold.split(X, Y))
+
+        values = []
+
+        for i, (train_index, test_index) in enumerate(split):
+            X_train = X[train_index]
+            Y_train = Y[train_index]
+
+            X_val = X[test_index]
+            Y_val = Y[test_index]
+
+
+            model = KerasRegressor(model=create_model, verbose=0)
+
+            model.fit(X_train, Y_train, epochs=epochs, batch_size=batch_size)
+
+            Y_predicted = model.predict(X_val)
+            error = sklearn.metrics.mean_squared_error(Y_predicted, Y_val)
+            values.append(error)
+
+            K.clear_session()
+            del model
+
+        result = sum(values)/len(values)
+        return result
+
+
+    loss = 'mean_squared_error'#hyperparameterspace_special["loss"][index]
+
+    epochs = 10
+
+    batch_size = 57
+
+    model_learning_rate = 7.873896236216029e-02
+
+    neurons_per_layer = 40 # int(params[3])
+
+    number_of_layers = 1 # int(params[4])
+
+    for _ in range(1):
+        print(evaluate_model(loss, epochs, batch_size, model_learning_rate, neurons_per_layer, number_of_layers))
+
+    print("")
+
     
-model = KerasRegressor(model=create_model)
-
-model.fit(dataset.get_X(), dataset.get_Y(), epochs=20)
-
-Y_predicted = model.predict(dataset.get_X())
-print(Y_predicted[:5])
-print(dataset.get_Y_test()[:5])
-
-error = sklearn.metrics.mean_squared_error(Y_predicted, dataset.get_Y())
-K.clear_session()
-print(error)
