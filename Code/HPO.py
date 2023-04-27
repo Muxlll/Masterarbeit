@@ -98,7 +98,7 @@ class Dataset:
                 # additional scaling of numerical features
                 scaler = StandardScaler().fit(data)
                 data = scaler.transform(data)
-                
+
             else:
                 scaler = StandardScaler().fit(data)
                 data = scaler.transform(data)
@@ -247,7 +247,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
 
 
 def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosity, x0=None, n_pre_samples=1,
-                          gp_params=None, random_search=False, alpha=1e-5, epsilon=1e-7):
+                          gp_params=None, alpha=1e-5, epsilon=1e-7):
     """ bayesian_optimisation
     Uses Gaussian Processes to optimise the loss function `sample_loss`.
     Arguments:
@@ -309,21 +309,22 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
 
         model.fit(xp, yp)
 
-        # Sample next hyperparameter
-        if random_search:
-            x_random = np.random.uniform(
-                bounds[:, 0], bounds[:, 1], size=(random_search, n_params))
-            ei = -1 * expected_improvement(x_random, model,
-                                           yp, greater_is_better=False, n_params=n_params)
-            next_sample = x_random[np.argmax(ei), :]
-        else:
-            next_sample = sample_next_hyperparameter(
-                expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=50)
+        next_sample = sample_next_hyperparameter(
+            expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=50)
 
         # Duplicates will break the GP. In case of a duplicate, we will randomly sample a next query point.
         if np.any(np.abs(next_sample - xp) <= epsilon):
-            next_sample = np.random.uniform(
-                bounds[:, 0], bounds[:, 1], bounds.shape[0])
+            next_sample = []
+            for dim in range(n_params):
+                if sampling_scales[dim] == "log":
+                    next_sample.append(loguniform.rvs(
+                        bounds[dim, 0], bounds[dim, 1]))
+                elif sampling_scales[dim] == "int":
+                    next_sample.append(stats.randint.rvs(
+                        bounds[dim, 0], bounds[dim, 1]))
+                else:
+                    next_sample.append(stats.uniform(
+                        bounds[dim, 0], bounds[dim, 1]))
 
         # Sample loss for new set of parameters
         cv_score = sample_loss(next_sample)
@@ -677,6 +678,10 @@ class SparseGridSearchOptimization(Optimization):
         if d == 2:
             x_values = []
             y_values = []
+
+            x_values_interpreted = []
+            y_values_interpreted = []
+
             z_values = []
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
@@ -684,29 +689,47 @@ class SparseGridSearchOptimization(Optimization):
                 if self.hyperparameterspace[keys[0]][0] == "interval-int":
                     x_values.append(from_standard(
                         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
+                    x_values_interpreted.append(from_standard(
+                        self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
                 elif self.hyperparameterspace[keys[1]][0] == "interval-log":
-                    x_values.append(from_standard_log(
+                    x_values.append(from_standard(
+                        self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
+                    x_values_interpreted.append(from_standard_log(
                         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
                 else:
                     x_values.append(gp.getStandardCoordinate(0))
+                    x_values_interpreted.append(gp.getStandardCoordinate(0))
 
                 if self.hyperparameterspace[keys[1]][0] == "interval-int":
                     y_values.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                    y_values_interpreted.append(from_standard(
+                        self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 elif self.hyperparameterspace[keys[1]][0] == "interval-log":
                     y_values.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
+                    y_values_interpreted.append(from_standard_log(
+                        self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 else:
                     y_values.append(gp.getStandardCoordinate(1))
+                    y_values_interpreted.append(gp.getStandardCoordinate(1))
 
                 z_values.append(functionValues[i])
 
             if self.verbosity >= 1:
+                print("########### Generated Grid: ###########")
                 plt.plot(x_values, y_values, 'bo')
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                plt.show()
 
-            if self.verbosity >= 1:
+                print("########### Interpreted Values: ###########")
+                plt.plot(x_values_interpreted, y_values_interpreted, 'bo')
+                plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                plt.show()
+
+
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
 
