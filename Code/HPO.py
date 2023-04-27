@@ -694,7 +694,7 @@ class SparseGridSearchOptimization(Optimization):
                     y_values.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 elif self.hyperparameterspace[keys[1]][0] == "interval-log":
-                    y_values.append(from_standard_log(
+                    y_values.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 else:
                     y_values.append(gp.getStandardCoordinate(1))
