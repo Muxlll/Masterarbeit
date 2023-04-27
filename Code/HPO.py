@@ -91,13 +91,14 @@ class Dataset:
                     categorical_features)
                 transformed = encoder.transform(categorical_features)
 
-                # additional scaling of numerical features
-                scaler = StandardScaler().fit(numerical_features)
-                numerical_features = scaler.transform(numerical_features)
-
-                # bring back together
-                data = [numerical_features[i].tolist() + transformed[i].tolist()
+                # bring back together (before standard scaling)
+                data = [numerical_features[i] + transformed[i].tolist()
                         for i in range(len(numerical_features))]
+
+                # additional scaling of numerical features
+                scaler = StandardScaler().fit(data)
+                data = scaler.transform(data)
+                
             else:
                 scaler = StandardScaler().fit(data)
                 data = scaler.transform(data)
