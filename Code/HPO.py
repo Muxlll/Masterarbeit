@@ -7,6 +7,8 @@ from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 
 import timeit
 
+import itertools
+
 import copy
 
 import sklearn.gaussian_process as gp
@@ -87,33 +89,34 @@ class Dataset:
 
             self.categorical_indicator = categorical_indicator
 
-            # Following part only for computing the input dimension of the network ###
-            # TODO check if otherwise possible
-            data_temp = data
+            # # Following part only for computing the input dimension of the network ###
+            # # TODO check if otherwise possible
+            # data_temp = data
 
-            numeric_features = [not x for x in categorical_indicator]
-            numeric_transformer = Pipeline(
-                steps=[("imputer", SimpleImputer(strategy="median")),
-                    ("scaler", StandardScaler())]
-            )
+            # numeric_features = [not x for x in categorical_indicator]
+            # numeric_transformer = Pipeline(
+            #     steps=[("imputer", SimpleImputer(strategy="median")),
+            #            ("scaler", StandardScaler())]
+            # )
 
-            categorical_transformer = Pipeline(
-                steps=[
-                    ("encoder", OneHotEncoder(handle_unknown="error", sparse_output=False)),
-                    #("selector", SelectPercentile(chi2, percentile=50)),
-                ]
-            )
-            preprocessor = ColumnTransformer(
-                transformers=[
-                    ("num", numeric_transformer, numeric_features),
-                    ("cat", categorical_transformer, categorical_indicator),
-                ]
-            )
+            # categorical_transformer = Pipeline(
+            #     steps=[
+            #         ("encoder", OneHotEncoder(
+            #             handle_unknown="error", sparse_output=False)),
+            #         # ("selector", SelectPercentile(chi2, percentile=50)),
+            #     ]
+            # )
+            # preprocessor = ColumnTransformer(
+            #     transformers=[
+            #         ("num", numeric_transformer, numeric_features),
+            #         ("cat", categorical_transformer, categorical_indicator),
+            #     ]
+            # )
 
-            preprocessor.fit(data_temp)
-            data_temp = preprocessor.transform(data_temp)
+            # preprocessor.fit(data_temp)
+            # data_temp = preprocessor.transform(data_temp)
 
-            self.input_dim = len(data_temp[0])
+            # self.input_dim = len(data_temp[0])
 
             X = torch.Tensor(data)
             Y = torch.Tensor(target.reshape(-1, 1))
@@ -293,14 +296,29 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
 
     n_params = bounds.shape[0]
 
-    if x0 is None:
-        for params in np.random.uniform(bounds[:, 0], bounds[:, 1], (n_pre_samples, bounds.shape[0])):
-            x_list.append(params)
-            y_list.append(sample_loss(params))
-    else:
-        for params in x0:
-            x_list.append(params)
-            y_list.append(sample_loss(params))
+    first_sample = []
+    for dim in range(n_params):
+        if sampling_scales[dim] == "log":
+            first_sample.append(loguniform.rvs(
+                bounds[dim, 0], bounds[dim, 1]))
+        elif sampling_scales[dim] == "int":
+            first_sample.append(stats.randint.rvs(
+                bounds[dim, 0], bounds[dim, 1]))
+        else:
+            first_sample.append(stats.uniform(
+                bounds[dim, 0], bounds[dim, 1]))
+
+    x_list.append(first_sample)
+    y_list.append(sample_loss(first_sample))
+
+    # if x0 is None:
+    #     for params in np.random.uniform(bounds[:, 0], bounds[:, 1], (n_pre_samples, bounds.shape[0])):
+    #         x_list.append(params)
+    #         y_list.append(sample_loss(params))
+    # else:
+    #     for params in x0:
+    #         x_list.append(params)
+    #         y_list.append(sample_loss(params))
 
     xp = np.array(x_list)
     yp = np.array(y_list)
@@ -318,7 +336,6 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
     time = 0
 
     for n in range(n_iters):
-
         starttime = timeit.default_timer()
 
         model.fit(xp, yp)
@@ -359,7 +376,11 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
     if verbosity > 0:
         print("Iterations took", time, "seconds")
 
-    return xp, yp
+    result_list = []
+    for i in range(len(xp)):
+        result_list.append([xp[i], yp[i]])
+
+    return result_list, (len(result_list)+1)
 
 
 def to_standard(lower, upper, value):
@@ -496,71 +517,22 @@ class GridSearchOptimization(Optimization):
 
     def fit(self):
 
-        # # partial one hot encoding
-        # onehotencoder = ColumnTransformer(
-        #     transformers=[
-        #         ("categorical", OneHotEncoder(sparse_output=False),
-        #         self.dataset.get_categorical_indicator())
-        #     ], remainder='passthrough'
-        # )
+        lists = [self.hyperparameterspace_processed[key]
+                 for key in self.hyperparameterspace_processed.keys()]
 
-        # # final regressor
-        # regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
-        #                                 transformer=StandardScaler())
+        cart_product = itertools.product(*lists)
 
-        # pipeline = Pipeline([
-        #     ('ohencoder', onehotencoder),
-        #     ('standardizer', StandardScaler(with_mean=False)),
-        #     ('regressor', regressor)
-        # ])
+        result_list = []
+        for combination in cart_product:
+            result = self.model(combination)
 
-        numeric_features = [
-            not x for x in self.dataset.get_categorical_indicator()]
-        numeric_transformer = Pipeline(
-            steps=[("imputer", SimpleImputer(strategy="median")),
-                   ("scaler", StandardScaler())]
-        )
-
-        categorical_transformer = Pipeline(
-            steps=[
-                ("encoder", OneHotEncoder(handle_unknown="error", sparse_output=False)),
-                # ("selector", SelectPercentile(chi2, percentile=50)),
-            ]
-        )
-
-        categorical_transformer.fit(self.dataset.get_X_train())
-
-        number_numeric_features = 0
-        for x in numeric_features:
-            if x:
-                number_numeric_features += 1
-
-        preprocessor = ColumnTransformer(
-            transformers=[
-                ("num", numeric_transformer, numeric_features),
-                ("cat", categorical_transformer,
-                 self.dataset.get_categorical_indicator()),
-            ]
-        )
-        # (number_numeric_features+len(categorical_transformer["encoder"].categories_)
-
-        # final regressor
-        regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
-                                               transformer=StandardScaler())
-
-        pipeline = Pipeline([
-            ('preprocessor', preprocessor),
-            ('regressor', regressor)
-        ])
-
-        clf = GridSearchCV(pipeline, self.hyperparameterspace_processed, cv=self.cv,
-                           scoring=self.scoring, n_jobs=1, error_score='raise', verbose=self.verbosity)
+            result_list.append([combination, result])
 
         cost = 1
         for key in self.hyperparameterspace_processed.keys():
             cost *= len(self.hyperparameterspace_processed.get(key))
 
-        return clf.fit(self.dataset.get_X(), self.dataset.get_Y()), cost
+        return result_list, cost
 
 
 class RandomSearchOptimization(Optimization):
@@ -616,28 +588,18 @@ class RandomSearchOptimization(Optimization):
                 print("Need to specify the type of list")
 
     def fit(self):
-        # partial one hot encoding
-        onehotencoder = ColumnTransformer(
-            transformers=[
-                ("categorical", OneHotEncoder(sparse_output=False),
-                 self.dataset.get_categorical_indicator())
-            ], remainder='passthrough'
-        )
 
-        # final regressor
-        regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
-                                               transformer=StandardScaler())
+        result_list = []
 
-        pipeline = Pipeline([
-            ('ohencoder', onehotencoder),
-            ('standardizer', StandardScaler(with_mean=False)),
-            ('regressor', regressor)
-        ])
+        for _ in range(self.budget):
+            combination = []
+            for key in self.hyperparameterspace_processed.keys():
+                random_number = self.hyperparameterspace_processed[key].rvs()
+                combination.append(random_number)
 
-        clf = RandomizedSearchCV(pipeline, self.hyperparameterspace_processed, n_iter=self.budget,
-                                 cv=self.cv, scoring=self.scoring, n_jobs=1, error_score='raise', verbose=self.verbosity)
+            result_list.append([combination, self.model(combination)])
 
-        return clf.fit(self.dataset.get_X(), self.dataset.get_Y()), self.budget
+        return result_list, self.budget
 
 
 class BayesianOptimization(Optimization):
