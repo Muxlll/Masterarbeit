@@ -24,6 +24,7 @@ import sys
 from IPython.display import clear_output
 
 import pysgpp
+from sklearn.impute import SimpleImputer
 
 import scipy.stats as stats
 from sklearn.utils.fixes import loguniform
@@ -83,45 +84,39 @@ class Dataset:
             # Get the data itself as an array
             data, target, categorical_indicator, _ = dataset.get_data(
                 dataset.default_target_attribute, dataset_format="array")
-            
+
             self.categorical_indicator = categorical_indicator
 
-
             # Following part only for computing the input dimension of the network ###
-            # TODO check if otherwise possible 
+            # TODO check if otherwise possible
             data_temp = data
 
-            if all(categorical_indicator):
-                encoder = OneHotEncoder(sparse_output=False).fit(data_temp)
-                data_temp = encoder.transform(data_temp)
-            elif any(categorical_indicator):
-                # split into categorical and numerical features
-                categorical_features = [[x[i] for i in range(
-                    len(x)) if categorical_indicator[i]] for x in data_temp]
-                numerical_features = [[x[i] for i in range(
-                    len(x)) if not categorical_indicator[i]] for x in data_temp]
+            numeric_features = [not x for x in categorical_indicator]
+            numeric_transformer = Pipeline(
+                steps=[("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler())]
+            )
 
-                # one hot encoding of the categorical features
-                encoder = OneHotEncoder(sparse_output=False).fit(
-                    categorical_features)
-                transformed = encoder.transform(categorical_features)
+            categorical_transformer = Pipeline(
+                steps=[
+                    ("encoder", OneHotEncoder(handle_unknown="error", sparse_output=False)),
+                    #("selector", SelectPercentile(chi2, percentile=50)),
+                ]
+            )
+            preprocessor = ColumnTransformer(
+                transformers=[
+                    ("num", numeric_transformer, numeric_features),
+                    ("cat", categorical_transformer, categorical_indicator),
+                ]
+            )
 
-                # bring back together (before standard scaling)
-                data_temp = [numerical_features[i] + transformed[i].tolist()
-                        for i in range(len(numerical_features))]
-
-                # additional scaling of numerical features
-                scaler = StandardScaler().fit(data_temp)
-                data_temp = scaler.transform(data_temp)
-
-            else:
-                scaler = StandardScaler().fit(data_temp)
-                data_temp = scaler.transform(data_temp)
+            preprocessor.fit(data_temp)
+            data_temp = preprocessor.transform(data_temp)
 
             self.input_dim = len(data_temp[0])
 
             X = torch.Tensor(data)
-            Y = torch.Tensor(target.reshape(-1,1))
+            Y = torch.Tensor(target.reshape(-1, 1))
 
         self.X = torch.Tensor(X)
         self.Y = torch.Tensor(Y)
@@ -140,7 +135,7 @@ class Dataset:
         self.Y_test = torch.Tensor(Y[int(len(Y) * ratio):])
 
     def get_input_dim(self):
-        return self.input_dim   
+        return self.input_dim
 
     def get_categorical_indicator(self):
         return self.categorical_indicator
@@ -266,7 +261,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
 
 
 def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosity, x0=None, n_pre_samples=1,
-                          gp_params=None, alpha=1e-5, epsilon=1e-7):
+                          gp_params=None, alpha=1e-3, epsilon=1e-7):
     """ bayesian_optimisation
     Uses Gaussian Processes to optimise the loss function `sample_loss`.
     Arguments:
@@ -329,7 +324,7 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
         model.fit(xp, yp)
 
         next_sample = sample_next_hyperparameter(
-            expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=50)
+            expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=20)
 
         # Duplicates will break the GP. In case of a duplicate, we will randomly sample a next query point.
         if np.any(np.abs(next_sample - xp) <= epsilon):
@@ -500,23 +495,61 @@ class GridSearchOptimization(Optimization):
                 print("Need to specify the type of list")
 
     def fit(self):
-        
-        # partial one hot encoding
-        onehotencoder = ColumnTransformer(
-            transformers=[
-                ("categorical", OneHotEncoder(sparse_output=False),
-                self.dataset.get_categorical_indicator())
-            ], remainder='passthrough'
+
+        # # partial one hot encoding
+        # onehotencoder = ColumnTransformer(
+        #     transformers=[
+        #         ("categorical", OneHotEncoder(sparse_output=False),
+        #         self.dataset.get_categorical_indicator())
+        #     ], remainder='passthrough'
+        # )
+
+        # # final regressor
+        # regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
+        #                                 transformer=StandardScaler())
+
+        # pipeline = Pipeline([
+        #     ('ohencoder', onehotencoder),
+        #     ('standardizer', StandardScaler(with_mean=False)),
+        #     ('regressor', regressor)
+        # ])
+
+        numeric_features = [
+            not x for x in self.dataset.get_categorical_indicator()]
+        numeric_transformer = Pipeline(
+            steps=[("imputer", SimpleImputer(strategy="median")),
+                   ("scaler", StandardScaler())]
         )
+
+        categorical_transformer = Pipeline(
+            steps=[
+                ("encoder", OneHotEncoder(handle_unknown="error", sparse_output=False)),
+                # ("selector", SelectPercentile(chi2, percentile=50)),
+            ]
+        )
+
+        categorical_transformer.fit(self.dataset.get_X_train())
+
+        number_numeric_features = 0
+        for x in numeric_features:
+            if x:
+                number_numeric_features += 1
+
+        preprocessor = ColumnTransformer(
+            transformers=[
+                ("num", numeric_transformer, numeric_features),
+                ("cat", categorical_transformer,
+                 self.dataset.get_categorical_indicator()),
+            ]
+        )
+        # (number_numeric_features+len(categorical_transformer["encoder"].categories_)
 
         # final regressor
         regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
-                                        transformer=StandardScaler())
-
+                                               transformer=StandardScaler())
 
         pipeline = Pipeline([
-            ('ohencoder', onehotencoder),
-            ('standardizer', StandardScaler(with_mean=False)),
+            ('preprocessor', preprocessor),
             ('regressor', regressor)
         ])
 
@@ -587,14 +620,13 @@ class RandomSearchOptimization(Optimization):
         onehotencoder = ColumnTransformer(
             transformers=[
                 ("categorical", OneHotEncoder(sparse_output=False),
-                self.dataset.get_categorical_indicator())
+                 self.dataset.get_categorical_indicator())
             ], remainder='passthrough'
         )
 
         # final regressor
         regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
-                                        transformer=StandardScaler())
-
+                                               transformer=StandardScaler())
 
         pipeline = Pipeline([
             ('ohencoder', onehotencoder),
@@ -777,7 +809,6 @@ class SparseGridSearchOptimization(Optimization):
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
                 plt.show()
-
 
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')

@@ -24,8 +24,13 @@ from sklearn.compose import TransformedTargetRegressor
 from sklearn.pipeline import Pipeline
 from scikeras.wrappers import KerasRegressor
 
+from sklearn.linear_model import SGDRegressor
+
 
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.feature_selection import SelectPercentile, chi2
+
 import tensorflow as tf
 import numpy as np
 import keras
@@ -59,112 +64,80 @@ def relu_advanced(x):
 
 
 ACTIVATION_FUNCTION = relu_advanced
-INITIALIZER = tf.keras.initializers.RandomNormal(mean=0.0, stddev=1, seed=42)
 
-def evaluate_model(loss, epochs, batch_size, model_learning_rate, neurons_per_layer, number_of_layers):
-    # Function to create model, required for KerasClassifier
-    def create_model(learning_rate=0.0001, input_dim=10):
-        # create model
-        model = Sequential()
-        model.add(Dense(30, input_shape=(input_dim,), activation=ACTIVATION_FUNCTION, kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
-        model.add(Dense(30, activation=ACTIVATION_FUNCTION, kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
-        model.add(Dense(1, activation=None))
-
-        optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
-
-        model.compile(loss='mean_squared_error', optimizer=optimizer)
-        return model
+INITIALIZER = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.01, seed=42)
 
 
-    kfold = KFold(n_splits=2)
+def create_model(learning_rate=0.001, input_dim=10):
+    # create model
+    model = Sequential()
+    model.add(Dense(30, input_shape=(input_dim,), activation=ACTIVATION_FUNCTION,
+                kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
+    model.add(Dense(30, activation=ACTIVATION_FUNCTION,
+                kernel_initializer=INITIALIZER, bias_initializer=INITIALIZER))
+    model.add(Dense(1, activation=None))
 
-    split = (kfold.split(dataset.get_X(), dataset.get_Y()))
+    optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
 
-    values = []
-
-    # partial one hot encoding
-    onehotencoder = ColumnTransformer(
-        transformers=[
-            ("categorical", OneHotEncoder(sparse_output=False),
-            dataset.get_categorical_indicator())
-        ], remainder='passthrough'
-    )
-
-    # final regressor
-    regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=create_model, input_dim=dataset.get_input_dim(), verbose=0),
-                                    transformer=StandardScaler())
+    model.compile(loss='mean_absolute_error', optimizer=optimizer)
+    return model
 
 
-    pipeline = Pipeline([
-        ('ohencoder', onehotencoder),
-        ('standardizer', StandardScaler(with_mean=False)),
-        ('regressor', regressor)
-    ])
+numeric_features = [not x for x in dataset.get_categorical_indicator()]
+numeric_transformer = Pipeline(
+    steps=[("imputer", SimpleImputer(strategy="median")),
+           ("scaler", StandardScaler())]
+)
 
-    for i, (train_index, test_index) in enumerate(split):
-        X_train = dataset.get_X()[train_index]
-        Y_train = dataset.get_Y()[train_index]
+categorical_transformer = Pipeline(
+    steps=[
+        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+        #("selector", SelectPercentile(chi2, percentile=50)),
+    ]
+)
 
-        X_val = dataset.get_X()[test_index]
-        Y_val = dataset.get_Y()[test_index]
+preprocessor = ColumnTransformer(
+    transformers=[
+        ("num", numeric_transformer, numeric_features),
+        ("cat", categorical_transformer, dataset.get_categorical_indicator()),
+    ]
+)
+
+# onehotencoder = ColumnTransformer(
+#     transformers=[
+#         ("categorical", OneHotEncoder(sparse_output=False),
+#             dataset.get_categorical_indicator())
+#     ], remainder='passthrough'
+# )
+
+# final regressor
+regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=create_model, input_dim=dataset.get_input_dim(), verbose=0),
+                                       transformer=StandardScaler())
+
+pipeline = Pipeline([
+    ('preprocessor', preprocessor),
+    ('regressor', regressor)
+])
+
+pipeline.fit(dataset.get_X_train(),
+             dataset.get_Y_train(), regressor__epochs=15)
+
+print(pipeline['regressor'].regressor_.history_['loss'])
+
+# summarize history for loss
+plt.plot(pipeline['regressor'].regressor_.history_['loss'])
+plt.title('model training loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.show()
+
+test_pre = pipeline.predict(dataset.get_X_test())
+print(dataset.get_Y_test())
+print(test_pre)
+print(sklearn.metrics.mean_absolute_error(test_pre, dataset.get_Y_test()))
+
+val_pre = pipeline.predict(dataset.get_X_validation())
+
+print(sklearn.metrics.mean_absolute_error(val_pre, dataset.get_Y_validation()))
 
 
-        model = KerasRegressor(model=create_model, verbose=0)
-
-        pipeline.fit(X_train, Y_train, regressor__epochs=epochs, regressor__batch_size=batch_size)
-
-        Y_predicted = pipeline.predict(X_val)
-        error = sklearn.metrics.mean_absolute_error(Y_predicted, Y_val)
-        values.append(error)
-
-        K.clear_session()
-        del model
-
-    result = sum(values)/len(values)
-    return result
-
-def blackboxfunction(params):
-    #index = int(params[0]*(len(hyperparameterspace_special["loss"])-1))
-    loss = 'mean_squared_error'#hyperparameterspace_special["loss"][index]
-    
-    epochs = int(params[0])
-
-    batch_size = int(params[1])
-
-    model_learning_rate = params[2]
-
-    neurons_per_layer = 40 # int(params[3])
-
-    number_of_layers = 1 # int(params[4])
-
-    return evaluate_model(loss, epochs, batch_size, model_learning_rate, neurons_per_layer, number_of_layers)
-        
-
-class ExampleFunction(pysgpp.ScalarFunction):
-
-    def __init__(self):
-        super(ExampleFunction, self).__init__(len(hyperparameterspace.keys()))
-
-
-    def eval(self, x):
-        #index = int(x[0]*(len(hyperparameterspace_special["loss"])-1))
-        loss = 'mean_squared_error'#hyperparameterspace_special["loss"][index]
-        
-        epochs = int(HPO.from_standard(hyperparameterspace_special["epochs"][0], hyperparameterspace_special["epochs"][1], x[0]))
-
-        batch_size = int(HPO.from_standard(hyperparameterspace_special["batch_size"][0], hyperparameterspace_special["batch_size"][1], x[1]))
-
-        model_learning_rate = HPO.from_standard_log(hyperparameterspace_special["optimizer__learning_rate"][0], hyperparameterspace_special["optimizer__learning_rate"][1], x[2])
-        
-        neurons_per_layer = 40 # int(HPO.from_standard(hyperparameterspace_special["model__neurons_per_layer"][0], hyperparameterspace_special["model__neurons_per_layer"][1], x[3]))
-
-        number_of_layers = 1 # int(HPO.from_standard(hyperparameterspace_special["model__number_of_layers"][0], hyperparameterspace_special["model__number_of_layers"][1], x[4]))
-
-        return evaluate_model(loss, epochs, batch_size, model_learning_rate, neurons_per_layer, number_of_layers)
-
-opt = HPO.SparseGridSearchOptimization(dataset=dataset, model=ExampleFunction(), hyperparameterspace=hyperparameterspace, budget=3)
-
-result = opt.fit()
-
-print(result[0].best_params_)
-print(-result[0].best_score_)
