@@ -28,9 +28,14 @@ import pysgpp
 import scipy.stats as stats
 from sklearn.utils.fixes import loguniform
 
-from openml import tasks
+from openml import tasks, datasets
 
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+from sklearn.compose import ColumnTransformer
+from sklearn.compose import TransformedTargetRegressor
+from sklearn.pipeline import Pipeline
+from scikeras.wrappers import KerasRegressor
 
 
 def update_progress(progress, time, remaining_time):
@@ -69,6 +74,8 @@ class Dataset:
     """
 
     def __init__(self, X=None, Y=None, ratio=0.8, task_id=None) -> None:
+        self.input_dim = 0
+
         if not (task_id == None):
             task = tasks.get_task(task_id)
             dataset = task.get_dataset()
@@ -76,15 +83,23 @@ class Dataset:
             # Get the data itself as an array
             data, target, categorical_indicator, _ = dataset.get_data(
                 dataset.default_target_attribute, dataset_format="array")
+            
+            self.categorical_indicator = categorical_indicator
+
+
+            # Following part only for computing the input dimension of the network ###
+            # TODO check if otherwise possible 
+            data_temp = data
+
             if all(categorical_indicator):
-                encoder = OneHotEncoder(sparse_output=False).fit(data)
-                data = encoder.transform(data)
+                encoder = OneHotEncoder(sparse_output=False).fit(data_temp)
+                data_temp = encoder.transform(data_temp)
             elif any(categorical_indicator):
                 # split into categorical and numerical features
                 categorical_features = [[x[i] for i in range(
-                    len(x)) if categorical_indicator[i]] for x in data]
+                    len(x)) if categorical_indicator[i]] for x in data_temp]
                 numerical_features = [[x[i] for i in range(
-                    len(x)) if not categorical_indicator[i]] for x in data]
+                    len(x)) if not categorical_indicator[i]] for x in data_temp]
 
                 # one hot encoding of the categorical features
                 encoder = OneHotEncoder(sparse_output=False).fit(
@@ -92,26 +107,24 @@ class Dataset:
                 transformed = encoder.transform(categorical_features)
 
                 # bring back together (before standard scaling)
-                data = [numerical_features[i] + transformed[i].tolist()
+                data_temp = [numerical_features[i] + transformed[i].tolist()
                         for i in range(len(numerical_features))]
 
                 # additional scaling of numerical features
-                scaler = StandardScaler().fit(data)
-                data = scaler.transform(data)
+                scaler = StandardScaler().fit(data_temp)
+                data_temp = scaler.transform(data_temp)
 
             else:
-                scaler = StandardScaler().fit(data)
-                data = scaler.transform(data)
+                scaler = StandardScaler().fit(data_temp)
+                data_temp = scaler.transform(data_temp)
 
-            scaler = StandardScaler().fit(target.reshape(-1, 1))
-            target = scaler.transform(target.reshape(-1, 1))
+            self.input_dim = len(data_temp[0])
 
             X = torch.Tensor(data)
-            Y = torch.Tensor(target)
+            Y = torch.Tensor(target.reshape(-1,1))
 
         self.X = torch.Tensor(X)
         self.Y = torch.Tensor(Y)
-        X, Y = shuffle(X, Y)
 
         self.X_train = torch.Tensor(X[:int(len(X) * ratio)])
         self.X_validation = torch.Tensor(
@@ -125,6 +138,12 @@ class Dataset:
         self.Y_train = torch.Tensor(
             self.Y_train[:int(len(self.Y_train) * ratio)])
         self.Y_test = torch.Tensor(Y[int(len(Y) * ratio):])
+
+    def get_input_dim(self):
+        return self.input_dim   
+
+    def get_categorical_indicator(self):
+        return self.categorical_indicator
 
     def get_X_train(self):
         return self.X_train
@@ -328,6 +347,8 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
 
         # Sample loss for new set of parameters
         cv_score = sample_loss(next_sample)
+        if verbosity > 1:
+            print("Current score:", cv_score)
 
         # Update lists
         x_list.append(next_sample)
@@ -423,7 +444,7 @@ class GridSearchOptimization(Optimization):
                  budget: int = 100,
                  verbosity: int = 1,
                  cv: int = 5,
-                 scoring: str = 'neg_mean_squared_error'):
+                 scoring: str = 'neg_mean_absolute_error'):
 
         self.dataset = dataset
         self.model = model
@@ -479,19 +500,34 @@ class GridSearchOptimization(Optimization):
                 print("Need to specify the type of list")
 
     def fit(self):
-        n_jobs = 1
-        clf = GridSearchCV(self.model, self.hyperparameterspace_processed, cv=self.cv,
-                           scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
-        X_fit = torch.cat((self.dataset.get_X_train(),
-                          self.dataset.get_X_validation()))
-        Y_fit = torch.cat((self.dataset.get_Y_train(),
-                          self.dataset.get_Y_validation()))
+        
+        # partial one hot encoding
+        onehotencoder = ColumnTransformer(
+            transformers=[
+                ("categorical", OneHotEncoder(sparse_output=False),
+                self.dataset.get_categorical_indicator())
+            ], remainder='passthrough'
+        )
+
+        # final regressor
+        regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
+                                        transformer=StandardScaler())
+
+
+        pipeline = Pipeline([
+            ('ohencoder', onehotencoder),
+            ('standardizer', StandardScaler(with_mean=False)),
+            ('regressor', regressor)
+        ])
+
+        clf = GridSearchCV(pipeline, self.hyperparameterspace_processed, cv=self.cv,
+                           scoring=self.scoring, n_jobs=1, error_score='raise', verbose=self.verbosity)
 
         cost = 1
         for key in self.hyperparameterspace_processed.keys():
             cost *= len(self.hyperparameterspace_processed.get(key))
 
-        return clf.fit(X_fit, Y_fit), cost
+        return clf.fit(self.dataset.get_X(), self.dataset.get_Y()), cost
 
 
 class RandomSearchOptimization(Optimization):
@@ -512,7 +548,7 @@ class RandomSearchOptimization(Optimization):
                  budget: int = 100,
                  verbosity: int = 1,
                  cv: int = 5,
-                 scoring: str = 'neg_mean_squared_error'):
+                 scoring: str = 'neg_mean_absolute_error'):
 
         self.dataset = dataset
         self.model = model
@@ -547,16 +583,29 @@ class RandomSearchOptimization(Optimization):
                 print("Need to specify the type of list")
 
     def fit(self):
-        n_jobs = 1
+        # partial one hot encoding
+        onehotencoder = ColumnTransformer(
+            transformers=[
+                ("categorical", OneHotEncoder(sparse_output=False),
+                self.dataset.get_categorical_indicator())
+            ], remainder='passthrough'
+        )
 
-        clf = RandomizedSearchCV(self.model, self.hyperparameterspace_processed, n_iter=self.budget,
-                                 cv=self.cv, scoring=self.scoring, n_jobs=n_jobs, error_score='raise', verbose=self.verbosity)
-        X_fit = torch.cat((self.dataset.get_X_train(),
-                          self.dataset.get_X_validation()))
-        Y_fit = torch.cat((self.dataset.get_Y_train(),
-                          self.dataset.get_Y_validation()))
+        # final regressor
+        regressor = TransformedTargetRegressor(regressor=KerasRegressor(model=self.model, input_dim=self.dataset.get_input_dim(), verbose=0),
+                                        transformer=StandardScaler())
 
-        return clf.fit(X_fit, Y_fit), self.budget
+
+        pipeline = Pipeline([
+            ('ohencoder', onehotencoder),
+            ('standardizer', StandardScaler(with_mean=False)),
+            ('regressor', regressor)
+        ])
+
+        clf = RandomizedSearchCV(pipeline, self.hyperparameterspace_processed, n_iter=self.budget,
+                                 cv=self.cv, scoring=self.scoring, n_jobs=1, error_score='raise', verbose=self.verbosity)
+
+        return clf.fit(self.dataset.get_X(), self.dataset.get_Y()), self.budget
 
 
 class BayesianOptimization(Optimization):
@@ -857,4 +906,4 @@ class SparseGridSearchOptimization(Optimization):
             x0_vec.append(x0[i])
             xOpt_vec.append(xOpt[i])
 
-        return x0_vec, xOpt_vec, len(functionValues)
+        return [x0_vec, ftX0, xOpt_vec, ftXOpt], len(functionValues)
