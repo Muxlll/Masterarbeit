@@ -9,6 +9,8 @@ import timeit
 
 import itertools
 
+import random
+
 import copy
 
 import sklearn.gaussian_process as gp
@@ -88,35 +90,6 @@ class Dataset:
                 dataset.default_target_attribute, dataset_format="array")
 
             self.categorical_indicator = categorical_indicator
-
-            # # Following part only for computing the input dimension of the network ###
-            # # TODO check if otherwise possible
-            # data_temp = data
-
-            # numeric_features = [not x for x in categorical_indicator]
-            # numeric_transformer = Pipeline(
-            #     steps=[("imputer", SimpleImputer(strategy="median")),
-            #            ("scaler", StandardScaler())]
-            # )
-
-            # categorical_transformer = Pipeline(
-            #     steps=[
-            #         ("encoder", OneHotEncoder(
-            #             handle_unknown="error", sparse_output=False)),
-            #         # ("selector", SelectPercentile(chi2, percentile=50)),
-            #     ]
-            # )
-            # preprocessor = ColumnTransformer(
-            #     transformers=[
-            #         ("num", numeric_transformer, numeric_features),
-            #         ("cat", categorical_transformer, categorical_indicator),
-            #     ]
-            # )
-
-            # preprocessor.fit(data_temp)
-            # data_temp = preprocessor.transform(data_temp)
-
-            # self.input_dim = len(data_temp[0])
 
             X = torch.Tensor(data)
             Y = torch.Tensor(target.reshape(-1, 1))
@@ -231,16 +204,13 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
     best_acquisition_value = 1
     n_params = bounds.shape[0]
 
-    # for starting_point in np.random.uniform(bounds[:, 0], bounds[:, 1], size=(n_restarts, n_params)):
-    #    print(starting_point)
     for _ in range(n_restarts):
-
         # for each hyperparameter sample according to the distribution
         starting_point = []
         for dim in range(n_params):
             if sampling_scales[dim] == "log":
-                starting_point.append(stats.uniform.rvs(
-                    -bounds[dim, 0], -bounds[dim, 1]))
+                starting_point.append(random.uniform(
+                    bounds[dim, 0], bounds[dim, 1]))
             elif sampling_scales[dim] == "int":
                 starting_point.append(stats.randint.rvs(
                     bounds[dim, 0], bounds[dim, 1]))
@@ -263,8 +233,7 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
     return best_x
 
 
-def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosity, x0=None, n_pre_samples=1,
-                          gp_params=None, alpha=1e-3, epsilon=1e-7):
+def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosity, gp_params=None, alpha=1e-3, epsilon=1e-7):
     """ bayesian_optimisation
     Uses Gaussian Processes to optimise the loss function `sample_loss`.
     Arguments:
@@ -299,8 +268,8 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
     first_sample = []
     for dim in range(n_params):
         if sampling_scales[dim] == "log":
-            first_sample.append(stats.uniform.rvs(
-                -bounds[dim, 0], -bounds[dim, 1]))
+            first_sample.append(random.uniform(
+                bounds[dim, 0], bounds[dim, 1]))
         elif sampling_scales[dim] == "int":
             first_sample.append(stats.randint.rvs(
                 bounds[dim, 0], bounds[dim, 1]))
@@ -348,8 +317,8 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
             next_sample = []
             for dim in range(n_params):
                 if sampling_scales[dim] == "log":
-                    next_sample.append(stats.uniform.rvs(
-                        -bounds[dim, 0], -bounds[dim, 1]))
+                    next_sample.append(random.uniform(
+                        bounds[dim, 0], bounds[dim, 1]))
                 elif sampling_scales[dim] == "int":
                     next_sample.append(stats.randint.rvs(
                         bounds[dim, 0], bounds[dim, 1]))
@@ -508,9 +477,10 @@ class GridSearchOptimization(Optimization):
                 else:
                     param_list = []
                     step = (math.log(upper)-math.log(lower)) / \
-                        (param_per_dimension - 1)
+                        (param_per_dimension+1)
                     for i in range(param_per_dimension):
-                        param_list.append(math.exp(math.log(lower) + i * step))
+                        param_list.append(
+                            math.exp(math.log(lower) + (i+1) * step))
                     self.hyperparameterspace_processed[key] = param_list
             else:
                 print("Need to specify the type of list")
@@ -713,9 +683,9 @@ class SparseGridSearchOptimization(Optimization):
         gridGen = pysgpp.OptIterativeGridGeneratorRitterNovak(
             f, grid, N, gamma)
 
-        print("Initial level of sparse grid: ", gridGen.getInitialLevel())
+        # print("Initial level of sparse grid: ", gridGen.getInitialLevel())
         gridGen.setInitialLevel(1)
-        print("Initial level changed!")
+        # print("Initial level changed!")
 
         functionValues = gridGen.getFunctionValues()
         if not gridGen.generate():
@@ -904,4 +874,4 @@ class SparseGridSearchOptimization(Optimization):
             x0_vec.append(x0[i])
             xOpt_vec.append(xOpt[i])
 
-        return [x0_vec, ftX0, xOpt_vec, ftXOpt], len(functionValues)
+        return [x0_vec, ftX0, xOpt_vec, fXOpt], len(functionValues)
