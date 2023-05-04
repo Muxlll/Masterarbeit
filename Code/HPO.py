@@ -239,13 +239,13 @@ def sample_next_hyperparameter(acquisition_func, gaussian_process, evaluated_los
         starting_point = []
         for dim in range(n_params):
             if sampling_scales[dim] == "log":
-                starting_point.append(loguniform.rvs(
-                    bounds[dim, 0], bounds[dim, 1]))
+                starting_point.append(stats.uniform.rvs(
+                    -bounds[dim, 0], -bounds[dim, 1]))
             elif sampling_scales[dim] == "int":
                 starting_point.append(stats.randint.rvs(
                     bounds[dim, 0], bounds[dim, 1]))
             else:
-                starting_point.append(stats.uniform(
+                starting_point.append(stats.uniform.rvs(
                     bounds[dim, 0], bounds[dim, 1]))
 
         starting_point = np.array(starting_point)
@@ -299,13 +299,13 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
     first_sample = []
     for dim in range(n_params):
         if sampling_scales[dim] == "log":
-            first_sample.append(loguniform.rvs(
-                bounds[dim, 0], bounds[dim, 1]))
+            first_sample.append(stats.uniform.rvs(
+                -bounds[dim, 0], -bounds[dim, 1]))
         elif sampling_scales[dim] == "int":
             first_sample.append(stats.randint.rvs(
                 bounds[dim, 0], bounds[dim, 1]))
         else:
-            first_sample.append(stats.uniform(
+            first_sample.append(stats.uniform.rvs(
                 bounds[dim, 0], bounds[dim, 1]))
 
     x_list.append(first_sample)
@@ -348,13 +348,13 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
             next_sample = []
             for dim in range(n_params):
                 if sampling_scales[dim] == "log":
-                    next_sample.append(loguniform.rvs(
-                        bounds[dim, 0], bounds[dim, 1]))
+                    next_sample.append(stats.uniform.rvs(
+                        -bounds[dim, 0], -bounds[dim, 1]))
                 elif sampling_scales[dim] == "int":
                     next_sample.append(stats.randint.rvs(
                         bounds[dim, 0], bounds[dim, 1]))
                 else:
-                    next_sample.append(stats.uniform(
+                    next_sample.append(stats.uniform.rvs(
                         bounds[dim, 0], bounds[dim, 1]))
 
         # Sample loss for new set of parameters
@@ -627,7 +627,12 @@ class BayesianOptimization(Optimization):
 
         list = []
         for key in self.hyperparameterspace.keys():
-            if self.hyperparameterspace.get(key)[0] != 'list':
+            if self.hyperparameterspace.get(key)[0] == 'interval-log':
+                self.hyperparameterspace_processed.get(key).pop(0)
+                lower = self.hyperparameterspace_processed.get(key)[0]
+                upper = self.hyperparameterspace_processed.get(key)[1]
+                list.append([math.log10(lower), math.log10(upper)])
+            elif self.hyperparameterspace.get(key)[0] == 'interval-int' or self.hyperparameterspace.get(key)[0] == 'interval':
                 self.hyperparameterspace_processed.get(key).pop(0)
                 list.append(self.hyperparameterspace_processed.get(key))
             else:
