@@ -858,7 +858,7 @@ class SparseGridSearchOptimization(Optimization):
                         self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
                 elif self.hyperparameterspace[key][0] == "interval-log":
                     print(key + ": " + str(from_standard_log(
-                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
+                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
                 else:
                     print(
                         "Key of the hyperparameterspace not found while printing results")
