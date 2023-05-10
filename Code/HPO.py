@@ -20,9 +20,6 @@ from scipy.optimize import minimize
 
 from sklearn.utils import shuffle
 
-import numpy as np
-import matplotlib.pyplot as plt
-
 import math
 import sys
 from IPython.display import clear_output
@@ -310,7 +307,7 @@ def bayesian_optimisation(n_iters, sample_loss, bounds, sampling_scales, verbosi
         model.fit(xp, yp)
 
         next_sample = sample_next_hyperparameter(
-            expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=20)
+            expected_improvement, model, yp, greater_is_better=False, bounds=bounds, sampling_scales=sampling_scales, n_restarts=10)
 
         # Duplicates will break the GP. In case of a duplicate, we will randomly sample a next query point.
         if np.any(np.abs(next_sample - xp) <= epsilon):
