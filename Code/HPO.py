@@ -701,7 +701,7 @@ class SparseGridSearchOptimization(Optimization):
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
                 keys = list(self.hyperparameterspace.keys())
-                if self.hyperparameterspace[keys[0]][0] == "interval-int":
+                if self.hyperparameterspace[keys[0]][0] == "interval":
                     x_values.append(from_standard(
                         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
                     x_values_interpreted.append(from_standard(
@@ -715,7 +715,7 @@ class SparseGridSearchOptimization(Optimization):
                     x_values.append(gp.getStandardCoordinate(0))
                     x_values_interpreted.append(gp.getStandardCoordinate(0))
 
-                if self.hyperparameterspace[keys[1]][0] == "interval-int":
+                if self.hyperparameterspace[keys[1]][0] == "interval":
                     y_values.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                     y_values_interpreted.append(from_standard(
@@ -747,8 +747,12 @@ class SparseGridSearchOptimization(Optimization):
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
 
-                ax.scatter(x_values, y_values, z_values,
-                           c=z_values, cmap='viridis')
+                if len(z_values) > 10:
+                    ax.plot_trisurf(x_values, y_values,
+                                    z_values, cmap='viridis')
+                else:
+                    ax.scatter(x_values, y_values, z_values,
+                               c=z_values, cmap='viridis')
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
                 plt.show()
@@ -796,7 +800,7 @@ class SparseGridSearchOptimization(Optimization):
             print("Please specify optimizer!")
             sys.exit(1)
 
-        ##################### find point with minimal loss (which are already evaluated) #################
+        ##################### find point with smallest f value #################
 
         # find point with smallest value as start point for gradient descent
         x0Index = 0
@@ -818,7 +822,7 @@ class SparseGridSearchOptimization(Optimization):
                         x0[i]*(len(self.hyperparameterspace_processed[key])-2))
                     print(
                         key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
-                elif self.hyperparameterspace[key][0] == "interval-int":
+                elif self.hyperparameterspace[key][0] == "interval":
                     print(key + ": " + str(from_standard(
                         self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x0[i])))
                 elif self.hyperparameterspace[key][0] == "interval-log":
@@ -832,38 +836,103 @@ class SparseGridSearchOptimization(Optimization):
             print("Resulting loss:")
             print(ftX0)
 
-        ################################## Optimize with specified optimizer ##################################
+        ################################## Local optimization ##################################
+
+        optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
 
         # apply the gradient method and print the results.
         optimizer.setStartingPoint(x0)
         optimizer.optimize()
-        xOpt = optimizer.getOptimalPoint()
-        ftXOpt = optimizer.getOptimalValue()
 
-        fXOpt = f.eval(xOpt)
+        x1 = optimizer.getOptimalPoint()
+        fX1 = optimizer.getOptimalValue()
+
+        ftX1 = f.eval(x1)
         if self.verbosity > 0:
-            print("\nOptimal hyperparameters after optimization:")
+            print("\nOptimal hyperparameters after local optimization:")
             i = 0
             for key in self.hyperparameterspace.keys():
                 if self.hyperparameterspace[key][0] == "list":
                     index = int(
-                        xOpt[i]*(len(self.hyperparameterspace_processed[key])-2))
+                        x1[i]*(len(self.hyperparameterspace_processed[key])-2))
                     print(
                         key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
-                elif self.hyperparameterspace[key][0] == "interval-int":
+                elif self.hyperparameterspace[key][0] == "interval":
                     print(key + ": " + str(from_standard(
-                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
+                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x1[i])))
                 elif self.hyperparameterspace[key][0] == "interval-log":
                     print(key + ": " + str(from_standard_log(
-                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], xOpt[i])))
+                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x1[i])))
                 else:
                     print(
                         "Key of the hyperparameterspace not found while printing results")
                 i += 1
             print("Resulting loss (Optimal value from optimization):")
-            print(ftXOpt)
+            print(fX1)
             print("Resulting loss (Optimal point evaluated):")
-            print(fXOpt)
+            print(ftX1)
+
+        # ################################## Global optimization ##################################
+
+        optimizer2 = pysgpp.OptMultiStart(ft)
+
+        print(optimizer2.getPopulationSize())
+        print(optimizer2.getStartingPoint())
+
+        # apply the gradient method and print the results.
+        optimizer.setStartingPoint(x0)
+        optimizer2.optimize()
+        x2 = optimizer2.getOptimalPoint()
+        fX2 = optimizer2.getOptimalValue()
+
+        ftX2 = f.eval(x2)
+        if self.verbosity > 0:
+            print("\nOptimal hyperparameters after global optimization:")
+            i = 0
+            for key in self.hyperparameterspace.keys():
+                if self.hyperparameterspace[key][0] == "list":
+                    index = int(
+                        x2[i]*(len(self.hyperparameterspace_processed[key])-2))
+                    print(
+                        key + ": " + str(self.hyperparameterspace_processed[key][index+1]))
+                elif self.hyperparameterspace[key][0] == "interval":
+                    print(key + ": " + str(from_standard(
+                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x2[i])))
+                elif self.hyperparameterspace[key][0] == "interval-log":
+                    print(key + ": " + str(from_standard_log(
+                        self.hyperparameterspace_processed[key][0], self.hyperparameterspace_processed[key][1], x2[i])))
+                else:
+                    print(
+                        "Key of the hyperparameterspace not found while printing results")
+                i += 1
+            print("Resulting loss (Optimal value from optimization):")
+            print(fX2)
+            print("Resulting loss (Optimal point evaluated):")
+            print(ftX2)
+
+        if ftX0 == min([ftX0, ftX1, ftX2]):
+            xOpt = x0
+            fxOpt = ftX0
+        elif ftX1 == min([ftX0, ftX1, ftX2]):
+            xOpt = x1
+            fxOpt = ftX1
+        else:
+            xOpt = x2
+            fxOpt = ftX2
+
+
+        # print("X0:")
+        # print(x0)
+        # print(fX0)
+        # print(ftX0)
+        # print("X1:")
+        # print(x1)
+        # print(fX1)
+        # print(ftX1)
+        # print("X2:")
+        # print(x2)
+        # print(fX2)
+        # print(ftX2)
 
         x0_vec = []
         xOpt_vec = []
@@ -871,4 +940,6 @@ class SparseGridSearchOptimization(Optimization):
             x0_vec.append(x0[i])
             xOpt_vec.append(xOpt[i])
 
-        return [x0_vec, ftX0, xOpt_vec, fXOpt], len(functionValues)
+        #return [x0_vec, ftX0, x0_vec, ftX0], len(functionValues)
+
+        return [x0_vec, ftX0, xOpt_vec, fxOpt], len(functionValues)
