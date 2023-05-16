@@ -1,9 +1,0 @@
-Dimension of hyperparameter space: 2
-
-epochs: ['interval', -512, 512]
-batch_size: ['interval', -512, 512]
-
-Sparse grid degree: 2
-Sparse grid adaptivity param: 1
-Sparse grid optimization alg: gradient_descent
-BUDGETS: [10000]

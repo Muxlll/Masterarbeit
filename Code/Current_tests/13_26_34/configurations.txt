@@ -1,9 +1,0 @@
-Dimension of hyperparameter space: 2
-
-x0: ['interval', -5, 10]
-x1: ['interval', -5, 10]
-
-Sparse grid degree: 2
-Sparse grid adaptivity param: 0.5
-Sparse grid optimization alg: gradient_descent
-BUDGETS: [1, 10, 50, 100, 300, 500, 1000]
