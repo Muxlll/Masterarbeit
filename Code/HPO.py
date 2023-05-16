@@ -733,28 +733,44 @@ class SparseGridSearchOptimization(Optimization):
 
             if self.verbosity >= 1:
                 print("########### Generated Grid: ###########")
+                
+                fig = plt.figure()
                 plt.plot(x_values, y_values, 'bo')
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
-                plt.show()
 
-                print("########### Interpreted Values: ###########")
-                plt.plot(x_values_interpreted, y_values_interpreted, 'bo')
-                plt.xlabel(list(self.hyperparameterspace.keys())[0])
-                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                plt.savefig("./Testfunctions/Rastrigin/Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
                 plt.show()
 
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
 
-                if len(z_values) > 10:
+                if len(z_values) > 100:
                     ax.plot_trisurf(x_values, y_values,
-                                    z_values, cmap='viridis')
+                                    z_values, cmap='plasma')
                 else:
                     ax.scatter(x_values, y_values, z_values,
-                               c=z_values, cmap='viridis')
+                               c=z_values, cmap='plasma')
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
+
+                plt.show()
+
+                fig = plt.figure()
+                ax = plt.axes(projection='3d')
+
+                if len(z_values) > 100:
+                    surface = ax.plot_trisurf(x_values, y_values,
+                                    z_values, cmap='plasma')
+                else:
+                    surface = ax.scatter(x_values, y_values, z_values,
+                               c=z_values, cmap='plasma')
+                plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                fig.colorbar(surface, shrink=0.8, aspect=15)
+                ax.view_init(90, 270)
+                ax.set_zticks([])
+                plt.savefig("./Testfunctions/Rastrigin/Above_Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
                 plt.show()
 
         ######################################## grid functions ########################################
@@ -872,15 +888,14 @@ class SparseGridSearchOptimization(Optimization):
             print("Resulting loss (Optimal point evaluated):")
             print(ftX1)
 
-        # ################################## Global optimization ##################################
+        ################################### Global optimization ##################################
 
         optimizer2 = pysgpp.OptMultiStart(ft)
 
-        print(optimizer2.getPopulationSize())
-        print(optimizer2.getStartingPoint())
+        optimizer2.setPopulationSize(min([10*d, 100]))
 
         # apply the gradient method and print the results.
-        optimizer.setStartingPoint(x0)
+        optimizer2.setStartingPoint(x0)
         optimizer2.optimize()
         x2 = optimizer2.getOptimalPoint()
         fX2 = optimizer2.getOptimalValue()

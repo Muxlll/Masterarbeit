@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAR 2023 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  16 MAY 2023 15:17
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -1076,7 +1076,25 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "main.w18")...executed.
+
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count448
 \svg@box=\box70
@@ -1136,9 +1154,6 @@ nguages
 )
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count455
 
@@ -1483,12 +1498,26 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip99
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count486
+\c@subtable=\count487
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.ex
+ternal.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibrar
+yexternal.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zexternalshared.code.tex)))
+\openout4 = `main.auxlock'.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 6
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 7
 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
@@ -1496,32 +1525,32 @@ File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 77.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 67.
+line 77.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 67.
-Package scrbase Info: activating american \contentsname on input line 67.
-Package scrbase Info: activating american \listfigurename on input line 67.
-Package scrbase Info: activating american \listtablename on input line 67.
+ line 77.
+Package scrbase Info: activating american \contentsname on input line 77.
+Package scrbase Info: activating american \listfigurename on input line 77.
+Package scrbase Info: activating american \listtablename on input line 77.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1564,20 +1593,20 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 67.
-Package biblatex Info: Reference segment=0 on input line 67.
+Package biblatex Info: Reference section=0 on input line 77.
+Package biblatex Info: Reference segment=0 on input line 77.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count486
+\scratchcounter=\count488
 \scratchdimen=\dimen322
 \scratchbox=\box77
-\nofMPsegments=\count487
-\nofMParguments=\count488
+\nofMPsegments=\count489
+\nofMParguments=\count490
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count489
+\MPscratchCnt=\count491
 \MPscratchDim=\dimen323
-\MPnumerator=\count490
-\makeMPintoPDFobject=\count491
+\MPnumerator=\count492
+\makeMPintoPDFobject=\count493
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1588,24 +1617,24 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count492
-Package scrhack Info: undefining \float@addtolists on input line 67.
+\c@lstlisting=\count494
+Package scrhack Info: undefining \float@addtolists on input line 77.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 67.
-Package microtype Info: Applying patch `item' on input line 67.
-Package microtype Info: Applying patch `toc' on input line 67.
-Package microtype Info: Applying patch `eqnum' on input line 67.
-Package microtype Info: Applying patch `footnote' on input line 67.
+LaTeX Info: Redefining \microtypecontext on input line 77.
+Package microtype Info: Applying patch `item' on input line 77.
+Package microtype Info: Applying patch `toc' on input line 77.
+Package microtype Info: Applying patch `eqnum' on input line 77.
+Package microtype Info: Applying patch `footnote' on input line 77.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 67.
+LaTeX Info: Redefining \showhyphens on input line 77.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1616,7 +1645,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1627,11 +1656,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count493
+\c@section@level=\count495
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1644,19 +1673,19 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 67.
+(scrbook)           before \begin{document} on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count494
+\BKM@id=\count496
 ))
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 67.
+line 77.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 67.
+line 77.
 
 (./pages/cover.tex
 <logos/tum.pdf, id=7, 742.775pt x 391.4625pt>
@@ -1737,7 +1766,7 @@ chapter without number
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 81
+Package tocbasic Info: character protrusion at toc deactivated on input line 91
 .
  (./main.toc)
 \tf@toc=\write7
@@ -1757,7 +1786,7 @@ chapter 1.
 ]
 chapter 2.
 (./figures/drawing.pdf_tex
-<figures/drawing.pdf, id=142, page=1, 543.16635pt x 320.98929pt>
+<figures/drawing.pdf, id=146, page=1, 543.16635pt x 320.98929pt>
 File: figures/drawing.pdf Graphic file (type pdf)
 <use figures/drawing.pdf, page 1>
 Package pdftex.def Info: figures/drawing.pdf , page1 used on input line 56.
@@ -1773,7 +1802,7 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 
 ]
 (./figures/drawing2.pdf_tex
-<figures/drawing2.pdf, id=167, page=1, 578.37982pt x 418.45718pt>
+<figures/drawing2.pdf, id=171, page=1, 578.37982pt x 418.45718pt>
 File: figures/drawing2.pdf Graphic file (type pdf)
 <use figures/drawing2.pdf, page 1>
 Package pdftex.def Info: figures/drawing2.pdf , page1 used on input line 56.
@@ -1797,7 +1826,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pplx on input line
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 ) [4 <./figures/drawing2.pdf>] [5]
-<figures/comparison_searches.png, id=303, 1502.61375pt x 757.83125pt>
+<figures/comparison_searches.png, id=307, 1502.61375pt x 757.83125pt>
 File: figures/comparison_searches.png Graphic file (type png)
 <use figures/comparison_searches.png>
 Package pdftex.def Info: figures/comparison_searches.png  used on input line 10
@@ -1806,39 +1835,39 @@ Package pdftex.def Info: figures/comparison_searches.png  used on input line 10
  [6 <./figures/comparison_searches.png>] [7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 134.
-<figures/bayesian_optimization.png, id=333, 1124.2pt x 1098.1025pt>
+<figures/bayesian_optimization.png, id=337, 1124.2pt x 1098.1025pt>
 File: figures/bayesian_optimization.png Graphic file (type png)
 <use figures/bayesian_optimization.png>
 Package pdftex.def Info: figures/bayesian_optimization.png  used on input line 
 154.
 (pdftex.def)             Requested size: 393.47589pt x 384.34163pt.
  [8] [9 <./figures/bayesian_optimization.png>] [10]
-<figures/weighted_sum.png, id=364, 835.12pt x 372.39125pt>
+<figures/weighted_sum.png, id=368, 835.12pt x 372.39125pt>
 File: figures/weighted_sum.png Graphic file (type png)
 <use figures/weighted_sum.png>
 Package pdftex.def Info: figures/weighted_sum.png  used on input line 200.
 (pdftex.def)             Requested size: 417.55898pt x 186.19516pt.
  [11 <./figures/weighted_sum.png>]
-<figures/hierarchical_basis.png, id=378, 699.61375pt x 299.1175pt>
+<figures/hierarchical_basis.png, id=382, 699.61375pt x 299.1175pt>
 File: figures/hierarchical_basis.png Graphic file (type png)
 <use figures/hierarchical_basis.png>
 Package pdftex.def Info: figures/hierarchical_basis.png  used on input line 218
 .
 (pdftex.def)             Requested size: 349.80602pt x 149.55838pt.
-<figures/weighted_sum_hierarchical.png, id=382, 757.83125pt x 317.185pt>
+<figures/weighted_sum_hierarchical.png, id=386, 757.83125pt x 317.185pt>
 File: figures/weighted_sum_hierarchical.png Graphic file (type png)
 <use figures/weighted_sum_hierarchical.png>
 Package pdftex.def Info: figures/weighted_sum_hierarchical.png  used on input l
 ine 232.
 (pdftex.def)             Requested size: 378.9147pt x 158.5921pt.
  [12 <./figures/hierarchical_basis.png>]
-<figures/2d_basis.png, id=397, 1061.9675pt x 804.00375pt>
+<figures/2d_basis.png, id=401, 1061.9675pt x 804.00375pt>
 File: figures/2d_basis.png Graphic file (type png)
 <use figures/2d_basis.png>
 Package pdftex.def Info: figures/2d_basis.png  used on input line 261.
 (pdftex.def)             Requested size: 276.10504pt x 209.03604pt.
  [13 <./figures/weighted_sum_hierarchical.png>]
-<figures/subspaces_twodims.png, id=413, 666.49pt x 447.6725pt>
+<figures/subspaces_twodims.png, id=417, 666.49pt x 447.6725pt>
 File: figures/subspaces_twodims.png Graphic file (type png)
 <use figures/subspaces_twodims.png>
 Package pdftex.def Info: figures/subspaces_twodims.png  used on input line 280.
@@ -1846,13 +1875,13 @@ Package pdftex.def Info: figures/subspaces_twodims.png  used on input line 280.
 (pdftex.def)             Requested size: 333.24419pt x 223.8357pt.
 
 [14 <./figures/2d_basis.png>]
-<figures/normal_combi_technique.png, id=433, 1136.245pt x 1099.10625pt>
+<figures/normal_combi_technique.png, id=437, 1136.245pt x 1099.10625pt>
 File: figures/normal_combi_technique.png Graphic file (type png)
 <use figures/normal_combi_technique.png>
 Package pdftex.def Info: figures/normal_combi_technique.png  used on input line
  305.
 (pdftex.def)             Requested size: 204.51527pt x 197.83058pt.
-<figures/adaptive_combination_technique.png, id=434, 1141.26375pt x 1093.08376p
+<figures/adaptive_combination_technique.png, id=438, 1141.26375pt x 1093.08376p
 t>
 File: figures/adaptive_combination_technique.png Graphic file (type png)
 <use figures/adaptive_combination_technique.png>
@@ -1874,7 +1903,7 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-<figures/spatially_adaptive_combi_technique.png, id=450, 2071.74pt x 827.09pt>
+<figures/spatially_adaptive_combi_technique.png, id=454, 2071.74pt x 827.09pt>
 File: figures/spatially_adaptive_combi_technique.png Graphic file (type png)
 <use figures/spatially_adaptive_combi_technique.png>
 Package pdftex.def Info: figures/spatially_adaptive_combi_technique.png  used o
@@ -1905,7 +1934,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--416
 
  []
 
-<figures/hyperbolic.png, id=519, 1281.78876pt x 972.63374pt>
+<figures/hyperbolic.png, id=523, 1281.78876pt x 972.63374pt>
 File: figures/hyperbolic.png Graphic file (type png)
 <use figures/hyperbolic.png>
 Package pdftex.def Info: figures/hyperbolic.png  used on input line 425.
@@ -1922,52 +1951,337 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--435
 
 ) (./chapters/04_hyperparameter_optimization.tex [21]
 chapter 3.
-) (./chapters/05_conclusion_and_outlook.tex [22
+[22
 
 
 ]
+<Eggholder_normal.pdf, id=566, 343.62178pt x 282.05878pt>
+File: Eggholder_normal.pdf Graphic file (type pdf)
+<use Eggholder_normal.pdf>
+Package pdftex.def Info: Eggholder_normal.pdf  used on input line 52.
+(pdftex.def)             Requested size: 125.47794pt x 102.99577pt.
+<Eggholder_above.pdf, id=567, 343.62178pt x 281.56392pt>
+File: Eggholder_above.pdf Graphic file (type pdf)
+<use Eggholder_above.pdf>
+Package pdftex.def Info: Eggholder_above.pdf  used on input line 53.
+(pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
+<Rosenbrock_normal.pdf, id=568, 333.58527pt x 287.03537pt>
+File: Rosenbrock_normal.pdf Graphic file (type pdf)
+<use Rosenbrock_normal.pdf>
+Package pdftex.def Info: Rosenbrock_normal.pdf  used on input line 59.
+(pdftex.def)             Requested size: 125.47794pt x 107.96648pt.
+<Rosenbrock_above.pdf, id=569, 333.58527pt x 281.56392pt>
+File: Rosenbrock_above.pdf Graphic file (type pdf)
+<use Rosenbrock_above.pdf>
+Package pdftex.def Info: Rosenbrock_above.pdf  used on input line 60.
+(pdftex.def)             Requested size: 125.47794pt x 105.90842pt.
+<Rastrigin_normal.pdf, id=570, 335.81561pt x 287.03537pt>
+File: Rastrigin_normal.pdf Graphic file (type pdf)
+<use Rastrigin_normal.pdf>
+Package pdftex.def Info: Rastrigin_normal.pdf  used on input line 66.
+(pdftex.def)             Requested size: 125.47794pt x 107.24818pt.
+<Rastrigin_above.pdf, id=571, 335.81561pt x 281.56392pt>
+File: Rastrigin_above.pdf Graphic file (type pdf)
+<use Rastrigin_above.pdf>
+Package pdftex.def Info: Rastrigin_above.pdf  used on input line 67.
+(pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
+ [23 <./Eggholder_normal.pdf> <./Eggholder_above.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Eggholder_above.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+> <./Rosenbrock_normal.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Rosenbrock_normal.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Rosenbrock_above.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Rosenbrock_above.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./Rastrigin_normal.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Rastrigin_normal.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./Rastrigin_above.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Rastrigin_above.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>]
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_1
+.pdf, id=680, 415.74022pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_1.pdf  used on input line 89.
+(pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
+bove_1.pdf, id=681, 343.62178pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_above_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_above_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_above_1.pdf  used on input line 90.
+(pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_0
+_5.pdf, id=682, 415.74022pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_0_5.pdf  used on input line 96.
+(pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
+bove_0_5.pdf, id=683, 343.62178pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_above_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_above_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_above_0_5.pdf  used on input line 97.
+(pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_0
+.pdf, id=684, 415.74022pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_0.pdf  used on input line 103.
+(pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
+<figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
+bove_0.pdf, id=685, 343.62178pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
+der_above_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_above_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
+er/tex_files/Eggholder_above_0.pdf  used on input line 104.
+(pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
+ [24 <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggh
+older_1.pdf> <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_fi
+les/Eggholder_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Eg
+gholder/tex_files/Eggholder_0_5.pdf> <./figures/Results/Sparse_grid_generation_
+results/Eggholder/tex_files/Eggholder_above_0_5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Eggholder/tex_files/Eggholder_above_0_5.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
+er_0.pdf> <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_files
+/Eggholder_above_0.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Eggholder/tex_files/Eggholder_above_0.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_1.pdf, id=760, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_1.pdf  used on input line 127.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_above_1.pdf, id=761, 350.87186pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_above_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_above_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_above_1.pdf  used on input line 128.
+(pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_0_5.pdf, id=762, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_0_5.pdf  used on input line 134.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_above_0_5.pdf, id=763, 350.87186pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_above_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_above_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_above_0_5.pdf  used on input line 135.
+(pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_0.pdf, id=764, 397.89552pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_0.pdf  used on input line 141.
+(pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
+<figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
+_above_0.pdf, id=765, 345.8531pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
+brock_above_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_above_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
+ock/tex_files/Rosenbrock_above_0.pdf  used on input line 142.
+(pdftex.def)             Requested size: 125.47794pt x 102.15344pt.
+[25 <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rose
+nbrock_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_
+files/Rosenbrock_above_1.pdf> <./figures/Results/Sparse_grid_generation_results
+/Rosenbrock/tex_files/Rosenbrock_0_5.pdf> <./figures/Results/Sparse_grid_genera
+tion_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_0.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_fi
+les/Rosenbrock_above_0.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rosenbrock/tex_files/Rosenbrock_above_0.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1
+.pdf, id=837, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_1.pdf  used on input line 162.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_1.pdf, id=838, 335.81561pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_1.pdf  used on input line 163.
+(pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
+_5.pdf, id=839, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_0_5.pdf  used on input line 169.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_0_5.pdf, id=840, 330.79585pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_0_5.pdf  used on input line 170.
+(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
+.pdf, id=841, 397.89552pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_0.pdf  used on input line 176.
+(pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_0.pdf, id=842, 330.79585pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_0.pdf  used on input line 177.
+(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+[26 <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastr
+igin_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_fil
+es/Rastrigin_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Ras
+trigin/tex_files/Rastrigin_0_5.pdf> <./figures/Results/Sparse_grid_generation_r
+esults/Rastrigin/tex_files/Rastrigin_above_0_5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rastrigin/tex_files/Rastrigin_above_0_5.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_0.pdf> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files
+/Rastrigin_above_0.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rastrigin/tex_files/Rastrigin_above_0.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>]
+===== Image 'main-figure0' is up-to-date. ======
+===== Image 'main-figure1' is up-to-date. ======
+===== Image 'main-figure2' is up-to-date. ======
+
+LaTeX Warning: Float too large for page by 20.88914pt on input line 281.
+
+) (./chapters/05_conclusion_and_outlook.tex [27] [28 <./main-figure0.pdf> <./ma
+in-figure1.pdf> <./main-figure2.pdf>]
 chapter 4.
-) [23
+) [29
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 96
-.
- (./main.lof [24
+Package tocbasic Info: character protrusion at lof deactivated on input line 10
+6.
+ (./main.lof [30
 
 
 ])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [25]
-Package tocbasic Info: character protrusion at lot deactivated on input line 97
-.
+ [31]
+Package tocbasic Info: character protrusion at lot deactivated on input line 10
+7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [26
+ [32
 
 
 ]
 chapter without number
 
-Overfull \hbox (12.56586pt too wide) in paragraph at lines 99--99
+Overfull \hbox (12.56586pt too wide) in paragraph at lines 109--109
 \T1/pplx/m/n/10.95 (-20) op-ti-mal pat-tern recog-ni-tion with propo-si-tional 
 logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[27
+[33
 
 
 ]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
-9.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+09.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1975,48 +2289,41 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [28] [29]
+ [34] [35]
 No complaints by nag.
-[30] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
+[36] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54059 strings out of 480121
- 1228050 string characters out of 5892160
- 2223139 words of memory out of 5000000
- 70361 multiletter control sequences out of 15000+600000
- 539598 words of font info for 417 fonts, out of 8000000 for 9000
+ 54967 strings out of 480121
+ 1263470 string characters out of 5892160
+ 2239357 words of memory out of 5000000
+ 71139 multiletter control sequences out of 15000+600000
+ 550541 words of font info for 466 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 115i,15n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,15n,109p,10599b,3089s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
 k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathp
-azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (37 pages, 2065344 bytes).
+type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/math
+pazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplm
+r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (43 pages, 4230610 bytes).
 PDF statistics:
- 825 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 179 named destinations out of 1000 (max. 500000)
- 92448 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1261 PDF objects out of 1440 (max. 8388607)
+ 959 compressed objects within 10 object streams
+ 199 named destinations out of 1000 (max. 500000)
+ 103863 words of extra memory for PDF output out of 106986 (max. 10000000)
 

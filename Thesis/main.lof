@@ -15,6 +15,11 @@
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Example of the spatially adaptive combination technique in two dimensions. Taken from \blx@tocontentsinit {0}\cite {obersteiner2021generalized}. \relax }}{17}{figure.caption.15}%
 \contentsline {figure}{\numberline {2.12}{\ignorespaces HPC of level $ k = 5 $ (red stars) and full grid (black dots). A full grid would have $ 33^2 = 1089 $ and this grid has $ 147 $ points. Taken from \blx@tocontentsinit {0}\cite {duan2016induction}.\relax }}{20}{figure.caption.36}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Test functions used for evaluating the Sparse Grid Optimization. Each one is plotted with 200 samples in each dimension.\relax }}{23}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.\relax }}{24}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.\relax }}{25}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.\relax }}{26}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces $ \gamma = 0.0 $\relax }}{28}{figure.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

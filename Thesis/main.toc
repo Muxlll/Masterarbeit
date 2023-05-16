@@ -29,8 +29,10 @@
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Results}{22}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{23}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{24}{chapter*.37}%
-\contentsline {chapter}{\nonumberline List of Tables}{26}{chapter*.38}%
-\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.39}%
+\contentsline {subsection}{\numberline {3.2.1}Experiments with well-defined functions}{22}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Optimization with small neural networks}{27}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{29}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{30}{chapter*.43}%
+\contentsline {chapter}{\nonumberline List of Tables}{32}{chapter*.44}%
+\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.45}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
