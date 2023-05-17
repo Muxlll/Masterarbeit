@@ -739,7 +739,7 @@ class SparseGridSearchOptimization(Optimization):
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
                 plt.ylabel(list(self.hyperparameterspace.keys())[1])
 
-                plt.savefig("./Testfunctions/Rastrigin/Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
+                # plt.savefig("./Testfunctions/Rastrigin/Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
                 plt.show()
 
                 fig = plt.figure()
@@ -770,7 +770,7 @@ class SparseGridSearchOptimization(Optimization):
                 fig.colorbar(surface, shrink=0.8, aspect=15)
                 ax.view_init(90, 270)
                 ax.set_zticks([])
-                plt.savefig("./Testfunctions/Rastrigin/Above_Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
+                # plt.savefig("./Testfunctions/Rastrigin/Above_Gamma"+ str(self.adaptivity)+".pgf",bbox_inches='tight' )
                 plt.show()
 
         ######################################## grid functions ########################################
@@ -925,36 +925,13 @@ class SparseGridSearchOptimization(Optimization):
             print("Resulting loss (Optimal point evaluated):")
             print(ftX2)
 
-        if ftX0 == min([ftX0, ftX1, ftX2]):
-            xOpt = x0
-            fxOpt = ftX0
-        elif ftX1 == min([ftX0, ftX1, ftX2]):
-            xOpt = x1
-            fxOpt = ftX1
-        else:
-            xOpt = x2
-            fxOpt = ftX2
-
-
-        # print("X0:")
-        # print(x0)
-        # print(fX0)
-        # print(ftX0)
-        # print("X1:")
-        # print(x1)
-        # print(fX1)
-        # print(ftX1)
-        # print("X2:")
-        # print(x2)
-        # print(fX2)
-        # print(ftX2)
-
         x0_vec = []
-        xOpt_vec = []
+        x1_vec = []
+        x2_vec = []
         for i in range(len(x0)):
             x0_vec.append(x0[i])
-            xOpt_vec.append(xOpt[i])
+            x1_vec.append(x1[i])
+            x2_vec.append(x2[i])
 
-        #return [x0_vec, ftX0, x0_vec, ftX0], len(functionValues)
 
-        return [x0_vec, ftX0, xOpt_vec, fxOpt], len(functionValues)
+        return [x0_vec, ftX0, x1_vec, ftX1, x2_vec, ftX2], len(functionValues)

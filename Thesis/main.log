@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 10:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1965,16 +1965,16 @@ File: Eggholder_above.pdf Graphic file (type pdf)
 <use Eggholder_above.pdf>
 Package pdftex.def Info: Eggholder_above.pdf  used on input line 53.
 (pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
-<Rosenbrock_normal.pdf, id=568, 333.58527pt x 287.03537pt>
+<Rosenbrock_normal.pdf, id=568, 325.7771pt x 287.03537pt>
 File: Rosenbrock_normal.pdf Graphic file (type pdf)
 <use Rosenbrock_normal.pdf>
 Package pdftex.def Info: Rosenbrock_normal.pdf  used on input line 59.
-(pdftex.def)             Requested size: 125.47794pt x 107.96648pt.
-<Rosenbrock_above.pdf, id=569, 333.58527pt x 281.56392pt>
+(pdftex.def)             Requested size: 125.47794pt x 110.55495pt.
+<Rosenbrock_above.pdf, id=569, 325.7771pt x 281.56392pt>
 File: Rosenbrock_above.pdf Graphic file (type pdf)
 <use Rosenbrock_above.pdf>
 Package pdftex.def Info: Rosenbrock_above.pdf  used on input line 60.
-(pdftex.def)             Requested size: 125.47794pt x 105.90842pt.
+(pdftex.def)             Requested size: 125.47794pt x 108.44754pt.
 <Rastrigin_normal.pdf, id=570, 335.81561pt x 287.03537pt>
 File: Rastrigin_normal.pdf Graphic file (type pdf)
 <use Rastrigin_normal.pdf>
@@ -2007,7 +2007,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Rastrigin_above.pdf): PDF inclusion:
 multiple pdfs with page group included in a single page
 >]
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_1
-.pdf, id=680, 415.74022pt x 310.44884pt>
+.pdf, id=660, 415.74022pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2016,7 +2016,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_1.pdf  used on input line 89.
 (pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
-bove_1.pdf, id=681, 343.62178pt x 281.56392pt>
+bove_1.pdf, id=661, 343.62178pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_above_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2025,7 +2025,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_above_1.pdf  used on input line 90.
 (pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_0
-_5.pdf, id=682, 415.74022pt x 310.44884pt>
+_5.pdf, id=662, 415.74022pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2034,7 +2034,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_0_5.pdf  used on input line 96.
 (pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
-bove_0_5.pdf, id=683, 343.62178pt x 281.56392pt>
+bove_0_5.pdf, id=663, 343.62178pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_above_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2043,7 +2043,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_above_0_5.pdf  used on input line 97.
 (pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_0
-.pdf, id=684, 415.74022pt x 310.44884pt>
+.pdf, id=664, 415.74022pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2052,7 +2052,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_0.pdf  used on input line 103.
 (pdftex.def)             Requested size: 125.47794pt x 93.69907pt.
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_a
-bove_0.pdf, id=685, 343.62178pt x 281.56392pt>
+bove_0.pdf, id=665, 343.62178pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
 der_above_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghold
@@ -2082,7 +2082,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_1.pdf, id=760, 405.70271pt x 310.44884pt>
+_1.pdf, id=740, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2091,7 +2091,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_1.pdf  used on input line 127.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_1.pdf, id=761, 350.87186pt x 281.56392pt>
+_above_1.pdf, id=741, 350.87186pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2100,7 +2100,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_1.pdf  used on input line 128.
 (pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_0_5.pdf, id=762, 405.70271pt x 310.44884pt>
+_0_5.pdf, id=742, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2109,7 +2109,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_0_5.pdf  used on input line 134.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_0_5.pdf, id=763, 350.87186pt x 281.56392pt>
+_above_0_5.pdf, id=743, 350.87186pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2118,7 +2118,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_0_5.pdf  used on input line 135.
 (pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_0.pdf, id=764, 397.89552pt x 310.44884pt>
+_0.pdf, id=744, 397.89552pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2127,7 +2127,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_0.pdf  used on input line 141.
 (pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_0.pdf, id=765, 345.8531pt x 281.56392pt>
+_above_0.pdf, id=745, 345.8531pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2135,29 +2135,13 @@ rock_above_0.pdf>
 Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_0.pdf  used on input line 142.
 (pdftex.def)             Requested size: 125.47794pt x 102.15344pt.
-[25 <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rose
-nbrock_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_
-files/Rosenbrock_above_1.pdf> <./figures/Results/Sparse_grid_generation_results
-/Rosenbrock/tex_files/Rosenbrock_0_5.pdf> <./figures/Results/Sparse_grid_genera
-tion_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
-n_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
-> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
-rock_0.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_fi
-les/Rosenbrock_above_0.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
-n_results/Rosenbrock/tex_files/Rosenbrock_above_0.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1
-.pdf, id=837, 405.70271pt x 310.44884pt>
+.pdf, id=752, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2166,7 +2150,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
 in/tex_files/Rastrigin_1.pdf  used on input line 162.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_1.pdf, id=838, 335.81561pt x 281.56392pt>
+bove_1.pdf, id=753, 335.81561pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_above_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2175,7 +2159,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
 in/tex_files/Rastrigin_above_1.pdf  used on input line 163.
 (pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
-_5.pdf, id=839, 405.70271pt x 310.44884pt>
+_5.pdf, id=754, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2184,7 +2168,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
 in/tex_files/Rastrigin_0_5.pdf  used on input line 169.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_0_5.pdf, id=840, 330.79585pt x 281.56392pt>
+bove_0_5.pdf, id=755, 330.79585pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_above_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2193,7 +2177,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
 in/tex_files/Rastrigin_above_0_5.pdf  used on input line 170.
 (pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
-.pdf, id=841, 397.89552pt x 310.44884pt>
+.pdf, id=756, 397.89552pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2202,7 +2186,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
 in/tex_files/Rastrigin_0.pdf  used on input line 176.
 (pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
 <figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_0.pdf, id=842, 330.79585pt x 281.56392pt>
+bove_0.pdf, id=757, 330.79585pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
 gin_above_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
@@ -2215,11 +2199,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-[26 <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastr
-igin_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_fil
-es/Rastrigin_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Ras
-trigin/tex_files/Rastrigin_0_5.pdf> <./figures/Results/Sparse_grid_generation_r
-esults/Rastrigin/tex_files/Rastrigin_above_0_5.pdf
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+[25] [26 <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files
+/Rosenbrock_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock
+/tex_files/Rosenbrock_above_1.pdf> <./figures/Results/Sparse_grid_generation_re
+sults/Rosenbrock/tex_files/Rosenbrock_0_5.pdf> <./figures/Results/Sparse_grid_g
+eneration_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rosenbrock/tex_files/Rosenbrock_above_0_5.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
+rock_0.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_fi
+les/Rosenbrock_above_0.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
+n_results/Rosenbrock/tex_files/Rosenbrock_above_0.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [27 <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Ra
+strigin_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_
+files/Rastrigin_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/
+Rastrigin/tex_files/Rastrigin_0_5.pdf> <./figures/Results/Sparse_grid_generatio
+n_results/Rastrigin/tex_files/Rastrigin_above_0_5.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Rastrigin/tex_files/Rastrigin_above_0_5.pdf): PDF inclusion: multiple
@@ -2232,78 +2237,40 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Rastrigin/tex_files/Rastrigin_above_0.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
-\openout4 = `main-figure0.md5'.
+===== Image 'main-figure0' is up-to-date. ======
+===== Image 'main-figure1' is up-to-date. ======
+===== Image 'main-figure2' is up-to-date. ======
 
-\openout4 = `main.auxlock'.
+LaTeX Warning: Float too large for page by 35.16919pt on input line 287.
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure0" "\def\tikzexternalrealjo
-b{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure0" "\def\tikzexternalrealjob{main}\input{main}")...executed.
-
-\openout4 = `main.auxlock'.
-
-\openout4 = `main-figure1.md5'.
-
-\openout4 = `main.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure1" "\def\tikzexternalrealjo
-b{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure1" "\def\tikzexternalrealjob{main}\input{main}")...executed.
-
-\openout4 = `main.auxlock'.
-
-\openout4 = `main-figure2.md5'.
-
-\openout4 = `main.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure2" "\def\tikzexternalrealjo
-b{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure2" "\def\tikzexternalrealjob{main}\input{main}")...executed.
-
-\openout4 = `main.auxlock'.
-
-
-LaTeX Warning: Float too large for page by 20.88914pt on input line 287.
-
-) (./chapters/05_conclusion_and_outlook.tex [27] [28 <./main-figure0.pdf> <./ma
+) (./chapters/05_conclusion_and_outlook.tex [28] [29 <./main-figure0.pdf> <./ma
 in-figure1.pdf> <./main-figure2.pdf>]
 chapter 4.
-) [29
+) [30
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [30
+ (./main.lof [31
 
 
 ])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [31]
+ [32]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [32
+ [33
 
 
 ]
@@ -2315,7 +2282,7 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[33
+[34
 
 
 ]
@@ -2331,9 +2298,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [34] [35]
+ [35] [36]
 No complaints by nag.
-[36] (./main.aux)
+[37] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2341,9 +2308,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54968 strings out of 480121
- 1263484 string characters out of 5892160
- 2239357 words of memory out of 5000000
+ 54969 strings out of 480121
+ 1263491 string characters out of 5892160
+ 2239603 words of memory out of 5000000
  71139 multiletter control sequences out of 15000+600000
  550541 words of font info for 466 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
@@ -2353,19 +2320,18 @@ k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/math
-pazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplm
-r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (43 pages, 4232283 bytes).
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathp
+azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (44 pages, 4269821 bytes).
 PDF statistics:
- 1264 PDF objects out of 1440 (max. 8388607)
- 962 compressed objects within 10 object streams
- 200 named destinations out of 1000 (max. 500000)
+ 1251 PDF objects out of 1440 (max. 8388607)
+ 953 compressed objects within 10 object streams
+ 201 named destinations out of 1000 (max. 500000)
  103863 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -69,7 +69,7 @@ where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{f
 		\label{fig:Rastrigin}
 	\end{subfigure}
 	
-	\caption{Test functions used for evaluating the Sparse Grid Optimization. Each one is plotted with 200 samples in each dimension.}
+	\caption{Test functions used for evaluating the Sparse Grid Optimization. Each one is plotted with 200 samples in each dimension. Note that the function values of the Rosenbrock function are transformed with $ log_{10}(f(x)) $ for better visualization.}
 	\label{fig:test_functions_plot}
 \end{figure}
 
@@ -194,7 +194,7 @@ In the following, the goal is to further analyze this adaptivity parameter. For 
 \end{equation}
 $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top function is for the Eggholder function, the one in the center belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
 
-\begin{figure}
+\begin{figure}[htbp!]
 		\begin{tikzpicture}
 			\begin{axis}[
 				xlabel = Number of grid points,
@@ -282,7 +282,7 @@ $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is t
 			\end{axis}
 		\end{tikzpicture}
 	
-	\caption{$ \gamma = 0.0 $}	
+	\caption{ Influence of the adaptivity parameter on the error (difference to the actual optimal value) of the optimum found by the sparse grid. }	
 	\label{fig:Functions_results}
 \end{figure}
 

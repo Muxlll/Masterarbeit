@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  16 MAY 2023 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 10:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -355,38 +355,36 @@ e
 ))
 (./figures/Results/Testfunctions/Rosenbrock_normal.pgf
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 232.
+(Font)              <7> on input line 220.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 232.
+(Font)              <5> on input line 220.
 <figures/Results/Testfunctions/Rosenbrock_normal-img0.png, id=4, interpolate=tr
 ue, 20.075pt x 296.10625pt>
 File: figures/Results/Testfunctions/Rosenbrock_normal-img0.png Graphic file (ty
 pe png)
 <use figures/Results/Testfunctions/Rosenbrock_normal-img0.png>
 Package pdftex.def Info: figures/Results/Testfunctions/Rosenbrock_normal-img0.p
-ng  used on input line 78057.
+ng  used on input line 78051.
 (pdftex.def)             Requested size: 14.45396pt x 213.20084pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/Results/Testfunc
 tions/Rosenbrock_normal-img0.png>]) (./Rosenbrock_normal.aux) ) 
 Here is how much of TeX's memory you used:
- 9808 strings out of 480121
- 198118 string characters out of 5892160
- 2162829 words of memory out of 5000000
- 27613 multiletter control sequences out of 15000+600000
+ 9802 strings out of 480121
+ 197985 string characters out of 5892160
+ 2177340 words of memory out of 5000000
+ 27607 multiletter control sequences out of 15000+600000
  469259 words of font info for 28 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  85i,7n,90p,423b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Rosenbrock_normal.pdf (1 page, 296790 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Rosenbrock_normal.pdf (1 page, 296577 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
