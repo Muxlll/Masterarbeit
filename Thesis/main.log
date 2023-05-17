@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  16 MAY 2023 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 08:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2232,11 +2232,53 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Rastrigin/tex_files/Rastrigin_above_0.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-===== Image 'main-figure0' is up-to-date. ======
-===== Image 'main-figure1' is up-to-date. ======
-===== Image 'main-figure2' is up-to-date. ======
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
-LaTeX Warning: Float too large for page by 20.88914pt on input line 281.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+
+ []
+
+\openout4 = `main-figure0.md5'.
+
+\openout4 = `main.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "main-figure0" "\def\tikzexternalrealjo
+b{main}\input{main}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "main-figure0" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+
+\openout4 = `main.auxlock'.
+
+\openout4 = `main-figure1.md5'.
+
+\openout4 = `main.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "main-figure1" "\def\tikzexternalrealjo
+b{main}\input{main}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "main-figure1" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+
+\openout4 = `main.auxlock'.
+
+\openout4 = `main-figure2.md5'.
+
+\openout4 = `main.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "main-figure2" "\def\tikzexternalrealjo
+b{main}\input{main}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "main-figure2" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+
+\openout4 = `main.auxlock'.
+
+
+LaTeX Warning: Float too large for page by 20.88914pt on input line 287.
 
 ) (./chapters/05_conclusion_and_outlook.tex [27] [28 <./main-figure0.pdf> <./ma
 in-figure1.pdf> <./main-figure2.pdf>]
@@ -2299,8 +2341,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54967 strings out of 480121
- 1263470 string characters out of 5892160
+ 54968 strings out of 480121
+ 1263484 string characters out of 5892160
  2239357 words of memory out of 5000000
  71139 multiletter control sequences out of 15000+600000
  550541 words of font info for 466 fonts, out of 8000000 for 9000
@@ -2320,10 +2362,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (43 pages, 4230610 bytes).
+Output written on main.pdf (43 pages, 4232283 bytes).
 PDF statistics:
- 1261 PDF objects out of 1440 (max. 8388607)
- 959 compressed objects within 10 object streams
- 199 named destinations out of 1000 (max. 500000)
+ 1264 PDF objects out of 1440 (max. 8388607)
+ 962 compressed objects within 10 object streams
+ 200 named destinations out of 1000 (max. 500000)
  103863 words of extra memory for PDF output out of 106986 (max. 10000000)
 

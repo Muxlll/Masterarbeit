@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  16 MAY 2023 14:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 08:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2286,15 +2286,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+
+LaTeX Warning: Reference `fig:test_functions_plot' on page 23 undefined on inpu
+t line 195.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+
+ []
+
 \openout6 = `main-figure0.dpth'.
 
-[22
+[23
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+
+LaTeX Warning: Reference `fig:Ras_gamma_0' on page 23 undefined on input line 2
+89.
+
 ) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
@@ -2325,18 +2343,18 @@ Package logreq Info: Writing requests to 'main-figure0.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54284 strings out of 480121
- 1241118 string characters out of 5892160
- 2098787 words of memory out of 5000000
- 71053 multiletter control sequences out of 15000+600000
- 520661 words of font info for 192 fonts, out of 8000000 for 9000
+ 54287 strings out of 480121
+ 1241153 string characters out of 5892160
+ 2095787 words of memory out of 5000000
+ 71054 multiletter control sequences out of 15000+600000
+ 520763 words of font info for 193 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,21n,112p,10633b,2555s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure0.pdf (1 page, 34042 bytes).
+Output written on main-figure0.pdf (1 page, 34668 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream

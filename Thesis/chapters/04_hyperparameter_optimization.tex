@@ -81,7 +81,7 @@ As a first step, we want to concentrate on the sparse grid generation which is d
 \end{equation}
 is refined. In this case, $ r_{l,i} = |\{ (l', i') \in K | f(x_{l',i'}) \le f(x_{l,i}) \}| \in \{1, ... , |K|\} $ is the rank of the grid point with $ K $ being the current set of level-index pairs of the grid. Intuitively, this rank denotes the place of the function value in the ascending order of all  values of the current grid. On the other hand, the degree of the point $ d_{l,i} \in \mathbb{N}_0 $ is the number of previous refinements at this point. One important choice is to be made for the adaptivity parameter $ \gamma $. This value has to be between 0 and 1 and the smaller this value is, the more adaptive is the sparse grid. With this value, a trade-off between exploration and exploitation can be balanced. The optimal value depends on the function that has to be optimized.
 
-In the following, the behavior of the sparse grid generation is analyzed with the help of the three test functions. In each case, 3 different values for the adaptivity parameter $ \gamma \in \{0.0, 0.5, 1.0\} $ are used and the resulting sparse grid with the corresponding function values are plotted. The interpolated function is plotted with the triangulation of neighboring grid points. The first test case is the Eggholder function and the result is depicted in Figure \ref{fig:Eggholder_grid}.
+In the following, the behavior of the sparse grid generation is analyzed with the help of the three test functions. In each case, 3 different values for the adaptivity parameter $ \gamma \in \{0.0, 0.5, 1.0\} $ are used and the resulting sparse grid with the triangulated function values is plotted. The first test case is the Eggholder function and the result is depicted in Figure \ref{fig:Eggholder_grid}.
 
 \begin{figure}[htbp!]
 	\begin{subfigure}{0.3\textwidth}
@@ -114,9 +114,9 @@ In the first case with $ \gamma = 1.0 $, the grid is homogeneous and not adaptiv
 
 The other extreme case is depicted in Figure \ref{fig:Egg_gamma_0}. There, the grid is maximally adaptive and really concentrated at the top left corner around $ (-260, 280) $. As we know from Table \ref{tab:test_functions}, this is not where the optimal point is located. This behavior can be explained by the high exploitation throughout the iterations. With such a low adaptivity parameter, the points that are low in the first iterations are mostly refined in the other iterations. 
 
-The middle case with $ \gamma = 0.5 $ depicts a case where exploitation and exploration are balanced. The grid points are more distributed than in the case of $ \gamma = 0.0 $ but there are also some regions where the grid points are more defined, e.g. in the top left and right and also around $ (450, -300) $.
+The middle case with $ \gamma = 0.5 $ depicts a case where exploitation and exploration are more balanced. The grid points are more distributed than in the case of $ \gamma = 0.0 $ but there are also some regions where the grid points are more defined, e.g. in the top left corner of the domain.
 
-Note that in all three cases, the exact same number of grid points are evaluated. In this case it is very hard to find the real optimum because it is located at the border of the domain and the sparse grid does not use grid points at the border. \newline
+Note that in all three cases, the exact same number of grid points are evaluated. In this case it is very hard to find the real optimum because it is located at the border of the domain and the sparse grid does not use grid points at the border. Also, the oscillatory nature of the function makes it hard to not concentrate on a local optimum. \newline
 
 
 The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbrock}). Again, three different values for the adaptivity parameter are used. The results are depicted in Figure \ref{fig:Rosenbrock_grid}.
@@ -151,7 +151,7 @@ The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbroc
 
 The first fact that can be observed is that the sparse grid in the first case (Figure \ref{fig:Ros_gamma_1}) is exactly the same as the one for the Eggholder function (Figure \ref{fig:Egg_gamma_1}). This is due to the fact that this value of $ \gamma $ leads to a homogeneous sparse grid which is not dependent on the function used but rather the number of iterations for the grid generation. In this case, the interpolated function looks similar to the real function (Figure \ref{fig:Rosenbrock}). 
 
-Now with decreasing value of $ \gamma $, the grid gets more and more inhomogeneous, while concentrating to refine smaller function values. The extreme case can be seen in Figure \ref{fig:Ros_gamma_0}, where the most grid points are next to the point $ (0.65, 0.65) $. This is close to the real optimal point which is located at $ (1, 1) $. \newline 
+Now with decreasing value of $ \gamma $, the grid gets more and more inhomogeneous, while concentrating to refine smaller function values. The extreme case can be seen in Figure \ref{fig:Ros_gamma_0}, where the most grid points are next to the point $ (2.5, 6.25) $. After refining the first point in the middle, the one on top of it is getting refined all the time for the case $ \gamma = 0.0 $. Again, the sparse grid with $ \gamma = 0.5 $ is more balanced with more grid points on the left where the real optimum is located. \newline 
 
 
 The last function used is the Rastrigin function (see Figure \ref{fig:Rastrigin} for the plot of the function and \ref{fig:Rastrigin_grid} for the resulting sparse grids). 
@@ -183,16 +183,22 @@ The last function used is the Rastrigin function (see Figure \ref{fig:Rastrigin}
 	\label{fig:Rastrigin_grid}
 \end{figure}
 
-As in the previous two cases, the sparse grid is exactly the same for $ \gamma = 1 $. We can also see the same behavior for a decreasing adaptivity parameter, this time concentrating around the optimal point which is known beforehand $ (0,0) $. \newline 
+As in the previous two cases, the sparse grid is exactly the same for $ \gamma = 1 $. We can also see the same behavior for a decreasing adaptivity parameter. Now for $ \gamma = 0.0 $, only the grid point in the center is refined in all steps. In the middle case, the grid looks more balanced with tendency to the bottom left corner.  \newline 
 
 
-All in all, these experiments show that the value for the adaptivity parameter strongly influences the grid generation and the resulting optimal value found by the algorithm. In the case of strong oscillatory functions, a rather high value for the adaptivity parameter should be chosen because otherwise, the grid could refine at local optima. In the other cases, we have seen that the grid refines in the correct region for a smaller adaptivity parameter. 
+All in all, these experiments show that the value for the adaptivity parameter strongly influences the grid generation and the resulting optimal value found by the algorithm. In general, this trade-off between exploitation with trying to find a solution fast and exploration with reconstructing the function in the whole domain can be balanced with this adaptivity parameter. \newline
+
+In the following, the goal is to further analyze this adaptivity parameter. For each of the three test functions, experiments with $ \gamma \in {0.0, 0.25, 0.5, 0.75, 1.0} $ are made. The error of the optimum found by the grid is calculated depending on the number of grid points used. It is evaluated with 
+\begin{equation}
+ Error = f(x_{opt}^*) - f(x_{opt}) 
+\end{equation}
+$ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top function is for the Eggholder function, the one in the center belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
 
 \begin{figure}
 		\begin{tikzpicture}
 			\begin{axis}[
 				xlabel = Number of grid points,
-				ylabel = Error,
+				ylabel = Error (Eggholder),
 				scale=0.9,
 				cycle list name=exotic,
 				legend pos=outer north east,
@@ -221,7 +227,7 @@ All in all, these experiments show that the value for the adaptivity parameter s
 		\begin{tikzpicture}
 			\begin{axis}[
 				xlabel = Number of grid points,
-				ylabel = Error,
+				ylabel = Error (Rosenbrock),
 				scale = 0.9,
 				ymode=log,
 				cycle list name=exotic,
@@ -251,7 +257,7 @@ All in all, these experiments show that the value for the adaptivity parameter s
 		\begin{tikzpicture}
 			\begin{axis}[
 				xlabel = Number of grid points,
-				ylabel = Error,
+				ylabel = Error (Rastrigin),
 				scale = 0.9,
 				cycle list name=exotic,
 				legend pos=outer north east,
@@ -279,6 +285,9 @@ All in all, these experiments show that the value for the adaptivity parameter s
 	\caption{$ \gamma = 0.0 $}	
 	\label{fig:Functions_results}
 \end{figure}
+
+For all three test functions, a value $ 0.75 \le \gamma \le 1.0 $ leads to the smallest error with higher number of grid points. This means that a fast exploitation is not good for finding the global optimum. For the Rastrigin function, the most adaptive sparse grid does not even lead to a smaller error with up to 1000 grid points. This is the same example as in Figure \ref{fig:Ras_gamma_0}, where only the center point is refined. Note that by now, no optimization algorithm is applied on top of the sparse grid. For further experiments, the adaptivity parameter will be set to $ \gamma = 0.85 $.
+
 
 \subsection{Optimization with small neural networks}
 
