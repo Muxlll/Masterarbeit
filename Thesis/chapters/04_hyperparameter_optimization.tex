@@ -288,6 +288,79 @@ $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is t
 
 For all three test functions, a value $ 0.75 \le \gamma \le 1.0 $ leads to the smallest error with higher number of grid points. This means that a fast exploitation is not good for finding the global optimum. For the Rastrigin function, the most adaptive sparse grid does not even lead to a smaller error with up to 1000 grid points. This is the same example as in Figure \ref{fig:Ras_gamma_0}, where only the center point is refined. Note that by now, no optimization algorithm is applied on top of the sparse grid. For further experiments, the adaptivity parameter will be set to $ \gamma = 0.85 $.
 
+\begin{figure}[htbp!]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Number of grid points,
+			ylabel = Error (degree 2),
+			scale=0.9,
+			cycle list name=exotic,
+			legend pos=north east,
+			]
+			
+			\addplot+[mark=*, style=thick] coordinates
+			{(1,52.5) (9,23.124999999999993) (29,20.221948342338713) (49,12.642146873903034) (97,12.037968800252116) (197,5.324940782205941) (297,5.070573664357864) (397,5.059483529507994) (497,5.059483529509992) (749,4.981978981445401) (997,4.975134049661977) };
+			
+			\addplot+[mark=*, style=thick]  coordinates 
+			{(1,52.5) (9,36.56247783900481) (29,20.221948342338713) (49,12.642146873903027) (97,12.037968800252123) (197,5.324940782205946) (297,5.070573664357985) (397,5.059483529510453) (497,5.059483529510453) (749,4.981978981455729) (997,4.975134049663653) };
+			
+			\addplot+[mark=*, style=thick]   coordinates 
+			{(1,84.58773867867924) (9,37.34881542254573) (29,35.353118558881526) (49,26.048828056455157) (97,5.180279637187814) (197,1.4141172901666579) (297,1.3031251937216908) (397,1.0903873189756652) (497,0.08680369103412033) (749,0.10422400147368194) (997,0.020853342869873615) };
+			
+			\legend{Before Optimization, Local Optimization, Global Optimization}
+			
+		\end{axis}
+	\end{tikzpicture}
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Number of grid points,
+			ylabel = Error (degree 3),
+			scale=0.9,
+			cycle list name=exotic,
+			legend pos=north east,
+			]
+			
+			\addplot+[mark=*, style=thick] coordinates
+			{(1,52.5) (9,23.124999999999986) (29,20.221948342338727) (49,12.642146873903025) (97,12.037968800252077) (197,5.324940782206068) (297,5.070573664356438) (397,5.059483529515382) (497,5.059483529505752) (749,4.9819789814573205) (997,4.975134049660271) };
+			
+			\addplot+[mark=*, style=thick]  coordinates 
+			{(1,52.5) (9,39.26658373479667) (29,20.847171449176678) (49,49.99973745586844) (97,6.259687480962173) (197,5.002154846904871) (297,4.975751718068931) (397,4.975746034104377) (497,4.975697508130967) (749,3.980892241733912) (997,3.979835850885795) };
+			
+			\addplot+[mark=*, style=thick]   coordinates 
+			{(1,48.864612088186476) (9,31.16918203994022) (29,20.48853217431511) (49,50.53387608332728) (97,3.0805866327728566) (197,0.14445847530268452) (297,0.06980177032781754) (397,0.06988725538127483) (497,0.02077395004058502) (749,0.003850124352695161) (997,0.4352002384999345) };
+			
+			\legend{Before Optimization, Local Optimization, Global Optimization}
+			
+		\end{axis}
+	\end{tikzpicture}
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Number of grid points,
+			ylabel = Error (degree 5),
+			scale=0.9,
+			cycle list name=exotic,
+			legend pos=north east,
+			]
+			
+			\addplot+[mark=*, style=thick] coordinates
+			{(1,52.5) (9,23.124999999999996) (29,20.221948342338706) (49,12.642146873903044) (97,12.037968800252427) (197,5.324940782206359) (297,5.070573664363549) (397,5.059483529512068) (497,5.059483529510554) (749,4.981978981456664) (997,4.975134049668072) };
+			
+			\addplot+[mark=*, style=thick]  coordinates 
+			{(1,52.5) (9,34.964270829168846) (29,22.048613242940117) (49,49.999815285630675) (97,8.771776029715767) (197,4.977579661397227) (297,4.9749420077761) (397,4.974930572100956) (497,4.974940210636003) (749,3.9798360656238323) (997,4.974790247773939) };
+			
+			\addplot+[mark=*, style=thick]   coordinates 
+			{(1,73.32956404214876) (9,37.355007206361236) (29,22.57998988395788) (49,50.570154840256905) (97,1.7957114981045024) (197,0.059327067234512754) (297,0.0044097596433303465) (397,0.11308692978262513) (497,0.008066444905090009) (749,0.02197720207793452) (997,0.002142203898742423) };
+			
+			\legend{Before Optimization, Local Optimization, Global Optimization}
+			
+		\end{axis}
+	\end{tikzpicture}
+	
+	\caption{ Different optimization algorithms. Rosenbrock function. }	
+	\label{fig:Optimizer_results}
+\end{figure}
 
 \subsection{Optimization with small neural networks}
 

@@ -20,6 +20,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.\relax }}{26}{figure.caption.40}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.\relax }}{27}{figure.caption.41}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Influence of the adaptivity parameter on the error (difference to the actual optimal value) of the optimum found by the sparse grid. \relax }}{29}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Different optimization algorithms. Rosenbrock function. \relax }}{30}{figure.caption.43}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
