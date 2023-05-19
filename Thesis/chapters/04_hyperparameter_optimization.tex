@@ -13,7 +13,7 @@
 
 \subsection{Experiments with well-defined functions}
 
-Before optimizing the configurations of machine learning models, well defined functions are used. This has the advantage that the optimal point is already known in advance and a function call is much faster than evaluating a neural network. Therefor, three different test functions are given with the following properties \cite{valentin2016hierarchical}:
+Before optimizing the configurations of machine learning models, well defined functions are used. This has the advantage that the optimal point is already known in advance and a function call is much faster than evaluating a neural network. Therefore, three different test functions are given with the following properties \cite{valentin2016hierarchical}:
 
 \begin{table}[htbp!]
 		\centering
@@ -30,7 +30,7 @@ Before optimizing the configurations of machine learning models, well defined fu
 	\label{tab:test_functions}
 \end{table}
 
-The plots of the functions can be seen in Figure \ref{fig:test_functions_plot}. The Eggholder function is defined with \cite{whitley1996evaluating} 
+The Eggholder function is defined with \cite{whitley1996evaluating} 
 \begin{equation}
 	f(x_0, x_1) = -x_0 * \text{sin}(\sqrt{ | x_0 - (x_1 + 47) | }) - (x_1 + 47) \text{sin}(\sqrt{ | x_1 +47 + \frac{x_0}{2} | }).
 \end{equation}
@@ -43,7 +43,7 @@ and the third one (Rastrigin) \cite{yang2010engineering} is defined with
 \begin{equation}
 	f(\vec{x}) = 10 d + \sum_{ i = 1 }^{d} (x_i^2 - 10 \text{cos}(2 \pi x_i))
 \end{equation} 
-where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{fig:test_functions_plot} shows the functions in two dimensions. 
+where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{fig:test_functions_plot} shows the functions in two dimensions.
 
 
 \begin{figure}[htbp!]
@@ -58,7 +58,7 @@ where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{f
 		\centering
 		\includegraphics[width=\textwidth]{Rosenbrock_normal}
 		\includegraphics[width=\textwidth]{Rosenbrock_above}
-		\caption{Rosenbrock.}
+		\caption{$ log_{10}(f) $ of Rosenbrock.}
 		\label{fig:Rosenbrock}
 	\end{subfigure}
 	\begin{subfigure}{0.3\textwidth}
@@ -73,13 +73,13 @@ where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{f
 	\label{fig:test_functions_plot}
 \end{figure}
 
-You can directly see some properties. The Eggholder function (see Figure \ref{fig:Eggholder}) is very oscillatory and the optimal point $ x_{opt} $ lays at the border of the domain. The second one (see Figure \ref{fig:Rosenbrock}) has a big region where the function values are close to the minimum and the last one looks similar (see Figure \ref{fig:Rastrigin}) but with additionally being oscillatory. This might lead to optimizer getting stuck at local minima.
+The Eggholder function (see Figure \ref{fig:Eggholder}) is very oscillatory and the optimal point $ x_{opt} $ lays at the border of the domain. Additionally, it is multi modal. The second one (see Figure \ref{fig:Rosenbrock}) is plotted with the function values additionally transformed with $ log_{10}(x) $. The last one is also multi modal (see Figure \ref{fig:Rastrigin}). 
 
 As a first step, we want to concentrate on the sparse grid generation which is done with the Ritter Novak refinement criterion \cite{b_splines}. In each iteration, the grid point $ x_{l,i} $ that minimizes the product 
 \begin{equation}
 	(r_{l,i} +1)^{1 - \gamma} \cdot (||l||_1 + d_{l,i} + 1)^{\gamma}
 \end{equation}
-is refined. In this case, $ r_{l,i} = |\{ (l', i') \in K | f(x_{l',i'}) \le f(x_{l,i}) \}| \in \{1, ... , |K|\} $ is the rank of the grid point with $ K $ being the current set of level-index pairs of the grid. Intuitively, this rank denotes the place of the function value in the ascending order of all  values of the current grid. On the other hand, the degree of the point $ d_{l,i} \in \mathbb{N}_0 $ is the number of previous refinements at this point. One important choice is to be made for the adaptivity parameter $ \gamma $. This value has to be between 0 and 1 and the smaller this value is, the more adaptive is the sparse grid. With this value, a trade-off between exploration and exploitation can be balanced. The optimal value depends on the function that has to be optimized.
+is refined. In this case, $ r_{l,i} = |\{ (l', i') \in K | f(x_{l',i'}) \le f(x_{l,i}) \}| \in \{1, ... , |K|\} $ is the rank of the grid point with $ K $ being the current set of level-index pairs of the grid. Intuitively, this rank denotes the place of the function value in the ascending order of all values of the current grid. On the other hand, the degree of the point $ d_{l,i} \in \mathbb{N}_0 $ is the number of previous refinements at this point. One important choice is to be made for the adaptivity parameter $ \gamma $. This value has to be between 0 and 1 and the smaller this value is, the more adaptive is the sparse grid. With this value, a trade-off between exploration and exploitation can be balanced. The optimal value depends on the function that has to be optimized.
 
 In the following, the behavior of the sparse grid generation is analyzed with the help of the three test functions. In each case, 3 different values for the adaptivity parameter $ \gamma \in \{0.0, 0.5, 1.0\} $ are used and the resulting sparse grid with the triangulated function values is plotted. The first test case is the Eggholder function and the result is depicted in Figure \ref{fig:Eggholder_grid}.
 
@@ -106,18 +106,17 @@ In the following, the behavior of the sparse grid generation is analyzed with th
 		\label{fig:Egg_gamma_0}
 	\end{subfigure}
 	
-	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
+	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $ for the Eggholder function. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
 	\label{fig:Eggholder_grid}
 \end{figure}
 
 In the first case with $ \gamma = 1.0 $, the grid is homogeneous and not adaptive at all. The function values are distributed over the whole domain and the interpolated function looks very similar to the real plot from Figure \ref{fig:Eggholder}. 
 
-The other extreme case is depicted in Figure \ref{fig:Egg_gamma_0}. There, the grid is maximally adaptive and really concentrated at the top left corner around $ (-260, 280) $. As we know from Table \ref{tab:test_functions}, this is not where the optimal point is located. This behavior can be explained by the high exploitation throughout the iterations. With such a low adaptivity parameter, the points that are low in the first iterations are mostly refined in the other iterations. 
+The other extreme case is depicted in Figure \ref{fig:Egg_gamma_0}. There, the grid is maximally adaptive and really concentrated at the top left corner around $ (-260, 280) $. As it is known from Table \ref{tab:test_functions}, this is not where the optimal point is located. This behavior can be explained by the high exploitation throughout the iterations. With such a low adaptivity parameter, the grid points with low function values in the first iterations are mostly refined in the other iteration steps. 
 
-The middle case with $ \gamma = 0.5 $ depicts a case where exploitation and exploration are more balanced. The grid points are more distributed than in the case of $ \gamma = 0.0 $ but there are also some regions where the grid points are more defined, e.g. in the top left corner of the domain.
+The middle case with $ \gamma = 0.5 $ depicts a case where exploitation and exploration are more balanced. The grid points are more distributed than in the case of $ \gamma = 0.0 $ but there are also some regions where they are more refined, e.g. in the top left corner of the domain.
 
-Note that in all three cases, the exact same number of grid points are evaluated. In this case it is very hard to find the real optimum because it is located at the border of the domain and the sparse grid does not use grid points at the border. Also, the oscillatory nature of the function makes it hard to not concentrate on a local optimum. \newline
-
+Note that in all three cases, the exact same number of grid points are evaluated. In this case it is very hard to find the real optimum because it is located at the border of the domain and the sparse grid does not use grid points at the border. Also, the oscillatory nature of the function makes it hard to not concentrate on a local optimum which can happen in case of too high adaptivity. \newline
 
 The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbrock}). Again, three different values for the adaptivity parameter are used. The results are depicted in Figure \ref{fig:Rosenbrock_grid}.
 
@@ -144,7 +143,7 @@ The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbroc
 		\label{fig:Ros_gamma_0}
 	\end{subfigure}
 	
-	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
+	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $ for the Rosenbrock function. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
 	\label{fig:Rosenbrock_grid}
 \end{figure}
 
@@ -179,11 +178,11 @@ The last function used is the Rastrigin function (see Figure \ref{fig:Rastrigin}
 		\label{fig:Ras_gamma_0}
 	\end{subfigure}
 	
-	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
+	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $ for the Rastrigin function. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
 	\label{fig:Rastrigin_grid}
 \end{figure}
 
-As in the previous two cases, the sparse grid is exactly the same for $ \gamma = 1 $. We can also see the same behavior for a decreasing adaptivity parameter. Now for $ \gamma = 0.0 $, only the grid point in the center is refined in all steps. In the middle case, the grid looks more balanced with tendency to the bottom left corner.  \newline 
+As in the previous two cases, the sparse grid is exactly the same for $ \gamma = 1.0 $. We can also see the same behavior for a decreasing adaptivity parameter. Now for $ \gamma = 0.0 $, only the grid point in the center is refined in all steps. In the middle case, the grid looks more balanced with tendency to the bottom left corner.  \newline 
 
 
 All in all, these experiments show that the value for the adaptivity parameter strongly influences the grid generation and the resulting optimal value found by the algorithm. In general, this trade-off between exploitation with trying to find a solution fast and exploration with reconstructing the function in the whole domain can be balanced with this adaptivity parameter. \newline
@@ -192,7 +191,7 @@ In the following, the goal is to further analyze this adaptivity parameter. For 
 \begin{equation}
  Error = f(x_{opt}^*) - f(x_{opt}) 
 \end{equation}
-$ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top function is for the Eggholder function, the one in the center belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
+where $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top left plot is for the Eggholder function, the one on the top right belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
 
 \begin{figure}[htbp!]
 	\begin{tikzpicture}
@@ -279,7 +278,7 @@ $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is t
 For all three test functions, a value $ 0.75 \le \gamma \le 1.0 $ leads to the smallest error with higher number of grid points. This means that a fast exploitation is not good for finding the global optimum. For the Rastrigin function, the most adaptive sparse grid does not even lead to a smaller error with up to 1000 grid points. This is the same example as in Figure \ref{fig:Ras_gamma_0}, where only the center point is refined. Note that by now, no optimization algorithm is applied on top of the sparse grid. For further experiments, the adaptivity parameter will be set to $ \gamma = 0.85 $. \newline 
 
 
-The next improvement is to add optimizers after the grid generation phase. There are two different types of algorithms. The first one is local optimization, for example based on the gradient like gradient descent. The second one is global optimization. An example therefore is to use a multi start approach by trying out multiple different starting points for the algorithm which can for example be the nelder mead optimization. The following experiments show how the error (difference between optimum found by algorithm and actual optimal function value) behaves with higher number of grid points of the underlying sparse grid. As a local optimization algorithm, the gradient descent is used. The starting point for this algorithm is set to the point of the sparse grid where the smallest function value was found. For the global optimization, a multi start approach with 20 equally distributed starting points is used. The concrete algorithm is the nelder mead optimization as described in \ref{Optimization_algorithms}. The number of function evaluations used in this method is set to 1000. One important parameter for the optimization is the degree of the B-splines used on the sparse grid. The resulting errors depending on the number of grid points for the degrees 2, 3, and 5 can be seen in Figure \ref{fig:Optimizer_results}. The Rosenbrock function is used in all cases.
+The next improvement is to add optimizers after the grid generation phase. There are two different types of algorithms. The first one is local optimization, for example based on the gradient like gradient descent. The second one is global optimization. An example therefore is to use a multi start approach by trying out multiple different starting points for the algorithm. These various initial values can be uniformly distributed in the domain. The following experiments show how the error (difference between optimum found by algorithm and actual optimal function value) behaves with higher number of grid points of the underlying sparse grid. As a local optimization algorithm, the gradient descent is used. The starting point for this algorithm is set to the point of the sparse grid where the smallest function value was found. For the global optimization, a multi start approach with 20 equally distributed starting points is used. The concrete algorithm is the nelder mead optimization as described in \ref{Optimization_algorithms}. The number of function evaluations used in this method is set to 1000. One important parameter for the optimization is the degree of the B-splines used on the sparse grid. The resulting errors depending on the number of grid points for the degrees 2, 3, and 5 can be seen in Figure \ref{fig:Optimizer_results}. The Rosenbrock function is used in all cases.
 
 \begin{figure}[htbp!]
 	\begin{tikzpicture}
@@ -349,18 +348,19 @@ The next improvement is to add optimizers after the grid generation phase. There
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Different optimization algorithms. Rosenbrock function. }	
+	\caption{ Optimization error for different algorithms depending on the number of grid points in two dimensions. The plots show the results with degree 2 (top left), degree 3 (top right) and degree 5 (bottom). The Rosenbrock function was used. }	
 	\label{fig:Optimizer_results}
 \end{figure}
 
-In all three cases, the errors first increase with increasing number of grid points until about 100 to 200 function evaluations are done. After that, both local and global optimization algorithms are at least as good as the result found by the sparse grid. The increasing error in the beginning is caused by the low number of function evaluations and the resulting knowledge about the function being optimized. With increasing number of grid points, the global optimization finds the best solution in all cases with degrees 2, 3, and 5.
+In all three cases, the errors of the local and global optimizers first increase with increasing number of grid points until about 100 to 200 function evaluations are done. After that, both local and global optimization algorithms are at least as good as the result found by the sparse grid. With increasing number of grid points, the global optimization finds the best solution in all cases with degrees 2, 3, and 5.
 
 One approach is to combine all three resulting points with their corresponding function value. The overall optimum point is then just the one with the smallest function value. \newline 
 
-The input of the previous experiments were all just in two dimensions. The following ones analyze the impact of the dimension on the performance of the algorithm. Therefore, the Rastrigin function is optimized, again with increasing number of grid points.
+The input of the previous experiments were all just in two dimensions. The following ones analyze the impact of the dimension on the performance of the algorithm. Therefore, the Rastrigin function is optimized, again with increasing number of grid points. The degree of the B-splines used on the sparse grid is set to 5 and for the adaptivity parameter, we set $ \gamma = 0.85 $.
 
 
 \begin{figure}[htbp!]
+	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -393,7 +393,12 @@ The input of the previous experiments were all just in two dimensions. The follo
 	\label{fig:Dimensions_results}
 \end{figure}
 
-\subsection{Optimization with small neural networks}
+The results show that with increasing dimensionality of the problem, more grid points are needed in order to reduce the error. The metric was again defined as the optimum found by the algorithm subtracted by the actual optimal value. \newline 
+
+In conclusion, the adaptivity parameter, the degree of the B-splines on the sparse grid, and the dimensionality of the problem that is optimized, strongly influence the behavior of the sparse grid optimization. For the adaptivity parameter, a value with about $ \gamma = 0.85 $ is in general a good choice for a function that is not known in advance. With a higher degree, we can find the optimum a bit faster and for higher dimensionality, more refinement iterations of the sparse grid are needed. 
+
+
+\subsection{Hyperparameter Optimization of Small Neural Networks}
 
 
 

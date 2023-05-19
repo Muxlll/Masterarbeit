@@ -30,9 +30,9 @@
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Results}{22}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Experiments with well-defined functions}{22}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Optimization with small neural networks}{31}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{32}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{33}{chapter*.45}%
-\contentsline {chapter}{\nonumberline List of Tables}{35}{chapter*.46}%
-\contentsline {chapter}{\nonumberline Bibliography}{36}{chapter*.47}%
+\contentsline {subsection}{\numberline {3.2.2}Hyperparameter Optimization of Small Neural Networks}{30}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{31}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{32}{chapter*.45}%
+\contentsline {chapter}{\nonumberline List of Tables}{34}{chapter*.46}%
+\contentsline {chapter}{\nonumberline Bibliography}{35}{chapter*.47}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
