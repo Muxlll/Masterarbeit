@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 12:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2170,7 +2170,7 @@ LaTeX Warning: Reference `fig:Rastrigin' on page 20 undefined on input line 76.
 LaTeX Warning: Citation 'b_splines' on page 20 undefined on input line 78.
 
 
-LaTeX Warning: Reference `fig:Eggholder_grid' on page 20 undefined on input lin
+LaTeX Warning: Reference `fig:Eggholder_grid' on page 21 undefined on input lin
 e 84.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
@@ -2209,11 +2209,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 
-LaTeX Warning: Reference `fig:Rosenbrock' on page 21 undefined on input line 12
+LaTeX Warning: Reference `fig:Rosenbrock' on page 22 undefined on input line 12
 2.
 
 
-LaTeX Warning: Reference `fig:Rosenbrock_grid' on page 21 undefined on input li
+LaTeX Warning: Reference `fig:Rosenbrock_grid' on page 22 undefined on input li
 ne 122.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
@@ -2311,8 +2311,27 @@ isable this.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Reference `fig:Ras_gamma_0' on page 23 undefined on input line 2
-89.
+79.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+LaTeX Warning: Reference `Optimization_algorithms' on page 24 undefined on inpu
+t line 282.
+
+
+LaTeX Warning: Reference `fig:Optimizer_results' on page 24 undefined on input 
+line 282.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 ) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
@@ -2343,18 +2362,18 @@ Package logreq Info: Writing requests to 'main-figure2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54287 strings out of 480121
- 1241142 string characters out of 5892160
- 2095787 words of memory out of 5000000
- 71054 multiletter control sequences out of 15000+600000
- 520763 words of font info for 193 fonts, out of 8000000 for 9000
+ 54296 strings out of 480121
+ 1241298 string characters out of 5892160
+ 2093787 words of memory out of 5000000
+ 71061 multiletter control sequences out of 15000+600000
+ 520834 words of font info for 194 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,21n,112p,10633b,2561s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure2.pdf (1 page, 35042 bytes).
+Output written on main-figure2.pdf (1 page, 34225 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
