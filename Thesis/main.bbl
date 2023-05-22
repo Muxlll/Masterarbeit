@@ -1851,6 +1851,80 @@
       \field{title}{Engineering optimization: an introduction with metaheuristic applications}
       \field{year}{2010}
     \endentry
+    \entry{feurer-arxiv19a}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=2661e0a744cd67c731851c7f1c80d2e2}{%
+           family={Feurer},
+           familyi={F\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09c51db2fbb24f4ec363924d7ae87263}{%
+           family={Rijn},
+           familyi={R\bibinitperiod},
+           given={Jan\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=b763bba7351002c2261c6ab6a89a1d77}{%
+           family={Kadra},
+           familyi={K\bibinitperiod},
+           given={Arlind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc85e272fcb76555940abdb9ea6a6067}{%
+           family={Gijsbers},
+           familyi={G\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a69e908321346e2678d43aa9ea6e49c}{%
+           family={Mallik},
+           familyi={M\bibinitperiod},
+           given={Neeratyoy},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d824824e65a1dccb3b1b8fa4222e276}{%
+           family={Ravi},
+           familyi={R\bibinitperiod},
+           given={Sahithya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6cfa06c6d110548dbb088a1445563f5}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ce3afeba4f8f866dbad8e5b02118406}{%
+           family={Vanschoren},
+           familyi={V\bibinitperiod},
+           given={Joaquin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6f3339156d725c8aa09f013d30c486f5}
+      \strng{fullhash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{bibnamehash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{authorbibnamehash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{authornamehash}{6f3339156d725c8aa09f013d30c486f5}
+      \strng{authorfullhash}{6266a447054437b85f58a1b35c10f79c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv:1911.02490}
+      \field{title}{OpenML-Python: an extensible Python API for OpenML}
+      \field{year}{2019}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
