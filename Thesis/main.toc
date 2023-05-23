@@ -31,8 +31,8 @@
 \contentsline {section}{\numberline {3.2}Results}{22}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Experiments with simple functions}{22}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Hyperparameter Optimization of Small Neural Networks}{31}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{33}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{34}{chapter*.46}%
-\contentsline {chapter}{\nonumberline List of Tables}{36}{chapter*.47}%
-\contentsline {chapter}{\nonumberline Bibliography}{37}{chapter*.48}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{34}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{35}{chapter*.47}%
+\contentsline {chapter}{\nonumberline List of Tables}{37}{chapter*.48}%
+\contentsline {chapter}{\nonumberline Bibliography}{38}{chapter*.49}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

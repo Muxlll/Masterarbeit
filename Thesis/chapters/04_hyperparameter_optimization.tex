@@ -426,9 +426,17 @@ Now we replace the function, where we know the analytical optimum with the evalu
 
 In this plot, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. 
 
-
-
-
+\begin{figure}[htbp!]
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_85}
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_85}
+	
+	
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_5}
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_5}
+	
+	\caption{ Analysis of sparse grid with machine learning }
+	\label{fig:analysis_sparse_grid_with_machine_learning}
+\end{figure}
 
 
 
