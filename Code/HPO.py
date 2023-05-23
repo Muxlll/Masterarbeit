@@ -700,8 +700,6 @@ class SparseGridSearchOptimization(Optimization):
             z_values = []
             for i in range(gridStorage.getSize()):
                 gp = gridStorage.getPoint(i)
-                print(gp.getStandardCoordinate(0))
-                print(gp.getStandardCoordinate(1))
                 keys = list(self.hyperparameterspace.keys())
                 if self.hyperparameterspace[keys[0]][0] == "interval" or self.hyperparameterspace[keys[0]][0] == "interval-int":
                     x_values.append(from_standard(
@@ -709,7 +707,8 @@ class SparseGridSearchOptimization(Optimization):
                     x_values_interpreted.append(from_standard(
                         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
                 elif self.hyperparameterspace[keys[0]][0] == "interval-log":
-                    x_values.append(gp.getStandardCoordinate(0))
+                    x_values.append(np.log10(from_standard_log(
+                        self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0))))
                     x_values_interpreted.append(from_standard_log(
                         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], gp.getStandardCoordinate(0)))
                 else:
@@ -722,7 +721,8 @@ class SparseGridSearchOptimization(Optimization):
                     y_values_interpreted.append(from_standard(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 elif self.hyperparameterspace[keys[1]][0] == "interval-log":
-                    y_values.append(gp.getStandardCoordinate(1))
+                    y_values.append(np.log10(from_standard_log(
+                        self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1))))
                     y_values_interpreted.append(from_standard_log(
                         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], gp.getStandardCoordinate(1)))
                 else:
@@ -732,15 +732,39 @@ class SparseGridSearchOptimization(Optimization):
                 z_values.append(functionValues[i])
 
             if self.verbosity >= 1:
-                print("########### Generated Grid: ###########")
+                # print("########### Generated Grid: ###########")
                 
-                fig = plt.figure()
-                plt.plot(x_values, y_values, 'bo')
-                plt.xlabel(list(self.hyperparameterspace.keys())[0])
-                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                # fig = plt.figure()
+                # plt.plot(x_values, y_values, 'bo')
+                # plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                # plt.ylabel("log10(" + list(self.hyperparameterspace.keys())[1] + ")")
 
-                plt.savefig("./Grid"+ str(self.budget)+"adapt"+str(self.adaptivity)+".pgf",bbox_inches='tight' )
-                plt.show()
+                # # plt.savefig("./Grid"+ str(self.budget)+"adapt"+str(self.adaptivity)+".pgf",bbox_inches='tight' )
+                # plt.show()
+
+                # fig = plt.figure()
+                # ax = plt.axes(projection='3d')
+
+                # if len(z_values) > 100:
+                #     surface = ax.plot_trisurf(x_values, y_values,
+                #                     z_values, cmap='plasma')
+                # else:
+                #     surface = ax.scatter(x_values, y_values, z_values,
+                #                c=z_values, cmap='plasma')
+                # plt.xlabel(list(self.hyperparameterspace.keys())[0])
+                # plt.ylabel("log10(" + list(self.hyperparameterspace.keys())[1] + ")")
+                # fig.colorbar(surface, shrink=0.8, aspect=15)
+                # # plt.savefig("./Normal_budget"+ str(self.budget)+"adapt"+str(self.adaptivity)+".pgf",bbox_inches='tight' )
+                # plt.show()
+
+                x0Index = 0
+                fX0 = functionValues[0]
+                for i in range(1, len(functionValues)):
+                    if functionValues[i] < fX0:
+                        fX0 = functionValues[i]
+                        x0Index = i
+
+                x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
 
                 fig = plt.figure()
                 ax = plt.axes(projection='3d')
@@ -751,26 +775,20 @@ class SparseGridSearchOptimization(Optimization):
                 else:
                     surface = ax.scatter(x_values, y_values, z_values,
                                c=z_values, cmap='plasma')
+                    ax.scatter(from_standard(
+                        self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], x0[0]), 
+                        np.log10(from_standard_log(
+                        self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], x0[1])), 
+                        fX0, 
+                        c='black',
+                        alpha=1)
                 plt.xlabel(list(self.hyperparameterspace.keys())[0])
-                plt.ylabel(list(self.hyperparameterspace.keys())[1])
-                fig.colorbar(surface, shrink=0.8, aspect=15)
-                plt.savefig("./Normal_budget"+ str(self.budget)+"adapt"+str(self.adaptivity)+".pgf",bbox_inches='tight' )
-                plt.show()
-
-                fig = plt.figure()
-                ax = plt.axes(projection='3d')
-
-                if len(z_values) > 100:
-                    surface = ax.plot_trisurf(x_values, y_values,
-                                    z_values, cmap='plasma')
-                else:
-                    surface = ax.scatter(x_values, y_values, z_values,
-                               c=z_values, cmap='plasma')
-                plt.xlabel(list(self.hyperparameterspace.keys())[0])
-                plt.ylabel(list(self.hyperparameterspace.keys())[1])
+                plt.ylabel("log10(" + list(self.hyperparameterspace.keys())[1] + ")")
                 fig.colorbar(surface, shrink=0.8, aspect=15)
                 ax.view_init(90, 270)
                 ax.set_zticks([])
+                ax.set_xlim([self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2]])
+                ax.set_ylim([np.log10(self.hyperparameterspace[keys[1]][1]), np.log10(self.hyperparameterspace[keys[1]][2])])
                 plt.savefig("./Above_budget"+ str(self.budget)+"adapt"+str(self.adaptivity)+".pgf",bbox_inches='tight' )
                 plt.show()
 
