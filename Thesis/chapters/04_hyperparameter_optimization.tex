@@ -424,19 +424,51 @@ Now we replace the function, where we know the analytical optimum with the evalu
 	\label{fig:analysis_model_training}
 \end{figure}
 
-In this plot, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. 
+In this plot, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. \newline
+
+
+With this knowledge about the underlying function that has to be minimized, the behavior of the sparse grid can be analyzed. Figure \ref{fig:analysis_sparse_grid_with_machine_learning} depicts the generated grid colored corresponding to the function value for different adaptivity values and number of grid points. Note that the scale of the learning rate is the one interpreted by the sparse grid. The actual scale is logarithmic between $ 10^{-10} $ for $ 0.0 $ and $ 10 ^{-1} $ for $ 1.0 $. 
 
 \begin{figure}[htbp!]
-	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_85}
-	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_85}
+	\begin{subfigure}{\textwidth}
+		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_85}
+		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_85}
+		\caption{ Sparse grid generated with adaptivity parameter $ \gamma = 0.85 $ and number of grid points of 50 (left) and 100 (right). Most points are in the upper half for higher values of the learning rate. }
+		\label{fig:analysis_sparse_grid_with_machine_learning_085}
+	\end{subfigure}
 	
-	
-	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_5}
-	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_5}
-	
-	\caption{ Analysis of sparse grid with machine learning }
+	\begin{subfigure}{\textwidth}
+		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_50_5}
+		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/Above_100_5}
+		\caption{Sparse grid generated with adaptivity parameter $ \gamma = 0.5 $ and number of grid points of 50 (left) and 100 (right). Most points are in the upper right half for higher values of the learning rate and epochs between 25 and 30. }
+		\label{fig:analysis_sparse_grid_with_machine_learning_05}
+	\end{subfigure}
+
+	\caption{ Analysis of sparse grid with machine learning evaluation for different adaptivity parameters ($ 0.85 $ \ref{fig:analysis_sparse_grid_with_machine_learning_085} and $ 0.5 $ \ref{fig:analysis_sparse_grid_with_machine_learning_05}), each with 50 and 100 grid points.}
 	\label{fig:analysis_sparse_grid_with_machine_learning}
 \end{figure}
 
+In the first case with $ \gamma = 0.85 $, more grid points are generated in the upper half of the domain. A similar behavior can be observed for a higher number of grid points (\ref{fig:analysis_sparse_grid_with_machine_learning_085}, right). Especially in regions where the learning rate is at about $ 0.7 $ TODO:calculation, many grid points are refined. From the analysis in Figure \ref{fig:analysis_model_training}, there might be the optimal value. 
 
+For a smaller adaptivity value of $ \gamma = 0.5 $, the sparse grid is much more adaptive as depicted in Figure \ref{fig:analysis_sparse_grid_with_machine_learning_05}. For both number of grid points $ 50 $ and $ 100 $, the most refined part of the sparse grid is at the same region. One important thing to observe here is that with higher adaptivity, a lower number of grid points is necessary to find one candidate of the optimum value. On the other hand, with lower adaptivity, more grid points are needed to find a good minimal value. 
+
+However, as shown in Table \ref{tab:analysis_sparse_grid_with_machine_learning_results}, the best value is found with the configuration $ \gamma = 0.85 $ and number of grid points of 100. This means that lower adaptivity leads to better results.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{| c c | c c | c |} 
+		\hline
+		$ \gamma $ & N &  Epochs & Learning rate & Result \\
+		\hline
+		0.85 & 50 & 20 & 0.00021287516617963725 & 0.2671877220273016 \\
+		0.85 & 100 & 35 & 0.00029427271762092817 & \textbf{0.2633902207016944} \\
+		0.5 & 50 & 26 & 0.000153992652605 & 0.26837945729494145 \\
+		0.5 & 100 & 26 & 0.00015399265260594922 & 0.2683794572949416 \\
+		\hline
+	\end{tabular}
+	\caption{ Best hyperparameter configuration found by the sparse grid with different adaptivity parameters and number of grid points. The best result is found with $ \gamma = 0.85 $ and 100 grid points. }
+	\label{tab:analysis_sparse_grid_with_machine_learning_results}
+\end{table}
+
+The results shown in this table prove that too high adaptivity is not good for finding the smallest function value. 
 
