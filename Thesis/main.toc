@@ -28,11 +28,13 @@
 \contentsline {section}{\numberline {3.1}Methodology}{22}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Numerical Results}{22}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Experiments with simple functions}{22}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Hyperparameter Optimization of Small Neural Networks}{31}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{35}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{36}{chapter*.48}%
-\contentsline {chapter}{\nonumberline List of Tables}{39}{chapter*.49}%
-\contentsline {chapter}{\nonumberline Bibliography}{40}{chapter*.50}%
+\contentsline {section}{\numberline {3.2}Sparse Grid Optimization of functions}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Sparse Grid Generation with different Adaptivities}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{29}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{31}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Sparse Grid Generation}{33}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{36}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{37}{chapter*.48}%
+\contentsline {chapter}{\nonumberline List of Tables}{40}{chapter*.49}%
+\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.50}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
