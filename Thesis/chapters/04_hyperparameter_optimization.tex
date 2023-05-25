@@ -415,7 +415,11 @@ In conclusion, the adaptivity parameter, the degree of the B-splines on the spar
 
 \section{Hyperparameter Optimization with Sparse Grids}
 
-Now we replace the function, where we know the analytical optimum with the evaluation of a machine learning model. The biggest change is the much higher duration of one function call and the complexity of finding the analytical solution which is impossible due to the high number of network weights in neural networks. The following plots show an example of a small neural network being evaluated on the diamonds dataset which is available on OpenML \cite{feurer-arxiv19a}. We used a model consisting of two fully connected layers, each made up of 30 neurons. In one batch, 100 data samples are processed. The two dimensional plot (see Figure \ref{fig:analysis_model_training}) depicts the network evaluation depending on the number of epochs used and the value for the learning rate of the Adam optimizer of the model. The loss of the network is calculated with the mean squared error. As pre-processing of the data, the numeric features of the input data is scaled with a standard scaler and the categorical features are one hot encoded. The target values are also scaled separately. For the evaluation metric, we chose the average result of 2-fold-cross validation with the mean absolute percentage error (MAPE). This metric is defined as 
+Now we replace the function, where we know the analytical optimum with the evaluation of a machine learning model. The biggest change is the much higher duration of one function call and the complexity of finding the analytical solution which is impossible due to the high number of network weights in neural networks. 
+
+\subsection{Optimum Approximation with Sparse Grids}
+
+The following plots show an example of a small neural network being evaluated on the diamonds dataset which is available on OpenML \cite{feurer-arxiv19a}. We used a model consisting of two fully connected layers, each made up of 30 neurons. In one batch, 100 data samples are processed. The two dimensional plot (see Figure \ref{fig:analysis_model_training}) depicts the network evaluation depending on the number of epochs used and the value for the learning rate of the Adam optimizer of the model. The loss of the network is calculated with the mean squared error. As pre-processing of the data, the numeric features of the input data is scaled with a standard scaler and the categorical features are one hot encoded. The target values are also scaled separately. For the evaluation metric, we chose the average result of 2-fold-cross validation with the mean absolute percentage error (MAPE). This metric is defined as 
 \begin{equation}
  	\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n}\left|\frac{y^i - y^i_{pred}}{y^i}\right|
 \end{equation}
@@ -433,8 +437,6 @@ The interval of the epochs is $ [1, 40] $ and the learning rate is sampled equid
 \end{figure}
 
 In this plot, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. \newline
-
-\subsection{Sparse Grid Generation}
 
 With this knowledge about the underlying function that has to be minimized, the behavior of the sparse grid can be analyzed. Figure \ref{fig:analysis_sparse_grid_with_machine_learning} depicts the generated grid colored corresponding to the function value for different adaptivity values and number of grid points. Note that the scale of the learning rate is the one interpreted by the sparse grid. The actual scale is logarithmic between $ 10^{-10} $ for $ 0.0 $ and $ 10 ^{-1} $ for $ 1.0 $. 
 
@@ -484,4 +486,16 @@ However, as shown in Table \ref{tab:analysis_sparse_grid_with_machine_learning_r
 \end{table}
 
 The results shown in this table prove that too high adaptivity is not good for finding the smallest function value. However, when using higher adaptivity, the number of grid points has no big impact on finding the best solution in this case. This is because of the function shown in Figure \ref{fig:analysis_model_training}. In general, a higher adaptivity is good for finding a configuration faster. This can be useful in cases of hyperparameter optimization where not much time is available and a relatively good solution is enough. 
+
+\subsection{Optimization on Sparse Grids}
+
+By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found. In the following, the local and global optimization after the sparse grid generation is analyzed. 
+
+One important thing to keep in mind is that given a certain budget $ N $ which can be the number of function evaluations, the algorithm may not take more than that to find the optimal point. With the additional optimization algorithm which takes $ c $ function evaluations, the number of grid points is then $ N - c $. 
+
+
+
+
+
+
 
