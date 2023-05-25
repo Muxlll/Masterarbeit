@@ -491,9 +491,67 @@ The results shown in this table prove that too high adaptivity is not good for f
 
 By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found. In the following, the local and global optimization after the sparse grid generation is analyzed. 
 
-One important thing to keep in mind is that given a certain budget $ N $ which can be the number of function evaluations, the algorithm may not take more than that to find the optimal point. With the additional optimization algorithm which takes $ c $ function evaluations, the number of grid points is then $ N - c $. 
+One important thing to keep in mind is that given a certain budget $ N $ which can be the number of function evaluations or an upper bound for the iteration times, the algorithm may not take more than that to find the optimal point. With the additional optimization algorithm which takes $ c $ function evaluations, the number of grid points is then $ N - c $. In our case, where the function evaluation takes most of the time, the number of iterations of the optimization algorithm is set to a default of $ 1000 $. The reason is that no function evaluation is done during the optimization and the algorithms itself take small time compared to the sparse grid generation with a high number of function evaluations. 
 
 
+Comparison of all optimizers (but not cmaes because this one needs a huge number of grid points)
+
+\begin{figure}[htbp!]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Number of grid points,
+			ylabel = Result,
+			cycle list name=exotic,
+			legend pos=outer north east,
+			]
+			
+			\addplot coordinates
+			{(9,1.290485441684723)(17,0.32599571347236633)(49,0.32110922783613205)(97,0.2633902207016945)};
+			
+			\addplot coordinates 
+			{(10,0.3527909889817238)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.2633902207016945)};
+			
+			\addplot coordinates
+			{(10,1.3836875557899475)(18,0.32599571347236633)(50,0.29520951211452484)(98,0.28000885993242264)};
+			
+			\addplot coordinates 
+			{(10,1.290485441684723)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.28000885993242264)};
+			
+			%\addplot coordinates
+			%{(10,8.017291724681854)(18,0.32599571347236633)(50,0.3126538023352623)(98,0.29968782514333725)};
+			
+			\addplot coordinates 
+			{(10,1.3788496851921082)(18,0.3297809511423111)(50,0.3623143509030342)(98,0.4220040589570999)};
+			
+			\addplot coordinates
+			{(10,0.6486317813396454)(18,1.2909498512744904)(50,0.7201249003410339)(98,0.37163738161325455)};
+			
+			\addplot coordinates 
+			{(10,1.2569370865821838)(18,0.32599571347236633)(50,0.5238737538456917)(98,0.28000885993242264)};
+			
+			\addplot coordinates
+			{(10,0.6032524108886719)(18,1.2246662378311157)(50,1.3469037413597107)(98,0.3075151592493057)};
+			
+			\addplot coordinates 
+			{(10,1.2569370865821838)(18,0.32599571347236633)(50,1.3082255125045776)(98,0.28000885993242264)};
+			
+			\addplot coordinates
+			{(10,0.6032524108886719)(18,0.32599571347236633)(50,0.4634876996278763)(98,0.27563904970884323)};
+			
+			\addplot coordinates 
+			{(10,1.2569370865821838)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.28000885993242264)};
+			
+			% cmaes
+			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{  }	
+	\label{fig:Comparison_optimizers}
+\end{figure}
+
+
+Concrete analysis of good optimizer:
 
 
 
