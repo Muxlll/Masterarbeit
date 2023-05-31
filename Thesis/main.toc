@@ -34,8 +34,8 @@
 \contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{31}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{31}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{35}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{37}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{38}{chapter*.49}%
-\contentsline {chapter}{\nonumberline List of Tables}{41}{chapter*.50}%
-\contentsline {chapter}{\nonumberline Bibliography}{42}{chapter*.51}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{36}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{37}{chapter*.49}%
+\contentsline {chapter}{\nonumberline List of Tables}{40}{chapter*.50}%
+\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.51}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
