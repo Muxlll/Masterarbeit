@@ -375,7 +375,7 @@ The visualization in Figure \ref{fig:optimizers_visualized} indicates why the gl
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization80}
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization1000}
 	
-	\caption{Resulting optimal points from local (red points) and global (black points) optimization algorithm. In the background, the contour of the interpolated function is depicted with the corresponding sparse grid points in white. The left one has 5 grid points, the one in the center 77, and the right one 997. }
+	\caption{Resulting optimal points from local (red points) and global (black points) optimization algorithm. In the background, the contour of the interpolated function is depicted with the corresponding sparse grid points in white. The left one has 5 grid points, the one in the center 77, and the right one 997. The degree of the B-splines on the sparse grid is 2. }
 	\label{fig:optimizers_visualized}
 \end{figure}
 
@@ -395,11 +395,11 @@ The exact solutions of each algorithm can be seen in Table \ref{tab:optimizer_vi
 		Number grid points & Optimizer & Coordinates & Interpolated value & Actual value \\
 		\hline
 		5 & Local &  (-5,2.5)  &  23.125  &  51.25  \\
-		5 & Global &  (-4.980,-4.965)  &  -6.033  &  49.770  \\
+		5 & Global &  (-4.965,-4.981)  &  -6.039  &  49.775  \\
 		77 & Local &  (-1.25,-1.016)  &  12.642  &  12.642  \\
-		77 & Global &  (0.156,-1.012)  &  5.625  &  5.529  \\
-		997 & Local &  (-1.99,-0.994)  &  4.975  &  4.975  \\
-		997 & Global & \textbf{(0.002,0.013)} & 0.150 & \textbf{0.035} \\
+		77 & Global &  (0.151,-1.016)  &  5.668  &  5.255  \\
+		997 & Local &  (-1.990,-0.994)  &  4.975  &  4.975  \\
+		997 & Global & \textbf{(0.031,0.015)} & 0.333 & \textbf{0.237} \\
 		\hline
 	\end{tabular}
 \end{table}

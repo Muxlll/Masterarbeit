@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 JUN 2023 11:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 JUN 2023 12:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2265,32 +2265,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--371
  []
 
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-5.pdf, id=945, 393.83838pt x 313.93484pt>
+5.pdf, id=945, 391.04994pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation5.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
 tion5.pdf>
 Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization5.pdf  used on input line 374.
-(pdftex.def)             Requested size: 129.65819pt x 103.3545pt.
+(pdftex.def)             Requested size: 129.65819pt x 104.08742pt.
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-80.pdf, id=946, 386.03221pt x 313.93484pt>
+80.pdf, id=946, 388.26155pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation80.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
 tion80.pdf>
 Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization80.pdf  used on input line 375.
-(pdftex.def)             Requested size: 129.65819pt x 105.43826pt.
+(pdftex.def)             Requested size: 129.65819pt x 104.83948pt.
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-1000.pdf, id=947, 393.83838pt x 313.93484pt>
+1000.pdf, id=947, 388.26155pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation1000.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
 tion1000.pdf>
 Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization1000.pdf  used on input line 376.
-(pdftex.def)             Requested size: 129.65819pt x 103.3545pt.
+(pdftex.def)             Requested size: 129.65819pt x 104.83948pt.
 [29] [30 <./main-figure3.pdf> <./main-figure4.pdf> <./main-figure5.pdf>]
 Overfull \hbox (8.35046pt too wide) in paragraph at lines 393--405
  [][] 
@@ -2316,7 +2316,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
  []
 
 [32 <./main-figure6.pdf>]
-<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1046, 
+<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1032, 
 341.39143pt x 281.56392pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_above.pdf Graph
 ic file (type pdf)
@@ -2324,7 +2324,7 @@ ic file (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/1000_evaluations/Netw
 ork_above.pdf  used on input line 470.
 (pdftex.def)             Requested size: 200.76086pt x 165.58421pt.
-<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1047,
+<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1033,
  341.39143pt x 287.03537pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf Grap
 hic file (type pdf)
@@ -2338,7 +2338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--478
  []
 
 [33]
-<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1056, 333.
+<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1042, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_30_85.pdf Graphic f
 ile (type pdf)
@@ -2346,7 +2346,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 30_85.pdf  used on input line 483.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1057, 333.
+<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1043, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_80_85.pdf Graphic f
 ile (type pdf)
@@ -2354,7 +2354,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 80_85.pdf  used on input line 484.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1058, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1044, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_30_5.pdf Graphic fi
 le (type pdf)
@@ -2362,7 +2362,7 @@ le (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/Above_
 30_5.pdf  used on input line 490.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1059, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1045, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_80_5.pdf Graphic fi
 le (type pdf)
@@ -2456,7 +2456,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  55159 strings out of 480121
  1271651 string characters out of 5892160
- 2243584 words of memory out of 5000000
+ 2243637 words of memory out of 5000000
  71239 multiletter control sequences out of 15000+600000
  552610 words of font info for 501 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
@@ -2474,10 +2474,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (54 pages, 5022793 bytes).
+Output written on main.pdf (54 pages, 5071828 bytes).
 PDF statistics:
- 1540 PDF objects out of 1728 (max. 8388607)
- 1172 compressed objects within 12 object streams
+ 1528 PDF objects out of 1728 (max. 8388607)
+ 1163 compressed objects within 12 object streams
  224 named destinations out of 1000 (max. 500000)
  106005 words of extra memory for PDF output out of 106986 (max. 10000000)
 

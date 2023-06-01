@@ -866,7 +866,7 @@ class SparseGridSearchOptimization(Optimization):
                 vec = pysgpp.DataVector(2)
                 vec.set(0, X[i][j])
                 vec.set(1, Y[i][j])
-                Z[i][j] = np.log10(ft.eval(vec))
+                Z[i][j] = ft.eval(vec)
 
         fig = plt.figure()
         ax = plt.axes()#projection='3d')
@@ -878,8 +878,8 @@ class SparseGridSearchOptimization(Optimization):
             for j in range(resolution):
                 x_interpolated.append(from_standard(
                     self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], X[i][j]))
-                y_interpolated.append(from_standard(
-                    self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], Y[i][j]))
+                # y_interpolated.append(np.log10(from_standard_log(
+                #     self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], Y[i][j])))
 
                 z_interpolated.append(Z[i][j])
                 X[i][j] = from_standard(
