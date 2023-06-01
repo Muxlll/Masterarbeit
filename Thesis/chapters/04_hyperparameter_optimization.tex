@@ -383,7 +383,28 @@ In the left example of Figure \ref{fig:optimizers_visualized} with 5 sparse grid
 
 With increasing number of these basis points, both algorithms find a better solution to the problem. In the center plot of Figure \ref{fig:optimizers_visualized}, 77 grid points were used and the interpolated contour looks more oscillatory and more similar to the original function. The local and global algorithms find different optimal points in this case. 
 
-In the right example of Figure \ref{fig:optimizers_visualized}, 997 grid points were used and the contour already looks very similar to the function plot. There are many candidates of the global optimizer and some of them are really near to the actual optimal point which is located at $ (0, 0) $. 
+In the right example of Figure \ref{fig:optimizers_visualized}, 997 grid points were used and the contour already looks very similar to the function plot. There are many candidates of the global optimizer and so	me of them are really near to the actual optimal point which is located at $ (0, 0) $. 
+
+The exact solutions of each algorithm can be seen in Table \ref{tab:optimizer_vis_function}.
+\begin{table}[h!]
+	\caption{ Overview over the exact solutions found by the local and global optimizer for the same problem as in Figure \ref{fig:optimizers_visualized}. The actual optimum is at (0, 0), with function value 0 (see Table \ref{tab:test_functions}).}
+	\label{tab:optimizer_vis_function}
+	\centering
+	\begin{tabular}{|c c c c c|} 
+		\hline
+		Number grid points & Optimizer & Coordinates & Interpolated value & Actual value \\
+		\hline
+		5 & Local &  (-5,2.5)  &  23.125  &  51.25  \\
+		5 & Global &  (-4.980,-4.965)  &  -6.033  &  49.770  \\
+		77 & Local &  (-1.25,-1.016)  &  12.642  &  12.642  \\
+		77 & Global &  (0.156,-1.012)  &  5.625  &  5.529  \\
+		997 & Local &  (-1.99,-0.994)  &  4.975  &  4.975  \\
+		997 & Global & \textbf{(0.002,0.013)} & 0.150 & \textbf{0.035} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+The big advantage of the global optimizer is that multiple starting points are used so that the chance of reaching the global minimum is very high. Especially for a high number of grid points used, this is the case. While the local optimizer only finds a local minimum (see Figure \ref{fig:optimizers_visualized}, red dot at (-1.99, -0.994)), the global optimizer finds multiple candidates at more than one local minimum. One of them is very near to the global optimal point in this case (see Figure \ref{fig:optimizers_visualized}, black dot at (0.002, 0.013)). \newline 
 
 
 One approach is to combine all three resulting points with their corresponding function value. The overall optimal point is then just set to the one with the smallest function value. \newline 

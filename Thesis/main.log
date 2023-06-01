@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 JUN 2023 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 JUN 2023 11:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2292,82 +2292,92 @@ Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization1000.pdf  used on input line 376.
 (pdftex.def)             Requested size: 129.65819pt x 103.3545pt.
 [29] [30 <./main-figure3.pdf> <./main-figure4.pdf> <./main-figure5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
-
+Overfull \hbox (8.35046pt too wide) in paragraph at lines 393--405
+ [][] 
  []
 
-===== Image 'main-figure6' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
 [31 <./figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visuali
 zation5.pdf> <./figures/Results/Testfunctions/Optimizer_visualization/Optimizer
 s_visualization80.pdf> <./figures/Results/Testfunctions/Optimizer_visualization
-/Optimizers_visualization1000.pdf>] [32 <./main-figure6.pdf>]
-<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1040, 
+/Optimizers_visualization1000.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+
+ []
+
+===== Image 'main-figure6' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+
+ []
+
+[32 <./main-figure6.pdf>]
+<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1046, 
 341.39143pt x 281.56392pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_above.pdf Graph
 ic file (type pdf)
 <use figures/Results/Machine_learning/1000_evaluations/Network_above.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/1000_evaluations/Netw
-ork_above.pdf  used on input line 449.
+ork_above.pdf  used on input line 470.
 (pdftex.def)             Requested size: 200.76086pt x 165.58421pt.
-<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1041,
+<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1047,
  341.39143pt x 287.03537pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf Grap
 hic file (type pdf)
 <use figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/1000_evaluations/Netw
-ork_normal.pdf  used on input line 450.
+ork_normal.pdf  used on input line 471.
 (pdftex.def)             Requested size: 200.76086pt x 168.80193pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
-[33 <./figures/Results/Machine_learning/1000_evaluations/Network_above.pdf> <./
-figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/1000
-_evaluations/Network_normal.pdf): PDF inclusion: multiple pdfs with page group 
-included in a single page
->]
-<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1081, 333.
+[33]
+<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1056, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_30_85.pdf Graphic f
 ile (type pdf)
 <use figures/Results/Machine_learning/first_analysis/above_30_85.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
-30_85.pdf  used on input line 462.
+30_85.pdf  used on input line 483.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1082, 333.
+<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1057, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_80_85.pdf Graphic f
 ile (type pdf)
 <use figures/Results/Machine_learning/first_analysis/above_80_85.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
-80_85.pdf  used on input line 463.
+80_85.pdf  used on input line 484.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1083, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1058, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_30_5.pdf Graphic fi
 le (type pdf)
 <use figures/Results/Machine_learning/first_analysis/Above_30_5.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/Above_
-30_5.pdf  used on input line 469.
+30_5.pdf  used on input line 490.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1084, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1059, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_80_5.pdf Graphic fi
 le (type pdf)
 <use figures/Results/Machine_learning/first_analysis/Above_80_5.pdf>
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/Above_
-80_5.pdf  used on input line 470.
+80_5.pdf  used on input line 491.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
- [34] [35 <./figures/Results/Machine_learning/first_analysis/above_30_85.pdf> <
-./figures/Results/Machine_learning/first_analysis/above_80_85.pdf
+ [34 <./figures/Results/Machine_learning/1000_evaluations/Network_above.pdf> <.
+/figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/1000
+_evaluations/Network_normal.pdf): PDF inclusion: multiple pdfs with page group 
+included in a single page
+>] [35 <./figures/Results/Machine_learning/first_analysis/above_30_85.pdf> <./f
+igures/Results/Machine_learning/first_analysis/above_80_85.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/firs
 t_analysis/above_80_85.pdf): PDF inclusion: multiple pdfs with page group inclu
@@ -2384,29 +2394,29 @@ t_analysis/above_80_5.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
 ===== Image 'main-figure7' is up-to-date. ======
-) (./chapters/05_conclusion_and_outlook.tex [36 <./main-figure7.pdf>]
+) (./chapters/05_conclusion_and_outlook.tex [36] [37 <./main-figure7.pdf>]
 chapter 4.
-) [37
+) [38
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [38
+ (./main.lof [39
 
 
-] [39])
+] [40])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [40]
+ [41]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [41
+ [42
 
 
 ]
@@ -2418,7 +2428,7 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[42
+[43
 
 
 ]
@@ -2434,9 +2444,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43] [44]
+ [44] [45]
 No complaints by nag.
-[45] (./main.aux)
+[46] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2444,10 +2454,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55156 strings out of 480121
- 1271600 string characters out of 5892160
- 2243323 words of memory out of 5000000
- 71238 multiletter control sequences out of 15000+600000
+ 55159 strings out of 480121
+ 1271651 string characters out of 5892160
+ 2243584 words of memory out of 5000000
+ 71239 multiletter control sequences out of 15000+600000
  552610 words of font info for 501 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,15n,109p,10599b,3089s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2464,10 +2474,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (53 pages, 5020487 bytes).
+Output written on main.pdf (54 pages, 5022793 bytes).
 PDF statistics:
- 1522 PDF objects out of 1728 (max. 8388607)
- 1157 compressed objects within 12 object streams
- 222 named destinations out of 1000 (max. 500000)
+ 1540 PDF objects out of 1728 (max. 8388607)
+ 1172 compressed objects within 12 object streams
+ 224 named destinations out of 1000 (max. 500000)
  106005 words of extra memory for PDF output out of 106986 (max. 10000000)
 

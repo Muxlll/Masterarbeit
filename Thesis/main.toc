@@ -31,11 +31,11 @@
 \contentsline {section}{\numberline {3.2}Sparse Grid Optimization of functions}{22}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Sparse Grid Generation with different Adaptivities}{24}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{29}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{32}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{32}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{33}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{33}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{36}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{37}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{38}{chapter*.50}%
-\contentsline {chapter}{\nonumberline List of Tables}{41}{chapter*.51}%
-\contentsline {chapter}{\nonumberline Bibliography}{42}{chapter*.52}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{38}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{39}{chapter*.51}%
+\contentsline {chapter}{\nonumberline List of Tables}{42}{chapter*.52}%
+\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.53}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
