@@ -852,7 +852,7 @@ class SparseGridSearchOptimization(Optimization):
 
         x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
 
-        resolution = 200
+        resolution = 500
 
         x = np.linspace(0, 1, resolution)
         y = np.linspace(0, 1, resolution)
@@ -866,7 +866,7 @@ class SparseGridSearchOptimization(Optimization):
                 vec = pysgpp.DataVector(2)
                 vec.set(0, X[i][j])
                 vec.set(1, Y[i][j])
-                Z[i][j] = ft.eval(vec)
+                Z[i][j] = np.log10(ft.eval(vec))
 
         fig = plt.figure()
         ax = plt.axes()#projection='3d')
@@ -895,9 +895,9 @@ class SparseGridSearchOptimization(Optimization):
         #     for m in range(len(z_interpolated)):
         #         z_interpolated[m] = np.log10(z_interpolated[m])
 
-
-        surface = ax.scatter(x_interpolated, y_interpolated,
-                             c=z_interpolated, cmap='plasma', s=0.1)
+        surface = ax.contourf(X, Y, Z, cmap='plasma')
+        # surface = ax.plot_surface(X, Y, Z,
+        #                     cmap='plasma')
 
         z_values = []
         for i in range(len(x_values)):
@@ -909,18 +909,18 @@ class SparseGridSearchOptimization(Optimization):
             vec = pysgpp.DataVector(2)
             vec.set(0, x_0)
             vec.set(1, x_1)
-            z_values.append(ft.eval(vec)+0.1)
+            z_values.append(ft.eval(vec))
 
-        minimal = min(z_values)
-        if minimal < 0:
-            for m in range(len(z_values)):
-                z_values[m] = np.log10(z_values[m] - (minimal) + 1)
-        else:
-            for m in range(len(z_values)):
-                z_values[m] = np.log10(z_values[m])
+        # minimal = min(z_values)
+        # if minimal < 0:
+        #     for m in range(len(z_values)):
+        #         z_values[m] = np.log10(z_values[m] - (minimal) + 1) + 1
+        # else:
+        #     for m in range(len(z_values)):
+        #         z_values[m] = np.log10(z_values[m]) + 1
 
-        # ax.scatter(x_values, y_values, c='white',
-        #            alpha=1.0, s=1)
+        ax.scatter(x_values, y_values, c='white', marker=".",
+                   alpha=1.0, s=1)
 
         optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
         optimizer.setStartingPoint(x0)
@@ -944,7 +944,7 @@ class SparseGridSearchOptimization(Optimization):
         for i in range(history_points.getNrows()):
             vec = pysgpp.DataVector(history_points.getNcols())
             history_points.getRow(i, vec)
-            z.append(np.log10(ft.eval(vec)+0.1))
+            z.append(ft.eval(vec))
             x.append(from_standard(
                 self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], vec[0]))
             y.append(from_standard(
@@ -956,17 +956,17 @@ class SparseGridSearchOptimization(Optimization):
         #         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], optimizer.getOptimalPoint()[1]))
 
         
-        minimal = min(z)
-        if minimal < 0:
-            for m in range(len(z)):
-                z[m] = np.log10(z[m] - (minimal) + 1)
-        else:
-            for m in range(len(z)):
-                z[m] = np.log10(z[m])
+        # minimal = min(z)
+        # if minimal < 0:
+        #     for m in range(len(z)):
+        #         z[m] = np.log10(z[m] - (minimal) + 1) + 1
+        # else:
+        #     for m in range(len(z)):
+        #         z[m] = np.log10(z[m]) + 1
  
         
-        plt.plot(x, y, c="red", fillstyle='full',
-                 linestyle='-', linewidth=1, marker='+')
+        ax.plot(x, y, c='red', marker="o", zorder=1,
+                   alpha=1.0)
         
 
         optimizer = pysgpp.OptMultiStart(ft)
@@ -992,23 +992,24 @@ class SparseGridSearchOptimization(Optimization):
         for i in range(history_points.getNrows()):
             vec = pysgpp.DataVector(history_points.getNcols())
             history_points.getRow(i, vec)
-            z.append(ft.eval(vec)+0.1)
+            z.append(ft.eval(vec))
             x.append(from_standard(
                 self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], vec[0]))
             y.append(from_standard(
                 self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], vec[1]))
         
-        minimal = min(z)
-        if minimal < 0:
-            for m in range(len(z)):
-                z[m] = np.log10(z[m] - (minimal) + 1)
-        else:
-            for m in range(len(z)):
-                z[m] = np.log10(z[m])
+        # minimal = min(z)
+        # if minimal < 0:
+        #     for m in range(len(z)):
+        #         z[m] = np.log10(z[m] - (minimal) + 1) + 1
+        # else:
+        #     for m in range(len(z)):
+        #         z[m] = np.log10(z[m]) + 1
         
         # for m in range(len(x)-1):
         #     plt.quiver(x[m], y[m], x[m+1]-x[m], y[m+1]-y[m], scale_units='xy', angles='xy', scale=1)      
-        # plt.scatter(x, y, c="black", marker='+')
+        ax.scatter(x, y, c='black', marker="o",
+                   alpha=1.0, zorder=1)
 
         # naming the x axis
         plt.xlabel('x0')
@@ -1017,10 +1018,10 @@ class SparseGridSearchOptimization(Optimization):
 
         fig.colorbar(surface, shrink=0.8, aspect=15)
 
-        ax.set_xlim([self.hyperparameterspace[keys[0]][1]-1,
-                    self.hyperparameterspace[keys[0]][2]+1])
-        ax.set_ylim([self.hyperparameterspace[keys[1]][1]-1,
-                     self.hyperparameterspace[keys[1]][2]+1])
+        ax.set_xlim([self.hyperparameterspace[keys[0]][1],
+                    self.hyperparameterspace[keys[0]][2]])
+        ax.set_ylim([self.hyperparameterspace[keys[1]][1],
+                     self.hyperparameterspace[keys[1]][2]])
 
         #ax.set_zticks([])
         #ax.view_init(90, 270)

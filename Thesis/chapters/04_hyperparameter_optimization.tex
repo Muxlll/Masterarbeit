@@ -369,15 +369,21 @@ The next improvement is to add optimizers after the grid generation phase. There
 
 In all three cases, the errors of the local and global optimizers first increase with increasing number of grid points until about 100 to 200 function evaluations are done. After that, both local and global optimization algorithms are at least as good as the result found by the sparse grid. With increasing number of grid points, the global optimization finds the best solution in all cases with degrees 2, 3, and 5. \newline 
 
-The visualization in Figure \ref{fig:optimizers_visualized} confirm these results. 
+The visualization in Figure \ref{fig:optimizers_visualized} indicates why the global optimizer achieves the best results for a high number of sparse grid points. 
 \begin{figure}[htbp!]
-	\includegraphics[width=0.3\textwidth]{figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0}
-	\includegraphics[width=0.3\textwidth]{figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_above_0}
+	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization5}
+	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization80}
+	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization1000}
 	
-	\caption{Sparse grid generation depending on the adaptivity parameter $ \gamma $ for the Rastrigin function. In all cases, the same number of grid points is used. Here, in each of the 249 iterations, 4 new grid points are added resulting in a overall number of 997 function evaluations.}
+	\caption{Resulting optimal points from local (red points) and global (black points) optimization algorithm. In the background, the contour of the interpolated function is depicted with the corresponding sparse grid points in white. The left one has 5 grid points, the one in the center 77, and the right one 997. }
 	\label{fig:optimizers_visualized}
 \end{figure}
 
+In the left example of Figure \ref{fig:optimizers_visualized} with 5 sparse grid points, the result of the local optimizer is at the left border of the domain as indicated by the red line which connects the different steps of the algorithm. All resulting optimal points found by the multi start approach are located in the lower left corner. Note that the interpolated function is not very similar to the original one (see Figure \ref{fig:Rastrigin}) because of the low number of grid points. 
+
+With increasing number of these basis points, both algorithms find a better solution to the problem. In the center plot of Figure \ref{fig:optimizers_visualized}, 77 grid points were used and the interpolated contour looks more oscillatory and more similar to the original function. The local and global algorithms find different optimal points in this case. 
+
+In the right example of Figure \ref{fig:optimizers_visualized}, 997 grid points were used and the contour already looks very similar to the function plot. There are many candidates of the global optimizer and some of them are really near to the actual optimal point which is located at $ (0, 0) $. 
 
 
 One approach is to combine all three resulting points with their corresponding function value. The overall optimal point is then just set to the one with the smallest function value. \newline 
