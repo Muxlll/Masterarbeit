@@ -527,7 +527,34 @@ The results shown in this table prove that too high adaptivity is not good for f
 
 \subsection{Optimization on Sparse Grids}
 
-By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found. In the following, the local and global optimization after the sparse grid generation is analyzed. 
+By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found if enough grid points are available. If this number is too small then the interpolant is not precise enough and the solution of the optimizer is not the real optimum. One example is depicted in Figure \ref{fig:optimizers_network_visualization}. The steps of the normal gradient descent optimization algorithm are depicted and connected with arrows. In the background, the interpolated function is shown. The problem is the same as in Figure \ref{fig:analysis_model_training}. The degree of the B-splines on the grid is 2 and the sparse grid points are shown in white. 
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
+	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
+	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30}
+	
+	\caption{  }
+	\label{fig:optimizers_network_visualization}
+\end{figure}
+
+In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradient descent optimization algorithm is analyzed with 5, 9, and 29 grid points on the left, center, and right, respectively. The minimal interpolated function values and the actual function evaluations can be seen in Table \ref{tab:results_opt_ml}.
+
+
+\begin{table}[htbp!]
+	\caption{ }
+	\label{tab:results_opt_ml}
+	\centering
+	\begin{tabular}{| c c | c c | c |} 
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
+
+In the first case, the optimizer starts at the right grid points and makes one step towards the right boundary of the domain. In the center, the solution of the optimizer is at the right top corner of the domain. 
+
+
 
 One important thing to keep in mind is that given a certain budget $ N $ which can be the number of function evaluations or an upper bound for the iteration times, the algorithm may not take more than that to find the optimal point. With the additional optimization algorithm which takes $ c $ function evaluations, the number of grid points is then $ N - c $. In our case, where the function evaluation takes most of the time, the number of iterations of the optimization algorithm is set to a default of $ 1000 $. The reason is that no function evaluation is done during the optimization and the algorithms itself take small time compared to the sparse grid generation with a high number of function evaluations. 
 
