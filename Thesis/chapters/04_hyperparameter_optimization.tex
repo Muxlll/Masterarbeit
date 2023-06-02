@@ -536,15 +536,15 @@ By adding optimization methods like gradient descent or evolutionary algorithms,
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30}
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50}
 	
-	\caption{  }
+	\caption{ Optimization steps of gradient descent algorithm for 5 (top left), 9 (top right), 29 (bottom left) and 49 (bottom right) grid points. In the background of each plot, the contour of each interpolated function is shown. The function evaluated is the same as depicted in Figure \ref{fig:analysis_model_training}. }
 	\label{fig:optimizers_network_visualization}
 \end{figure}
 
-In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradient descent optimization algorithm is analyzed with 5, 9, and 29 grid points on the left, center, and right, respectively. The minimal interpolated function values and the actual function evaluations can be seen in Table \ref{tab:results_opt_ml}.
+In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradient descent optimization algorithm is analyzed with 5, 9, 29 and 49 grid points on the top left, top right, bottom left and bottom right, respectively. The minimal interpolated function values and the actual function evaluations can be seen in Table \ref{tab:results_opt_ml}.
 
 
 \begin{table}[htbp!]
-	\caption{ }
+	\caption{ Exact values for the optima found by the sparse grid points and the gradient descent algorithm. The values for $ x_{min}^{grid} $ are the configurations evaluated by the sparse grid during the generation and the coordinates in column $ x_{min}^{opt} $ are found by the optimizer. In bold, the best function values of the optimum found by the sparse grid and gradient descent algorithm, respectively. }
 	\label{tab:results_opt_ml}
 	\centering
 	\begin{tabular}{| c c c c c c |} 
@@ -553,8 +553,8 @@ In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradie
 		\hline
 		5 & $ (30.25, 3.162*10^{-6}) $ & $ 0.729 $ & $ (40, 3.162*10^{-6}) $ & $ 0.668 $ & $ 0.670 $ \\ 
 		9 & $ (30.25, 5.623*10^{-4}) $ & $ 0.353 $ & $ (40, 1*10^{-1}) $ & $ 1.257 $ & $ -0.950 $ \\ 
-		29 & $ (27.81, 5.623*10^{-4}) $ & $ 0.326 $ & $ (27.81,5.623*10^{-4}) $ & $ 0.326 $ & $ 0.326 $ \\ 
-		49 & $ (20.5, 2.129*10^{-4}) $ & $ 0.267 $ & $ (21.72,2.094*10^{-2}) $ & $ 0.524 $ & $ -0.247 $ \\ 
+		29 & $ (27.81, 5.623*10^{-4}) $ & $ 0.326 $ & $ (27.81,5.623*10^{-4}) $ & $ \mathbf{0.326} $ & $ 0.326 $ \\ 
+		49 & $ (20.5, 2.129*10^{-4}) $ & $ \mathbf{0.267} $ & $ (21.72,2.094*10^{-2}) $ & $ 0.524 $ & $ -0.247 $ \\ 
 		\hline
 	\end{tabular}
 \end{table}
@@ -576,43 +576,43 @@ Note that the additional optimization is very cheap compared to generating the a
 			]
 			
 			\addplot coordinates
-			{(9,1.290485441684723)(17,0.32599571347236633)(49,0.32110922783613205)(97,0.2633902207016945)};
+			{(5,0.7287221550941467)(9,0.3527909889817238)(29,0.32599571347236633)(49,0.2671877220273018)};
 			
 			\addplot coordinates 
-			{(10,0.3527909889817238)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.2633902207016945)};
+			{(5,2.1821350157260895)(9,0.6828966736793518)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			\addplot coordinates
-			{(10,1.3836875557899475)(18,0.32599571347236633)(50,0.29520951211452484)(98,0.28000885993242264)};
+			{(5,0.6853730380535126)(9,0.39767882227897644)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			\addplot coordinates 
-			{(10,1.290485441684723)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.28000885993242264)};
-			
-			%\addplot coordinates
-			%{(10,8.017291724681854)(18,0.32599571347236633)(50,0.3126538023352623)(98,0.29968782514333725)};
-			
-			\addplot coordinates 
-			{(10,1.3788496851921082)(18,0.3297809511423111)(50,0.3623143509030342)(98,0.4220040589570999)};
+			{(5,0.5231324583292007)(9,0.7891336679458618)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			\addplot coordinates
-			{(10,0.6486317813396454)(18,1.2909498512744904)(50,0.7201249003410339)(98,0.37163738161325455)};
+			{(5,1.1052730679512024)(9,0.7524459362030029)(29,0.43529146909713745)(49,0.29589295387268066)};
 			
 			\addplot coordinates 
-			{(10,1.2569370865821838)(18,0.32599571347236633)(50,0.5238737538456917)(98,0.28000885993242264)};
+			{(5,1.4689656496047974)(9,1.290563017129898)(29,1.2196790277957916)(49,1.2911579012870789)};
 			
 			\addplot coordinates
-			{(10,0.6032524108886719)(18,1.2246662378311157)(50,1.3469037413597107)(98,0.3075151592493057)};
+			{(5,2.182135373353958)(9,2.123611092567444)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			\addplot coordinates 
-			{(10,1.2569370865821838)(18,0.32599571347236633)(50,1.3082255125045776)(98,0.28000885993242264)};
+			{(5,0.7962593734264374)(9,0.6032524108886719)(29,1.2914847433567047)(49,1.289109081029892)};
 			
 			\addplot coordinates
-			{(10,0.6032524108886719)(18,0.32599571347236633)(50,0.4634876996278763)(98,0.27563904970884323)};
+			{(5,2.182135373353958)(9,1.278253585100174)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			\addplot coordinates 
-			{(10,1.2569370865821838)(18,0.32599571347236633)(50,0.2671877220273018)(98,0.28000885993242264)};
+			{(5,2.1821350157260895)(9,0.7396568655967712)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
-			% cmaes
-			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			\addplot[green,mark=star] coordinates
+			{(5,2.182135373353958)(9,0.7816146612167358)(29,0.8723746538162231)(49,0.8723746538162231)};
+			
+			\addplot[black,mark=star] coordinates 
+			{(5,0.872105598449707)(9,0.872105598449707)(29,0.8723746538162231)(49,0.8723746538162231)};
+			
+			
+			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, cmaes, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
 			
 		\end{axis}
 	\end{tikzpicture}
