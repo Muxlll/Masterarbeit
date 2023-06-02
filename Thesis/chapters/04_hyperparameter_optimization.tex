@@ -559,7 +559,9 @@ In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradie
 	\end{tabular}
 \end{table}
 
-In the first case, the optimizer starts at the right grid points and makes one step towards the right boundary of the domain. In the center, the solution of the optimizer is at the right top corner of the domain. 
+In the first case, the optimizer starts at the right grid points and makes one step towards the right boundary of the domain. In the top right case with 9 grid points, the solution of the optimizer is at the right top corner of the domain. With 29 basis points in the left lower case, the solution of the optimizer is the same as the grid point with the smallest evaluated function value and in the right lower plot, the optimizer first takes a step to the right and then a second step up to a higher learning rate. 
+
+As illustrated in Table \ref{tab:results_opt_ml}, the optimizer does not always find an actual better solution. While the interpolated function value actually decreases, the evaluation of the network with the given configuration results in a higher value which is worse. This behavior is the same as in Figure \ref{fig:Optimizer_results} where both optimizers lead to a higher error than the smallest value found by the sparse grid. This is due to the small number of function evaluations made so far and the interpolant of the function becing too inaccurate. Also the visual comparison of the interpolant plots in Figure \ref{fig:optimizers_network_visualization} and Figure \ref{fig:analysis_model_training} shows that there are still big differences. Nevertheless in the scope of this thesis, further increasing the number of grid points is infeasible because of the high costs of one single function evaluation which is the training and evaluation of a machine learning model. \newline
 
 
 
