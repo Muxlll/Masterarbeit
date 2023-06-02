@@ -840,6 +840,8 @@ class SparseGridSearchOptimization(Optimization):
 
         ##################### find point with smallest f value #################
 
+        ######################################################### PLOTTING THE OPTIMIZERS ######################################################################
+
         # find point with smallest value as start point for gradient descent
         x0Index = 0
         fX0 = functionValues[0]
@@ -1028,6 +1030,8 @@ class SparseGridSearchOptimization(Optimization):
         plt.show()
 
         return optimizer  # result.append(f.eval(optimizer.getOptimalPoint()))
+
+        ##############################################################################################################################################################
 
         # optimizer = pysgpp.OptBFGS(ft, ftGradient)
         # optimizer.setStartingPoint(x0)
