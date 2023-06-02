@@ -531,9 +531,10 @@ By adding optimization methods like gradient descent or evolutionary algorithms,
 
 \begin{figure}[htbp!]
 	\centering
-	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
-	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
-	\includegraphics[width=0.31\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30}
+	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
+	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
+	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30}
+	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50}
 	
 	\caption{  }
 	\label{fig:optimizers_network_visualization}
@@ -546,8 +547,14 @@ In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradie
 	\caption{ }
 	\label{tab:results_opt_ml}
 	\centering
-	\begin{tabular}{| c c | c c | c |} 
+	\begin{tabular}{| c c c c c c |} 
 		\hline
+		N & $ x_{min}^{grid} $ & $ f(x_{min}^{grid}) $ & $ x_{min}^{opt} $ & $ f(x_{min}^{opt}) $ & $ f_{interpolated}(x_{min}^{opt}) $ \\ 
+		\hline
+		5 & $ (30.25, 3.162*10^{-6}) $ & $ 0.729 $ & $ (40, 3.162*10^{-6}) $ & $ 0.668 $ & $ 0.670 $ \\ 
+		9 & $ (30.25, 5.623*10^{-4}) $ & $ 0.353 $ & $ (40, 1*10^{-1}) $ & $ 1.257 $ & $ -0.950 $ \\ 
+		29 & $ (27.81, 5.623*10^{-4}) $ & $ 0.326 $ & $ (27.81,5.623*10^{-4}) $ & $ 0.326 $ & $ 0.326 $ \\ 
+		49 & $ (20.5, 2.129*10^{-4}) $ & $ 0.267 $ & $ (21.72,2.094*10^{-2}) $ & $ 0.524 $ & $ -0.247 $ \\ 
 		\hline
 	\end{tabular}
 \end{table}

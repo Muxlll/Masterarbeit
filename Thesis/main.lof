@@ -26,7 +26,7 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces 2-layer (with 30 neurons each) fully connected network evaluation on the diamonds dataset depending on the number of epochs and learning rate of the Adam optimizer. \relax }}{34}{figure.caption.47}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Analysis of sparse grid with machine learning evaluation for different adaptivity parameters ($ 0.85 $ \ref {fig:analysis_sparse_grid_with_machine_learning_085} and $ 0.5 $ \ref {fig:analysis_sparse_grid_with_machine_learning_05}), each with 29 and 77 grid points.\relax }}{35}{figure.caption.48}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces \relax }}{37}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces \relax }}{37}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \relax }}{38}{figure.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

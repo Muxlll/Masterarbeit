@@ -957,7 +957,7 @@ class SparseGridSearchOptimization(Optimization):
             y.append(np.log10(from_standard_log(
                 self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], vec[1])))
 
-        if self.budget < 30:
+        if self.budget != 30:
             for m in range(len(x)-1):
                 plt.quiver(x[m], y[m], x[m+1]-x[m], y[m+1]-y[m],
                         scale_units='xy', angles='xy', scale=1, color='red')
