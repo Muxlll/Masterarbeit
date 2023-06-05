@@ -1744,6 +1744,80 @@
       \field{pages}{382\bibrangedash 396}
       \range{pages}{15}
     \endentry
+    \entry{feurer-arxiv19a}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=2661e0a744cd67c731851c7f1c80d2e2}{%
+           family={Feurer},
+           familyi={F\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09c51db2fbb24f4ec363924d7ae87263}{%
+           family={Rijn},
+           familyi={R\bibinitperiod},
+           given={Jan\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=b763bba7351002c2261c6ab6a89a1d77}{%
+           family={Kadra},
+           familyi={K\bibinitperiod},
+           given={Arlind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc85e272fcb76555940abdb9ea6a6067}{%
+           family={Gijsbers},
+           familyi={G\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a69e908321346e2678d43aa9ea6e49c}{%
+           family={Mallik},
+           familyi={M\bibinitperiod},
+           given={Neeratyoy},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d824824e65a1dccb3b1b8fa4222e276}{%
+           family={Ravi},
+           familyi={R\bibinitperiod},
+           given={Sahithya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6cfa06c6d110548dbb088a1445563f5}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ce3afeba4f8f866dbad8e5b02118406}{%
+           family={Vanschoren},
+           familyi={V\bibinitperiod},
+           given={Joaquin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6f3339156d725c8aa09f013d30c486f5}
+      \strng{fullhash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{bibnamehash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{authorbibnamehash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{authornamehash}{6f3339156d725c8aa09f013d30c486f5}
+      \strng{authorfullhash}{6266a447054437b85f58a1b35c10f79c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv:1911.02490}
+      \field{title}{OpenML-Python: an extensible Python API for OpenML}
+      \field{year}{2019}
+    \endentry
     \entry{valentin2016hierarchical}{inproceedings}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=06a62916f96f396a2a807520c092d764}{%
@@ -1768,8 +1842,8 @@
       \strng{authorbibnamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authornamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authorfullhash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse Grids and Applications-Stuttgart 2014}
@@ -1851,79 +1925,121 @@
       \field{title}{Engineering optimization: an introduction with metaheuristic applications}
       \field{year}{2010}
     \endentry
-    \entry{feurer-arxiv19a}{article}{}
-      \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=2661e0a744cd67c731851c7f1c80d2e2}{%
-           family={Feurer},
-           familyi={F\bibinitperiod},
-           given={Matthias},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=09c51db2fbb24f4ec363924d7ae87263}{%
-           family={Rijn},
-           familyi={R\bibinitperiod},
-           given={Jan\bibnamedelima N.},
-           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=b763bba7351002c2261c6ab6a89a1d77}{%
-           family={Kadra},
-           familyi={K\bibinitperiod},
-           given={Arlind},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fc85e272fcb76555940abdb9ea6a6067}{%
-           family={Gijsbers},
-           familyi={G\bibinitperiod},
-           given={Pieter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7a69e908321346e2678d43aa9ea6e49c}{%
-           family={Mallik},
-           familyi={M\bibinitperiod},
-           given={Neeratyoy},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4d824824e65a1dccb3b1b8fa4222e276}{%
-           family={Ravi},
-           familyi={R\bibinitperiod},
-           given={Sahithya},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b6cfa06c6d110548dbb088a1445563f5}{%
-           family={Müller},
-           familyi={M\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4ce3afeba4f8f866dbad8e5b02118406}{%
-           family={Vanschoren},
-           familyi={V\bibinitperiod},
-           given={Joaquin},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=528d4af87fd2ecf5fb8a22db913ce088}{%
-           family={Hutter},
-           familyi={H\bibinitperiod},
-           given={Frank},
+    \entry{scikit-learn}{article}{}
+      \name{author}{16}{}{%
+        {{un=0,uniquepart=base,hash=6e96fec0d63277626bb324bd28cdecb7}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={F.},
            giveni={F\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=b99c2df2144dc5ee09317a7833dea42d}{%
+           family={Varoquaux},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=955f19cea89ae97bb7936078898e6255}{%
+           family={Gramfort},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2787869c9954c1d4e9891098995feb75}{%
+           family={Michel},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86d47ab9ca1a9dae108b4d4a0418c679}{%
+           family={Thirion},
+           familyi={T\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d42f9e9cec95da1dad2232eac74982ab}{%
+           family={Grisel},
+           familyi={G\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bd8ef25258dd2311f92df23fe71ecf7}{%
+           family={Blondel},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5ee41fa92b9e425806e1773853f1932}{%
+           family={Prettenhofer},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c808557734e8929976d1f06f99c4ff2}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9662a6ea01596c6dd450817ccac81c4a}{%
+           family={Dubourg},
+           familyi={D\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39e81a3e2193b954680a0ab847a0bb55}{%
+           family={Vanderplas},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14c4a498c032f77d0b83f86c710dd50e}{%
+           family={Passos},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc075b18fb4710a1a37b258804c57efe}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67ec0e8add781665a43010c9559111e9}{%
+           family={Brucher},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcb3918f09eb8785e6b212a907cc37cf}{%
+           family={Perrot},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab20fcf381cd45daa82417c6fc595051}{%
+           family={Duchesnay},
+           familyi={D\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{6f3339156d725c8aa09f013d30c486f5}
-      \strng{fullhash}{6266a447054437b85f58a1b35c10f79c}
-      \strng{bibnamehash}{6266a447054437b85f58a1b35c10f79c}
-      \strng{authorbibnamehash}{6266a447054437b85f58a1b35c10f79c}
-      \strng{authornamehash}{6f3339156d725c8aa09f013d30c486f5}
-      \strng{authorfullhash}{6266a447054437b85f58a1b35c10f79c}
+      \strng{namehash}{dae710add1b58c233b40c77fa8628347}
+      \strng{fullhash}{7a67607c66e4af944b5f16461d6d0a87}
+      \strng{bibnamehash}{7a67607c66e4af944b5f16461d6d0a87}
+      \strng{authorbibnamehash}{7a67607c66e4af944b5f16461d6d0a87}
+      \strng{authornamehash}{dae710add1b58c233b40c77fa8628347}
+      \strng{authorfullhash}{7a67607c66e4af944b5f16461d6d0a87}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv:1911.02490}
-      \field{title}{OpenML-Python: an extensible Python API for OpenML}
-      \field{year}{2019}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{title}{Scikit-learn: Machine Learning in {P}ython}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2825\bibrangedash 2830}
+      \range{pages}{6}
     \endentry
   \enddatalist
 \endrefsection

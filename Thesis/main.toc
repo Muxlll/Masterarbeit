@@ -35,8 +35,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{34}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{38}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{40}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{42}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{43}{chapter*.53}%
-\contentsline {chapter}{\nonumberline List of Tables}{46}{chapter*.54}%
-\contentsline {chapter}{\nonumberline Bibliography}{47}{chapter*.55}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{44}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{45}{chapter*.55}%
+\contentsline {chapter}{\nonumberline List of Tables}{48}{chapter*.56}%
+\contentsline {chapter}{\nonumberline Bibliography}{49}{chapter*.57}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

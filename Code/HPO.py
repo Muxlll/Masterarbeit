@@ -652,7 +652,7 @@ class SparseGridSearchOptimization(Optimization):
         self.model = model
         self.hyperparameterspace = hyperparameterspace
         self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
-        self.budget = budget
+        self.budget = budget - 2
         self.verbosity = verbosity
 
         self.degree = degree
@@ -854,30 +854,30 @@ class SparseGridSearchOptimization(Optimization):
 
         result = [fX0]
 
-        optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptAdaptiveNewton(ft, hessian)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptAdaptiveNewton(ft, hessian)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptBFGS(ft, ftGradient)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptBFGS(ft, ftGradient)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
         # optimizer = pysgpp.OptCMAES(ft, 100)
         # optimizer.setStartingPoint(x0)
         # optimizer.optimize()
         # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptDifferentialEvolution(ft)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptDifferentialEvolution(ft)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
         optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
         optimizer.setStartingPoint(x0)
@@ -889,24 +889,24 @@ class SparseGridSearchOptimization(Optimization):
         optimizer.optimize()
         result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptNLCG(ft, ftGradient)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptNLCG(ft, ftGradient)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptNelderMead(ft)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptNelderMead(ft)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptNewton(ft, hessian)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptNewton(ft, hessian)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptRprop(ft, ftGradient)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptRprop(ft, ftGradient)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
         return result, len(functionValues)

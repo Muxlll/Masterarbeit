@@ -44,7 +44,9 @@ The parameters lower and upper are the bounds of the original hyperparameter int
 Before optimizing the configurations of machine learning models, simple functions are used. This has the advantage that the optimal point is already known in advance and a function call is much faster than evaluating a neural network. Therefore, three different test functions are given with the following properties \cite{valentin2016hierarchical}:
 
 \begin{table}[htbp!]
-		\centering
+	\caption{ Three test functions and their properties.}
+	\label{tab:test_functions}
+	\centering
 	\begin{tabular}{|c c c c|} 
 		\hline
 		Function & Domain & $x_{opt}$ & $ f(x_{opt}) $\\
@@ -54,8 +56,6 @@ Before optimizing the configurations of machine learning models, simple function
 		Rastrigin & $[-2, 8]^d $ & $\vec{0}$ & $ 0 $ \\
 		\hline
 	\end{tabular}
-	\caption{ Three test functions and their properties.}
-	\label{tab:test_functions}
 \end{table}
 
 The Eggholder function is defined with \cite{whitley1996evaluating} 
@@ -521,6 +521,8 @@ However, as shown in Table \ref{tab:analysis_sparse_grid_with_machine_learning_r
 
 \begin{table}[htbp!]
 	\centering
+	\caption{ Best hyperparameter configuration found by the sparse grid with different adaptivity parameters and number of grid points. The best result is found with $ \gamma = 0.85 $ and 77 grid points. }
+	\label{tab:analysis_sparse_grid_with_machine_learning_results}
 	\begin{tabular}{| c c | c c | c |} 
 		\hline
 		$ \gamma $ & N &  Epochs & Learning rate & Result \\
@@ -535,8 +537,6 @@ However, as shown in Table \ref{tab:analysis_sparse_grid_with_machine_learning_r
 		0.5 & 77 & 26 & 0.00015 & 0.26837 \\
 		\hline
 	\end{tabular}
-	\caption{ Best hyperparameter configuration found by the sparse grid with different adaptivity parameters and number of grid points. The best result is found with $ \gamma = 0.85 $ and 77 grid points. }
-	\label{tab:analysis_sparse_grid_with_machine_learning_results}
 \end{table}
 
 The results shown in this table prove that too high adaptivity is not good for finding the smallest function value. However, when using higher adaptivity, the number of grid points has no big impact on finding the best solution in this case. This is because of the function shown in Figure \ref{fig:analysis_model_training}. In general, a higher adaptivity is good for finding a configuration faster. This can be useful in cases of hyperparameter optimization where not much time is available and a relatively good solution is enough. 
@@ -683,13 +683,158 @@ Note that the additional optimization is very cheap compared to generating the a
 
 For both cases, the solution found by the sparse grid without optimization step decreases with increasing number of basis points. For the optimizers, this is not always the case. The resulting machine learning performance with the configuration found by the respective algorithm is even much worse than the one found by the sparse grid in some cases. In comparison to Figure \ref{fig:Optimizer_results}, we are only using a small number of grid points and get the same result in this situation. But further increasing the number of grid points is not feasible because of the high evaluation cost of the neural network. \newline
 
-We can conclude that the use of any optimizer is not very promising for finding an improved solution in our case. However, we will still use a local and global optimizer because it is very cheap compared to the sparse grid generation and in some cases, the solution is improved. 
+We can conclude that the use of any optimizer is not very promising for finding an improved solution in our case. However, we will still use a local and global optimizer because it is very cheap compared to the sparse grid generation and in some cases, the solution is improved. The resulting configuration returned by the algorithm will just be the best of three alternatives. 
 
 
 \section{Comparison with Grid-, Random Search and Bayesian Optimization}
 
+Now with the sparse grid search being analyzed with defined functions and a small neural network, this algorithm will be compared to the already existing optimization methods presented in Chapter \ref{chapter:theoretical_background}. We will always compare the algorithms depending on some given budget. This is the upper bound for the number of function evaluations the algorithm is allowed to make. For the grid search, this budget is always $ n^d $ where $ d $ is the number of hyperparameters or dimension of the problem. Therefore, $ n $ different values are taken for each hyperparameter. On the other hand, for the sparse grid search, the highest number of grid points is $ budget - 2 $ because we have to evaluate the point of the local and global optimization for comparison. \newline 
 
+The first experiment is using a two layer neural network with 40 neurons in each layer. A batch size of 100 is used and as datasets, 4 different tasks from OpenML are taken. Table \ref{tab:datasets_first_experiment} gives an overview over the datasets. 
 
+\begin{table}[htbp!]
+	\centering
+	\caption{ Overview over the datasets used for the first comparison of the optimization algorithms. }
+	\label{tab:datasets_first_experiment}
+	\begin{tabular}{| c | c | c | c |} 
+		\hline
+		 & \multicolumn{2}{c|}{Number of features} &   \\
+		 Dataset& numeric & categorical & Number of instances  \\
+		 \hline
+		 diamonds & 7 & 3 & 53940  \\
+		 house\_16H & 17 & 0 & 22784  \\
+		 sensory & 11 & 1 & 576  \\
+		 house\_sales & 16 & 2 & 21613  \\
+		 Brazilian\_houses & 9 & 3 & 10692  \\
+		\hline
+	\end{tabular}
+\end{table}
 
+All the categorical features are transformed with one hot encoding and the numeric as well as the target values are scaled using the \textit{StandardScaler} from the \textit{scikit-learn} library \cite{scikit-learn}. Both transformers are trained on the training set and used for both training and test set. We used 2-fold cross validation with the mean absolute percentage error as metric. Before each run, the seeds for getting the random values are reset. This is necessary because the evaluation of the neural network with a specific configuration should always return the same value. For the B-splines on the sparse grid, we use a degree of 2 and the grid is generated with adaptivity value $ 0.85 $. The resulting performance can be seen in Figure \ref{fig:result_first_comparison}.
+
+\begin{figure}[htbp!]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (diamonds),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(5,0.7287221550941467)(9,0.3527909889817238)(29,0.32599571347236633)(49,0.2671877220273018)(69,0.2633902207016945)};
+			
+			\addplot coordinates 
+			{(5,0.6684863269329071)(9,1.3836875557899475)(29,0.32599571347236633)(49,0.29520951211452484)(69,0.2633902207016945)};
+			
+			\addplot coordinates
+			{(5,0.6684863269329071)(9,1.290485441684723)(29,0.32599571347236633)(49,0.2671877220273018)(69,0.2633902207016945)};
+			
+			\addplot coordinates 
+			{(5,2.1821350157260895)(9,8.017291724681854)(29,0.32599571347236633)(49,0.3126538023352623)(69,0.2633902207016945)};
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_16H),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.3521949201822281)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+		
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (sensory),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(5,0.7287221550941467)(9,0.3527909889817238)(29,0.32599571347236633)(49,0.2671877220273018)(69,0.2633902207016945)};
+			
+			\addplot coordinates 
+			{(5,0.6684863269329071)(9,1.3836875557899475)(29,0.32599571347236633)(49,0.29520951211452484)(69,0.2633902207016945)};
+			
+			\addplot coordinates
+			{(5,0.6684863269329071)(9,1.290485441684723)(29,0.32599571347236633)(49,0.2671877220273018)(69,0.2633902207016945)};
+			
+			\addplot coordinates 
+			{(5,2.1821350157260895)(9,8.017291724681854)(29,0.32599571347236633)(49,0.3126538023352623)(69,0.2633902207016945)};
+			
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_sales),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.3521949201822281)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (Brazilian\_houses),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.3521949201822281)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\addplot coordinates 
+			{(1,0.8082304298877716)(7,0.6366344541311264)(25,0.2879640683531761)(49,0.2879640683531761)(67,0.26214249432086945)};
+			
+			\legend{Grid search, Random search, Bayesian optimization, Sparse Grid Search}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{  }	
+	\label{fig:result_first_comparison}
+\end{figure}
 
 
