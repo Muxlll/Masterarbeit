@@ -867,10 +867,10 @@ class SparseGridSearchOptimization(Optimization):
         optimizer.optimize()
         result.append(f.eval(optimizer.getOptimalPoint()))
 
-        optimizer = pysgpp.OptCMAES(ft, 100)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        result.append(f.eval(optimizer.getOptimalPoint()))
+        # optimizer = pysgpp.OptCMAES(ft, 100)
+        # optimizer.setStartingPoint(x0)
+        # optimizer.optimize()
+        # result.append(f.eval(optimizer.getOptimalPoint()))
 
         optimizer = pysgpp.OptDifferentialEvolution(ft)
         optimizer.setStartingPoint(x0)

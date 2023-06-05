@@ -563,16 +563,17 @@ In the first case, the optimizer starts at the right grid points and makes one s
 
 As illustrated in Table \ref{tab:results_opt_ml}, the optimizer does not always find an actual better solution. While the interpolated function value actually decreases, the evaluation of the network with the given configuration results in a higher value which is worse. This behavior is the same as in Figure \ref{fig:Optimizer_results} where both optimizers lead to a higher error than the smallest value found by the sparse grid. This is due to the small number of function evaluations made so far and the interpolant of the function becing too inaccurate. Also the visual comparison of the interpolant plots in Figure \ref{fig:optimizers_network_visualization} and Figure \ref{fig:analysis_model_training} shows that there are still big differences. Nevertheless in the scope of this thesis, further increasing the number of grid points is infeasible because of the high costs of one single function evaluation which is the training and evaluation of a machine learning model. \newline
 
-Note that the additional optimization is very cheap compared to generating the adaptive sparse grid because the algorithm uses the interpolated function and does not have to train and evaluate whole machine learning models. In the following, the different algorithms for optimization based on the sparse grid are compared. The same neural network with the same dataset is used for the comparison.
+Note that the additional optimization is very cheap compared to generating the adaptive sparse grid because the algorithm uses the interpolated function and does not have to train and evaluate whole machine learning models. In Figure \ref{fig:Comparison_optimizers}, the different algorithms for optimization based on the sparse grid are compared. The same neural network with the same dataset is used for the comparison.
 
 
 \begin{figure}[htbp!]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
-			ylabel = Result,
+			ylabel = Result (2d),
 			cycle list name=exotic,
 			legend pos=outer north east,
+			scale=0.8
 			]
 			
 			\addplot coordinates
@@ -587,8 +588,8 @@ Note that the additional optimization is very cheap compared to generating the a
 			\addplot coordinates 
 			{(5,0.5231324583292007)(9,0.7891336679458618)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
-			\addplot coordinates
-			{(5,1.1052730679512024)(9,0.7524459362030029)(29,0.43529146909713745)(49,0.29589295387268066)};
+			%\addplot coordinates
+			%{(5,1.1052730679512024)(9,0.7524459362030029)(29,0.43529146909713745)(49,0.29589295387268066)};
 			
 			\addplot coordinates 
 			{(5,1.4689656496047974)(9,1.290563017129898)(29,1.2196790277957916)(49,1.2911579012870789)};
@@ -612,7 +613,52 @@ Note that the additional optimization is very cheap compared to generating the a
 			{(5,0.872105598449707)(9,0.872105598449707)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			
-			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, cmaes, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			%\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, cmaes, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Number of grid points,
+			ylabel = Result (3d),
+			cycle list name=exotic,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(7,0.7138009369373322)(25,0.28593338280916214)(49,0.2520767152309418)(67,0.2520767152309418)};
+			
+			\addplot coordinates 
+			{(7,0.3631749004125595)(25,0.26401545852422714)(49,0.859004557132721)(67,1.025824248790741)};
+			
+			\addplot coordinates
+			{(7,0.3631749004125595)(25,2.1821350157260895)(49,0.3097514733672142)(67,0.8723746538162231)};
+			
+			\addplot coordinates 
+			{(7,0.8723803758621216)(25,0.8003125190734863)(49,0.5399707108736038)(67,1.5895830392837524)};
+			
+			\addplot coordinates
+			{(7,0.3864019811153412)(25,0.5674376487731934)(49,0.3233611434698105)(67,1.437251329421997)};
+			
+			\addplot coordinates 
+			{(7,0.3625069409608841)(25,0.25335288792848587)(49,0.31378278881311417)(67,2.845527619123459)};
+			
+			\addplot coordinates
+			{(7,0.33103197067976)(25,0.40967778116464615)(49,0.6666834726929665)(67,1.0963754579424858)};
+			
+			\addplot coordinates 
+			{(7,0.3625069409608841)(25,0.7549034804105759)(49,0.5265548080205917)(67,2.845527619123459)};
+			
+			\addplot coordinates
+			{(7,0.3631749004125595)(25,0.36608389019966125)(49,0.872953474521637)(67,1.3473573327064514)};
+			
+			\addplot coordinates 
+			{(7,0.3625069409608841)(25,0.26109638810157776)(49,0.42248380929231644)(67,2.845527619123459)};
+			
+			\addplot[green,mark=star] coordinates
+			{(7,0.7615045607089996)(25,0.8732951283454895)(49,1.2640468180179596)(67,0.8531704545021057)};
+			
+			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
 			
 		\end{axis}
 	\end{tikzpicture}
@@ -620,6 +666,9 @@ Note that the additional optimization is very cheap compared to generating the a
 	\label{fig:Comparison_optimizers}
 \end{figure}
 
+For both cases, the solution found by the sparse grid without optimization step decreases with increasing number of basis points. For the optimizers, this is not the case. The resulting machine learning performance with the configuration found by the respective algorithm is even much worse than the one found by the sparse grid. In comparison to Figure \ref{fig:Optimizer_results}, we are only using a small number of grid points and get the same result in this situation. But further increasing the number of grid points is not feasible because of the high evaluation cost of the neural network. \newline
+
+We can conclude that the use of any optimizer is not very promising for finding an improved solution in our case. However, we will still use a local and global optimizer because it is very cheap compared to the sparse grid generation and in some cases, the solution is improved. 
 
 
 
