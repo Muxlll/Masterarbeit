@@ -573,7 +573,7 @@ Note that the additional optimization is very cheap compared to generating the a
 			ylabel = Result (2d),
 			cycle list name=exotic,
 			legend pos=outer north east,
-			scale=0.8
+			scale=1
 			]
 			
 			\addplot coordinates
@@ -613,16 +613,17 @@ Note that the additional optimization is very cheap compared to generating the a
 			{(5,0.872105598449707)(9,0.872105598449707)(29,0.8723746538162231)(49,0.8723746538162231)};
 			
 			
-			%\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, cmaes, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
 			
 		\end{axis}
 	\end{tikzpicture}
+\centering
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
 			ylabel = Result (3d),
 			cycle list name=exotic,
-			scale=0.8
+			scale=1
 			]
 			
 			\addplot coordinates
@@ -658,11 +659,11 @@ Note that the additional optimization is very cheap compared to generating the a
 			\addplot[green,mark=star] coordinates
 			{(7,0.7615045607089996)(25,0.8732951283454895)(49,1.2640468180179596)(67,0.8531704545021057)};
 			
-			\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
+			%\legend{without opt, adaptive gradient descent, adaptive newton, bfgs, differential evolution, gradient descent, multi start, nlcg, nelder mead, newton, rprop}
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{  }	
+	\caption{ Comparison of optimization algorithms on the sparse grid with increasing number of grid points in two and three dimensions. Epochs, learning rate, and the batch size of a two-layer neural network on the diamonds dataset for regression are optimized. Result is the mean absolute percentage error.  }	
 	\label{fig:Comparison_optimizers}
 \end{figure}
 

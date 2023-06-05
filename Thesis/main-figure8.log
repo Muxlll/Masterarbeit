@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 JUN 2023 06:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 JUN 2023 06:40
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2605,16 +2605,16 @@ Package logreq Info: Writing requests to 'main-figure8.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54359 strings out of 480121
- 1242700 string characters out of 5892160
- 2095786 words of memory out of 5000000
- 71107 multiletter control sequences out of 15000+600000
- 521426 words of font info for 203 fonts, out of 8000000 for 9000
+ 54322 strings out of 480121
+ 1242095 string characters out of 5892160
+ 2085786 words of memory out of 5000000
+ 71072 multiletter control sequences out of 15000+600000
+ 521355 words of font info for 202 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,15n,112p,10633b,2377s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure8.pdf (1 page, 21721 bytes).
+Output written on main-figure8.pdf (1 page, 20392 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
