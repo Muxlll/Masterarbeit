@@ -850,6 +850,8 @@ class SparseGridSearchOptimization(Optimization):
                 fX0 = functionValues[i]
                 x0Index = i
 
+        x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
+
         result = [fX0]
 
         optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
