@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 JUN 2023 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  6 JUN 2023 07:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1964,7 +1964,7 @@ ine 315.
 LaTeX Warning: Citation 'pfluger2010spatially' on page 13 undefined on input li
 ne 315.
 
-LaTeX Font Info:    Trying to load font information for U+eus on input line 324
+LaTeX Font Info:    Trying to load font information for U+eus on input line 326
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
@@ -2622,8 +2622,16 @@ isable this.
 
 [33
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./chapters/05_conclusion
-_and_outlook.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 33 undefined o
+n input line 836.
+
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 33 undefined o
+n input line 836.
+
+) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
@@ -2653,19 +2661,20 @@ Package logreq Info: Writing requests to 'main-figure13.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54761 strings out of 480121
- 1245799 string characters out of 5892160
- 2126796 words of memory out of 5000000
- 71495 multiletter control sequences out of 15000+600000
- 524052 words of font info for 212 fonts, out of 8000000 for 9000
+ 54772 strings out of 480121
+ 1245864 string characters out of 5892160
+ 2126795 words of memory out of 5000000
+ 71494 multiletter control sequences out of 15000+600000
+ 525678 words of font info for 220 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,21n,112p,10633b,2559s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure13.pdf (1 page, 19871 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on main-figure13.pdf (1 page, 28305 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 26 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  1 named destinations out of 1000 (max. 500000)
- 55309 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 59405 words of extra memory for PDF output out of 61914 (max. 10000000)
 
