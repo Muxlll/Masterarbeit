@@ -691,6 +691,8 @@ We can conclude that the use of any optimizer is not very promising for finding 
 
 Now with the sparse grid search being analyzed with defined functions and a small neural network, this algorithm will be compared to the already existing optimization methods presented in Chapter \ref{chapter:theoretical_background}. We will always compare the algorithms depending on some given budget. This is the upper bound for the number of function evaluations the algorithm is allowed to make. For the grid search, this budget is always $ n^d $ where $ d $ is the number of hyperparameters or dimension of the problem. Therefore, $ n $ different values are taken for each hyperparameter. On the other hand, for the sparse grid search, the highest number of grid points is $ budget - 2 $ because we have to evaluate the point of the local and global optimization for comparison. \newline 
 
+\subsection{Two-dimensional Experiment of Regression with Small Neural Network}
+
 The first experiment is using a two layer neural network with 40 neurons in each layer. A batch size of 100 is used and as datasets, 4 different tasks from OpenML are taken. Table \ref{tab:datasets_first_experiment} gives an overview over the datasets. 
 
 \begin{table}[htbp!]
@@ -846,7 +848,7 @@ It can be seen that in almost all cases, the result is decreasing with increasin
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Grid10}
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Grid30}
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Grid50}
-		\caption{ }
+		\caption{ Grid search with 9 (left), 25 (center), and 49 (right) grid points. The grid is homogeneous and the function values are indicated with the colorbar on the side. The best configuration is indicated with a white cross on the grid point and achieves a model performance of \textbf{0.14393} (left), \textbf{0.14080} (center), and \textbf{0.14393} (right) for mean absolute percentage with 2-fold cross validation. }
 		\label{fig:first_comparison_grid_search}
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
@@ -854,11 +856,17 @@ It can be seen that in almost all cases, the result is decreasing with increasin
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Sparse8}
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Sparse28}
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Sparse48}
-		\caption{ }
+		\caption{ Sparse grid optimization with 7 (left), 27 (center), and 47 (right) grid points. The sparse grid is adaptive and the function values are indicated with the colorbar on the side. The best configuration is indicated with a white cross on the grid point and achieves a model performance of \textbf{0.14393} (left), \textbf{0.13739} (center), and \textbf{0.13533} (right) for mean absolute percentage with 2-fold cross validation. }
 		\label{fig:first_comparison_sparse_optimization}
 	\end{subfigure}
 	
-	\caption{ }
+	\caption{ Comparison of the grids generated for grid search (see Figure \ref{fig:first_comparison_grid_search}) and the sparse grid optimization (see Figure \ref{fig:first_comparison_sparse_optimization}) for the house\_sales dataset. }
 	\label{fig:Comparison_visualization}
 \end{figure}
 
+The big difference between grid search and sparse grid optimization is the adaptivity and the location of grid points. In Figure \ref{fig:Comparison_visualization}, this can be seen very clearly. While the grid generated for the grid search (see Figure \ref{fig:first_comparison_grid_search}) is very homogeneous and spread over the whole domain, the grid points are more gathered for the sparse grid optimization (see Figure \ref{fig:first_comparison_sparse_optimization}). For these upper bounds for the cost and for this dataset, the sparse grid optimization finds configurations with a bit better performance.
+
+
+\subsection{3 and 5-dimensional Experiments of Regression with Small Neural Network}
+
+While the two-dimensional case is good for the visualization of the approaches, one is often interested in the optimization of more hyperparameters. In the following, we will focus again on regression problems, but this time we will include the batch size, the number of neural layers, and the number of neurons per layer in the hyperparameter space. 
