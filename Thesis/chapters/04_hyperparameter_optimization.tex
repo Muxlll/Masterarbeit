@@ -32,8 +32,8 @@ def to_standard_log(lower, upper, value):
 	return math.log10(value / lower) / a	
 	
 def from_standard_log(lower, upper, value):
-	a = math.log10(upper/lower)
-	return lower * 10**(a*value)
+	a = math.log10(upper / lower)
+	return lower * 10 ** (a * value)
 \end{lstlisting}
 
 The parameters lower and upper are the bounds of the original hyperparameter interval. The value argument is then scaled to or from the standard domain $ [0,1] $, respectively.
@@ -867,9 +867,11 @@ It can be seen that in almost all cases, the result is decreasing with increasin
 The big difference between grid search and sparse grid optimization is the adaptivity and the location of grid points. In Figure \ref{fig:Comparison_visualization}, this can be seen very clearly. While the grid generated for the grid search (see Figure \ref{fig:first_comparison_grid_search}) is very homogeneous and spread over the whole domain, the grid points are more gathered for the sparse grid optimization (see Figure \ref{fig:first_comparison_sparse_optimization}). For these upper bounds for the cost and for this dataset, the sparse grid optimization finds configurations with a bit better performance.
 
 
-\subsection{3 and 5-dimensional Experiments of Regression with Small Neural Network}
+\subsection{Three- and Five-dimensional Experiments of Regression with Small Neural Network}
 
-While the two-dimensional case is good for the visualization of the approaches, one is often interested in the optimization of more hyperparameters. In the following, we will focus again on regression problems, but this time we will include the batch size, the number of neural layers, and the number of neurons per layer in the hyperparameter space. 
+While the two-dimensional case is good for the visualization of the approaches, one is often interested in the optimization of more hyperparameters. In the following, we will focus again on regression problems, but this time we will include the batch size, the number of neural layers, and the number of neurons per layer in the hyperparameter space. \newline 
+
+For the three dimensional case, we first use the same network with fixed architecture again, consisting of 2 layers with 40 neurons each. The hyperparameterspace consists of the epochs, the batch size and the learning rate of the neural network. The first two are linear integer from 1 to 40 for the epochs and the batch size has 100 and 2050 as bounds. The learning rate is again logarithmic from $ 10^{-9} $ to $ 10^{-1} $. We used the three datasets house\_16H, house\_sales, and Brazilian\_houses (see Table \ref{tab:datasets_first_experiment}). The resulting performance can be seen in Figure \ref{fig:result_second_comparison_dim3}. 
 
 
 \begin{figure}[htbp!]
@@ -947,9 +949,15 @@ While the two-dimensional case is good for the visualization of the approaches, 
 		
 	\end{axis}
 	\end{tikzpicture}
-	\caption{ Dimension 3. }	
+	\caption{ Comparison of grid search, random search, bayesian optimization and sparse grid search. The model optimized consists of two layers with 40 neurons each. The number of epochs, batch size, and learning rate are optimized.  }	
 	\label{fig:result_second_comparison_dim3}
 \end{figure}
+
+
+The advantage of adaptive sparse grid optimization compared to a homogeneous grid is the adaptivity meaning that more evaluations are done in a region of already small values. Especially with the house\_sales dataset, the sparse grid optimization achieves good results already with small cost. Although in general, this method needs at least some cost to generate a grid that is precise enough to find the optimal point. This can be seen in the case of the house\_16H dataset. At first, the resulting mean average percentage error is very high compared to the other three techniques but after a cost of 69, the sparse grid optimization achieves the best results with the smallest error. \newline 
+
+To also analyze the behavior in settings of higher dimensionality, we now also add the number of layers and the number of neurons per layer as fourth and fifth variable to the hyperparameter space. The other variables and their intervals stay the same. The number of layers can now range from 2 to 21 and each layer can have 1 to 20 neurons. The resulting errors depending on the cost for the same three datasets as in Figure \ref{fig:result_second_comparison_dim3} can be seen in Figure \ref{fig:result_second_comparison_dim5}.
+
 
 \begin{figure}[htbp!]
 	\begin{tikzpicture}
@@ -1026,6 +1034,13 @@ While the two-dimensional case is good for the visualization of the approaches, 
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Dimension 5. }	
+	\caption{  Comparison of grid search, random search, bayesian optimization and sparse grid search. The number of epochs, batch size, and learning rate are optimized as well as the number of layers and number of neurons per layer. }	
 	\label{fig:result_second_comparison_dim5}
 \end{figure}
+
+
+The big advantage of sparse grid is the efficiency in higher dimensions. This can be seen in Figure \ref{fig:result_second_comparison_dim5}. Here with 5 dimensions and a maximum limit for cost of 130, the normal grid search can only use 2 different values for each hyperparameter leading to 32 function evaluations. That is the reason why we can only see one point in each of the three plots for the datasets. The big advantage of sparse grid optimization is that less grid points are needed and those basis points generated are also adaptive to the problem leading to a fast decrease of error. For almost all three datasets, the sparse grid optimization finds the configuration leading to the smallest mean absolute percentage error. 
+
+
+
+
