@@ -870,3 +870,162 @@ The big difference between grid search and sparse grid optimization is the adapt
 \subsection{3 and 5-dimensional Experiments of Regression with Small Neural Network}
 
 While the two-dimensional case is good for the visualization of the approaches, one is often interested in the optimization of more hyperparameters. In the following, we will focus again on regression problems, but this time we will include the batch size, the number of neural layers, and the number of neurons per layer in the hyperparameter space. 
+
+
+\begin{figure}[htbp!]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_16H),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(27,0.5013840645551682)(27,0.5013840645551682)(64,0.4510077089071274)(64,0.4510077089071274)(64,0.4510077089071274)};
+			
+			\addplot coordinates 
+			{(30,0.4240635335445404)(50,0.4060138463973999)(70,0.4060138463973999)(90,0.40074291825294495)(110,0.3524976521730423)};
+			
+			\addplot coordinates
+			{(30,0.33826425671577454)(50,0.3445577770471573)(70,0.44258445501327515)(90,0.36445462703704834)(110,0.3701321929693222)};
+			
+			\addplot coordinates 
+			{(27,0.7578987777233124)(45,0.7578987777233124)(69,0.36318539083004)(87,0.3436579704284668)(105,0.3411036729812622)};
+		
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_sales),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(27,0.1389964520931244)(27,0.1389964520931244)(64,0.1349487155675888)(64,0.1349487155675888)(64,0.1349487155675888)};
+			
+			\addplot coordinates 
+			{(30,0.13356372714042664)(50,0.13356372714042664)(70,0.1317945420742035)(90,0.1317945420742035)(110,0.12730281800031662)};
+			
+			\addplot coordinates
+			{(30,0.13418538868427277)(50,0.13357464969158173)(70,0.1307784542441368)(90,0.13196838647127151)(110,0.1292630285024643)};
+			
+			\addplot coordinates 
+			{(27,0.1285368874669075)(45,0.1285368874669075)(69,0.12759799510240555)(87,0.12759799510240555)(105,0.12759799510240555)};
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		xlabel = Cost,
+		ylabel = Result (Brazilian\_houses),
+		cycle list name=exotic,
+		legend pos=outer north east,
+		scale=0.8
+		]
+		
+		\addplot coordinates
+		{(27,0.21274123340845108)(27,0.21274123340845108)(64,0.11224503070116043)(64,0.11224503070116043)(64,0.11224503070116043)};
+		
+		\addplot coordinates 
+		{(30,0.0599429477006197)(50,0.055251454934477806)(70,0.055251454934477806)(90,0.055251454934477806)(110,0.055251454934477806)};
+		
+		\addplot coordinates
+		{(30,0.09721800312399864)(50,0.08995457738637924)(70,0.12300247699022293)(90,0.06836232542991638)(110,0.068906981498003)};
+		
+		\addplot coordinates 
+		{(27,0.08419231697916985)(45,0.07201046124100685)(69,0.07080245390534401)(87,0.07080245390534401)(105,0.06940628960728645)};
+		
+		\legend{Grid search, random search, bayesian, sparse}
+		
+	\end{axis}
+	\end{tikzpicture}
+	\caption{ Dimension 3. }	
+	\label{fig:result_second_comparison_dim3}
+\end{figure}
+
+\begin{figure}[htbp!]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_16H),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(32,0.40729059278964996)(32,0.40729059278964996)(32,0.40729059278964996)};
+			
+			\addplot coordinates 
+			{(50,0.36966221034526825)(90,0.3504626899957657)(130,0.3504626899957657)};
+			
+			\addplot coordinates
+			{(50,0.35314927995204926)(90,0.3563224822282791)(130,0.3386409282684326)};
+			
+			\addplot coordinates 
+			{(43,0.3417779803276062)(83,0.3410039693117142)(123,0.3410039693117142)};
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (house\_sales),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(32,0.1750636175274849)(32,0.1750636175274849)(32,0.1750636175274849)};
+			
+			\addplot coordinates 
+			{(50,0.13386639952659607)(90,0.13123302906751633)(130,0.13123302906751633)};
+			
+			\addplot coordinates
+			{(50,0.1305573582649231)(90,0.13035045564174652)(130,0.12902139127254486)};
+			
+			\addplot coordinates 
+			{(43,0.1314886212348938)(83,0.12908799946308136)(123,0.12908799946308136)};
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (Brazilian\_houses),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(32,0.20395687967538834)(32,0.20395687967538834)(32,0.20395687967538834)};
+			
+			\addplot coordinates 
+			{(50,0.11145678907632828)(90,0.10634149610996246)(130,0.10634149610996246)};
+			
+			\addplot coordinates
+			{(50,0.1136467456817627)(90,0.07838094979524612)(130,0.07470651902258396)};
+			
+			\addplot coordinates 
+			{(43,0.08488190919160843)(83,0.03610859997570515)(123,0.028350481763482094)};
+			
+			\legend{Grid search, random search, bayesian, sparse}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{ Dimension 5. }	
+	\label{fig:result_second_comparison_dim5}
+\end{figure}
