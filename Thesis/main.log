@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUN 2023 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUN 2023 15:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2502,29 +2502,74 @@ File: figures/Results/First_comparison/Grid50.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Results/First_comparison/Grid50.pdf  used on i
 nput line 850.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse8.pdf, id=1319, 387.1464pt x 313.93484p
+<figures/Results/First_comparison/Random10.pdf, id=1319, 387.1464pt x 313.93484
+pt>
+File: figures/Results/First_comparison/Random10.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Random10.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Random10.pdf  used on
+ input line 856.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Random30.pdf, id=1320, 387.1464pt x 313.93484
+pt>
+File: figures/Results/First_comparison/Random30.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Random30.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Random30.pdf  used on
+ input line 857.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Random50.pdf, id=1321, 387.1464pt x 313.93484
+pt>
+File: figures/Results/First_comparison/Random50.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Random50.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Random50.pdf  used on
+ input line 858.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Bayesian10.pdf, id=1322, 387.1464pt x 313.934
+84pt>
+File: figures/Results/First_comparison/Bayesian10.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Bayesian10.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Bayesian10.pdf  used 
+on input line 864.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Bayesian30.pdf, id=1323, 387.1464pt x 313.934
+84pt>
+File: figures/Results/First_comparison/Bayesian30.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Bayesian30.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Bayesian30.pdf  used 
+on input line 865.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Bayesian50.pdf, id=1324, 387.1464pt x 313.934
+84pt>
+File: figures/Results/First_comparison/Bayesian50.pdf Graphic file (type pdf)
+<use figures/Results/First_comparison/Bayesian50.pdf>
+Package pdftex.def Info: figures/Results/First_comparison/Bayesian50.pdf  used 
+on input line 866.
+(pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
+<figures/Results/First_comparison/Sparse8.pdf, id=1325, 387.1464pt x 313.93484p
 t>
 File: figures/Results/First_comparison/Sparse8.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse8.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse8.pdf  used on 
-input line 856.
+input line 873.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse28.pdf, id=1320, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse28.pdf, id=1326, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse28.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse28.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse28.pdf  used on
- input line 857.
+ input line 874.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse48.pdf, id=1321, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse48.pdf, id=1327, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse48.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse48.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse48.pdf  used on
- input line 858.
+ input line 875.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--873
+LaTeX Warning: Float too large for page by 31.90596pt on input line 882.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--890
 
  []
 
@@ -2532,7 +2577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 872--873
 ===== Image 'main-figure15' is up-to-date. ======
 ===== Image 'main-figure16' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 957--958
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
 
  []
 
@@ -2548,6 +2593,36 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Grid
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Grid
 50.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
+> <./figures/Results/First_comparison/Random10.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Rand
+om10.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+> <./figures/Results/First_comparison/Random30.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Rand
+om30.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+> <./figures/Results/First_comparison/Random50.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Rand
+om50.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+> <./figures/Results/First_comparison/Bayesian10.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Baye
+sian10.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+> <./figures/Results/First_comparison/Bayesian30.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Baye
+sian30.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+> <./figures/Results/First_comparison/Bayesian50.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Baye
+sian50.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
 > <./figures/Results/First_comparison/Sparse8.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Spar
@@ -2628,11 +2703,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55830 strings out of 480121
- 1283360 string characters out of 5892160
- 2348750 words of memory out of 5000000
- 71765 multiletter control sequences out of 15000+600000
- 563317 words of font info for 565 fonts, out of 8000000 for 9000
+ 55883 strings out of 480121
+ 1286461 string characters out of 5892160
+ 2348359 words of memory out of 5000000
+ 71825 multiletter control sequences out of 15000+600000
+ 562818 words of font info for 560 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,15n,109p,10599b,3089s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
@@ -2648,10 +2723,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (65 pages, 6868689 bytes).
+Output written on main.pdf (65 pages, 6937778 bytes).
 PDF statistics:
- 1938 PDF objects out of 2073 (max. 8388607)
- 1475 compressed objects within 15 object streams
+ 2034 PDF objects out of 2073 (max. 8388607)
+ 1536 compressed objects within 16 object streams
  260 named destinations out of 1000 (max. 500000)
- 124059 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 118969 words of extra memory for PDF output out of 128383 (max. 10000000)
 
