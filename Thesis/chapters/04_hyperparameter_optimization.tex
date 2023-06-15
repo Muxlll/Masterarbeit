@@ -1047,7 +1047,7 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 			\addplot coordinates 
 			{(43,0.08488190919160843)(83,0.03610859997570515)(123,0.028350481763482094)};
 			
-			\legend{Grid search, random search, bayesian, sparse}
+			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
 			
 		\end{axis}
 	\end{tikzpicture}
@@ -1059,5 +1059,36 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 The big advantage of sparse grid is the efficiency in higher dimensions. This can be seen in Figure \ref{fig:result_second_comparison_dim5}. Here with 5 dimensions and a maximum limit for cost of 130, the normal grid search can only use 2 different values for each hyperparameter leading to 32 function evaluations. That is the reason why we can only see one point in each of the three plots for the datasets. The big advantage of sparse grid optimization is that less grid points are needed and those basis points generated are also adaptive to the problem leading to a fast decrease of error. For almost all three datasets, the sparse grid optimization finds the configuration leading to the smallest mean absolute percentage error. 
 
 
+\subsection{Nine-dimensional Optimization for Image Classification}
 
+\begin{figure}[htbp!]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Accuracy,
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(1,0.10649999976158142)(1,0.10649999976158142)(1,0.10649999976158142)(1,0.10649999976158142)};
+			
+			\addplot coordinates 
+			{(10,0.9577000141143799)(30,0.9577000141143799)(50,0.973800003528595)(70,0.973800003528595)};
+			
+			\addplot coordinates
+			{(10,0.9103000164031982)(30,0.9620000123977661)(50,0.9697999954223633)(70,0.9729999899864197)};
+			
+			\addplot coordinates 
+			{(3,0.10649999976158142)(21,0.8738999962806702)(39,0.9395999908447266)(57,0.982699990272522)};
+			
+			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{ MNIST dataset, Convolutional neural network, 9 hyperparameter: Epochs, batch size, learning rate, number convolutional layers, number fully connected layers, kernel size, pool size, neurons per fully connected layer, dropout probability. }	
+	\label{fig:MNIST_results}
+\end{figure}
 

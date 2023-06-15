@@ -37,8 +37,9 @@
 \contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{42}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{50}{chapter*.58}%
-\contentsline {chapter}{\nonumberline List of Tables}{53}{chapter*.59}%
-\contentsline {chapter}{\nonumberline Bibliography}{54}{chapter*.60}%
+\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Optimization for Image Classification}{47}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{50}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{51}{chapter*.59}%
+\contentsline {chapter}{\nonumberline List of Tables}{54}{chapter*.60}%
+\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.61}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

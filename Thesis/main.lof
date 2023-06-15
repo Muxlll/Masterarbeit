@@ -31,6 +31,7 @@
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Comparison of the grids generated for the house\_sales dataset. The best configuration found $ x_{opt} $ is marked with a white cross.\relax }}{45}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of grid search, random search, bayesian optimization and sparse grid search. The model optimized consists of two layers with 40 neurons each. The number of epochs, batch size, and learning rate are optimized. \relax }}{46}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Comparison of grid search, random search, bayesian optimization and sparse grid search. The number of epochs, batch size, and learning rate are optimized as well as the number of layers and number of neurons per layer. \relax }}{48}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces MNIST dataset, Convolutional neural network, 9 hyperparameter: Epochs, batch size, learning rate, number convolutional layers, number fully connected layers, kernel size, pool size, neurons per fully connected layer, dropout probability. \relax }}{49}{figure.caption.58}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
