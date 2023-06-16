@@ -940,13 +940,12 @@ For the three dimensional case, we first use the same network with fixed archite
 			
 		\end{axis}
 	\end{tikzpicture}
-	\centering
 	\begin{tikzpicture}
 	\begin{axis}[
 		xlabel = Cost,
 		ylabel = Result (Brazilian\_houses),
 		cycle list name=exotic,
-		legend pos=outer north east,
+		legend style={at={(2,0.7)}},
 		scale=0.8
 		]
 		
@@ -962,7 +961,7 @@ For the three dimensional case, we first use the same network with fixed archite
 		\addplot coordinates 
 		{(27,0.08419231697916985)(45,0.07201046124100685)(69,0.07080245390534401)(87,0.07080245390534401)(105,0.06940628960728645)};
 		
-		\legend{Grid search, random search, bayesian, sparse}
+		\legend{Grid search, Random search, Bayesian optimization, Sparse grid optimization}
 		
 	\end{axis}
 	\end{tikzpicture}

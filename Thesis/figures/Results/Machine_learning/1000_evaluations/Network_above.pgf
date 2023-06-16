@@ -452,7 +452,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.217847in, y=3.728940in, left, base,rotate=315.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont Result}%
+\pgftext[x=0.217847in, y=3.728940in, left, base,rotate=315.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log(Result)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.100000in}{0.100000in}}{\pgfqpoint{3.696000in}{3.696000in}}%

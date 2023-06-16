@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUN 2023 07:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 JUN 2023 07:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2642,6 +2642,24 @@ The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
 parison/Grid50}' has been optimized away. Use '/tikz/external/optimize=false' t
 o disable this.
 The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random10}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random30}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random50}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian10}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian30}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian50}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
 parison/Sparse8}' has been optimized away. Use '/tikz/external/optimize=false' 
 to disable this.
 The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
@@ -2651,32 +2669,29 @@ The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
 parison/Sparse48}' has been optimized away. Use '/tikz/external/optimize=false'
  to disable this.
 
-LaTeX Warning: Reference `fig:first_comparison_grid_search' on page 34 undefine
-d on input line 863.
-
-
-LaTeX Warning: Reference `fig:first_comparison_sparse_optimization' on page 34 
-undefined on input line 863.
-
-
-LaTeX Warning: Reference `fig:first_comparison_grid_search' on page 34 undefine
-d on input line 863.
-
-
-LaTeX Warning: Reference `fig:first_comparison_sparse_optimization' on page 34 
-undefined on input line 863.
-
-
 LaTeX Warning: Reference `fig:Comparison_visualization' on page 34 undefined on
- input line 867.
+ input line 884.
 
 
 LaTeX Warning: Reference `fig:first_comparison_grid_search' on page 34 undefine
-d on input line 867.
+d on input line 884.
 
 
 LaTeX Warning: Reference `fig:first_comparison_sparse_optimization' on page 34 
-undefined on input line 867.
+undefined on input line 884.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--890
+
+ []
+
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 34 undefined o
+n input line 891.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 34 undefin
+ed on input line 891.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -2684,10 +2699,34 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 \openout6 = `main-figure16.dpth'.
 
-[34
+[36
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./chapters/05_conclusion
-_and_outlook.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
+
+ []
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 36 undefin
+ed on input line 976.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 36 undefin
+ed on input line 976.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 36 undefin
+ed on input line 1059.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
@@ -2717,20 +2756,20 @@ Package logreq Info: Writing requests to 'main-figure16.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54798 strings out of 480121
- 1246232 string characters out of 5892160
- 2126795 words of memory out of 5000000
- 71504 multiletter control sequences out of 15000+600000
- 527925 words of font info for 229 fonts, out of 8000000 for 9000
+ 54800 strings out of 480121
+ 1246337 string characters out of 5892160
+ 2129795 words of memory out of 5000000
+ 71512 multiletter control sequences out of 15000+600000
+ 526987 words of font info for 227 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,21n,112p,10633b,2567s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure16.pdf (1 page, 28769 bytes).
+Output written on main-figure16.pdf (1 page, 29151 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  18 compressed objects within 1 object stream
  1 named destinations out of 1000 (max. 500000)
- 61453 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 60429 words of extra memory for PDF output out of 61914 (max. 10000000)
 
