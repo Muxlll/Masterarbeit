@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 JUN 2023 07:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  20 JUN 2023 08:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2356,7 +2356,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/1000
 _evaluations/Network_normal.pdf): PDF inclusion: multiple pdfs with page group 
 included in a single page
 >]
-<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1112, 333.
+<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1113, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_30_85.pdf Graphic f
 ile (type pdf)
@@ -2364,7 +2364,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 30_85.pdf  used on input line 500.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1113, 333.
+<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1114, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_80_85.pdf Graphic f
 ile (type pdf)
@@ -2372,7 +2372,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 80_85.pdf  used on input line 501.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1114, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1115, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_30_5.pdf Graphic fi
 le (type pdf)
@@ -2380,7 +2380,7 @@ le (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/Above_
 30_5.pdf  used on input line 507.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1115, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1116, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_80_5.pdf Graphic fi
 le (type pdf)
@@ -2406,7 +2406,7 @@ t_analysis/above_80_5.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.pdf, 
-id=1201, 402.20264pt x 313.93484pt>
+id=1202, 402.20264pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.
 pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.p
@@ -2415,7 +2415,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_5.pdf  used on input line 551.
 (pdftex.def)             Requested size: 204.94751pt x 159.97052pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10.pdf,
- id=1202, 404.99104pt x 313.93484pt>
+ id=1203, 404.99104pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10.
@@ -2424,7 +2424,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_10.pdf  used on input line 552.
 (pdftex.def)             Requested size: 204.94751pt x 158.86876pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30.pdf,
- id=1203, 392.16513pt x 313.93484pt>
+ id=1204, 392.16513pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30.
@@ -2433,7 +2433,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_30.pdf  used on input line 553.
 (pdftex.def)             Requested size: 204.94751pt x 164.06618pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50.pdf,
- id=1204, 397.18388pt x 313.93484pt>
+ id=1205, 397.18388pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50.
@@ -2446,15 +2446,16 @@ Overfull \hbox (5.49312pt too wide) in paragraph at lines 567--577
  [][] 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
 [38] [39 <./figures/Results/Machine_learning/optimizer/Optimizers_visualization
 _ml_5.pdf> <./figures/Results/Machine_learning/optimizer/Optimizers_visualizati
 on_ml_10.pdf> <./figures/Results/Machine_learning/optimizer/Optimizers_visualiz
 ation_ml_30.pdf> <./figures/Results/Machine_learning/optimizer/Optimizers_visua
 lization_ml_50.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
-
- []
-
 ===== Image 'main-figure7' is up-to-date. ======
 ===== Image 'main-figure8' is up-to-date. ======
 
@@ -2462,114 +2463,195 @@ Underfull \hbox (badness 10000) in paragraph at lines 685--686
 
  []
 
+[40 <./main-figure7.pdf> <./main-figure8.pdf>]
+<figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
+ppar_28.pdf, id=1297, 403.3188pt x 310.44884pt>
+File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
+al_hyppar_28.pdf Graphic file (type pdf)
+<use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_28.pdf>
+Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
+_hyperpar/Categorical_hyppar_28.pdf  used on input line 690.
+(pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
+<figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
+ppar_48.pdf, id=1298, 403.3188pt x 310.44884pt>
+File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
+al_hyppar_48.pdf Graphic file (type pdf)
+<use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_48.pdf>
+Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
+_hyperpar/Categorical_hyppar_48.pdf  used on input line 691.
+(pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
+<figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
+ppar_98.pdf, id=1299, 403.3188pt x 310.44884pt>
+File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
+al_hyppar_98.pdf Graphic file (type pdf)
+<use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_98.pdf>
+Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
+_hyperpar/Categorical_hyppar_98.pdf  used on input line 692.
+(pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
+<figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
+ppar_198.pdf, id=1300, 403.3188pt x 310.44884pt>
+File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
+al_hyppar_198.pdf Graphic file (type pdf)
+<use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_198.pdf>
+Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
+_hyperpar/Categorical_hyppar_198.pdf  used on input line 693.
+(pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+Underfull \hbox (badness 10000) in paragraph at lines 690--694
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
-[40] [41 <./main-figure7.pdf> <./main-figure8.pdf>] [42]
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
+
+ []
+
+[42 <./figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categori
+cal_hyppar_28.pdf> <./figures/Results/Machine_learning/optimizer/categorical_hy
+perpar/Categorical_hyppar_48.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/opti
+mizer/categorical_hyperpar/Categorical_hyppar_48.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_98.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/opti
+mizer/categorical_hyperpar/Categorical_hyppar_98.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
+l_hyppar_198.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Machine_learning/opti
+mizer/categorical_hyperpar/Categorical_hyppar_198.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [43]
 ===== Image 'main-figure9' is up-to-date. ======
 ===== Image 'main-figure10' is up-to-date. ======
 ===== Image 'main-figure11' is up-to-date. ======
 ===== Image 'main-figure12' is up-to-date. ======
 ===== Image 'main-figure13' is up-to-date. ======
 
-Underfull \hbox (badness 1852) in paragraph at lines 719--839
+Underfull \hbox (badness 1852) in paragraph at lines 738--858
 [][] []
  []
 
 
-LaTeX Warning: Float too large for page by 19.20723pt on input line 841.
+LaTeX Warning: Float too large for page by 19.20723pt on input line 860.
 
-<figures/Results/First_comparison/Grid10.pdf, id=1318, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid10.pdf, id=1379, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid10.pdf  used on i
-nput line 848.
+nput line 867.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Grid30.pdf, id=1319, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid30.pdf, id=1380, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid30.pdf  used on i
-nput line 849.
+nput line 868.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Grid50.pdf, id=1320, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid50.pdf, id=1381, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid50.pdf  used on i
-nput line 850.
+nput line 869.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random10.pdf, id=1321, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random10.pdf, id=1382, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random10.pdf  used on
- input line 856.
+ input line 875.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random30.pdf, id=1322, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random30.pdf, id=1383, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random30.pdf  used on
- input line 857.
+ input line 876.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random50.pdf, id=1323, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random50.pdf, id=1384, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random50.pdf  used on
- input line 858.
+ input line 877.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian10.pdf, id=1324, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian10.pdf, id=1385, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian10.pdf  used 
-on input line 864.
+on input line 883.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian30.pdf, id=1325, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian30.pdf, id=1386, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian30.pdf  used 
-on input line 865.
+on input line 884.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian50.pdf, id=1326, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian50.pdf, id=1387, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian50.pdf  used 
-on input line 866.
+on input line 885.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse8.pdf, id=1327, 387.1464pt x 313.93484p
+<figures/Results/First_comparison/Sparse8.pdf, id=1388, 387.1464pt x 313.93484p
 t>
 File: figures/Results/First_comparison/Sparse8.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse8.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse8.pdf  used on 
-input line 873.
+input line 892.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse28.pdf, id=1328, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse28.pdf, id=1389, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse28.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse28.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse28.pdf  used on
- input line 874.
+ input line 893.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse48.pdf, id=1329, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse48.pdf, id=1390, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse48.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse48.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse48.pdf  used on
- input line 875.
+ input line 894.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
 
-LaTeX Warning: Float too large for page by 31.90596pt on input line 882.
+LaTeX Warning: Float too large for page by 31.90596pt on input line 901.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--890
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
 
  []
 
@@ -2577,17 +2659,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 889--890
 ===== Image 'main-figure15' is up-to-date. ======
 ===== Image 'main-figure16' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--968
+Underfull \hbox (badness 10000) in paragraph at lines 914--987
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
+Underfull \hbox (badness 10000) in paragraph at lines 992--993
 
  []
 
-[43] [44 <./main-figure9.pdf> <./main-figure10.pdf> <./main-figure11.pdf> <./ma
-in-figure12.pdf> <./main-figure13.pdf>] [45 <./figures/Results/First_comparison
+[44] [45 <./main-figure9.pdf> <./main-figure10.pdf> <./main-figure11.pdf> <./ma
+in-figure12.pdf> <./main-figure13.pdf>] [46 <./figures/Results/First_comparison
 /Grid10.pdf> <./figures/Results/First_comparison/Grid30.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Grid
@@ -2643,13 +2725,13 @@ ge
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/First_comparison/Spar
 se48.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
 ge
->] [46 <./main-figure14.pdf> <./main-figure15.pdf> <./main-figure16.pdf>]
+>] [47 <./main-figure14.pdf> <./main-figure15.pdf> <./main-figure16.pdf>]
 ===== Image 'main-figure17' is up-to-date. ======
 ===== Image 'main-figure18' is up-to-date. ======
 ===== Image 'main-figure19' is up-to-date. ======
+[48 <./main-figure17.pdf> <./main-figure18.pdf> <./main-figure19.pdf>]
 ===== Image 'main-figure20' is up-to-date. ======
-) (./chapters/05_conclusion_and_outlook.tex [47] [48 <./main-figure17.pdf> <./m
-ain-figure18.pdf> <./main-figure19.pdf>] [49 <./main-figure20.pdf>]
+) (./chapters/05_conclusion_and_outlook.tex [49 <./main-figure20.pdf>]
 chapter 4.
 ) [50
 
@@ -2661,7 +2743,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 10
 
 
 ] [52]
-Overfull \hbox (4.2285pt too wide) in paragraph at lines 34--34
+Overfull \hbox (4.2285pt too wide) in paragraph at lines 35--35
  [][] [][]\T1/pplx/m/n/10.95 (-20) MNIST dataset, Con-vo-lu-tional neu-ral net-
 work, 9 hy-per-pa-ram-e-ter: Epochs, 
  []
@@ -2670,14 +2752,14 @@ work, 9 hy-per-pa-ram-e-ter: Epochs,
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [53]
+ [53] [54]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [54
+ [55
 
 
 ]
@@ -2689,7 +2771,7 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[55
+[56
 
 
 ]
@@ -2705,9 +2787,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [56] [57]
+ [57] [58]
 No complaints by nag.
-[58] (./main.aux)
+[59] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2715,11 +2797,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55889 strings out of 480121
- 1286539 string characters out of 5892160
- 2348632 words of memory out of 5000000
- 71827 multiletter control sequences out of 15000+600000
- 562818 words of font info for 560 fonts, out of 8000000 for 9000
+ 55949 strings out of 480121
+ 1290408 string characters out of 5892160
+ 2349030 words of memory out of 5000000
+ 71864 multiletter control sequences out of 15000+600000
+ 563618 words of font info for 572 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,15n,109p,10599b,3089s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
@@ -2735,10 +2817,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (66 pages, 6943786 bytes).
+Output written on main.pdf (67 pages, 8849959 bytes).
 PDF statistics:
- 2054 PDF objects out of 2073 (max. 8388607)
- 1553 compressed objects within 16 object streams
- 263 named destinations out of 1000 (max. 500000)
- 118982 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 2121 PDF objects out of 2487 (max. 8388607)
+ 1599 compressed objects within 16 object streams
+ 265 named destinations out of 1000 (max. 500000)
+ 119002 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -33,13 +33,13 @@
 \contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{29}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{34}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{34}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{38}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{42}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Optimization for Image Classification}{47}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{37}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{43}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{43}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{44}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Optimization for Image Classification}{49}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}Conclusion and Outlook}{50}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{51}{chapter*.59}%
-\contentsline {chapter}{\nonumberline List of Tables}{54}{chapter*.60}%
-\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.61}%
+\contentsline {chapter}{\nonumberline List of Figures}{51}{chapter*.60}%
+\contentsline {chapter}{\nonumberline List of Tables}{55}{chapter*.61}%
+\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.62}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

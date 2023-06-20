@@ -491,11 +491,11 @@ The interval of the epochs is $ [1, 40] $ and the learning rate is sampled equid
 	\label{fig:analysis_model_training}
 \end{figure}
 
-In this plot, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. \newline
+In the plot in Figure \ref{fig:analysis_model_training}, for each of epochs and learning rate, 100 different, equidistant values are sampled from the corresponding interval (linear sampling for epochs and log sampling for learning rate). All different combinations are evaluated leading to $ 100^2 = 10000 $ function evaluations. This took about 45 hours on a normal machine. Regarding the goal of hyperparameter optimization, this technique of trying all different combinations of distinct values is comparable to the grid search approach which is not very efficient. Although, the rough behavior of the machine learning model can be analyzed. The function is nearly constant for the learning rate between $ 10^{-6} $ and $ 10^{-10} $. This is caused by the Adam optimizer adjusting the weights of the network too slow in order to minimize the error. In the other half of the domain (learning rate between $ 10^{-1} $ and $ 10^{-5} $), a blue region where the smallest errors are achieved can be observed. This is where the combination between epochs and learning rate is very good for achieving good results. With this plot, a general observation can be made. However, it takes far too much time to analyze each problem with a plot like this. Additionally to the high effort, only the region of the minimum can be determined, not the optimal point itself. \newline
 
 With this knowledge about the underlying function that has to be minimized, the behavior of the sparse grid can be analyzed. Figure \ref{fig:analysis_sparse_grid_with_machine_learning} depicts the generated grid colored corresponding to the function value for different adaptivity values and number of grid points. Note that the scale of the learning rate is the one interpreted by the sparse grid. The actual scale is logarithmic between $ 10^{-10} $ for $ 0.0 $ and $ 10 ^{-1} $ for $ 1.0 $. 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/above_30_85}
 		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/above_80_85}
@@ -546,7 +546,7 @@ The results shown in this table prove that too high adaptivity is not good for f
 
 By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found if enough grid points are available. If this number is too small then the interpolant is not precise enough and the solution of the optimizer is not the real optimum. One example is depicted in Figure \ref{fig:optimizers_network_visualization}. The steps of the normal gradient descent optimization algorithm are depicted and connected with arrows. In the background, the interpolated function is shown. The problem is the same as in Figure \ref{fig:analysis_model_training}. The degree of the B-splines on the grid is 2 and the sparse grid points are shown in white. 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
@@ -684,7 +684,26 @@ Note that the additional optimization is very cheap compared to generating the a
 
 For both cases, the solution found by the sparse grid without optimization step decreases with increasing number of basis points. For the optimizers, this is not always the case. The resulting machine learning performance with the configuration found by the respective algorithm is even much worse than the one found by the sparse grid in some cases. In comparison to Figure \ref{fig:Optimizer_results}, we are only using a small number of grid points and get the same result in this situation. But further increasing the number of grid points is not feasible because of the high evaluation cost of the neural network. \newline
 
-We can conclude that the use of any optimizer is not very promising for finding an improved solution in our case. However, we will still use a local and global optimizer because it is very cheap compared to the sparse grid generation and in some cases, the solution is improved. The resulting configuration returned by the algorithm will just be the best of three alternatives. 
+One thing that has to be taken into consideration is that e.g. the epochs hyperparameter is not continuous. The values for the number of epochs are always integers converted with \textit{int()}. This means that all values in the interval $ [x, x+1] $ for any $ x \in \mathbb{N} $ are interpreted as the smaller integer $ x $. This means that there are regions in the interval that have the exact same function value because they are evaluated with the same configuration. This fact might impact the behavior of a gradient based optimizer. If the function values in an interval are exactly the same then the gradient is zero in this interval. This would make it impossible to find the real optimum if the optimizer gets stuck. In the experiment shown in Figure \ref{fig:optimizer_categorical_hyperparams}, an extreme example is tried out. We use two hyperparameters with three distinct values each. The first one is the batch size with values from $ {100, 400, 2000} $ and the second one is epochs taking values from $ {1, 5, 13} $. In two dimensions, nine different configurations are then possible. We used B-splines of degree 0 and a regular sparse grid with smallest adaptivity possible. As the machine learning model being evaluated, we took a 2-layer network with 30 neurons each and a learning rate of $ 10^{-5} $. As dataset, the diamonds regression set is used.
+
+\begin{figure}[htb!]
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_28}
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_48}
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_98}
+	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_198}
+	
+	\caption{ Sparse grid optimization with the interpolated function in the background, the white grid points, and the optimizer steps in red. Four different budgets are used (30: top left, 50: top right, 100: bottom left, 200: bottom right. Only three different configurations with values for batch size from $ {100, 400, 2000} $ and values for epochs from $ {1, 5, 13} $. }
+	\label{fig:optimizer_categorical_hyperparams}
+\end{figure}
+
+In Figure \ref{fig:optimizer_categorical_hyperparams}, four different budgets (30, 50, 100, 200) which are shown top left, top right, bottom left and bottom right, respectively, are depicted. In each case, the interpolated function is shown in the background with the grid points from the sparse grid. In red, the steps of the gradient descent optimizer are shown. \newline 
+
+We can observe one tendency. The more grid points are used, the more clear it gets that there are 9 different configurations and corresponding function values. For the first two cases in the top, the gradient descent still makes steps towards the bottom right corner of the domain. The interpolated function also still looks smooth. In the other two cases with a budget of 100 and 200, the optimizer does not take any steps because the grid points located next to the one with the smallest value also have the same smallest value. \newline 
+
+Now in this case with only 9 distinct values, the sparse grid with its optimizer is finding the global optimum. But in other cases where there are more distinct configurations, this might lead to the optimizer not finding the global optimum. \newline
+
+
+We can conclude that the use of any optimizer is not very promising for finding an improved solution in our case. However, we will still use a local and global optimizer because it is very cheap compared to the sparse grid generation and in some cases, the solution is improved. The resulting configuration returned by the algorithm will just be the best of three alternatives. \newline
 
 
 \section{Comparison with Grid-, Random Search and Bayesian Optimization}
@@ -891,7 +910,7 @@ While the two-dimensional case is good for the visualization of the approaches, 
 For the three dimensional case, we first use the same network with fixed architecture again, consisting of 2 layers with 40 neurons each. The hyperparameterspace consists of the epochs, the batch size and the learning rate of the neural network. The first two are linear integer from 1 to 40 for the epochs and the batch size has 100 and 2050 as bounds. The learning rate is again logarithmic from $ 10^{-9} $ to $ 10^{-1} $. We used the three datasets house\_16H, house\_sales, and Brazilian\_houses (see Table \ref{tab:datasets_first_experiment}). The resulting performance can be seen in Figure \ref{fig:result_second_comparison_dim3}. 
 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
@@ -975,7 +994,7 @@ The advantage of adaptive sparse grid optimization compared to a homogeneous gri
 To also analyze the behavior in settings of higher dimensionality, we now also add the number of layers and the number of neurons per layer as fourth and fifth variable to the hyperparameter space. The other variables and their intervals stay the same. The number of layers can now range from 2 to 21 and each layer can have 1 to 20 neurons. The resulting errors depending on the cost for the same three datasets as in Figure \ref{fig:result_second_comparison_dim3} can be seen in Figure \ref{fig:result_second_comparison_dim5}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
@@ -1060,7 +1079,7 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 
 \subsection{Nine-dimensional Optimization for Image Classification}
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1090,4 +1109,5 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 	\caption{ MNIST dataset, Convolutional neural network, 9 hyperparameter: Epochs, batch size, learning rate, number convolutional layers, number fully connected layers, kernel size, pool size, neurons per fully connected layer, dropout probability. }	
 	\label{fig:MNIST_results}
 \end{figure}
+
 

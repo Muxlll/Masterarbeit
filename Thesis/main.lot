@@ -8,7 +8,7 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces Overview over the exact solutions found by the local and global optimizer for the same problem as in Figure \ref {fig:optimizers_visualized}. The actual optimum is at (0, 0), with function value 0 (see Table \ref {tab:test_functions}).\relax }}{33}{table.caption.45}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Best hyperparameter configuration found by the sparse grid with different adaptivity parameters and number of grid points. The best result is found with $ \gamma = 0.85 $ and 77 grid points. \relax }}{38}{table.caption.49}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces Exact values for the optima found by the sparse grid points and the gradient descent algorithm. The values for $ x_{min}^{grid} $ are the configurations evaluated by the sparse grid during the generation and the coordinates in column $ x_{min}^{opt} $ are found by the optimizer. In bold, the best function values of the optimum found by the sparse grid and gradient descent algorithm, respectively. \relax }}{38}{table.caption.51}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Overview over the datasets used for the first comparison of the optimization algorithms. \relax }}{42}{table.caption.53}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Overview over the datasets used for the first comparison of the optimization algorithms. \relax }}{43}{table.caption.54}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
