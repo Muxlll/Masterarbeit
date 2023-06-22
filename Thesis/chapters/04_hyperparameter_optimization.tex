@@ -7,12 +7,14 @@
 
 \subsection{Adaptive Grid Search with Sparse Grids}
 
-\begin{itemize}
-	\item Evaluating neural networks as function with input of the hyperparameters
-	\item General goals
-\end{itemize}
+In the scope of this thesis, we implemented and analyzed a new approach for the problem of the hyperparameter optimization of machine learning models. The basic idea is to use the sparse grids and adaptively refine the grid points that seem to be promising. Similar to the grid search, first a few sample points are tried out and similar to bayesian search, more promising configurations are exploited. With the adaptivity parameter of the sparse grid, a trade-off between exploration and exploitation is balanced by generating an either homogeneous or adaptive sparse grid. We analyzed the algorithm for evaluating the neural networks on its behavior to find a general configuration performing well for most datasets. \newline 
+
+The reason for this work is that all well-analyzed hyperparameter optimization algorithms have advantages and shortcomings. We saw the promising possibility of using sparse grids for these kinds of optimization problems and compared the performance with grid-, random search, and bayesian optimization. \newline 
+
+For this comparison, we used several kinds of artificial neural networks such as fully connected or convolutional ones. Additionally, multiple datasets of different sizes and with categorical or numerical features are being used. We tried really general tasks like regression or object detection and classification to validate the findings in a general way. In \ref{subsec:Implementation}, a rough description of the implementation of the algorithms as well as the experiments, is presented.
 
 \subsection{Implementation}
+\label{subsec:Implementation}
 
 The implementation was done in Python and two main class are introduced. The first is the \textit{Dataset} encapsulating the input and target data of the dataset used for the machine learning model. One can either instantiate an object with given X and Y vector for the data and target or by giving a task id. This identification number is used to instantiate both arrays with the dataset that can be fetched with the functionality given by OpenML \cite{feurer-arxiv19a}. Each task has a unique id, we first concentrate on Regression tasks with small neural networks. \newline
 
@@ -39,7 +41,7 @@ def from_standard_log(lower, upper, value):
 The parameters lower and upper are the bounds of the original hyperparameter interval. The value argument is then scaled to or from the standard domain $ [0,1] $, respectively.
 
 
-\section{Sparse Grid Optimization of functions}
+\section{Sparse Grid Optimization of Functions}
 
 Before optimizing the configurations of machine learning models, simple functions are used. This has the advantage that the optimal point is already known in advance and a function call is much faster than evaluating a neural network. Therefore, three different test functions are given with the following properties \cite{valentin2016hierarchical}:
 
@@ -74,7 +76,7 @@ and the third one (Rastrigin) \cite{yang2010engineering} is defined with
 where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{fig:test_functions_plot} shows the functions in two dimensions.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Eggholder_normal}
@@ -113,7 +115,7 @@ is refined. In this case, $ r_{l,i} = |\{ (l', i') \in K | f(x_{l',i'}) \le f(x_
 
 In the following, the behavior of the sparse grid generation is analyzed with the help of the three test functions. In each case, 3 different values for the adaptivity parameter $ \gamma \in \{0.0, 0.5, 1.0\} $ are used and the resulting sparse grid with the triangulated function values is plotted. The first test case is the Eggholder function and the result is depicted in Figure \ref{fig:Eggholder_grid}.
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_1}
@@ -150,7 +152,7 @@ Note that in all three cases, the exact same number of grid points are evaluated
 
 The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbrock}). Again, three different values for the adaptivity parameter are used. The results are depicted in Figure \ref{fig:Rosenbrock_grid}.
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock_1}
@@ -185,7 +187,7 @@ Now with decreasing value of $ \gamma $, the grid gets more and more inhomogeneo
 
 The last function used is the Rastrigin function (see Figure \ref{fig:Rastrigin} for the plot of the function and \ref{fig:Rastrigin_grid} for the resulting sparse grids). 
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1}
@@ -223,7 +225,7 @@ In the following, the goal is to further analyze this adaptivity parameter. For 
 \end{equation}
 where $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top left plot is for the Eggholder function, the one on the top right belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -311,7 +313,7 @@ For all three test functions, a value $ 0.75 \le \gamma \le 1.0 $ leads to the s
 
 The next improvement is to add optimizers after the grid generation phase. There are two different types of algorithms. The first one is local optimization, for example based on the gradient like gradient descent. The second one is global optimization. An example therefore is to use a multi start approach by trying out multiple different starting points for the algorithm. These various initial values can be uniformly distributed in the domain. The following experiments show how the error (difference between optimum found by algorithm and actual optimal function value) behaves with higher number of grid points of the underlying sparse grid. As a local optimization algorithm, the gradient descent is used. The starting point for this algorithm is set to the point of the sparse grid where the smallest function value was found. For the global optimization, a multi start approach with 20 equally distributed starting points is used. The concrete algorithm is the nelder mead optimization as described in \ref{Optimization_algorithms}. The number of function evaluations used in this method, as well as the number of steps for gradient descent is set to 1000. One important parameter for the optimization is the degree of the B-splines used on the sparse grid. The resulting errors depending on the number of grid points for the degrees 2, 3, and 5 can be seen in Figure \ref{fig:Optimizer_results}. The Rosenbrock function is used in all cases.
 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -386,7 +388,7 @@ The next improvement is to add optimizers after the grid generation phase. There
 In all three cases, the errors of the local and global optimizers first increase with increasing number of grid points until about 100 to 200 function evaluations are done. After that, both local and global optimization algorithms are at least as good as the result found by the sparse grid. With increasing number of grid points, the global optimization finds the best solution in all cases with degrees 2, 3, and 5. \newline 
 
 The visualization in Figure \ref{fig:optimizers_visualized} indicates why the global optimizer achieves the best results for a high number of sparse grid points. 
-\begin{figure}[htbp!]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization5}
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization80}
@@ -550,6 +552,7 @@ By adding optimization methods like gradient descent or evolutionary algorithms,
 	\centering
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
+	
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30}
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50}
 	
@@ -689,6 +692,8 @@ One thing that has to be taken into consideration is that e.g. the epochs hyperp
 \begin{figure}[htb!]
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_28}
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_48}
+	
+	
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_98}
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_198}
 	
@@ -716,7 +721,7 @@ The first experiment is using a two layer neural network with 40 neurons in each
 
 \begin{table}[htbp!]
 	\centering
-	\caption{ Overview over the datasets used for the first comparison of the optimization algorithms. }
+	\caption{ Overview over the datasets used for the first comparison of the optimization algorithms. They are all available on OpenML \cite{OpenML2013}. }
 	\label{tab:datasets_first_experiment}
 	\begin{tabular}{| c | c | c | c |} 
 		\hline
@@ -1077,7 +1082,36 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 The big advantage of sparse grid is the efficiency in higher dimensions. This can be seen in Figure \ref{fig:result_second_comparison_dim5}. Here with 5 dimensions and a maximum limit for cost of 130, the normal grid search can only use 2 different values for each hyperparameter leading to 32 function evaluations. That is the reason why we can only see one point in each of the three plots for the datasets. The big advantage of sparse grid optimization is that less grid points are needed and those basis points generated are also adaptive to the problem leading to a fast decrease of error. For almost all three datasets, the sparse grid optimization finds the configuration leading to the smallest mean absolute percentage error. 
 
 
-\subsection{Nine-dimensional Optimization for Image Classification}
+\subsection{Comparison with Implementation of other Authors}
+
+Paper for comparison: \cite{WU201926}.
+
+
+
+\begin{table}[htb!]
+	\caption{  }
+	\label{tab:hyperparameter_space_mnist}
+	\centering
+	\begin{tabular}{| c c c |} 
+		\hline
+		Hyperparameter & type & Interval \\ 
+		\hline
+	 	Epochs & Int-Interval & $ [1,10] $ \\ 
+	 	Batch size & Int-Interval & $ [50,2050] $ \\ 
+	 	Learning rate & Log-Interval & $ [10^{-10},10^{-1}] $ \\ 
+	 	Number conv layers & Int-Interval & $ [1,4] $ \\ 
+	 	Number fully connected layers & Int-Interval & $ [1,4] $ \\ 
+	 	Kernel size & Int-Interval & $ [3,4] $ \\ 
+	 	Pool size & Int-Interval & $ [2,3] $ \\ 
+	 	Neurons in fully connected & Int-Interval & $ [1,10] $ \\ 
+	 	Dropout probability & Interval & $ [0,1] $ \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+
 
 \begin{figure}[htb!]
 	\centering

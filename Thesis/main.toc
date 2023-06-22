@@ -28,18 +28,18 @@
 \contentsline {section}{\numberline {3.1}Methodology}{22}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Sparse Grid Optimization of functions}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Sparse Grid Optimization of Functions}{24}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Sparse Grid Generation with different Adaptivities}{25}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{29}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{34}{section.3.3}%
+\contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{30}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{33}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{34}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{37}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{43}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{43}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{44}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Optimization for Image Classification}{49}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{50}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{51}{chapter*.60}%
-\contentsline {chapter}{\nonumberline List of Tables}{55}{chapter*.61}%
-\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.62}%
+\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{36}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{42}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Comparison with Implementation of other Authors}{48}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{50}{chapter*.61}%
+\contentsline {chapter}{\nonumberline List of Tables}{54}{chapter*.62}%
+\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.63}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

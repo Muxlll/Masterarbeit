@@ -758,12 +758,8 @@ class SparseGridSearchOptimization(Optimization):
                 fig.colorbar(surface, shrink=0.8, aspect=15)
 
 
-                plt.xlim([1,40])
-                plt.ylim([-9, -1])
-                plt.xlabel("Epochs")
-                plt.ylabel("log10(Learning rate)")
 
-                plt.savefig("./Sparse" + str(self.budget) + ".pgf",bbox_inches='tight' )
+                # plt.savefig("./Sparse" + str(self.budget) + ".pgf",bbox_inches='tight' )
                 plt.show()
 
                 # fig = plt.figure()
@@ -864,202 +860,16 @@ class SparseGridSearchOptimization(Optimization):
 
         ##################### find point with smallest f value #################
 
-        ######################################################### PLOTTING THE OPTIMIZERS ######################################################################
-
-        # find point with smallest value as start point for gradient descent
-        x0Index = 0
         fX0 = functionValues[0]
+        x0Index = 0
         for i in range(1, len(functionValues)):
-            print("Function value:", functionValues[i])
             if functionValues[i] < fX0:
                 fX0 = functionValues[i]
                 x0Index = i
 
         x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
 
-        x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
-
-        resolution = 500
-
-        x = np.linspace(0, 1, resolution)
-        y = np.linspace(0, 1, resolution)
-
-        X, Y = np.meshgrid(x, y)
-
-        Z = np.zeros((resolution, resolution))
-        keys = list(self.hyperparameterspace.keys())
-        for i in range(resolution):
-            for j in range(resolution):
-                vec = pysgpp.DataVector(2)
-                vec.set(0, X[i][j])
-                vec.set(1, Y[i][j])
-                Z[i][j] = ft.eval(vec)
-
-        fig = plt.figure()
-        ax = plt.axes()  # projection='3d')
-
-        x_interpolated = []
-        y_interpolated = []
-        z_interpolated = []
-        for i in range(resolution):
-            for j in range(resolution):
-                x_interpolated.append(from_standard(
-                    self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], X[i][j]))
-                y_interpolated.append(np.log10(from_standard_log(
-                    self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], Y[i][j])))
-
-                z_interpolated.append(Z[i][j])
-                X[i][j] = from_standard(
-                    self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], X[i][j])
-                Y[i][j] = from_standard(
-                    self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], Y[i][j])
-        # print(min(z_interpolated))
-        # minimal = min(z_interpolated)
-        # if minimal < 0:
-        #     for m in range(len(z_interpolated)):
-        #         z_interpolated[m] = np.log10(z_interpolated[m] - (minimal) + 1)
-        # else:
-        #     for m in range(len(z_interpolated)):
-        #         z_interpolated[m] = np.log10(z_interpolated[m])
-
-        surface = ax.contourf(X, Y, Z, levels=100 , cmap='plasma')
-        # surface = ax.plot_surface(X, Y, Z,
-        #                     cmap='plasma')
-
-        z_values = []
-        for i in range(len(x_values)):
-            x_0 = to_standard(
-                self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], x_values[i])
-            x_1 = to_standard(
-                self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], y_values[i])
-
-            vec = pysgpp.DataVector(2)
-            vec.set(0, x_0)
-            vec.set(1, x_1)
-            z_values.append(ft.eval(vec))
-
-        # minimal = min(z_values)
-        # if minimal < 0:
-        #     for m in range(len(z_values)):
-        #         z_values[m] = np.log10(z_values[m] - (minimal) + 1) + 1
-        # else:
-        #     for m in range(len(z_values)):
-        #         z_values[m] = np.log10(z_values[m]) + 1
-
-        ax.scatter(x_values, y_values, c='white', marker=".", zorder=1,
-                   alpha=1.0, s=1)
-
-        optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
-        optimizer.setStartingPoint(x0)
-        optimizer.optimize()
-        print("####  Local optimal point:")
-        print(from_standard(
-            self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], optimizer.getOptimalPoint()[0]))
-        print(from_standard(
-            self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], optimizer.getOptimalPoint()[1]))
-
-        vec = pysgpp.DataVector(2)
-        vec.set(0, optimizer.getOptimalPoint()[0])
-        vec.set(1, optimizer.getOptimalPoint()[1])
-        print("Optimal point evaluated:", f.eval(vec))
-        print("Optimal point interpolated:", optimizer.getOptimalValue())
-
-        x = []
-        y = []
-        z = []
-        history_points = optimizer.getHistoryOfOptimalPoints()
-        for i in range(history_points.getNrows()):
-            vec = pysgpp.DataVector(history_points.getNcols())
-            history_points.getRow(i, vec)
-            z.append(ft.eval(vec))
-            x.append(from_standard(
-                self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], vec[0]))
-            y.append(from_standard(
-                self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], vec[1]))
-
-        # x.append(from_standard(
-        #         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], optimizer.getOptimalPoint()[0]))
-        # y.append(from_standard(
-        #         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], optimizer.getOptimalPoint()[1]))
-
-        # minimal = min(z)
-        # if minimal < 0:
-        #     for m in range(len(z)):
-        #         z[m] = np.log10(z[m] - (minimal) + 1) + 1
-        # else:
-        #     for m in range(len(z)):
-        #         z[m] = np.log10(z[m]) + 1
-
-        ax.plot(x, y, c='red', marker="o", zorder=1,
-                alpha=1.0)
-
-        # optimizer = pysgpp.OptMultiStart(ft)
-        # # optimizer.setStartingPoint(x0)
-        # optimizer.optimize()
-
-        # print("####  Global optimal point:")
-        # print(from_standard(
-        #     self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], optimizer.getOptimalPoint()[0]))
-        # print(from_standard_log(
-        #     self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], optimizer.getOptimalPoint()[1]))
-        # vec = pysgpp.DataVector(2)
-        # vec.set(0, optimizer.getOptimalPoint()[0])
-        # vec.set(1, optimizer.getOptimalPoint()[1])
-        # print("Optimal point evaluated:", f.eval(vec))
-        # print("Optimal point interpolated:", optimizer.getOptimalValue())
-
-        # x = []
-        # y = []
-        # z = []
-        # history_points = optimizer.getHistoryOfOptimalPoints()
-        # for i in range(history_points.getNrows()):
-        #     vec = pysgpp.DataVector(history_points.getNcols())
-        #     history_points.getRow(i, vec)
-        #     z.append(ft.eval(vec))
-        #     x.append(from_standard(
-        #         self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], vec[0]))
-        #     y.append(np.log10(from_standard_log(
-        #         self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], vec[1])))
-
-        # # minimal = min(z)
-        # # if minimal < 0:
-        # #     for m in range(len(z)):
-        # #         z[m] = np.log10(z[m] - (minimal) + 1) + 1
-        # # else:
-        # #     for m in range(len(z)):
-        # #         z[m] = np.log10(z[m]) + 1
-
-        # # for m in range(len(x)-1):
-        # #     plt.quiver(x[m], y[m], x[m+1]-x[m], y[m+1]-y[m], scale_units='xy', angles='xy', scale=1)
-        # ax.scatter(x, y, c='black', marker="o",
-        #            alpha=1.0, zorder=1)
-
-        # naming the x axis
-        plt.xlabel('Epochs')
-        # naming the y axis
-        plt.ylabel('Batch size')
-
-        fig.colorbar(surface, shrink=0.8, aspect=15)
-
-        ax.set_xlim([self.hyperparameterspace[keys[0]][1],
-                    self.hyperparameterspace[keys[0]][2]])
-        ax.set_ylim([self.hyperparameterspace[keys[1]][1],
-                     self.hyperparameterspace[keys[1]][2]])
-        
-        ax.set_xticks([3.16, 7.3333, 10.5, 13.6666, 16.84],["1", "", "5", "", "13"])
-        ax.set_yticks([416.6, 733.3333, 1050, 1366.66666, 1683.3333], ["100", "", "400", "", "2000"])
-
-        # ax.set_zticks([])
-        # ax.view_init(90, 270)
-        plt.savefig("./Categorical_hyppar_" +
-                   str(self.budget)+".pgf", bbox_inches='tight')
-        plt.show()
-
-        return optimizer  # result.append(f.eval(optimizer.getOptimalPoint()))
-    
-        #### just delete above until x0 = ...
-
-        result = [fX0]
+        result = [x0, fX0]
 
         # optimizer = pysgpp.OptAdaptiveGradientDescent(ft, ftGradient)
         # optimizer.setStartingPoint(x0)
@@ -1089,11 +899,13 @@ class SparseGridSearchOptimization(Optimization):
         optimizer = pysgpp.OptGradientDescent(ft, ftGradient)
         optimizer.setStartingPoint(x0)
         optimizer.optimize()
+        result.append(optimizer.getOptimalPoint())
         result.append(f.eval(optimizer.getOptimalPoint()))
 
         optimizer = pysgpp.OptMultiStart(ft)  # default: NelderMead
         optimizer.setStartingPoint(x0)
         optimizer.optimize()
+        result.append(optimizer.getOptimalPoint())
         result.append(f.eval(optimizer.getOptimalPoint()))
 
         # optimizer = pysgpp.OptNLCG(ft, ftGradient)
