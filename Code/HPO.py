@@ -20,6 +20,8 @@ from scipy.optimize import minimize
 
 from sklearn.utils import shuffle
 
+import operator
+
 import math
 import sys
 from IPython.display import clear_output
@@ -540,7 +542,7 @@ class RandomSearchOptimization(Optimization):
                 upper = self.hyperparameterspace.get(key)[2]
                 lower = self.hyperparameterspace.get(key)[1]
                 self.hyperparameterspace_processed[key] = stats.uniform(
-                    lower, upper)
+                    lower, upper-lower)
             elif self.hyperparameterspace.get(key)[0] == "interval-int":
                 upper = self.hyperparameterspace.get(key)[2]
                 lower = self.hyperparameterspace.get(key)[1]
@@ -732,7 +734,7 @@ class SparseGridSearchOptimization(Optimization):
                 z_values.append(functionValues[i])
 
             if self.verbosity >= 1:
-                # print("########### Generated Grid: ###########")                
+                # print("########### Generated Grid: ###########")
                 x0Index = 0
                 fX0 = functionValues[0]
                 for i in range(1, len(functionValues)):
@@ -743,21 +745,19 @@ class SparseGridSearchOptimization(Optimization):
                 x0 = gridStorage.getCoordinates(gridStorage.getPoint(x0Index))
 
                 fig = plt.figure()
-                surface = plt.scatter(x_values, y_values, c=z_values, cmap='plasma')
-
+                surface = plt.scatter(x_values, y_values,
+                                      c=z_values, cmap='plasma')
 
                 plt.scatter(from_standard(
-                        self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], x0[0]),
-                        np.log10(from_standard_log(
-                            self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], x0[1])),
-                        100,
-                        c='white',
-                        marker="x",
-                        alpha=1)
-                
+                    self.hyperparameterspace[keys[0]][1], self.hyperparameterspace[keys[0]][2], x0[0]),
+                    np.log10(from_standard_log(
+                        self.hyperparameterspace[keys[1]][1], self.hyperparameterspace[keys[1]][2], x0[1])),
+                    100,
+                    c='white',
+                    marker="x",
+                    alpha=1)
+
                 fig.colorbar(surface, shrink=0.8, aspect=15)
-
-
 
                 # plt.savefig("./Sparse" + str(self.budget) + ".pgf",bbox_inches='tight' )
                 plt.show()
@@ -929,3 +929,201 @@ class SparseGridSearchOptimization(Optimization):
         # result.append(f.eval(optimizer.getOptimalPoint()))
 
         return result, len(functionValues)
+
+
+class Point():
+
+    def __init__(self,
+                 coordinates: list,
+                 value: float,
+                 level: int,
+                 number_refined: int = 0):
+
+        self.coordinates = coordinates
+        self.value = value
+        self.level = level
+        self.number_refined = number_refined
+
+    def get_coordinates(self):
+        return self.coordinates
+
+    def get_value(self):
+        return self.value
+
+    def get_level(self):
+        return self.level
+    
+    def get_number_refined(self):
+        return self.number_refined
+    
+    def increase_number_refined(self):
+        self.number_refined += 1
+
+
+class IterativeRandomOptimization(Optimization):
+    """
+        Iterative random Search Optimization class 
+        Params of the sparse grid settings:
+
+    """
+    """ Sparse Grid Search class
+    Sparse Grid Search class, adaptive sparse grid is generated and then optimized
+    Additional arguments:
+    ----------
+        Degree: int
+            Degree of the B-splines on the sparse grid
+        Adaptivity: float
+            Adaptivity of the sparse grid
+        Optimizer: String
+            Type of optimizer for the final optimization
+    """
+
+    def __init__(self,
+                 dataset: Dataset,
+                 model,
+                 hyperparameterspace: dict,
+                 budget: int = 100,
+                 verbosity: int = 0,
+                 adaptivity: float = 0.5,
+                 init_points: int = 10):
+
+        self.dataset = dataset
+        self.model = model
+        self.hyperparameterspace = hyperparameterspace
+        self.hyperparameterspace_processed = copy.deepcopy(hyperparameterspace)
+        self.budget = budget
+        self.verbosity = verbosity
+
+        self.adaptivity = adaptivity
+        self.init_points = init_points
+
+        for key in self.hyperparameterspace.keys():
+            if self.hyperparameterspace.get(key)[0] == "list":
+                self.hyperparameterspace_processed.get(key).pop(0)
+                self.hyperparameterspace_processed[key] = self.hyperparameterspace_processed.get(
+                    key)
+            elif self.hyperparameterspace.get(key)[0] == "interval":
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                self.hyperparameterspace_processed[key] = stats.uniform(
+                    lower, upper)
+            elif self.hyperparameterspace.get(key)[0] == "interval-int":
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                self.hyperparameterspace_processed[key] = stats.randint(
+                    lower, upper)
+            elif self.hyperparameterspace.get(key)[0] == "interval-log":
+                upper = self.hyperparameterspace.get(key)[2]
+                lower = self.hyperparameterspace.get(key)[1]
+                self.hyperparameterspace_processed[key] = loguniform(
+                    lower, upper)
+            else:
+                print("Need to specify the type of list")
+
+    def draw_value(self, key, lower, upper):
+        if self.hyperparameterspace.get(key)[0] == "interval":
+            result = stats.uniform(lower, upper-lower).rvs()
+            return result
+        elif self.hyperparameterspace.get(key)[0] == "interval-int":
+            result = stats.randint(lower, upper+1).rvs()
+            return result
+        elif self.hyperparameterspace.get(key)[0] == "interval-log":
+            result = loguniform(lower, upper).rvs()
+            return result
+        else:
+            print("Need to specify the type of list")
+
+    def fit(self):
+
+        points = []
+
+        # initialization (draw initial random points with level 1)
+        for _ in range(min([self.init_points, self.budget])):
+            coordinates = []
+            for key in self.hyperparameterspace.keys():
+                coordinates.append(self.draw_value(key, self.hyperparameterspace.get(key)[
+                                   1], self.hyperparameterspace.get(key)[2]))
+
+            value = self.model(coordinates)
+
+            points.append(Point(coordinates=coordinates, value=value, level=0))
+
+        points.sort(key=operator.attrgetter('value'))
+
+        x_values = []
+        y_values = []
+        z_values = []
+
+        for i in range(len(points)):
+            x_values.append(points[i].get_coordinates()[0])
+            y_values.append(points[i].get_coordinates()[1])
+            z_values.append(points[i].get_value())
+
+        fig = plt.figure()
+        ax = plt.axes()
+        surface = plt.scatter(x_values, y_values, c=z_values, cmap='plasma')
+
+        ax.set_xlim([-2, 8])
+        ax.set_ylim([-2, 8])
+
+        fig.colorbar(surface, shrink=0.8, aspect=15)
+
+        plt.show()
+
+        while len(points) + 2 * len(self.hyperparameterspace) <= self.budget:
+
+            coefficients = []
+            for i in range(len(points)):
+                rank_i = i
+                level_i = points[i].get_level()
+                number_refined_i = points[i].get_number_refined()
+                value_i = points[i].get_value()
+                coefficients.append(
+                    (rank_i + 1)**(1-self.adaptivity) * (level_i + number_refined_i + 1)**(self.adaptivity))
+
+            print(coefficients)
+            index_refine = 0
+            current_smallest = coefficients[0]
+            for i in range(len(coefficients)):
+                if coefficients[i] < current_smallest:
+                    current_smallest = coefficients[i]
+                    index_refine = i
+
+            level_best = points[index_refine].get_level()
+            coordinates_best = points[index_refine].get_coordinates()
+
+            points[index_refine].increase_number_refined()
+
+            intervals = []
+
+            keyIndex = 0
+            for key in self.hyperparameterspace.keys():
+                lower = self.hyperparameterspace.get(key)[1]
+                for j in range(len(points)):
+                    if lower < points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] < coordinates_best[keyIndex] and points[j].get_level() < level_best:
+                        lower = points[j].get_coordinates()[keyIndex]
+
+                upper = self.hyperparameterspace.get(key)[2]
+                for j in range(len(points)):
+                    if upper > points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] > coordinates_best[keyIndex] and points[j].get_level() < level_best:
+                        upper = points[j].get_coordinates()[keyIndex]
+
+                intervals.append([lower, upper])
+                keyIndex += 1
+
+            for _ in range(2 * len(self.hyperparameterspace)):
+                coordinates = []
+                keyIndex = 0
+                for key in self.hyperparameterspace.keys():
+                    coordinates.append(self.draw_value(
+                        key, intervals[keyIndex][0], intervals[keyIndex][1]))
+                    keyIndex += 1
+
+                value = self.model(coordinates)
+
+                points.append(Point(coordinates=coordinates,
+                              value=value, level=level_best+1))
+
+            points.sort(key=operator.attrgetter('value'))
+
+        return points

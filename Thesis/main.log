@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  22 JUN 2023 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  23 JUN 2023 13:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2748,18 +2748,20 @@ ge
 ===== Image 'main-figure19' is up-to-date. ======
 [47 <./main-figure17.pdf> <./main-figure18.pdf> <./main-figure19.pdf>]
 ===== Image 'main-figure20' is up-to-date. ======
-) (./chapters/05_conclusion_and_outlook.tex [48 <./main-figure20.pdf>]
+===== Image 'main-figure21' is up-to-date. ======
+) (./chapters/05_conclusion_and_outlook.tex [48 <./main-figure20.pdf>] [49 <./m
+ain-figure21.pdf>]
 chapter 4.
-) [49
+) [50
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [50
+ (./main.lof [51
 
 
-] [51]
+] [52]
 Overfull \hbox (4.2285pt too wide) in paragraph at lines 35--35
  [][] [][]\T1/pplx/m/n/10.95 (-20) MNIST dataset, Con-vo-lu-tional neu-ral net-
 work, 9 hy-per-pa-ram-e-ter: Epochs, 
@@ -2769,14 +2771,14 @@ work, 9 hy-per-pa-ram-e-ter: Epochs,
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [52] [53]
+ [53] [54]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [54
+ [55
 
 
 ]
@@ -2800,12 +2802,12 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[55
+[56
 
 
-] [56] [57] [58]
+] [57] [58] [59]
 No complaints by nag.
-[59] (./main.aux)
+[60] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2813,10 +2815,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55997 strings out of 480121
- 1291651 string characters out of 5892160
- 2347407 words of memory out of 5000000
- 71891 multiletter control sequences out of 15000+600000
+ 56001 strings out of 480121
+ 1291710 string characters out of 5892160
+ 2347443 words of memory out of 5000000
+ 71892 multiletter control sequences out of 15000+600000
  564537 words of font info for 585 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,15n,109p,10599b,3093s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2833,10 +2835,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (67 pages, 8861739 bytes).
+Output written on main.pdf (68 pages, 8865929 bytes).
 PDF statistics:
- 2161 PDF objects out of 2487 (max. 8388607)
- 1617 compressed objects within 17 object streams
- 270 named destinations out of 1000 (max. 500000)
- 119002 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 2174 PDF objects out of 2487 (max. 8388607)
+ 1627 compressed objects within 17 object streams
+ 272 named destinations out of 1000 (max. 500000)
+ 119007 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Comparison with Implementation of other Authors}{48}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{50}{chapter*.61}%
-\contentsline {chapter}{\nonumberline List of Tables}{54}{chapter*.62}%
-\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.63}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{50}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{51}{chapter*.62}%
+\contentsline {chapter}{\nonumberline List of Tables}{55}{chapter*.63}%
+\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.64}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

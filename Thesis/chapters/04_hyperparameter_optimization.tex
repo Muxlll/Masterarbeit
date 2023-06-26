@@ -1144,4 +1144,33 @@ Paper for comparison: \cite{WU201926}.
 	\label{fig:MNIST_results}
 \end{figure}
 
-
+\begin{figure}[htb!]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Accuracy,
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.8
+			]
+			
+			\addplot coordinates
+			{(1,0.0860000029206276)(4,0.0892999991774559)(9,0.23899999260902405)(16,0.848800003528595)};
+			
+			\addplot coordinates 
+			{(3,0.15240000188350677)(7,0.9771999716758728)(10,0.9771999716758728)(16,0.9771999716758728)};
+			
+			\addplot coordinates
+			{(3,0.14219999313354492)(7,0.6265000104904175)(10,0.9740999937057495)(16,0.9837999939918518)};
+			
+			\addplot coordinates 
+			{(3,0.0860000029206276)(7,0.12460000067949295)(7,0.12460000067949295)(15,0.9819999933242798)};
+			
+			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{  }	
+	\label{fig:Comparison_MNIST}
+\end{figure}
