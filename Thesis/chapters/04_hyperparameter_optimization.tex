@@ -1082,9 +1082,7 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 The big advantage of sparse grid is the efficiency in higher dimensions. This can be seen in Figure \ref{fig:result_second_comparison_dim5}. Here with 5 dimensions and a maximum limit for cost of 130, the normal grid search can only use 2 different values for each hyperparameter leading to 32 function evaluations. That is the reason why we can only see one point in each of the three plots for the datasets. The big advantage of sparse grid optimization is that less grid points are needed and those basis points generated are also adaptive to the problem leading to a fast decrease of error. For almost all three datasets, the sparse grid optimization finds the configuration leading to the smallest mean absolute percentage error. 
 
 
-\subsection{Comparison with Implementation of other Authors}
-
-Paper for comparison: \cite{WU201926}.
+\subsection{Nine-dimensional Experiment with MNIST Dataset}
 
 
 
@@ -1143,6 +1141,12 @@ Paper for comparison: \cite{WU201926}.
 	\caption{ MNIST dataset, Convolutional neural network, 9 hyperparameter: Epochs, batch size, learning rate, number convolutional layers, number fully connected layers, kernel size, pool size, neurons per fully connected layer, dropout probability. }	
 	\label{fig:MNIST_results}
 \end{figure}
+
+
+\subsection{Comparison with Implementation of other Authors}
+
+Paper for comparison: \cite{WU201926}.
+
 
 \begin{figure}[htb!]
 	\centering

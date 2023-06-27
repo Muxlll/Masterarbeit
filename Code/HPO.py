@@ -952,10 +952,10 @@ class Point():
 
     def get_level(self):
         return self.level
-    
+
     def get_number_refined(self):
         return self.number_refined
-    
+
     def increase_number_refined(self):
         self.number_refined += 1
 
@@ -985,7 +985,8 @@ class IterativeRandomOptimization(Optimization):
                  budget: int = 100,
                  verbosity: int = 0,
                  adaptivity: float = 0.5,
-                 init_points: int = 10):
+                 init_points: int = 10,
+                 alternative: int = 0):
 
         self.dataset = dataset
         self.model = model
@@ -996,6 +997,7 @@ class IterativeRandomOptimization(Optimization):
 
         self.adaptivity = adaptivity
         self.init_points = init_points
+        self.alternative = alternative
 
         for key in self.hyperparameterspace.keys():
             if self.hyperparameterspace.get(key)[0] == "list":
@@ -1022,7 +1024,7 @@ class IterativeRandomOptimization(Optimization):
 
     def draw_value(self, key, lower, upper):
         if self.hyperparameterspace.get(key)[0] == "interval":
-            result = stats.uniform(lower, upper-lower).rvs()
+            result = random.uniform(lower, upper)
             return result
         elif self.hyperparameterspace.get(key)[0] == "interval-int":
             result = stats.randint(lower, upper+1).rvs()
@@ -1050,26 +1052,6 @@ class IterativeRandomOptimization(Optimization):
 
         points.sort(key=operator.attrgetter('value'))
 
-        x_values = []
-        y_values = []
-        z_values = []
-
-        for i in range(len(points)):
-            x_values.append(points[i].get_coordinates()[0])
-            y_values.append(points[i].get_coordinates()[1])
-            z_values.append(points[i].get_value())
-
-        fig = plt.figure()
-        ax = plt.axes()
-        surface = plt.scatter(x_values, y_values, c=z_values, cmap='plasma')
-
-        ax.set_xlim([-2, 8])
-        ax.set_ylim([-2, 8])
-
-        fig.colorbar(surface, shrink=0.8, aspect=15)
-
-        plt.show()
-
         while len(points) + 2 * len(self.hyperparameterspace) <= self.budget:
 
             coefficients = []
@@ -1081,7 +1063,6 @@ class IterativeRandomOptimization(Optimization):
                 coefficients.append(
                     (rank_i + 1)**(1-self.adaptivity) * (level_i + number_refined_i + 1)**(self.adaptivity))
 
-            print(coefficients)
             index_refine = 0
             current_smallest = coefficients[0]
             for i in range(len(coefficients)):
@@ -1094,36 +1075,94 @@ class IterativeRandomOptimization(Optimization):
 
             points[index_refine].increase_number_refined()
 
-            intervals = []
-
-            keyIndex = 0
-            for key in self.hyperparameterspace.keys():
-                lower = self.hyperparameterspace.get(key)[1]
-                for j in range(len(points)):
-                    if lower < points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] < coordinates_best[keyIndex] and points[j].get_level() < level_best:
-                        lower = points[j].get_coordinates()[keyIndex]
-
-                upper = self.hyperparameterspace.get(key)[2]
-                for j in range(len(points)):
-                    if upper > points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] > coordinates_best[keyIndex] and points[j].get_level() < level_best:
-                        upper = points[j].get_coordinates()[keyIndex]
-
-                intervals.append([lower, upper])
-                keyIndex += 1
-
-            for _ in range(2 * len(self.hyperparameterspace)):
-                coordinates = []
+            if self.alternative == 0:
+                # ################ Alternative 1 ###############
+                ######## intervals in each dimension #########
+                intervals = []
                 keyIndex = 0
                 for key in self.hyperparameterspace.keys():
-                    coordinates.append(self.draw_value(
-                        key, intervals[keyIndex][0], intervals[keyIndex][1]))
+                    lower = self.hyperparameterspace.get(key)[1]
+                    for j in range(len(points)):
+                        if lower < points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] < coordinates_best[keyIndex] and points[j].get_level() <= level_best:
+                            lower = points[j].get_coordinates()[keyIndex]
+
+                    upper = self.hyperparameterspace.get(key)[2]
+                    for j in range(len(points)):
+                        if upper > points[j].get_coordinates()[keyIndex] and points[j].get_coordinates()[keyIndex] > coordinates_best[keyIndex] and points[j].get_level() <= level_best:
+                            upper = points[j].get_coordinates()[keyIndex]
+
+                    intervals.append([lower, upper])
                     keyIndex += 1
 
-                value = self.model(coordinates)
+                for _ in range(len(self.hyperparameterspace)):
+                    coordinates = []
+                    keyIndex = 0
+                    for key in self.hyperparameterspace.keys():
+                        coordinates.append(self.draw_value(
+                            key, intervals[keyIndex][0], intervals[keyIndex][1]))
+                        keyIndex += 1
 
-                points.append(Point(coordinates=coordinates,
-                              value=value, level=level_best+1))
+                    value = self.model(coordinates)
 
-            points.sort(key=operator.attrgetter('value'))
+                    points.append(Point(coordinates=coordinates,
+                                        value=value, level=level_best+1))
+                ################ Alternative 1 END ############
+            elif self.alternative == 1:
+
+                ################ Alternative 2 ###############
+                ####### uniform sampling n-dim balls #########
+
+                # compute all distances to other points
+                distances = [math.dist(
+                    points[index_refine].get_coordinates(), x.get_coordinates()) for x in points]
+                highest_distance = max(distances)
+
+                # find smallest distance (replace smallest distance zero with highest distance)
+                corners = [[], []]
+                for key in self.hyperparameterspace.keys():
+                    corners[0].append(self.hyperparameterspace.get(key)[1])
+                    corners[1].append(self.hyperparameterspace.get(key)[2])
+
+                smallest_dist = math.dist(corners[0], corners[1])
+                for i in range(len(points)):
+
+                    if distances[i] == 0:
+                        distances[i] = highest_distance
+
+                    if i != index_refine and distances[i] < smallest_dist and points[i].get_level() <= points[index_refine].get_level():
+                        smallest_dist = distances[i]
+
+                smallest_dist = (highest_distance + smallest_dist) / 2
+
+                # sample 2*dim new points in this ball
+                for _ in range(len(self.hyperparameterspace)):
+                    # an array of d normally distributed random variables
+                    u = np.random.normal(
+                        0, smallest_dist, len(self.hyperparameterspace))
+                    norm = np.sum(u**2) ** (0.5)
+                    r = random.uniform(
+                        0, smallest_dist)**(1.0/len(self.hyperparameterspace))
+                    x = r*u/norm
+                    coordinates = []
+                    # points[index_refine].get_coordinates()
+
+                    keyIndex = 0
+                    for key in self.hyperparameterspace.keys():
+                        coordinates.append(points[index_refine].get_coordinates()[
+                                           keyIndex] + x[keyIndex])
+
+                        coordinates[keyIndex] = max(
+                            [coordinates[keyIndex], self.hyperparameterspace.get(key)[1]])
+                        coordinates[keyIndex] = min(
+                            [coordinates[keyIndex], self.hyperparameterspace.get(key)[2]])
+
+                        keyIndex += 1
+
+                    value = self.model(coordinates)
+                    points.append(Point(coordinates=coordinates,
+                                  value=value, level=level_best+1))
+                # ################ Alternative 2 END ############
+
+            # points.sort(key=operator.attrgetter('value'))
 
         return points
