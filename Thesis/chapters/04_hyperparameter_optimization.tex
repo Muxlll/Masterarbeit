@@ -1123,16 +1123,16 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 			]
 			
 			\addplot coordinates
-			{(1,0.10649999976158142)(1,0.10649999976158142)(1,0.10649999976158142)(1,0.10649999976158142)};
+			{(1,0.1006999984383583)};
 			
 			\addplot coordinates 
-			{(10,0.9577000141143799)(30,0.9577000141143799)(50,0.973800003528595)(70,0.973800003528595)};
+			{(5,0.7871000170707703)(30,0.863099992275238)(50,0.9151999950408936)(80,0.974399983882904)(110,0.974399983882904)};
 			
 			\addplot coordinates
-			{(10,0.9103000164031982)(30,0.9620000123977661)(50,0.9697999954223633)(70,0.9729999899864197)};
+			{(5,0.19499999284744263)(30,0.9649999737739563)(50,0.9501000046730042)(80,0.9753999710083008)(110,0.9714999794960022)};
 			
 			\addplot coordinates 
-			{(3,0.10649999976158142)(21,0.8738999962806702)(39,0.9395999908447266)(57,0.982699990272522)};
+			{(3,0.3700999915599823)(21,0.8806999921798706)(39,0.9319000244140625)(75,0.9732999801635742)(93,0.9753999710083008)};
 			
 			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
 			
@@ -1178,3 +1178,49 @@ Paper for comparison: \cite{WU201926}.
 	\caption{  }	
 	\label{fig:Comparison_MNIST}
 \end{figure}
+
+
+\section{Iterative Adaptive Random Search}
+
+\begin{itemize}
+	\item Introduction why
+	\item General idea
+\end{itemize}
+
+\subsection{Presentation and Implementation details}
+
+\begin{itemize}
+	\item Precise explanation of the algorithm
+	\item Different refinement strategies
+	\item Different criteria
+	\item Implementation
+\end{itemize}
+
+\subsection{Analysis of Parameters with Functions}
+
+\begin{itemize}
+	\item initial points
+	\item number of refinements per iteration
+	\item refinement criteria
+	\item Budget
+\end{itemize}
+
+\subsection{Hyperparameter Optimization}
+
+\begin{itemize}
+	\item small first experiments
+\end{itemize}
+
+\subsection{Comparison with other Techniques}
+
+\begin{itemize}
+	\item compare all 5 techniques
+\end{itemize}
+
+
+
+
+
+
+
+
