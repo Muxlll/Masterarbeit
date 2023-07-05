@@ -30,23 +30,26 @@
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{22}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Sparse Grid Optimization of Functions}{24}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Sparse Grid Generation with different Adaptivities}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Sparse Grid Generation with different Adaptivities}{26}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Local and Global Optimization}{30}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{33}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{34}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{36}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{42}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Experiment with MNIST Dataset}{48}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{50}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{52}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{52}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{52}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{52}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{53}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{54}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{55}{chapter*.65}%
-\contentsline {chapter}{\nonumberline List of Tables}{59}{chapter*.66}%
-\contentsline {chapter}{\nonumberline Bibliography}{60}{chapter*.67}%
+\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{35}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{35}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{39}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{44}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{44}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{45}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Experiment with MNIST Dataset}{50}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{52}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{54}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{54}{subsection.3.5.1}%
+\contentsline {subsubsection}{\nonumberline Interval Based Strategy}{56}{subsubsection*.66}%
+\contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{56}{subsubsection*.69}%
+\contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{57}{subsubsection*.71}%
+\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{57}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{57}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{57}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{58}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{59}{chapter*.72}%
+\contentsline {chapter}{\nonumberline List of Tables}{63}{chapter*.73}%
+\contentsline {chapter}{\nonumberline Bibliography}{64}{chapter*.74}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

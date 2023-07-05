@@ -1075,7 +1075,7 @@ class IterativeRandomOptimization(Optimization):
                 number_refined_i = points[i].get_number_refined()
                 value_i = points[i].get_value()
                 coefficients.append(
-                    (rank_i + value_i + 1)**(1-self.adaptivity) * (level_i + number_refined_i + 1)**(self.adaptivity))
+                    (rank_i + 1)**(1-self.adaptivity) * (level_i + number_refined_i + 1)**(self.adaptivity))
 
             index_refine = 0
             current_smallest = coefficients[0]
@@ -1108,7 +1108,7 @@ class IterativeRandomOptimization(Optimization):
                     intervals.append([lower, upper])
                     keyIndex += 1
 
-                for _ in range(2* len(self.hyperparameterspace)):
+                for _ in range(2 * len(self.hyperparameterspace)):
                     coordinates = []
                     keyIndex = 0
                     for key in self.hyperparameterspace.keys():
@@ -1143,12 +1143,12 @@ class IterativeRandomOptimization(Optimization):
                     if distances[i] == 0:
                         distances[i] = highest_distance
 
-                    if i != index_refine and distances[i] < smallest_dist and points[i].get_level() <= points[index_refine].get_level():
+                    if i != index_refine and distances[i] < smallest_dist:#  and points[i].get_level() <= points[index_refine].get_level():
                         smallest_dist = distances[i]
 
                 # smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+1)*2)
                 smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*2)
-
+                # smallest_dist = smallest_dist
                 # smallest_dist = sum(distances) / len(distances)
 
                 # sample 2*dim new points in this ball
@@ -1205,8 +1205,9 @@ class IterativeRandomOptimization(Optimization):
                     if i != index_refine and distances[i] < smallest_dist and points[i].get_level() <= points[index_refine].get_level():
                         smallest_dist = distances[i]
 
-                # smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+1)*2)
-                smallest_dist = 1# (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*4)
+                smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+1)*2)
+                #smallest_dist = 1# (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*4)
+                # smallest_dist = (highest_distance + smallest_dist) / 2
 
                 for _ in range(2 * len(self.hyperparameterspace)):
                     coordinates = []
@@ -1230,6 +1231,7 @@ class IterativeRandomOptimization(Optimization):
 
                     points.append(Point(coordinates=coordinates,
                                         value=value, level=level_best+1))
+            
             points.sort(key=operator.attrgetter('value'))
 
         return points

@@ -2492,6 +2492,51 @@
       \endverb
       \keyw{Bayesian optimization,Gaussian process,hyperparameter optimization,machine learning}
     \endentry
+    \entry{HARMAN20102297}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1dc362167803b590ccf14716647964cd}{%
+           family={Harman},
+           familyi={H\bibinitperiod},
+           given={Radoslav},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02164dc8e98eff05419c4a0c554d0b89}{%
+           family={Lacko},
+           familyi={L\bibinitperiod},
+           given={Vladimír},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d992710094317b26d6d909e5dff3a73}
+      \strng{fullhash}{6d992710094317b26d6d909e5dff3a73}
+      \strng{bibnamehash}{6d992710094317b26d6d909e5dff3a73}
+      \strng{authorbibnamehash}{6d992710094317b26d6d909e5dff3a73}
+      \strng{authornamehash}{6d992710094317b26d6d909e5dff3a73}
+      \strng{authorfullhash}{6d992710094317b26d6d909e5dff3a73}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a universal conditional distribution method for uniform sampling from n-spheres and n-balls, based on properties of a family of radially symmetric multivariate distributions. The method provides us with a unifying view on several known algorithms as well as enabling us to construct novel variants. We give a numerical comparison of the known and newly proposed algorithms for dimensions 5, 6 and 7.}
+      \field{issn}{0047-259X}
+      \field{journaltitle}{Journal of Multivariate Analysis}
+      \field{number}{10}
+      \field{title}{On decompositional algorithms for uniform sampling from n-spheres and n-balls}
+      \field{volume}{101}
+      \field{year}{2010}
+      \field{pages}{2297\bibrangedash 2304}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jmva.2010.06.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0047259X10001211
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0047259X10001211
+      \endverb
+      \keyw{-ball,-sphere,Uniform distribution,Beta distribution,Normal distribution,Monte Carlo,Simulation}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
