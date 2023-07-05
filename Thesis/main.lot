@@ -11,6 +11,8 @@
 \contentsline {table}{\numberline {3.5}{\ignorespaces Overview over the datasets used for the first comparison of the optimization algorithms. They are all available on OpenML \blx@tocontentsinit {0}\cite {OpenML2013}. \relax }}{42}{table.caption.54}%
 \contentsline {table}{\numberline {3.6}{\ignorespaces Hyperparameters with their type and interval for the nine dimensional space. The values for the Int-Interval are discretized with Python's \textit {int()} function. The learning rate is sampled logarithmic and the dropout probability can take continuous values between 0 and 1. \relax }}{48}{table.caption.59}%
 \contentsline {table}{\numberline {3.7}{\ignorespaces Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). \relax }}{50}{table.caption.61}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Architecture used in \blx@tocontentsinit {0}\cite {WU201926} for MNIST image classification. \relax }}{50}{table.caption.62}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. \relax }}{52}{table.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

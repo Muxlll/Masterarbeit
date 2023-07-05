@@ -33,7 +33,7 @@
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Comparison of grid search, random search, bayesian optimization and sparse grid search. The model optimized consists of two layers with 40 neurons each. The number of epochs, batch size, and learning rate are optimized. \relax }}{46}{figure.caption.57}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Comparison of grid search, random search, bayesian optimization and sparse grid search. The number of epochs, batch size, and learning rate are optimized as well as the number of layers and number of neurons per layer. \relax }}{47}{figure.caption.58}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Hyperparameter optimization of a convolutional neural network on the MNIST dataset with different algorithms. The hyperparameter intervals are presented in Table \ref {tab:hyperparameter_space_mnist}. \relax }}{49}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces \relax }}{51}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Resulting accuracy with increasing budget for the grid search, random search, bayesian optimization and sparse grid optimization. The MNIST dataset and a small convolutional neural network were used. \relax }}{51}{figure.caption.63}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

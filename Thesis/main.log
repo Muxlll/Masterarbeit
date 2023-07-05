@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 JUL 2023 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 JUL 2023 11:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2794,42 +2794,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
  []
 
 [49 <./main-figure20.pdf>]
-\openout4 = `main-figure21.md5'.
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
 
-\openout4 = `main.auxlock'.
+ []
 
+[50]
+===== Image 'main-figure21' is up-to-date. ======
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure21" "\def\tikzexternalrealj
-ob{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure21" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
 
-\openout4 = `main.auxlock'.
+ []
 
-[50]) (./chapters/05_conclusion_and_outlook.tex [51 <./main-figure21.pdf>]
+[51 <./main-figure21.pdf>] [52]) (./chapters/05_conclusion_and_outlook.tex
+[53]
 chapter 4.
-) [52
+) [54
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [53
+ (./main.lof [55
 
 
-] [54])
+] [56])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [55] [56]
+ [57] [58]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [57
+ [59
 
 
 ]
@@ -2853,12 +2852,12 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[58
+[60
 
 
-] [59] [60] [61]
+] [61] [62] [63]
 No complaints by nag.
-[62] (./main.aux)
+[64] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2866,11 +2865,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56062 strings out of 480121
- 1293374 string characters out of 5892160
- 2348521 words of memory out of 5000000
- 71925 multiletter control sequences out of 15000+600000
- 565157 words of font info for 594 fonts, out of 8000000 for 9000
+ 56080 strings out of 480121
+ 1293570 string characters out of 5892160
+ 2348958 words of memory out of 5000000
+ 71927 multiletter control sequences out of 15000+600000
+ 565757 words of font info for 603 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,15n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/maxi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
@@ -2886,10 +2885,10 @@ azo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (70 pages, 8881525 bytes).
+Output written on main.pdf (72 pages, 8885993 bytes).
 PDF statistics:
- 2263 PDF objects out of 2487 (max. 8388607)
- 1701 compressed objects within 18 object streams
- 288 named destinations out of 1000 (max. 500000)
+ 2290 PDF objects out of 2487 (max. 8388607)
+ 1725 compressed objects within 18 object streams
+ 292 named destinations out of 1000 (max. 500000)
  119063 words of extra memory for PDF output out of 128383 (max. 10000000)
 

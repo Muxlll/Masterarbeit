@@ -1172,7 +1172,29 @@ We can observe that the algorithms find different best configurations for the co
 
 \subsection{Comparison with Implementation of other Authors}
 
-The next experiment we want to evaluate is similar to the previous nine dimensional problem. This time, we only use 2 hyperparameters as the authors did in \cite{WU201926}. They optimized the batch size and the learning rate of the optimizer. The first one is an integer interval between 20 and 2000 and the learning rate is between 0 and 1. 
+A similar experiment with the same dataset is presented in \cite{WU201926}. The authors concentrate on bayesian optimization and optimize two hyperparameters. The first one is the batch size with an interval $ [20, 2000] $. The second one is the learning rate which can take values from $ [0,1] $. The network that is used for preicting the class of the images is a small convolutional neural network. The architecture can be seen in Table \ref{tab:architecture_MNIST_comp}.
+
+
+\begin{table}[htb!]
+	\caption{ Architecture used in \cite{WU201926} for MNIST image classification. }
+	\label{tab:architecture_MNIST_comp}
+	\centering
+	\begin{tabular}{| c c c c |} 
+		\hline
+		Type & Filters  & Kernel size & Activation function \\ 
+		\hline
+		Convolutional 2D & 32 & $ (5,5) $ & ReLU \\ 
+		Max Pooling 2D &  & $ (2,2) $ &  \\ 
+		Convolutional 2D & 32 & $ (5,5) $ & ReLU \\ 
+		Max Pooling 2D &  & $ (2,2) $ &  \\ 
+		Dense &  &  & Softmax \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+As optimizer, they used the gradient descent and the loss function is the categorical crossentropy. The metric to be optimized is the accuracy. \newline 
+
+In \cite{WU201926}, it is not described for how many epochs they train the neural network which makes it hard to directly compare the algorithms. Additionally, we set the interval of the batch size to $ [20, 1020] $ because of hardware limitations. The learning rate is in our case again a logarithmic hyperparameter with lower bound of $ 10^{-16} $ and an upper bound of $ 1 $. For the neural network evaluation, we train the model on the training set with a validation split of $ 10\% $. The resulting score is then defined as the accuracy of the predictions of the test set. The result of the experiment with our four different algorithms are presented in Figure \ref{fig:Comparison_MNIST}.
 
 
 \begin{figure}[htb!]
@@ -1202,9 +1224,29 @@ The next experiment we want to evaluate is similar to the previous nine dimensio
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{  }	
+	\caption{ Resulting accuracy with increasing budget for the grid search, random search, bayesian optimization and sparse grid optimization. The MNIST dataset and a small convolutional neural network were used. }	
 	\label{fig:Comparison_MNIST}
 \end{figure}
+
+Again, with increasing cost, the performance of the optimization techniques improve. The absolute highest accuracy is achieved by the bayesian optimization with $ 98.96\% $ followed by the sparse grid optimization with $ 98.83\% $, and random search with $ 98.52\% $. The lowest accuracy is achieved by grid search with a value of $ 97.64\% $. The authors of \cite{WU201926} reach an accuracy of $ 99.14\% $ with a budget of 50, however we do not know for how many epochs they trained the network. For the evaluation of our four algorithms, we always used exactly ten epochs. The best configurations found by the techniques are depicted in Table \ref{tab:configs_MNIST_comp}. \newline 
+
+\begin{table}[htb!]
+	\caption{ Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. }
+	\label{tab:configs_MNIST_comp}
+	\centering
+	\begin{tabular}{| c c c c |} 
+		\hline
+		Algorithm & Batch size & Learning rate & Accuracy \\ 
+		\hline
+		Grid search & 91 & 0.01000 & 0.9764 \\ 
+		Random search & 42 & 0.03448 & 0.9852 \\ 
+		Bayesian optimization & 57 & 0.1979 & 0.9896 \\ 
+		Sparse grid optimization & 270 & 0.3162 & 0.9883 \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+The results shown in Table \ref{tab:configs_MNIST_comp} indicate that in this case, a rather small batch size leads to better testing results. This shows that the reduced interval is not restricting the performance of our algorithms. For this experiment, the authors in \cite{WU201926} do not provide the configuration found by their algorithm which makes it hard to compare the performances. 
 
 
 \section{Iterative Adaptive Random Search}
