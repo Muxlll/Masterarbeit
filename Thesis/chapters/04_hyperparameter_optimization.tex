@@ -1084,30 +1084,32 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 
 \subsection{Nine-dimensional Experiment with MNIST Dataset}
 
-
+To also compare the different approaches with a convolutional neural network for object detection, we use a small model with the MNIST dataset. Nine different hyperparameters are optimized. An overview over the type and the ranges can be seen in Table \ref{tab:hyperparameter_space_mnist}.
 
 \begin{table}[htb!]
-	\caption{  }
+	\caption{ Hyperparameters with their type and interval for the nine dimensional space. The values for the Int-Interval are discretized with Python's \textit{int()} function. The learning rate is sampled logarithmic and the dropout probability can take continuous values between 0 and 1. }
 	\label{tab:hyperparameter_space_mnist}
 	\centering
 	\begin{tabular}{| c c c |} 
 		\hline
-		Hyperparameter & type & Interval \\ 
+		Hyperparameter & Type & Interval \\ 
 		\hline
 	 	Epochs & Int-Interval & $ [1,10] $ \\ 
-	 	Batch size & Int-Interval & $ [50,2050] $ \\ 
+	 	Batch size & Int-Interval & $ [200,1000] $ \\ 
 	 	Learning rate & Log-Interval & $ [10^{-10},10^{-1}] $ \\ 
-	 	Number conv layers & Int-Interval & $ [1,4] $ \\ 
-	 	Number fully connected layers & Int-Interval & $ [1,4] $ \\ 
-	 	Kernel size & Int-Interval & $ [3,4] $ \\ 
-	 	Pool size & Int-Interval & $ [2,3] $ \\ 
-	 	Neurons in fully connected & Int-Interval & $ [1,10] $ \\ 
+	 	Number conv layers & Int-Interval & $ [1,3] $ \\ 
+	 	Number fully connected layers & Int-Interval & $ [1,3] $ \\ 
+	 	Kernel size & Int-Interval & $ [1,4] $ \\ 
+	 	Pool size & Int-Interval & $ [1,3] $ \\ 
+	 	Neurons in fully connected & Int-Interval & $ [1,7] $ \\ 
 	 	Dropout probability & Interval & $ [0,1] $ \\ 
 		\hline
 	\end{tabular}
 \end{table}
 
+The input shape is always $ (28, 28, 1) $ which defines the first layer of the network. After that, blocks consisting of convolutional and pooling layers are added. The number of blocks are defined by the hyperparameter number of convolutional layers. The kernel and pool size of the 2D convolution and the following pooling layer is defined by the kernel size and pool size and they are optimized. After that, fully connected layers are added. The number of layers as well as the number of neurons per layer are optimized with the two hyperparameters. Between the convolutional part and the fully connected layers, a dropout layer is added. The probability is optimized as well. The other hyperparameters like epochs, batch size, and learning rate are optimized like in the previous experiments. As optimizer, we used the Adam optimizer and the loss function is the categorical crossentropy. \newline 
 
+The evaluation of the network is done as follows. The dataset is fetched with the predefined training and test set from keras. The model is fit on the training set with validation split of $ 10\% $. It is not shuffled as we want to have reproducability because the same hyperparameter configuration should produce the same result. This is also the reason why we reset the seeds of Python's random functions to always have the same weight initialization of the network. After the training step, we evaluate the model using the test set. As optimization metric we use the negative accuracy of the prediction as we still minimize. The resulting accuracy depending on the increasing cost is depicted in Figure \ref{fig:MNIST_results}.
 
 
 
@@ -1138,14 +1140,39 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ MNIST dataset, Convolutional neural network, 9 hyperparameter: Epochs, batch size, learning rate, number convolutional layers, number fully connected layers, kernel size, pool size, neurons per fully connected layer, dropout probability. }	
+	\caption{ Hyperparameter optimization of a convolutional neural network on the MNIST dataset with different algorithms. The hyperparameter intervals are presented in Table \ref{tab:hyperparameter_space_mnist}. }	
 	\label{fig:MNIST_results}
 \end{figure}
 
+Again, with increasing cost, the algorithms find better configurations leading to a higher accuracy. In this example, the grid search can only evaluate the model with one single configuration. This is due to the reason that the next step would be $ 2^9 = 512 $ different configurations where it would try out 2 different values for each hyperparameter. \newline 
+
+The first points for sparse grid optimization and bayesian search are also very low, but with a bit higher cost, the performance increases very much. For the random search, even the first point with a budget of 5, the best accuracy is already at about $ 79\% $. \newline 
+
+For the sparse grid search, the advantage compared to the normal grid search is that there is no \textit{curse of the dimensionality}. The performance is comparable with the other two algorithms, random search and bayesian optimization. \newline 
+
+The best configurations found by each algorithm for the problem are depicted in Table \ref{tab:best_configurations_MNIST}.
+
+\begin{table}[htb!]
+	\caption{ Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). }
+	\label{tab:best_configurations_MNIST}
+	\centering
+	\begin{tabular}{| c c c c |} 
+		\hline
+		Algorithm & Configuration & Accuracy & Cost \\ 
+		\hline
+		GS & $ (5, 600, 10^{-6}, 2, 2, 2, 2, 4, 0.5) $ & $ 10.1\% $ & 1 \\ 
+		RS & $ (9, 975, 0.0173, 2, 1, 3, 1, 6, 0.619) $ & $ 97.4\% $ & 80 \\ 
+		BO & $ (6, 584, 10^{-2.17}, 2, 1, 3, 1, 5, 0.281) $ & $ 97.5\% $ & 80 \\ 
+		SG & $ (7, 400, 10^{-2}, 2, 2, 2, 2, 5, 0.5) $ & $ 97.5\% $ & 93 \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+We can observe that the algorithms find different best configurations for the convolutional model. However, the resulting best accuracy is very similar. This is normal for many machine learning problems. There are many different possibilities for very good model performances. In this case, we already achieve a high accuracy of about $ 97\% $. However, it is still possible to further increase this performance by e.g. increasing the number of epochs or using a more complex neural network. But this is not what we want to analyze in this thesis. 
 
 \subsection{Comparison with Implementation of other Authors}
 
-Paper for comparison: \cite{WU201926}.
+The next experiment we want to evaluate is similar to the previous nine dimensional problem. This time, we only use 2 hyperparameters as the authors did in \cite{WU201926}. They optimized the batch size and the learning rate of the optimizer. The first one is an integer interval between 20 and 2000 and the learning rate is between 0 and 1. 
 
 
 \begin{figure}[htb!]
@@ -1160,16 +1187,16 @@ Paper for comparison: \cite{WU201926}.
 			]
 			
 			\addplot coordinates
-			{(1,0.0860000029206276)(4,0.0892999991774559)(9,0.23899999260902405)(16,0.848800003528595)};
+			{(1,0.0860000029206276)(4,0.0892999991774559)(9,0.22550000250339508)(16,0.8327000141143799)(25,0.9394999742507935)(36,0.9652000069618225)(49,0.9764000177383423)};
 			
 			\addplot coordinates 
-			{(3,0.15240000188350677)(7,0.9771999716758728)(10,0.9771999716758728)(16,0.9771999716758728)};
+			{(3,0.15240000188350677)(7,0.9340000152587891)(11,0.9715999960899353)(17,0.9789999723434448)(25,0.9789999723434448)(40,0.9851999878883362)(55,0.9851999878883362)};
 			
 			\addplot coordinates
-			{(3,0.14219999313354492)(7,0.6265000104904175)(10,0.9740999937057495)(16,0.9837999939918518)};
+			{(3,0.9896000027656555)(7,0.9896000027656555)(11,0.9896000027656555)(17,0.9896000027656555)(25,0.9896000027656555)(40,0.9896000027656555)(55,0.9896000027656555)};
 			
 			\addplot coordinates 
-			{(3,0.0860000029206276)(7,0.12460000067949295)(7,0.12460000067949295)(15,0.9819999933242798)};
+			{(3,0.0860000029206276)(7,0.12290000170469284)(11,0.9416999816894531)(15,0.9824000000953674)(23,0.9861000180244446)(39,0.9883000254631042)(55,0.9883000254631042)};
 			
 			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
 			
@@ -1202,13 +1229,13 @@ Paper for comparison: \cite{WU201926}.
 	\item initial points
 	\item number of refinements per iteration
 	\item refinement criteria
-	\item Budget
+	\item budget
 \end{itemize}
 
 \subsection{Hyperparameter Optimization}
 
 \begin{itemize}
-	\item small first experiments
+	\item small first experiments (2d with visualizations)
 \end{itemize}
 
 \subsection{Comparison with other Techniques}

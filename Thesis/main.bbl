@@ -1828,6 +1828,241 @@
       \field{pages}{382\bibrangedash 396}
       \range{pages}{15}
     \endentry
+    \entry{hamzaccebi2006heuristic}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b29b7b5fd9dfc30338f3c06780f53d83}{%
+           family={Hamzaçebi},
+           familyi={H\bibinitperiod},
+           given={Coşkun},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9008a65efd2915eec63ded9199f0073}{%
+           family={Kutay},
+           familyi={K\bibinitperiod},
+           given={Fevzi},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{48a5f942d64dc070aa558e76852ab431}
+      \strng{fullhash}{48a5f942d64dc070aa558e76852ab431}
+      \strng{bibnamehash}{48a5f942d64dc070aa558e76852ab431}
+      \strng{authorbibnamehash}{48a5f942d64dc070aa558e76852ab431}
+      \strng{authornamehash}{48a5f942d64dc070aa558e76852ab431}
+      \strng{authorfullhash}{48a5f942d64dc070aa558e76852ab431}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Mathematics and Computation}
+      \field{number}{2}
+      \field{title}{A heuristic approach for finding the global minimum: Adaptive random search technique}
+      \field{volume}{173}
+      \field{year}{2006}
+      \field{pages}{1323\bibrangedash 1333}
+      \range{pages}{11}
+    \endentry
+    \entry{MASRI1980353}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=637e7bd39e124d112b084168077b28ed}{%
+           family={Masri},
+           familyi={M\bibinitperiod},
+           given={S.F.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f740e5ff4860b184ab1cb69a64dc815b}{%
+           family={Bekey},
+           familyi={B\bibinitperiod},
+           given={G.A.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8238316fc88bd3487993982f8ba06f5}{%
+           family={Safford},
+           familyi={S\bibinitperiod},
+           given={F.B.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1c4a5ec62318afabb2069d9d88846d10}
+      \strng{fullhash}{1c4a5ec62318afabb2069d9d88846d10}
+      \strng{bibnamehash}{1c4a5ec62318afabb2069d9d88846d10}
+      \strng{authorbibnamehash}{1c4a5ec62318afabb2069d9d88846d10}
+      \strng{authornamehash}{1c4a5ec62318afabb2069d9d88846d10}
+      \strng{authorfullhash}{1c4a5ec62318afabb2069d9d88846d10}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new random-search global optimization is described in which the variance of the step-size distribution is periodically optimized. By searching over a variance range of 8 to 10 decades, the algorithm finds the step-size distribution that yields the best local improvement in the criterion function. The variance search is then followed by a specified number of iterations of local random search where the step-size variance remains fixed. Periodic wide-range searches are introduced to ensure that the process does not stop at a local minimum. The sensitivity of the complete algorithm to various search parameters is investigated experimentally for a specific test problem. The ability of the method to locate global minima is illustrated by an example. The method also displays considerable problem independence, as demonstrated by two large and realistic example problems: (1) the identification of 25 parameters in a nonlinear model of a five-degrees-of-freedom mechanical dynamic system and (2) solution of a 24-parameter inverse problem required to identify a pulse train whose frequency spectrum matched a desired reference spectrum.}
+      \field{issn}{0096-3003}
+      \field{journaltitle}{Applied Mathematics and Computation}
+      \field{number}{4}
+      \field{title}{A global optimization algorithm using adaptive random search}
+      \field{volume}{7}
+      \field{year}{1980}
+      \field{pages}{353\bibrangedash 375}
+      \range{pages}{23}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0096-3003(80)90027-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0096300380900272
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0096300380900272
+      \endverb
+    \endentry
+    \entry{random_search_2}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=88a8d20aaa5d00a2d25ea5548846e92f}{%
+           family={Andradóttir},
+           familyi={A\bibinitperiod},
+           given={Sigrún},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0013da65494fa5bb3d2817b36b5b2974}{%
+           family={Prudius},
+           familyi={P\bibinitperiod},
+           given={Andrei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b11eb0fd45477bf8de3668ab825137f0}
+      \strng{fullhash}{b11eb0fd45477bf8de3668ab825137f0}
+      \strng{bibnamehash}{b11eb0fd45477bf8de3668ab825137f0}
+      \strng{authorbibnamehash}{b11eb0fd45477bf8de3668ab825137f0}
+      \strng{authornamehash}{b11eb0fd45477bf8de3668ab825137f0}
+      \strng{authorfullhash}{b11eb0fd45477bf8de3668ab825137f0}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract We present, analyze, and compare three random search methods for solving stochastic optimization problems with uncountable feasible regions. Our adaptive search with resampling (ASR) approach is a framework for designing provably convergent algorithms that are adaptive and may consequently involve local search. The deterministic and stochastic shrinking ball (DSB and SSB) approaches are also convergent, but they are based on pure random search with the only difference being the estimator of the optimal solution [the DSB method was originally proposed and analyzed by Baumert and Smith]. The three methods use different techniques to reduce the effects of noise in the estimated objective function values. Our ASR method achieves this goal through resampling of already sampled points, whereas the DSB and SSB approaches address it by averaging observations in balls that shrink with time. We present conditions under which the three methods are convergent, both in probability and almost surely, and provide a limited computational study aimed at comparing the methods. Although further investigation is needed, our numerical results suggest that the ASR approach is promising, especially for difficult problems where the probability of identifying good solutions using pure random search is small. © 2010 Wiley Periodicals, Inc. Naval Research Logistics, 2010}
+      \field{journaltitle}{Naval Research Logistics (NRL)}
+      \field{number}{6}
+      \field{title}{Adaptive random search for continuous simulation optimization}
+      \field{volume}{57}
+      \field{year}{2010}
+      \field{pages}{583\bibrangedash 604}
+      \range{pages}{22}
+      \verb{doi}
+      \verb https://doi.org/10.1002/nav.20422
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.20422
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.20422
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.20422
+      \endverb
+      \keyw{continuous stochastic optimization,local search,pure random search,global convergence in probability and almost surely,adaptive search with resampling,deterministic and stochastic shrinking ball methods}
+    \endentry
+    \entry{schumer1968adaptive}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3830bdbb96af57dbb1d0d8623aa99fea}{%
+           family={Schumer},
+           familyi={S\bibinitperiod},
+           given={MA},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0765a14719f507efefc8ebafc8974335}{%
+           family={Steiglitz},
+           familyi={S\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \strng{fullhash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \strng{bibnamehash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \strng{authorbibnamehash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \strng{authornamehash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \strng{authorfullhash}{e7407b9d9ebc78c5b8a116c2473bc810}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{3}
+      \field{title}{Adaptive step size random search}
+      \field{volume}{13}
+      \field{year}{1968}
+      \field{pages}{270\bibrangedash 276}
+      \range{pages}{7}
+    \endentry
+    \entry{kelahan1978application}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f70c022bf5942c90b896229914bdd7f0}{%
+           family={Kelahan},
+           familyi={K\bibinitperiod},
+           given={RC},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4197c05dca2610d64e764bd57e2f4f2}{%
+           family={Gaddy},
+           familyi={G\bibinitperiod},
+           given={JL},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \strng{fullhash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \strng{bibnamehash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \strng{authorbibnamehash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \strng{authornamehash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \strng{authorfullhash}{becb3359a6cff2c8c5eae4ac748888a1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal for Numerical Methods in Engineering}
+      \field{number}{2}
+      \field{title}{Application of the adaptive random search to discrete and mixed integer optimization}
+      \field{volume}{12}
+      \field{year}{1978}
+      \field{pages}{289\bibrangedash 298}
+      \range{pages}{10}
+    \endentry
+    \entry{tang1994adaptive}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad846f58de8cbf45a8825c2ae1259494}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Z\bibnamedelima Bo},
+           giveni={Z\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{fullhash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{bibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authorbibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authornamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authorfullhash}{ad846f58de8cbf45a8825c2ae1259494}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{11}
+      \field{title}{Adaptive partitioned random search to global optimization}
+      \field{volume}{39}
+      \field{year}{1994}
+      \field{pages}{2235\bibrangedash 2244}
+      \range{pages}{10}
+    \endentry
     \entry{feurer-arxiv19a}{article}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=2661e0a744cd67c731851c7f1c80d2e2}{%
@@ -2002,8 +2237,8 @@
       \strng{authorbibnamehash}{8b9a8afb4153d569a17f211b83af9fac}
       \strng{authornamehash}{8b9a8afb4153d569a17f211b83af9fac}
       \strng{authorfullhash}{8b9a8afb4153d569a17f211b83af9fac}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Engineering optimization: an introduction with metaheuristic applications}
@@ -2051,8 +2286,8 @@
       \strng{authorbibnamehash}{db4436ad6be0fa006763d94d3cdf16dc}
       \strng{authornamehash}{db4436ad6be0fa006763d94d3cdf16dc}
       \strng{authorfullhash}{db4436ad6be0fa006763d94d3cdf16dc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIGKDD Explorations}

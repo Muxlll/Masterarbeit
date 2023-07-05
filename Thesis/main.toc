@@ -24,6 +24,7 @@
 \contentsline {subparagraph}{\nonumberline Newton}{19}{subparagraph*.31}%
 \contentsline {subparagraph}{\nonumberline BFGS}{19}{subparagraph*.33}%
 \contentsline {subparagraph}{\nonumberline Rprop}{19}{subparagraph*.35}%
+\contentsline {subsection}{\numberline {2.3.5}Adaptive Random Search}{21}{subsection.2.3.5}%
 \contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{22}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Methodology}{22}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{22}{subsection.3.1.1}%
@@ -38,14 +39,14 @@
 \contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{42}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{43}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Experiment with MNIST Dataset}{48}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{48}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{49}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{49}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{49}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{49}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{50}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{51}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{52}{chapter*.62}%
-\contentsline {chapter}{\nonumberline List of Tables}{56}{chapter*.63}%
-\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.64}%
+\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{50}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{50}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{50}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{51}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{51}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{51}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{52}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{53}{chapter*.63}%
+\contentsline {chapter}{\nonumberline List of Tables}{57}{chapter*.64}%
+\contentsline {chapter}{\nonumberline Bibliography}{58}{chapter*.65}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
