@@ -35,6 +35,8 @@
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Hyperparameter optimization of a convolutional neural network on the MNIST dataset with different algorithms. The hyperparameter intervals are presented in Table \ref {tab:hyperparameter_space_mnist}. \relax }}{51}{figure.caption.60}%
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Resulting accuracy with increasing budget for the grid search, random search, bayesian optimization and sparse grid optimization. The MNIST dataset and a small convolutional neural network were used. \relax }}{53}{figure.caption.63}%
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Example for the interval based refinement strategy. The point being refined is indicated with the blue cross and the lines show the upper and lower boundary in each direction. The sampling is done uniformly in the blue area. \relax }}{56}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Example for the uniform d-ball sampling strategy. The point being refined is indicated with the blue cross and the circle is the area where the uniform sampling is done. \relax }}{57}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces \relax }}{58}{figure.caption.73}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

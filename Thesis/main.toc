@@ -43,13 +43,13 @@
 \contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{54}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{54}{subsection.3.5.1}%
 \contentsline {subsubsection}{\nonumberline Interval Based Strategy}{56}{subsubsection*.66}%
-\contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{56}{subsubsection*.69}%
-\contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{57}{subsubsection*.71}%
-\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{57}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{57}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{57}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{58}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{59}{chapter*.72}%
-\contentsline {chapter}{\nonumberline List of Tables}{63}{chapter*.73}%
-\contentsline {chapter}{\nonumberline Bibliography}{64}{chapter*.74}%
+\contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{57}{subsubsection*.69}%
+\contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{58}{subsubsection*.72}%
+\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{58}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{59}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{59}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{60}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{61}{chapter*.74}%
+\contentsline {chapter}{\nonumberline List of Tables}{65}{chapter*.75}%
+\contentsline {chapter}{\nonumberline Bibliography}{66}{chapter*.76}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

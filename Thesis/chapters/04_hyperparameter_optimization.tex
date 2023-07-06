@@ -1306,9 +1306,31 @@ In the example in Figure \ref{fig:alternative_1}, the number of initial points i
 
 \subsubsection{Uniform D-Ball Sampling Strategy}
 
-Uniform d-ball sampling: \cite{HARMAN20102297}.
+This strategy is based on the uniform sampling inside a multi dimensional ball. The point that is refined is the center of this ball and we define a certain radius of the ball. For the uniform sampling, multiple possible algorithms exist \cite{HARMAN20102297}. Some of them suffer from the curse of the dimensionality. One example is the rejection method where a value from $ [0,1]^d $ is sampled and rejected if it is not inside the ball. The probability for a sample being rejected increases with higher dimensionality. Another method is using the normal distribution. For a random variable $ Y \sim N_d(0_d, 1_d) $, $ S_n = \frac{Y}{|| Y ||} $ is uniform distributed on the d-sphere which is the surface of the ball. The last step is to multiply $ S_n $ by $ U^{\frac{1}{d}} $ where $ U $ has the uniform distribution on the interval between 0 and 1. Now the sampling is done inside the standard d-ball with radius 1. The final value just has to be multiplied by the radius to change the sampling to a d-ball with arbitrary size. One two-dimensional example can is presented in Figure \ref{fig:alternative_2}.
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_2}
+	\caption{ Example for the uniform d-ball sampling strategy. The point being refined is indicated with the blue cross and the circle is the area where the uniform sampling is done. }
+	\label{fig:alternative_2}
+\end{figure}
+
+In the example depicted in Figure \ref{fig:alternative_2}, five initial points (colored in red) are sampled. The one marked with the blue cross is chosen to be refined in this iteration. The radius is depending on the level of the point and the smallest and maximum distance to other points. It is computed with
+\begin{equation}
+	r = \frac{dist_{max} + dist_{min}}{(level+2)\cdot 2}
+\end{equation}
+
+where $ dist_{max} $ and $ dist_{min} $ are the highest and lowest distance to other points, respectively. The $ level $ is the level of the current point that is refined. With this, the radius of the ball at points with higher levels is smaller leading to samples near to the point being refined.
 
 \subsubsection{Normal Distribution Sampling Strategy}
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_3}
+	\caption{  }
+	\label{fig:alternative_3}
+\end{figure}
+
 
 \subsection{Analysis of Parameters with Functions}
 

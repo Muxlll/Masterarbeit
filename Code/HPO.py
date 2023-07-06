@@ -1205,7 +1205,7 @@ class IterativeRandomOptimization(Optimization):
                     if i != index_refine and distances[i] < smallest_dist and points[i].get_level() <= points[index_refine].get_level():
                         smallest_dist = distances[i]
 
-                smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+1)*2)
+                smallest_dist = (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*2)
                 #smallest_dist = 1# (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*4)
                 # smallest_dist = (highest_distance + smallest_dist) / 2
 
