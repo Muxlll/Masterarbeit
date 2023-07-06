@@ -1710,12 +1710,12 @@
            given={M},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=9357ac779f048b3512ec95aad9a80930}{%
+        {{un=1,uniquepart=given,hash=9357ac779f048b3512ec95aad9a80930}{%
            family={Schilling},
            familyi={S\bibinitperiod},
            given={K},
            giveni={K\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{494cae74b7990cd042e76f4c74e0b6f2}
       \strng{fullhash}{494cae74b7990cd042e76f4c74e0b6f2}
@@ -1863,6 +1863,37 @@
       \field{year}{2006}
       \field{pages}{1323\bibrangedash 1333}
       \range{pages}{11}
+    \endentry
+    \entry{schilling1999applied}{book}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=b79f007077faa0fcbe1ca59fe22bfb38}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={Harris\bibnamedelima A},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=f9c8411fcea61e1143a7fa3b475cdad6}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Sandra\bibnamedelima L},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Brooks/Cole Publishing Co.}%
+      }
+      \strng{namehash}{c541f066242a065975d1a8371339c221}
+      \strng{fullhash}{c541f066242a065975d1a8371339c221}
+      \strng{bibnamehash}{c541f066242a065975d1a8371339c221}
+      \strng{authorbibnamehash}{c541f066242a065975d1a8371339c221}
+      \strng{authornamehash}{c541f066242a065975d1a8371339c221}
+      \strng{authorfullhash}{c541f066242a065975d1a8371339c221}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Applied numerical methods for engineers using MATLAB}
+      \field{year}{1999}
     \endentry
     \entry{MASRI1980353}{article}{}
       \name{author}{3}{}{%
@@ -2207,8 +2238,8 @@
       \strng{authorbibnamehash}{c15ce7b35c44f2acc752606c21b08f93}
       \strng{authornamehash}{c15ce7b35c44f2acc752606c21b08f93}
       \strng{authorfullhash}{c15ce7b35c44f2acc752606c21b08f93}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Artificial intelligence}

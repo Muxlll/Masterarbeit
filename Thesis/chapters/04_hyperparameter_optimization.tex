@@ -1324,15 +1324,31 @@ where $ dist_{max} $ and $ dist_{min} $ are the highest and lowest distance to o
 
 \subsubsection{Normal Distribution Sampling Strategy}
 
+The last alternative is not sampling uniformly but based on the normal distribution. The idea behind this strategy is that we might be interested in sampling new points near the one that has to be refined in this iteration. This might lead to better results because the point that is refined might already be very promising. Therefor, in each dimension, the coordinate is sampled. A two-dimensional example is presented in Figure \ref{fig:alternative_3}.
+
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_3}
-	\caption{  }
+	\caption{ Example for the normal distribution sampling strategy. The point being refined is indicated with the blue cross and contour represents the likelihood of samples. }
 	\label{fig:alternative_3}
 \end{figure}
 
+The example in Figure \ref{fig:alternative_3} shows five initial points in red. The point marked with the blue cross is refined in this iteration step. The contour plot in the background indicates the probability distribution for new points. In each dimension, a normal distribution is constructed with mean and standard deviation with 
+\begin{equation}
+	\begin{split}
+		dist =& \frac{dist_{max} + dist_{min}}{(level+2)\cdot 2} \\
+		lower =& \text{ min}(\text{ max}(coord - dist, bound_{lower}), bound_{upper}) \\
+		upper =& \text{ max}(\text{ min}(coord + dist, bound_{upper}), bound_{lower}).
+	\end{split}
+\end{equation}
+
+Here, $ coord $ is the coordinate of the point refined in the corresponding dimension, $ bound_{lower} $ and $ bound_{upper} $ represent the bounds of the interval of the hyperparameter in this dimension and the distance $ dist $ is calculated the same way as the radius of the second refinement strategy. \newline 
+
+For the implementation, we added a new subclass inheriting \texttt{Optimization}. It has ad additional parameter for the choice of refinement strategy. 
 
 \subsection{Analysis of Parameters with Functions}
+
+
 
 \begin{itemize}
 	\item initial points

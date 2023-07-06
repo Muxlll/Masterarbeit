@@ -92,7 +92,7 @@ One advantage of this method is that it is easy to implement and very simple. Al
 On the other hand, the curse of the dimensionality makes it very slow if the function evaluations are very expensive which is the case for most machine learning algorithms. Another drawback is that each hyperparameter only takes $ n $ different values. The comparison to random search can be seen in Figure \ref{fig:comparison_searches}.
 
 
-\subsection{Random Search}
+\subsection{Random Search} \label{Random_search}
 The next technique \cite{random_search} is similar to the grid search because the idea is also to evaluate different hyperparameter configurations. In contrast to the previous one, random search generates for each run and for each parameter exactly one random value from an interval which has to be specified. For this approach, a budget $ b $ has to be given. This parameter determines the number of different combinations that are evaluated. A direct comparison of grid search and random search can be seen in figure \ref{fig:comparison_searches}.
 
 \begin{figure}[hbtp!]
@@ -439,14 +439,15 @@ Similar to this method, the authors of \cite{chen2013derivative} also present a 
 
 Also the authors of \cite{sankaran2009stochastic} present an optimization algorithm with the help of sparse grids. They use the collocation scheme and it can be used in a wide range of applications. Examples that are presented include stochastic inverse heat conduction problems and contamination source identification problems.
 
-\subsection{Adaptive Random Search}\label{Adaptive_random_search}
+\section{Adaptive Random Search}\label{Adaptive_random_search}
 
+As well as the previous described sparse grid optimization, an adapted random search can also be used for finding the minimum of arbitrary functions. The so-called adaptive random search was also already used in different settings in multiple variations. \newline 
 
-\cite{hamzaccebi2006heuristic}: ARSET (adaptive random search) \newline 
+One example is presented in \cite{hamzaccebi2006heuristic}. The authors introduce Adaptive Random Search Technique (ARSET) and compare its performance with other optimization techniques. The algorithm dynamically adapts the search space depending on the current and new function value, as well as the one two epochs before. The authors describe that with their algorithm, not only local optima but also the global optimum can be found. Benchmark tests are presented that show that other techniques like David–Fletcher Method \cite{schilling1999applied} are outperformed. Note that the authors used up to 50000 epochs to find the best solution. This number is way too high for hyperparameter optimization because of the long model training and evaluation. \newline 
 
-\cite{MASRI1980353}: adaptive step size search, local optimization with additional wide range search -> also global optimum \newline 
+The authors of \cite{MASRI1980353} also introduce an alternative approach of making the random search adaptive. The search space in each iteration is adapted by changing the standard deviation. For the exact algorithm, refer to \cite{MASRI1980353}. The authors present tests that illustrate that the adaptive approach accelerates the convergence compared to the standard random search optimization. \newline 
 
-\cite{random_search_2}: 3 different approaches, but with high number of function evaluations needed \newline 
+In the context of hyperparameter optimization where neural networks are initialized with random weights, the evaluation with the same configuration might lead to stochastic results. This can be prevented by e.g. setting the seeds of random functions. However, the authors of \cite{random_search_2} present three different adaptive random search approaches for such stochastic optimization problems. The first one is adaptive search with resampling (ASR) and it reduces the noise of the objective function through resampling of already evaluated points. The other two methods, deterministic and stochastic shrinking ball (DSB, SSB), reduce this noise by averaging the function values inside the ball. The authors show that ASR is a very promising algorithm for situations where normal random search has problems identifying good solutions. \newline
 
 \cite{schumer1968adaptive}: adaptive step size random search \newline 
 
