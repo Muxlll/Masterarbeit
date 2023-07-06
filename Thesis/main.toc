@@ -46,10 +46,12 @@
 \contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{58}{subsubsection*.69}%
 \contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{59}{subsubsection*.72}%
 \contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{60}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{60}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{60}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{61}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{62}{chapter*.74}%
-\contentsline {chapter}{\nonumberline List of Tables}{66}{chapter*.75}%
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.76}%
+\contentsline {subsubsection}{\nonumberline Adaptivity Parameter}{60}{subsubsection*.75}%
+\contentsline {subsubsection}{\nonumberline Number of initial points}{62}{subsubsection*.79}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{62}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{63}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{64}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{65}{chapter*.81}%
+\contentsline {chapter}{\nonumberline List of Tables}{69}{chapter*.82}%
+\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.83}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -13,6 +13,7 @@
 \contentsline {table}{\numberline {3.7}{\ignorespaces Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). \relax }}{53}{table.caption.61}%
 \contentsline {table}{\numberline {3.8}{\ignorespaces Architecture used in \blx@tocontentsinit {0}\cite {WU201926} for MNIST image classification. \relax }}{54}{table.caption.62}%
 \contentsline {table}{\numberline {3.9}{\ignorespaces Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. \relax }}{55}{table.caption.64}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces \relax }}{62}{table.caption.77}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
