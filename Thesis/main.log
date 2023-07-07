@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  6 JUL 2023 15:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUL 2023 11:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2862,8 +2862,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1345--1346
 
  []
 
+[60]
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf, id=1
-876, 369.8337pt x 300.99751pt>
+886, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf 
 Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf>
@@ -2871,7 +2872,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_1.0.pdf  used on input line 1371.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf, id=
-1877, 369.8337pt x 300.99751pt>
+1887, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf>
@@ -2880,7 +2881,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_0.75.pdf  used on input line 1372.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf, id=1
-878, 369.8337pt x 300.99751pt>
+888, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf 
 Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf>
@@ -2888,7 +2889,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_0.0.pdf  used on input line 1373.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.pdf, i
-d=1879, 369.8337pt x 300.99751pt>
+d=1889, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.pd
@@ -2897,7 +2898,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_1.0_1_.pdf  used on input line 1379.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf, id=
-1880, 369.8337pt x 300.99751pt>
+1890, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf>
@@ -2906,7 +2907,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_0.75.pdf  used on input line 1380.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.pdf, i
-d=1881, 369.8337pt x 300.99751pt>
+d=1891, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.pd
@@ -2915,7 +2916,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_0.0_1_.pdf  used on input line 1381.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pdf, i
-d=1882, 344.73894pt x 308.07997pt>
+d=1892, 344.73894pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pd
@@ -2924,7 +2925,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_1.0_2_.pdf  used on input line 1387.
 (pdftex.def)             Requested size: 129.65819pt x 115.86816pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf, id=
-1883, 357.56487pt x 308.07997pt>
+1893, 357.56487pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf>
@@ -2933,7 +2934,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_0.75.pdf  used on input line 1388.
 (pdftex.def)             Requested size: 129.65819pt x 111.71255pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pdf, i
-d=1884, 352.54712pt x 308.07997pt>
+d=1894, 352.54712pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pd
@@ -2941,7 +2942,17 @@ f>
 Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_0.0_2_.pdf  used on input line 1389.
 (pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
-[60] [61 <./figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1439
+
+ []
+
+[61] [62 <./figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.
 0.pdf> <./figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75
 .pdf
 
@@ -2989,32 +3000,35 @@ rameter/Alternative_2_adapt_0.0_2_.pdf): PDF inclusion: multiple pdfs with page
  group included in a single page
 >]
 ===== Image 'main-figure22' is up-to-date. ======
-[62 <./main-figure22.pdf>]) (./chapters/05_conclusion_and_outlook.tex [63]
+===== Image 'main-figure23' is up-to-date. ======
+[63 <./main-figure22.pdf> <./main-figure23.pdf>]
+===== Image 'main-figure24' is up-to-date. ======
+) (./chapters/05_conclusion_and_outlook.tex [64 <./main-figure24.pdf>]
 chapter 4.
-) [64
+) [65
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [65
+ (./main.lof [66
 
 
-] [66] [67])
+] [67] [68])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [68]
+ [69]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [69
+ [70
 
 
-] [70]
+] [71]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
@@ -3026,12 +3040,12 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[71
+[72
 
 
-] [72] [73] [74] [75]
+] [73] [74] [75] [76]
 No complaints by nag.
-[76] (./main.aux)
+[77] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -3039,11 +3053,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56324 strings out of 480121
- 1304032 string characters out of 5892160
- 2350206 words of memory out of 5000000
- 72090 multiletter control sequences out of 15000+600000
- 571464 words of font info for 624 fonts, out of 8000000 for 9000
+ 56371 strings out of 480121
+ 1304493 string characters out of 5892160
+ 2351951 words of memory out of 5000000
+ 72093 multiletter control sequences out of 15000+600000
+ 575275 words of font info for 653 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/maxi/.texl
@@ -3061,10 +3075,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (84 pages, 9338044 bytes).
+Output written on main.pdf (85 pages, 9359794 bytes).
 PDF statistics:
- 2595 PDF objects out of 2984 (max. 8388607)
- 1944 compressed objects within 20 object streams
- 326 named destinations out of 1000 (max. 500000)
- 125272 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 2660 PDF objects out of 2984 (max. 8388607)
+ 1997 compressed objects within 20 object streams
+ 328 named destinations out of 1000 (max. 500000)
+ 131426 words of extra memory for PDF output out of 154059 (max. 10000000)
 

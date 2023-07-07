@@ -42,16 +42,16 @@
 \contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{53}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{55}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Presentation and Implementation details}{55}{subsection.3.5.1}%
-\contentsline {subsubsection}{\nonumberline Interval Based Strategy}{57}{subsubsection*.66}%
+\contentsline {subsubsection}{\nonumberline Interval Based Refinement Strategy}{57}{subsubsection*.66}%
 \contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{58}{subsubsection*.69}%
 \contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{59}{subsubsection*.72}%
 \contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{60}{subsection.3.5.2}%
 \contentsline {subsubsection}{\nonumberline Adaptivity Parameter}{60}{subsubsection*.75}%
-\contentsline {subsubsection}{\nonumberline Number of initial points}{62}{subsubsection*.79}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{62}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{63}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{64}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{65}{chapter*.81}%
-\contentsline {chapter}{\nonumberline List of Tables}{69}{chapter*.82}%
-\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.83}%
+\contentsline {subsubsection}{\nonumberline Number of initial points}{64}{subsubsection*.80}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{64}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{64}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{65}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{66}{chapter*.82}%
+\contentsline {chapter}{\nonumberline List of Tables}{70}{chapter*.83}%
+\contentsline {chapter}{\nonumberline Bibliography}{72}{chapter*.84}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

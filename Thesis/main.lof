@@ -37,8 +37,9 @@
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Example for the interval based refinement strategy. The point being refined is indicated with the blue cross and the lines show the upper and lower boundary in each direction. The sampling is done uniformly in the blue area. \relax }}{57}{figure.caption.67}%
 \contentsline {figure}{\numberline {3.21}{\ignorespaces Example for the uniform d-ball sampling strategy. The point being refined is indicated with the blue cross and the circle is the area where the uniform sampling is done. \relax }}{58}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Example for the normal distribution sampling strategy. The point being refined is indicated with the blue cross and contour represents the likelihood of samples. \relax }}{59}{figure.caption.73}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces \relax }}{61}{figure.caption.76}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces \relax }}{62}{figure.caption.80}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Generated points for optimizing the Rosenbrock function with interval based refinement strategy (\ref {fig:alt0_adapt_param}), uniform d-ball sampling strategy (\ref {fig:alt1_adapt_param}), and normal distribution sampling strategy (\ref {fig:alt2_adapt_param}). In each case, the left one has adaptivity parameter $ \gamma = 1.0 $ which distributes the points most homogeneous. In the center with $ \gamma = 0.75 $, they are concentrated on few areas and in each right case where $ \gamma = 0.0 $, the grid is most adaptive and almost all points are in the same region. \relax }}{62}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Error of the found optimum by the different refinement strategies for the Rosenbrock (top) and the Rastrigin (bottom) function. \relax }}{63}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces \relax }}{64}{figure.caption.81}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

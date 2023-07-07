@@ -1291,7 +1291,7 @@ For the refinement strategy, meaning where the points are added, random points a
 
 The general idea of the refinement strategy is to sample points which are near to the point that is being refined because this point is either promising due to a small function value and thus rank, or it has not been refined that often. Concretely, we provide three different strategies.
 
-\subsubsection{Interval Based Strategy}
+\subsubsection{Interval Based Refinement Strategy}
 
 For this first refinement strategy, intervals in each dimension are used. The bounds are defined by neighboring points with and the sampling is done uniformly. An example for such a refinement is presented in Figure \ref{fig:alternative_1}. \newline 
 
@@ -1352,7 +1352,7 @@ In this case, we also have the problem that the optimal configuration of hyperpa
 
 \begin{itemize}
 	\item Adaptivity parameter
-	\item Number of initial points
+	\item Number of initial points: 
 	\item Number of refinements per iteration
 	\item Refinement criterion
 	\item Budget
@@ -1362,7 +1362,7 @@ We will optimize the Rosenbrock function (see Table \ref{tab:test_functions} and
 
 \subsubsection{Adaptivity Parameter}
 
-The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to check, if the algorithm behaves as expected. Especially the refinement criterion and strategy are influencing the behavior depending on this parameter. Therefor, we want to visualize how the points are distributed depending on the concrete value. We use 
+The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to check, if the algorithm behaves as expected. Especially the refinement criterion and strategy are influencing the behavior depending on this parameter. Therefor, we want to visualize how the points are distributed depending on the concrete value. We optimize the Rosenbrock function (see Table \ref{tab:test_functions} and Figure \ref{fig:test_functions_plot}) in two dimensions visualize the resulting points. The optimal point is at $ (1, 1) $ with function value 0. The results with a 200 budget and 5 initial points are depicted in Figure \ref{fig:Adapt_param_alternatives}.
 
 
 \begin{figure}[htbp!]
@@ -1371,7 +1371,7 @@ The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0}
-		\caption{ }
+		\caption{ Resulting points for the \textbf{interval based refinement strategy}. Adaptivity parameter $ \gamma $: 1.0 (left), 0.75 (center), 0.0 (right). }
 		\label{fig:alt0_adapt_param}
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
@@ -1379,7 +1379,7 @@ The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_}
-		\caption{ }
+		\caption{ Resulting points for the \textbf{uniform d-ball sampling strategy}. Adaptivity parameter $ \gamma $: 1.0 (left), 0.75 (center), 0.0 (right). }
 		\label{fig:alt1_adapt_param}
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
@@ -1387,17 +1387,20 @@ The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75}
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_}
-		\caption{ }
+		\caption{ Resulting points for the \textbf{normal distribution sampling strategy}. Adaptivity parameter $ \gamma $: 1.0 (left), 0.75 (center), 0.0 (right). }
 		\label{fig:alt2_adapt_param}
 	\end{subfigure}
 	
-	\caption{  }
+	\caption{ Generated points for optimizing the Rosenbrock function with interval based refinement strategy (\ref{fig:alt0_adapt_param}), uniform d-ball sampling strategy (\ref{fig:alt1_adapt_param}), and normal distribution sampling strategy (\ref{fig:alt2_adapt_param}). In each case, the left one has adaptivity parameter $ \gamma = 1.0 $ which distributes the points most homogeneous. In the center with $ \gamma = 0.75 $, they are concentrated on few areas and in each right case where $ \gamma = 0.0 $, the grid is most adaptive and almost all points are in the same region. }
 	\label{fig:Adapt_param_alternatives}
 \end{figure}
 
+The resulting points in Figure \ref{fig:Adapt_param_alternatives} show the behavior of the algorithms depending on the adaptivity parameter $ \gamma $. In all three cases, the points are most distributed in the whole domain for $ \gamma = 1.0 $ (left grids). This is due to the refinement criterion \ref{eq:refinement_criterion} which then selects the candidates in that way, that all points are refined as equally as possible which makes the distribution very homogeneous. In the center cases with $ \gamma = 0.75 $, the trade off between selecting points that have low rank and ones that have not been refined that often is balanced. The second extreme case is with $ \gamma = 0.0 $. This always leads to the candidate point with the smallest rank (smallest function value). This can be seen in the grid because the points are not distributed at all. Note that you can directly see the difference between the uniform d-ball sampling strategy (\ref{fig:alt1_adapt_param}, right grid) and the normal distribution sampling strategy (\ref{fig:alt2_adapt_param}, right grid) because in the first case, the points are distributed uniformly in this circle and in the lower strategy, the density of points is higher in the center of the region around $ (1,1) $. \newline 
+
+The concrete optimum found in each case is presented in Table \ref{tab:results_alternatives}.
 
 \begin{table}[htbp!]
-	\caption{  }
+	\caption{ Resulting optimum found by the three different refinement strategies interval based refinement strategy (1), uniform d-ball sampling strategy (2), and normal distribution sampling strategy (3). The best of each refinement algorithm is marked in bold. }
 	\label{tab:results_alternatives}
 	\centering
 	\begin{tabular}{| c |  c |c c |} 
@@ -1416,22 +1419,82 @@ The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to
 		%3 & 0.75 & [0.9605735775731732, 0.838958015201549] & 0.7028532076339621 \\ 
 		%3 & 0.0 & [1.097943243714717, 1.1936061770810482] & 0.02369014149435738 \\ 
 		
-		 & 1.0 & [0.4058, -0.04054] & 4.566 \\ 
-		1 & 0.75 & \textbf{[1.038, 1.079]} & \textbf{0.001519} \\ 
-		 & 0.0 & [2.158, 4.617] & 1.517 \\ 
+		 & 1.0 & [0.4059, -0.04055] & 4.566 \\ 
+		1 & 0.75 & \textbf{[1.039, 1.080]} & \textbf{0.001519} \\ 
+		 & 0.0 & [2.159, 4.618] & 1.517 \\ 
 		\hline
-		 & 1.0 & [-0.1135, -0.7217] & 55.21 \\ 
-		2 & 0.75 & [1.626, 2.625] & 0.4376 \\ 
-		 & 0.0 & \textbf{[0.9541, 0.9027]}  & \textbf{0.008060} \\ 
+		 & 1.0 & [-0.1135, -0.7218] & 55.21 \\ 
+		2 & 0.75 & [1.627, 2.625] & 0.4376 \\ 
+		 & 0.0 & \textbf{[0.9542, 0.9028]}  & \textbf{0.008060} \\ 
 		\hline
-		 & 1.0 & [2.281, 4.712] & 26.04 \\ 
-		3 & 0.75 & [0.9605, 0.8389] & 0.7028 \\ 
-		 & 0.0 & \textbf{[1.097, 1.193]} & \textbf{0.02369} \\ 
+		 & 1.0 & [2.282, 4.713] & 26.05 \\ 
+		3 & 0.75 & [0.9606, 0.8390] & 0.7029 \\ 
+		 & 0.0 & \textbf{[1.098, 1.194]} & \textbf{0.02369} \\ 
 		
 		\hline
 	\end{tabular}
 \end{table}
 
+The Table \ref{tab:results_alternatives} shows that each of the algorithms find a point very near to the optimum which is at $ (1,1) $. The table also indicates that each refinement strategy has a different best adaptivity parameter. For the second two alternatives, the most adaptive grid achieves the best result while a more homogeneous one is better for the first algorithm. \newline 
+
+The experiments by now were only made with 3 distinct values for the adaptivity parameter and this only leads to assumptions that the evaluated parameters are the best in each case. To further analyze this parameter, the Rosenbrock and additionally the Rastrigin function were solved with 11 different adaptivity parameters between 0 and 1 with a step size of $ 0.1 $. The results for each of the three algorithms are presented in Figure \ref{fig:alternatives_adaptivities_plot}.
+
+\begin{figure}[htbp!]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Adaptivity parameter $ \gamma $,
+			ylabel = Error (Rosenbrock),
+			cycle list name=exotic,
+			cycle list name=exotic,legend style={at={(1.03,0.5)},anchor=west},
+			scale=0.8,
+			ymode=log,
+			]
+			
+			\addplot coordinates
+			{(0.0,1.517121125222536)(0.1,1.517121125222536)(0.2,1.517121125222536)(0.30000000000000004,1.517121125222536)(0.4,1.517121125222536)(0.5,1.517121125222536)(0.6000000000000001,1.5171211252086616)(0.7000000000000001,0.02466439437702513)(0.8,0.33502340624824123)(0.9,2.61442204654008)(1.0,4.566409386159776)};
+			
+			\addplot coordinates 
+			{(0.0,0.008060015566753589)(0.1,0.008060015566753589)(0.2,0.008060015566753589)(0.30000000000000004,0.0023118954614058484)(0.4,0.002311894614521982)(0.5,0.008182947611344513)(0.6000000000000001,0.05339618203112462)(0.7000000000000001,0.08011233075458785)(0.8,2.1785202665483165)(0.9,1.5532894112998432)(1.0,55.21325276318493)};
+			
+			\addplot coordinates
+			{(0.0,0.05088818676922914)(0.1,0.05088818676922914)(0.2,0.05088818676922914)(0.30000000000000004,0.05088818676922914)(0.4,0.05088818676922914)(0.5,0.05088818676922914)(0.6000000000000001,0.1143331623160982)(0.7000000000000001,0.06775665487870741)(0.8,0.277004472996468)(0.9,0.7472436334827585)(1.0,0.7472436334827585)};
+			
+			\legend{Strategy 1, Strategy 2, Strategy 3}
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Adaptivity parameter $ \gamma $,
+			ylabel = Error (Rastrigin),
+			cycle list name=exotic,legend style={at={(1.03,0.5)},anchor=west},
+			scale=0.8,
+			ymode=log,
+			]
+			
+			\addplot coordinates
+			{(0.0,5.321259851862457)(0.1,5.321259851862457)(0.2,5.321259851862457)(0.30000000000000004,5.321259851862457)(0.4,5.321259851862457)(0.5,5.321259851862457)(0.6000000000000001,5.321001698568752)(0.7000000000000001,1.8077635146255417)(0.8,1.0048622402760152)(0.9,3.1362207781035067)(1.0,6.738058570648082)}
+			;
+			
+			\addplot coordinates 
+			{(0.0,0.0370187636704884)(0.1,0.0370187636704884)(0.2,0.0370187636704884)(0.30000000000000004,0.0370187636704884)(0.4,0.0370187636704884)(0.5,4.003244844322138)(0.6000000000000001,0.03662386784840521)(0.7000000000000001,4.046206137247143)(0.8,1.6528238414282015)(0.9,5.200127399463108)(1.0,5.200127399463108)}
+			;
+			
+			\addplot coordinates
+			{(0.0,2.8098752567524095)(0.1,2.8098752567524095)(0.2,2.8098752567524095)(0.30000000000000004,2.2197551375481552)(0.4,2.8098752567524095)(0.5,1.693340177046835)(0.6000000000000001,1.235250528609047)(0.7000000000000001,2.6011095407649165)(0.8,2.8098752567524095)(0.9,2.0097965072072554)(1.0,2.8098752567524095)};
+			
+			\legend{Strategy 1, Strategy 2, Strategy 3}
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{ Error of the found optimum by the different refinement strategies for the Rosenbrock (top) and the Rastrigin (bottom) function. }	
+	\label{fig:alternatives_adaptivities_plot}
+\end{figure}
+
+The results in Figure \ref{fig:alternatives_adaptivities_plot} confirm that each strategy has an own "sweet spot" for the adaptivity parameter. For the interval based refinement (Strategy 1), this is at about $ 0.7 - 0.8 $. For the second one which is the uniform d-ball sampling strategy, good results are achieved especially for values about $ 0.3 - 0.4 $. The last strategy based on normal distribution sampling achieves good results with $ \gamma = 0.6 $. One second observation we can make is that the perfect value for this parameter also depends on the optimization problem. However, these values are always in a small interval. This is the reason why we will set the parameter fixed for each of the refinement strategies. For the first one, we set $ \gamma_1 = 0.75 $, the second one $ \gamma_2 = 0.35 $ and for the last strategy, we use the value $ \gamma_3 = 0.6 $. 
 
 \subsubsection{Number of initial points}
 
