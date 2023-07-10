@@ -2028,6 +2028,36 @@
       \field{pages}{270\bibrangedash 276}
       \range{pages}{7}
     \endentry
+    \entry{tang1994adaptive}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad846f58de8cbf45a8825c2ae1259494}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Z\bibnamedelima Bo},
+           giveni={Z\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{fullhash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{bibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authorbibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authornamehash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{authorfullhash}{ad846f58de8cbf45a8825c2ae1259494}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{11}
+      \field{title}{Adaptive partitioned random search to global optimization}
+      \field{volume}{39}
+      \field{year}{1994}
+      \field{pages}{2235\bibrangedash 2244}
+      \range{pages}{10}
+    \endentry
     \entry{kelahan1978application}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=f70c022bf5942c90b896229914bdd7f0}{%
@@ -2064,35 +2094,33 @@
       \field{pages}{289\bibrangedash 298}
       \range{pages}{10}
     \endentry
-    \entry{tang1994adaptive}{article}{}
+    \entry{gall1966practical}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ad846f58de8cbf45a8825c2ae1259494}{%
-           family={Tang},
-           familyi={T\bibinitperiod},
-           given={Z\bibnamedelima Bo},
-           giveni={Z\bibinitperiod\bibinitdelim B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=7f26be1de7069a4ed1d33c7bfd45a930}{%
+           family={Gall},
+           familyi={G\bibinitperiod},
+           given={DA},
+           giveni={D\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {IEEE}%
+        {John Wiley New York}%
       }
-      \strng{namehash}{ad846f58de8cbf45a8825c2ae1259494}
-      \strng{fullhash}{ad846f58de8cbf45a8825c2ae1259494}
-      \strng{bibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
-      \strng{authorbibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
-      \strng{authornamehash}{ad846f58de8cbf45a8825c2ae1259494}
-      \strng{authorfullhash}{ad846f58de8cbf45a8825c2ae1259494}
+      \strng{namehash}{7f26be1de7069a4ed1d33c7bfd45a930}
+      \strng{fullhash}{7f26be1de7069a4ed1d33c7bfd45a930}
+      \strng{bibnamehash}{7f26be1de7069a4ed1d33c7bfd45a930}
+      \strng{authorbibnamehash}{7f26be1de7069a4ed1d33c7bfd45a930}
+      \strng{authornamehash}{7f26be1de7069a4ed1d33c7bfd45a930}
+      \strng{authorfullhash}{7f26be1de7069a4ed1d33c7bfd45a930}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Automatic Control}
-      \field{number}{11}
-      \field{title}{Adaptive partitioned random search to global optimization}
-      \field{volume}{39}
-      \field{year}{1994}
-      \field{pages}{2235\bibrangedash 2244}
-      \range{pages}{10}
+      \field{journaltitle}{Recent Advances in Optimization Techniques}
+      \field{title}{A practical multifactor optimization criterion}
+      \field{year}{1966}
+      \field{pages}{369\bibrangedash 386}
+      \range{pages}{18}
     \endentry
     \entry{feurer-arxiv19a}{article}{}
       \name{author}{9}{}{%
@@ -2192,8 +2220,8 @@
       \strng{authorbibnamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authornamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authorfullhash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse Grids and Applications-Stuttgart 2014}
@@ -2499,8 +2527,8 @@
       \strng{authorbibnamehash}{2f2757d3eacf8c6cbd03047cc93d2da8}
       \strng{authornamehash}{b7c38ec1418d00977066ad257b3b7996}
       \strng{authorfullhash}{2f2757d3eacf8c6cbd03047cc93d2da8}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Hyperparameters are important for machine learning algorithms since they directly control the behaviors of training algorithms and have a significant effect on the performance of machine learning models. Several techniques have been developed and successfully applied for certain application domains. However, this work demands professional knowledge and expert experience. And sometimes it has to resort to the brute-force search. Therefore, if an efficient hyperparameter optimization algorithm can be developed to optimize any given machine learning method, it will greatly improve the efficiency of machine learning. In this paper, we consider building the relationship between the performance of the machine learning models and their hyperparameters by Gaussian processes. In this way, the hyperparameter tuning problem can be abstracted as an optimization problem and Bayesian optimization is used to solve the problem. Bayesian optimization is based on the Bayesian theorem. It sets a prior over the optimization function and gathers the information from the previous sample to update the posterior of the optimization function. A utility function selects the next sample point to maximize the optimization function. Several experiments were conducted on standard test datasets. Experiment results show that the proposed method can find the best hyperparameters for the widely used machine learning models, such as the random forest algorithm and the neural networks, even multi-grained cascade forest under the consideration of time cost.}

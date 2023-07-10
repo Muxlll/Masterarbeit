@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUL 2023 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 JUL 2023 12:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3144,11 +3144,17 @@ ned on input line 1440.
 
 \openout6 = `main-figure22.dpth'.
 
-Package pgfplots info on input line 1452: Using 'lua backend=false' for axis: y
+Package pgfplots info on input line 1453: Using 'lua backend=false' for axis: y
 mode=log unsupported (yet).
 [49
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:alternatives_adaptivities_plot' on page 49 undefi
+ned on input line 1499.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3183,11 +3189,11 @@ Package logreq Info: Writing requests to 'main-figure22.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54927 strings out of 480121
- 1248809 string characters out of 5892160
+ 54930 strings out of 480121
+ 1248840 string characters out of 5892160
  2128796 words of memory out of 5000000
- 71585 multiletter control sequences out of 15000+600000
- 535611 words of font info for 262 fonts, out of 8000000 for 9000
+ 71586 multiletter control sequences out of 15000+600000
+ 535713 words of font info for 263 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,21n,112p,10633b,2570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
