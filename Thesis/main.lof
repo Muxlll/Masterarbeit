@@ -39,7 +39,7 @@
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Example for the normal distribution sampling strategy. The point being refined is indicated with the blue cross and contour represents the likelihood of samples. \relax }}{60}{figure.caption.73}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces Generated points for optimizing the Rosenbrock function with interval based refinement strategy (\ref {fig:alt0_adapt_param}), uniform d-ball sampling strategy (\ref {fig:alt1_adapt_param}), and normal distribution sampling strategy (\ref {fig:alt2_adapt_param}). In each case, the left one has adaptivity parameter $ \gamma = 1.0 $ which distributes the points most homogeneous. In the center with $ \gamma = 0.75 $, they are concentrated on few areas and in each right case where $ \gamma = 0.0 $, the grid is most adaptive and almost all points are in the same region. \relax }}{63}{figure.caption.76}%
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Error of the found optimum by the different refinement strategies for the Rosenbrock (top) and the Rastrigin (bottom) function. \relax }}{64}{figure.caption.78}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Error of the optimum found by the algorithm depending on the number of initial points. The budget is 200 in all cases. \relax }}{66}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Error of the optimum found by the algorithm depending on the number of initial points. The budget is 200 in all cases. Each point is the average of 10 evaluations. \relax }}{66}{figure.caption.81}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
