@@ -986,7 +986,8 @@ class IterativeRandomOptimization(Optimization):
                  verbosity: int = 0,
                  adaptivity: float = 0.5,
                  init_points: int = 10,
-                 alternative: int = 0):
+                 alternative: int = 0,
+                 ref_per_step: int = 4):
 
         self.dataset = dataset
         self.model = model
@@ -998,6 +999,7 @@ class IterativeRandomOptimization(Optimization):
         self.adaptivity = adaptivity
         self.init_points = init_points
         self.alternative = alternative
+        self.ref_per_step = ref_per_step
 
         for key in self.hyperparameterspace.keys():
             if self.hyperparameterspace.get(key)[0] == "list":
@@ -1066,7 +1068,7 @@ class IterativeRandomOptimization(Optimization):
 
         points.sort(key=operator.attrgetter('value'))
 
-        while len(points) + 2 * len(self.hyperparameterspace) <= self.budget:
+        while len(points) + self.ref_per_step <= self.budget:
 
             coefficients = []
             for i in range(len(points)):
@@ -1108,7 +1110,7 @@ class IterativeRandomOptimization(Optimization):
                     intervals.append([lower, upper])
                     keyIndex += 1
 
-                for _ in range(2 * len(self.hyperparameterspace)):
+                for _ in range(self.ref_per_step):
                     coordinates = []
                     keyIndex = 0
                     for key in self.hyperparameterspace.keys():
@@ -1151,8 +1153,7 @@ class IterativeRandomOptimization(Optimization):
                 # smallest_dist = smallest_dist
                 # smallest_dist = sum(distances) / len(distances)
 
-                # sample 2*dim new points in this ball
-                for _ in range(2 * len(self.hyperparameterspace)):
+                for _ in range(self.ref_per_step):
                     # an array of d normally distributed random variables
                     u = np.random.normal(
                         0, 1, len(self.hyperparameterspace))
@@ -1209,7 +1210,7 @@ class IterativeRandomOptimization(Optimization):
                 #smallest_dist = 1# (highest_distance + smallest_dist) / ((points[index_refine].get_level()+2)*4)
                 # smallest_dist = (highest_distance + smallest_dist) / 2
 
-                for _ in range(2 * len(self.hyperparameterspace)):
+                for _ in range(self.ref_per_step):
                     coordinates = []
                     keyIndex = 0
                     for key in self.hyperparameterspace.keys():
@@ -1222,9 +1223,14 @@ class IterativeRandomOptimization(Optimization):
                         if upper - lower < 0:
                             print(lower, upper)
                             print(smallest_dist)
+
+                        drawn_coordinate = self.draw_value_normal_distribution(
+                            key, lower, upper)
                         
-                        coordinates.append(self.draw_value_normal_distribution(
-                            key, lower, upper))
+                        drawn_coordinate = max(self.hyperparameterspace.get(key)[1], drawn_coordinate)
+                        drawn_coordinate = min(self.hyperparameterspace.get(key)[2], drawn_coordinate)
+
+                        coordinates.append(drawn_coordinate)
                         keyIndex += 1
 
                     value = self.model(coordinates)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  6 JUL 2023 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 10:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -372,20 +372,18 @@ img0.png>]) (./Alternative_2_adapt_0.0_2_.aux) )
 Here is how much of TeX's memory you used:
  9800 strings out of 480121
  197797 string characters out of 5892160
- 622976 words of memory out of 5000000
+ 621490 words of memory out of 5000000
  27605 multiletter control sequences out of 15000+600000
  469259 words of font info for 28 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  85i,7n,90p,432b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb>
-Output written on Alternative_2_adapt_0.0_2_.pdf (1 page, 70135 bytes).
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Alternative_2_adapt_0.0_2_.pdf (1 page, 53977 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

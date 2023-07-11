@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 09:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 11:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2916,32 +2916,32 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_0.0_1_.pdf  used on input line 1381.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pdf, i
-d=1898, 344.73894pt x 308.07997pt>
+d=1898, 352.54712pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_1.0_2_.pdf  used on input line 1387.
-(pdftex.def)             Requested size: 129.65819pt x 115.86816pt.
+(pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf, id=
-1899, 357.56487pt x 308.07997pt>
+1899, 352.54712pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf>
 
 Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_0.75.pdf  used on input line 1388.
-(pdftex.def)             Requested size: 129.65819pt x 111.71255pt.
+(pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pdf, i
-d=1900, 352.54712pt x 308.07997pt>
+d=1900, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_0.0_2_.pdf  used on input line 1389.
-(pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
+(pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
 
@@ -3002,7 +3002,7 @@ rameter/Alternative_2_adapt_0.0_2_.pdf): PDF inclusion: multiple pdfs with page
 ===== Image 'main-figure22' is up-to-date. ======
 ===== Image 'main-figure23' is up-to-date. ======
 [64 <./main-figure22.pdf> <./main-figure23.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
+Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
 
  []
 
@@ -3010,51 +3010,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
 ===== Image 'main-figure25' is up-to-date. ======
 ===== Image 'main-figure26' is up-to-date. ======
 ===== Image 'main-figure27' is up-to-date. ======
-\openout4 = `main-figure28.md5'.
+===== Image 'main-figure28' is up-to-date. ======
 
-\openout4 = `main.auxlock'.
+Underfull \hbox (badness 10000) in paragraph at lines 1648--1649
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure28" "\def\tikzexternalrealj
-ob{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure28" "\def\tikzexternalrealjob{main}\input{main}")...executed.
-
-\openout4 = `main.auxlock'.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
 
  []
 
 [65] [66 <./main-figure24.pdf> <./main-figure25.pdf> <./main-figure26.pdf> <./m
-ain-figure27.pdf> <./main-figure28.pdf>])
-(./chapters/05_conclusion_and_outlook.tex [67]
+ain-figure27.pdf> <./main-figure28.pdf>]
+===== Image 'main-figure29' is up-to-date. ======
+===== Image 'main-figure30' is up-to-date. ======
+\openout4 = `main-figure31.md5'.
+
+\openout4 = `main.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "main-figure31" "\def\tikzexternalrealj
+ob{main}\input{main}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "main-figure31" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+
+\openout4 = `main.auxlock'.
+
+===== Image 'main-figure32' is up-to-date. ======
+===== Image 'main-figure33' is up-to-date. ======
+) (./chapters/05_conclusion_and_outlook.tex [67] [68 <./main-figure29.pdf> <./m
+ain-figure30.pdf> <./main-figure31.pdf> <./main-figure32.pdf> <./main-figure33.
+pdf>]
 chapter 4.
-) [68
+) [69
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [69
+ (./main.lof [70
 
 
-] [70] [71])
+] [71] [72])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [72]
+ [73]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [73
+ [74
 
 
-] [74]
+] [75]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
@@ -3066,12 +3078,12 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[75
+[76
 
 
-] [76] [77] [78] [79]
+] [77] [78] [79] [80]
 No complaints by nag.
-[80] (./main.aux)
+[81] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -3079,10 +3091,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56384 strings out of 480121
- 1304767 string characters out of 5892160
- 2352179 words of memory out of 5000000
- 72096 multiletter control sequences out of 15000+600000
+ 56392 strings out of 480121
+ 1304874 string characters out of 5892160
+ 2352275 words of memory out of 5000000
+ 72097 multiletter control sequences out of 15000+600000
  575275 words of font info for 653 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3101,10 +3113,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (88 pages, 9429959 bytes).
+Output written on main.pdf (89 pages, 9499181 bytes).
 PDF statistics:
- 2708 PDF objects out of 2984 (max. 8388607)
- 2033 compressed objects within 21 object streams
- 334 named destinations out of 1000 (max. 500000)
- 131446 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2745 PDF objects out of 2984 (max. 8388607)
+ 2059 compressed objects within 21 object streams
+ 336 named destinations out of 1000 (max. 500000)
+ 131471 words of extra memory for PDF output out of 154059 (max. 10000000)
 

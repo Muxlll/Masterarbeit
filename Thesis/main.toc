@@ -51,8 +51,8 @@
 \contentsline {subsubsection}{\nonumberline Number of refinements per iteration}{67}{subsubsection*.83}%
 \contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{67}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{67}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{68}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{69}{chapter*.84}%
-\contentsline {chapter}{\nonumberline List of Tables}{73}{chapter*.85}%
-\contentsline {chapter}{\nonumberline Bibliography}{75}{chapter*.86}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{69}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{70}{chapter*.85}%
+\contentsline {chapter}{\nonumberline List of Tables}{74}{chapter*.86}%
+\contentsline {chapter}{\nonumberline Bibliography}{76}{chapter*.87}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

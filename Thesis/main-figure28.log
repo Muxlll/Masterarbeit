@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 09:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 10:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3152,14 +3152,14 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `fig:alternatives_adaptivities_plot' on page 50 undefi
-ned on input line 1499.
+ned on input line 1501.
 
 
 LaTeX Warning: Reference `fig:init_points_alternatives' on page 51 undefined on
- input line 1503.
+ input line 1505.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
+Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
 
  []
 
@@ -3173,82 +3173,35 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 \openout6 = `main-figure28.dpth'.
 
-Package pgfplots info on input line 1621: Using 'lua backend=false' for axis: y
+Package pgfplots info on input line 1623: Using 'lua backend=false' for axis: y
 mode=log unsupported (yet).
-NOTE: coordinate (1Y7.0e0],2Y1.3316177836329917e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0e1],2Y1.5373191353012226e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.2e1],2Y9.333861160183372e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.4e1],2Y9.981474069646784e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.6e1],2Y9.561769579473939e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.7e1],2Y4.0872456932745195e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.0e1],2Y1.4447884067654048e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.1e1],2Y3.372542548410602e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.3e1],2Y9.656068943546117e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.6e1],2Y7.0611224674237745e0]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.7e1],2Y7.150997953122271e0]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.8e1],2Y3.7669373113424356e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y2.9e1],2Y2.932975148689991e0]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.0e1],2Y2.542100732470259e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.2e1],2Y6.284556240148462e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.5e1],2Y6.706281357717529e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.7e1],2Y2.4799228403297036e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.8e1],2Y1.3131513471751765e2]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y3.9e1],2Y7.280731831046195e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.0e1],2Y8.140863654425925e0]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.1e1],2Y7.036754183242313e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.3e1],2Y5.4649482392706304e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.4e1],2Y9.511679399723046e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.5e1],2Y1.6107582263177505e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.8e1],2Y3.0856722952414806e1]) has been dropped because it
- is unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y4.9e1],2Y4.29169601718097e0]) has been dropped because it i
-s unbounded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y5.0e1],2Y1.423147905241592e1]) has been dropped because it 
-is unbounded (in y). (see also unbounded coords=jump). 
 [51
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Reference `fig:init_points_alternatives' on page 51 undefined on
- input line 1644.
+ input line 1646.
 
 
 LaTeX Warning: Reference `fig:init_points_alternatives' on page 51 undefined on
- input line 1644.
+ input line 1646.
 
 
 LaTeX Warning: Reference `fig:init_points_alternatives' on page 51 undefined on
- input line 1644.
+ input line 1646.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
+Underfull \hbox (badness 10000) in paragraph at lines 1648--1649
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 ) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
@@ -3279,16 +3232,16 @@ Package logreq Info: Writing requests to 'main-figure28.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54962 strings out of 480121
- 1249810 string characters out of 5892160
+ 54932 strings out of 480121
+ 1248871 string characters out of 5892160
  2128796 words of memory out of 5000000
- 71622 multiletter control sequences out of 15000+600000
+ 71592 multiletter control sequences out of 15000+600000
  534171 words of font info for 259 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2570s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,21n,112p,10633b,2572s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure28.pdf (1 page, 26021 bytes).
+Output written on main-figure28.pdf (1 page, 28754 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
