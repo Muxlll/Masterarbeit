@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 JUL 2023 11:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3165,8 +3165,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
 
 \openout6 = `main-figure24.dpth'.
 
-Package pgfplots info on input line 1517: Using 'lua backend=false' for axis: y
-mode=log unsupported (yet).
 [51
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -3200,6 +3198,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
 
  []
 
+
+LaTeX Warning: Reference `fig:ref_per_step' on page 52 undefined on input line 
+1664.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 ) (./chapters/05_conclusion_and_outlook.tex
@@ -3232,19 +3242,19 @@ Package logreq Info: Writing requests to 'main-figure24.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54918 strings out of 480121
- 1248620 string characters out of 5892160
+ 54913 strings out of 480121
+ 1248594 string characters out of 5892160
  2128796 words of memory out of 5000000
- 71576 multiletter control sequences out of 15000+600000
- 534242 words of font info for 260 fonts, out of 8000000 for 9000
+ 71581 multiletter control sequences out of 15000+600000
+ 533130 words of font info for 254 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,17n,112p,10633b,2377s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure24.pdf (1 page, 27867 bytes).
+Output written on main-figure24.pdf (1 page, 27517 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
  1 named destinations out of 1000 (max. 500000)
- 69133 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 65037 words of extra memory for PDF output out of 74296 (max. 10000000)
 

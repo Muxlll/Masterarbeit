@@ -45,7 +45,7 @@ The parameters lower and upper are the bounds of the original hyperparameter int
 
 Before optimizing the configurations of machine learning models, simple functions are used. This has the advantage that the optimal point is already known in advance and a function call is much faster than evaluating a neural network. Therefore, three different test functions are given with the following properties \cite{valentin2016hierarchical}:
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Three test functions and their properties.}
 	\label{tab:test_functions}
 	\centering
@@ -76,7 +76,7 @@ and the third one (Rastrigin) \cite{yang2010engineering} is defined with
 where $ d $ is the dimensionality of the input vector $ \vec{x} $. Figure \ref{fig:test_functions_plot} shows the functions in two dimensions.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Eggholder_normal}
@@ -115,7 +115,7 @@ is refined. In this case, $ r_{l,i} = |\{ (l', i') \in K | f(x_{l',i'}) \le f(x_
 
 In the following, the behavior of the sparse grid generation is analyzed with the help of the three test functions. In each case, 3 different values for the adaptivity parameter $ \gamma \in \{0.0, 0.5, 1.0\} $ are used and the resulting sparse grid with the triangulated function values is plotted. The first test case is the Eggholder function and the result is depicted in Figure \ref{fig:Eggholder_grid}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_1}
@@ -152,7 +152,7 @@ Note that in all three cases, the exact same number of grid points are evaluated
 
 The next function used is the Rosenbrock function (see Figure \ref{fig:Rosenbrock}). Again, three different values for the adaptivity parameter are used. The results are depicted in Figure \ref{fig:Rosenbrock_grid}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock_1}
@@ -187,7 +187,7 @@ Now with decreasing value of $ \gamma $, the grid gets more and more inhomogeneo
 
 The last function used is the Rastrigin function (see Figure \ref{fig:Rastrigin} for the plot of the function and \ref{fig:Rastrigin_grid} for the resulting sparse grids). 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1}
@@ -225,7 +225,7 @@ In the following, the goal is to further analyze this adaptivity parameter. For 
 \end{equation}
 where $ x_{opt}^* $ is the optimal point found by the sparse grid and $ x_{opt} $ is the real optimum. Figure \ref{fig:test_functions_plot} shows the resulting Errors depending on the number of grid points used. The top left plot is for the Eggholder function, the one on the top right belongs to the Rosenbrock function and the bottom one corresponds to the Rastrigin function. \newline
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -313,7 +313,7 @@ For all three test functions, a value $ 0.75 \le \gamma \le 1.0 $ leads to the s
 
 The next improvement is to add optimizers after the grid generation phase. There are two different types of algorithms. The first one is local optimization, for example based on the gradient like gradient descent. The second one is global optimization. An example therefore is to use a multi start approach by trying out multiple different starting points for the algorithm. These various initial values can be uniformly distributed in the domain. The following experiments show how the error (difference between optimum found by algorithm and actual optimal function value) behaves with higher number of grid points of the underlying sparse grid. As a local optimization algorithm, the gradient descent is used. The starting point for this algorithm is set to the point of the sparse grid where the smallest function value was found. For the global optimization, a multi start approach with 20 equally distributed starting points is used. The concrete algorithm is the nelder mead optimization as described in \ref{Optimization_algorithms}. The number of function evaluations used in this method, as well as the number of steps for gradient descent is set to 1000. One important parameter for the optimization is the degree of the B-splines used on the sparse grid. The resulting errors depending on the number of grid points for the degrees 2, 3, and 5 can be seen in Figure \ref{fig:Optimizer_results}. The Rosenbrock function is used in all cases.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -388,7 +388,7 @@ The next improvement is to add optimizers after the grid generation phase. There
 In all three cases, the errors of the local and global optimizers first increase with increasing number of grid points until about 100 to 200 function evaluations are done. After that, both local and global optimization algorithms are at least as good as the result found by the sparse grid. With increasing number of grid points, the global optimization finds the best solution in all cases with degrees 2, 3, and 5. \newline 
 
 The visualization in Figure \ref{fig:optimizers_visualized} indicates why the global optimizer achieves the best results for a high number of sparse grid points. 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization5}
 	\includegraphics[width=0.31\textwidth]{figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization80}
@@ -431,7 +431,7 @@ One approach is to combine all three resulting points with their corresponding f
 The input of the previous experiments were all just in two dimensions. The following ones analyze the impact of the dimension on the performance of the algorithm. Therefore, the Rastrigin function is optimized, again with increasing number of grid points. The degree of the B-splines used on the sparse grid is set to 5 and for the adaptivity parameter, we set $ \gamma = 0.85 $. The results are depicted in Figure \ref{fig:Dimensions_results}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -484,7 +484,7 @@ where $ y^i $ is the target value and $ y^i_{pred} $ is the predicted value of d
 
 The interval of the epochs is $ [1, 40] $ and the learning rate is sampled equidistant and logarithmic between $ [10^{-10}, 10^{-1}] $. The resulting plot with the result depending on the epochs and the $ log_{10}(\text{learning rate}) $ can be seen in Figure \ref{fig:analysis_model_training}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/1000_evaluations/Network_above}
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/1000_evaluations/Network_normal}
@@ -497,7 +497,7 @@ In the plot in Figure \ref{fig:analysis_model_training}, for each of epochs and 
 
 With this knowledge about the underlying function that has to be minimized, the behavior of the sparse grid can be analyzed. Figure \ref{fig:analysis_sparse_grid_with_machine_learning} depicts the generated grid colored corresponding to the function value for different adaptivity values and number of grid points. Note that the scale of the learning rate is the one interpreted by the sparse grid. The actual scale is logarithmic between $ 10^{-10} $ for $ 0.0 $ and $ 10 ^{-1} $ for $ 1.0 $. 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/above_30_85}
 		\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/first_analysis/above_80_85}
@@ -522,7 +522,7 @@ For a smaller adaptivity value of $ \gamma = 0.5 $, the sparse grid is much more
 
 However, as shown in Table \ref{tab:analysis_sparse_grid_with_machine_learning_results}, the best value is found with the configuration $ \gamma = 0.85 $ and number of grid points of 100. This means that lower adaptivity leads to better results.
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\centering
 	\caption{ Best hyperparameter configuration found by the sparse grid with different adaptivity parameters and number of grid points. The best result is found with $ \gamma = 0.85 $ and 77 grid points. }
 	\label{tab:analysis_sparse_grid_with_machine_learning_results}
@@ -548,7 +548,7 @@ The results shown in this table prove that too high adaptivity is not good for f
 
 By adding optimization methods like gradient descent or evolutionary algorithms, an even better approximation of the optimum might be found if enough grid points are available. If this number is too small then the interpolant is not precise enough and the solution of the optimizer is not the real optimum. One example is depicted in Figure \ref{fig:optimizers_network_visualization}. The steps of the normal gradient descent optimization algorithm are depicted and connected with arrows. In the background, the interpolated function is shown. The problem is the same as in Figure \ref{fig:analysis_model_training}. The degree of the B-splines on the grid is 2 and the sparse grid points are shown in white. 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5}
 	\includegraphics[width=0.49\textwidth]{figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10}
@@ -563,7 +563,7 @@ By adding optimization methods like gradient descent or evolutionary algorithms,
 In Figure \ref{fig:optimizers_network_visualization}, the solution of the gradient descent optimization algorithm is analyzed with 5, 9, 29 and 49 grid points on the top left, top right, bottom left and bottom right, respectively. The minimal interpolated function values and the actual function evaluations can be seen in Table \ref{tab:results_opt_ml}.
 
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Exact values for the optima found by the sparse grid points and the gradient descent algorithm. The values for $ x_{min}^{grid} $ are the configurations evaluated by the sparse grid during the generation and the coordinates in column $ x_{min}^{opt} $ are found by the optimizer. In bold, the best function values of the optimum found by the sparse grid and gradient descent algorithm, respectively. }
 	\label{tab:results_opt_ml}
 	\centering
@@ -586,7 +586,7 @@ As illustrated in Table \ref{tab:results_opt_ml}, the optimizer does not always 
 Note that the additional optimization is very cheap compared to generating the adaptive sparse grid because the algorithm uses the interpolated function and does not have to train and evaluate whole machine learning models. In Figure \ref{fig:Comparison_optimizers}, the different algorithms for optimization based on the sparse grid are compared. The same neural network with the same dataset is used for the comparison.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
@@ -689,7 +689,7 @@ For both cases, the solution found by the sparse grid without optimization step 
 
 One thing that has to be taken into consideration is that e.g. the epochs hyperparameter is not continuous. The values for the number of epochs are always integers converted with \textit{int()}. This means that all values in the interval $ [x, x+1] $ for any $ x \in \mathbb{N} $ are interpreted as the smaller integer $ x $. This means that there are regions in the interval that have the exact same function value because they are evaluated with the same configuration. This fact might impact the behavior of a gradient based optimizer. If the function values in an interval are exactly the same then the gradient is zero in this interval. This would make it impossible to find the real optimum if the optimizer gets stuck. In the experiment shown in Figure \ref{fig:optimizer_categorical_hyperparams}, an extreme example is tried out. We use two hyperparameters with three distinct values each. The first one is the batch size with values from $ {100, 400, 2000} $ and the second one is epochs taking values from $ {1, 5, 13} $. In two dimensions, nine different configurations are then possible. We used B-splines of degree 0 and a regular sparse grid with smallest adaptivity possible. As the machine learning model being evaluated, we took a 2-layer network with 30 neurons each and a learning rate of $ 10^{-5} $. As dataset, the diamonds regression set is used.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_28}
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hyppar_48}
 	
@@ -719,7 +719,7 @@ Now with the sparse grid search being analyzed with defined functions and a smal
 
 The first experiment is using a two layer neural network with 40 neurons in each layer. A batch size of 100 is used and as datasets, 4 different tasks from OpenML are taken. Table \ref{tab:datasets_first_experiment} gives an overview over the datasets. 
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\centering
 	\caption{ Overview over the datasets used for the first comparison of the optimization algorithms. They are all available on OpenML \cite{OpenML2013}. }
 	\label{tab:datasets_first_experiment}
@@ -739,7 +739,7 @@ The first experiment is using a two layer neural network with 40 neurons in each
 
 All the categorical features are transformed with one hot encoding and the numeric as well as the target values are scaled using the \textit{StandardScaler} from the \textit{scikit-learn} library \cite{scikit-learn}. Both transformers are trained on the training set and used for both training and test set. We used 2-fold cross validation with the mean absolute percentage error as metric. Before each run, the seeds for getting the random values are reset. This is necessary because the evaluation of the neural network with a specific configuration should always return the same value. For the B-splines on the sparse grid, we use a degree of 2 and the grid is generated with adaptivity value $ 0.85 $. Two hyperparameters, the number of epochs and the learning rate for the neural network's optimizer, are optimized. The first one is linear from 1 to 40 and the second hyperparameter logarithmic from $ 10^{-9} $ and $ 10^{-1} $. The resulting performance can be seen in Figure \ref{fig:result_first_comparison}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
@@ -866,7 +866,7 @@ All the categorical features are transformed with one hot encoding and the numer
 
 It can be seen that in almost all cases, the result is decreasing with increasing cost. For the house\_sales and Brazilian\_houses datasets, the sparse grid optimization is performing best for a cost which is higher than 20. For the sensory dataset, all four optimization algorithms already get very good results with small costs. This is due to the small number of data entries. This is not representative for a general behavior. When comparing the normal grid search and the sparse grid optimization, the second one performs better in most cases. Figure \ref{fig:Comparison_visualization} shows the behavior for the house\_sales dataset and a upper bound of 10, 30, and 50 for the cost.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{\textwidth}
 		\centering
 		\includegraphics[width=0.31\textwidth]{figures/Results/First_comparison/Grid10}
@@ -915,7 +915,7 @@ While the two-dimensional case is good for the visualization of the approaches, 
 For the three dimensional case, we first use the same network with fixed architecture again, consisting of 2 layers with 40 neurons each. The hyperparameterspace consists of the epochs, the batch size and the learning rate of the neural network. The first two are linear integer from 1 to 40 for the epochs and the batch size has 100 and 2050 as bounds. The learning rate is again logarithmic from $ 10^{-9} $ to $ 10^{-1} $. We used the three datasets house\_16H, house\_sales, and Brazilian\_houses (see Table \ref{tab:datasets_first_experiment}). The resulting performance can be seen in Figure \ref{fig:result_second_comparison_dim3}. 
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
@@ -999,7 +999,7 @@ The advantage of adaptive sparse grid optimization compared to a homogeneous gri
 To also analyze the behavior in settings of higher dimensionality, we now also add the number of layers and the number of neurons per layer as fourth and fifth variable to the hyperparameter space. The other variables and their intervals stay the same. The number of layers can now range from 2 to 21 and each layer can have 1 to 20 neurons. The resulting errors depending on the cost for the same three datasets as in Figure \ref{fig:result_second_comparison_dim3} can be seen in Figure \ref{fig:result_second_comparison_dim5}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
@@ -1086,7 +1086,7 @@ The big advantage of sparse grid is the efficiency in higher dimensions. This ca
 
 To also compare the different approaches with a convolutional neural network for object detection, we use a small model with the MNIST dataset. Nine different hyperparameters are optimized. An overview over the type and the ranges can be seen in Table \ref{tab:hyperparameter_space_mnist}.
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Hyperparameters with their type and interval for the nine dimensional space. The values for the Int-Interval are discretized with Python's \textit{int()} function. The learning rate is sampled logarithmic and the dropout probability can take continuous values between 0 and 1. }
 	\label{tab:hyperparameter_space_mnist}
 	\centering
@@ -1113,7 +1113,7 @@ The evaluation of the network is done as follows. The dataset is fetched with th
 
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1152,7 +1152,7 @@ For the sparse grid search, the advantage compared to the normal grid search is 
 
 The best configurations found by each algorithm for the problem are depicted in Table \ref{tab:best_configurations_MNIST}.
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). }
 	\label{tab:best_configurations_MNIST}
 	\centering
@@ -1175,7 +1175,7 @@ We can observe that the algorithms find different best configurations for the co
 A similar experiment with the same dataset is presented in \cite{WU201926}. The authors concentrate on bayesian optimization and optimize two hyperparameters. The first one is the batch size with an interval $ [20, 2000] $. The second one is the learning rate which can take values from $ [0,1] $. The network that is used for preicting the class of the images is a small convolutional neural network. The architecture can be seen in Table \ref{tab:architecture_MNIST_comp}.
 
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Architecture used in \cite{WU201926} for MNIST image classification. }
 	\label{tab:architecture_MNIST_comp}
 	\centering
@@ -1197,7 +1197,7 @@ As optimizer, they used the gradient descent and the loss function is the catego
 In \cite{WU201926}, it is not described for how many epochs they train the neural network which makes it hard to directly compare the algorithms. Additionally, we set the interval of the batch size to $ [20, 1020] $ because of hardware limitations. The learning rate is in our case again a logarithmic hyperparameter with lower bound of $ 10^{-16} $ and an upper bound of $ 1 $. For the neural network evaluation, we train the model on the training set with a validation split of $ 10\% $. The resulting score is then defined as the accuracy of the predictions of the test set. The result of the experiment with our four different algorithms are presented in Figure \ref{fig:Comparison_MNIST}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1228,9 +1228,9 @@ In \cite{WU201926}, it is not described for how many epochs they train the neura
 	\label{fig:Comparison_MNIST}
 \end{figure}
 
-Again, with increasing cost, the performance of the optimization techniques improve. The absolute highest accuracy is achieved by the bayesian optimization with $ 98.96\% $ followed by the sparse grid optimization with $ 98.83\% $, and random search with $ 98.52\% $. The lowest accuracy is achieved by grid search with a value of $ 97.64\% $. The authors of \cite{WU201926} reach an accuracy of $ 99.14\% $ with a budget of 50, however we do not know for how many epochs they trained the network. For the evaluation of our four algorithms, we always used exactly ten epochs. The best configurations found by the techniques are depicted in Table \ref{tab:configs_MNIST_comp}. \newline 
+Again, with increasing cost, the performance of the optimization techniques improves. The absolute highest accuracy is achieved by the bayesian optimization with $ 98.96\% $ followed by the sparse grid optimization with $ 98.83\% $, and random search with $ 98.52\% $. The lowest accuracy is achieved by grid search with a value of $ 97.64\% $. The authors of \cite{WU201926} reach an accuracy of $ 99.14\% $ with a budget of 50, however we do not know for how many epochs they trained the network. For the evaluation of our four algorithms, we always used exactly ten epochs. The best configurations found by the techniques are depicted in Table \ref{tab:configs_MNIST_comp}. \newline 
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. }
 	\label{tab:configs_MNIST_comp}
 	\centering
@@ -1251,31 +1251,31 @@ The results shown in Table \ref{tab:configs_MNIST_comp} indicate that in this ca
 
 \section{Iterative Adaptive Random Search}
 
-In the previous analysis of the sparse grid optimization for finding suitable hyperparameter configurations, we have seen that using sparse grids has advantages compared to the other algorithms in some situations. However, the pure random search is very powerful in most cases. One possible adaption of this method is to add iterative refinement like it is done in the grid generation of sparse grids. This is a promising way of combining the advantages of iterative methods and random search which allows to evaluate many different values for each hyperparameter. 
+In the previous analysis of the sparse grid optimization for finding suitable hyperparameter configurations, we have seen that using sparse grids has advantages compared to the other algorithms in some situations. However, the pure random search is very powerful in most cases. One possible adaption of this method is to add iterative refinement like it is done in the grid generation of sparse grids. This is a promising way of combining the advantages of iterative methods and random search which allows to evaluate many different values for each hyperparameter. This is why we introduce a new algorithm for optimizing the hyperparameters of machine learning models in an efficient manner.
 
-\subsection{Presentation and Implementation details}
+\subsection{Implementation}
 
-The algorithm starts with initial points that are distributed randomly in the whole search space. The number of these first points is variable and can be given by the user. A suitable value is dependent on the problem and the number of hyperparameters to be optimized. In each following iteration, one point is selected that is refined. The refinement criterion is similar to the Ritter-Novak criterion which is used for the sparse grid generation. The point i that minimizes 
+The algorithm starts with initial points that are distributed randomly in the whole search space. The number of these first points is variable and can be given by the user. A suitable value is dependent on the problem and the number of hyperparameters to be optimized. In each following iteration, one point is selected to be refined. The refinement criterion is similar to the Ritter-Novak criterion used for the sparse grid generation. The point i that minimizes 
 \begin{equation}
 \label{eq:refinement_criterion}
 	(rank_i + 1)^{1-\gamma} \cdot (level_i + refinements_i + 1)^\gamma
 \end{equation} 
-is refined. Here, the rank is the position in the array which is sorted with ascending function value. The adaptivity parameter $ \gamma $ can be used to balance exploration and exploitation. Each point additionally has an attribute level which is 0 for the initial points. In each iteration, the level of the added points is one higher than the refined point. The refinements attribute is increased each time the point is refined. \newline
+is refined. Here, the rank is the position of the point in list of all points with ascending function value. The adaptivity parameter $ \gamma $ can be used to balance exploration and exploitation. Each point additionally has an attribute level which is 0 for the initial points. In each iteration, the level of the added points is one higher than the level of the refined point. The refinements attribute is increased each time the point is refined. \newline
 
 For the refinement strategy, meaning where the points are added, random points are sampled following a distribution on a specific domain. There are different possible techniques for the refinement. In general, the algorithm takes the steps as depicted in Algorithm \ref{alg:adaptive_random_search_alg}. The iterations take place as long as the number of points where the function is evaluated is smaller or equal than the budget which has to be given.
 
-\begin{algorithm}[htbp!]
+\begin{algorithm}[H]
 	\caption{  }
 	\label{alg:adaptive_random_search_alg}
-	\textbf{Input} \textbf{m}: number of initial points, \textbf{n}: number of refinements per iteration \textbf{budget}: upper bound for evaluations, \boldmath{ $ \gamma $}: adaptivity parameter\\
+	\textbf{Input} \textbf{m}: number of initial points, \textbf{n}: number of refinements per iteration, \textbf{budget}: upper bound for evaluations, \boldmath{ $ \gamma $}: adaptivity parameter\\
 	\textbf{Output} \textbf{points}: Array of all evaluated points
 	\begin{algorithmic}
 		\For{\texttt{min(m, budget)}}
 			\State \texttt{sample point uniformly in search space}
 			\State \texttt{add point with level 0 to array}
 		\EndFor
-		\State \texttt{sort points with ascending function value}
-		\While{Number of points + n <= Budget}
+		\While{Number of points + n <= budget}
+			\State \texttt{sort points with ascending function value}
 			\State \texttt{select point p\_ref according to refinement criterion}
 			\For{\texttt{n}}
 				\State \texttt{sample point according to refinement strategy}
@@ -1283,19 +1283,26 @@ For the refinement strategy, meaning where the points are added, random points a
 				\State \texttt{increase p\_ref.refinements}
 			\EndFor
 			\State \texttt{increase number of points by n}
-			\State \texttt{sort points with ascending function value}
 		\EndWhile
 		\State return array of points
 	\end{algorithmic}
 \end{algorithm}
 
-The general idea of the refinement strategy is to sample points which are near to the point that is being refined because this point is either promising due to a small function value and thus rank, or it has not been refined that often. Concretely, we provide three different strategies.
+As input, the algorithm \ref{alg:adaptive_random_search_alg} expects the number of initial points m, the number of points to be added in each iteration, the upper bound for the number of function evaluations called budget and the adaptivity parameter $ \gamma $. The overall output is the array of all points where the function was evaluated. 
+
+The first loop is for sampling the initial points. The number of iterations is defined with \texttt{min(m, budget)} to assure that the number of function evaluations is smaller or equal than the budget. All initial points have level 0. 
+
+In the following, the refinements are done in the loop as long as the budget is not exceeded. First, the array is sorted with ascending function value. Then, one point is selected based on the refinement criterion \ref{eq:refinement_criterion}. The rank of the point is then just the index in the sorted array. 
+
+The next loop which is iterated n times, a new point is sampled according to the concrete refinement strategy. This point is then added with a level which is one higher than the one selected to be refined. Additionally, the \texttt{refinements} parameter of the point selected is increased by one. \newline 
+
+The general idea of the refinement strategy is to sample points which are near to the point that is being refined because this point is either promising due to a small function value and thus rank, or it has not been refined that often. Concretely, we provide three different strategies which are presented in the following.
 
 \subsubsection{Interval Based Refinement Strategy}
 
 For this first refinement strategy, intervals in each dimension are used. The bounds are defined by neighboring points with and the sampling is done uniformly. An example for such a refinement is presented in Figure \ref{fig:alternative_1}. \newline 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_1}
 	\caption{ Example for the interval based refinement strategy. The point being refined is indicated with the blue cross and the lines show the upper and lower boundary in each direction. The sampling is done uniformly in the blue area. }
@@ -1308,7 +1315,7 @@ In the example in Figure \ref{fig:alternative_1}, the number of initial points i
 
 This strategy is based on the uniform sampling inside a multi dimensional ball. The point that is refined is the center of this ball and we define a certain radius of the ball. For the uniform sampling, multiple possible algorithms exist \cite{HARMAN20102297}. Some of them suffer from the curse of the dimensionality. One example is the rejection method where a value from $ [0,1]^d $ is sampled and rejected if it is not inside the ball. The probability for a sample being rejected increases with higher dimensionality. Another method is using the normal distribution. For a random variable $ Y \sim N_d(0_d, 1_d) $, $ S_n = \frac{Y}{|| Y ||} $ is uniform distributed on the d-sphere which is the surface of the ball. The last step is to multiply $ S_n $ by $ U^{\frac{1}{d}} $ where $ U $ has the uniform distribution on the interval between 0 and 1. Now the sampling is done inside the standard d-ball with radius 1. The final value just has to be multiplied by the radius to change the sampling to a d-ball with arbitrary size. One two-dimensional example can is presented in Figure \ref{fig:alternative_2}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_2}
 	\caption{ Example for the uniform d-ball sampling strategy. The point being refined is indicated with the blue cross and the circle is the area where the uniform sampling is done. }
@@ -1326,7 +1333,7 @@ where $ dist_{max} $ and $ dist_{min} $ are the highest and lowest distance to o
 
 The last alternative is not sampling uniformly but based on the normal distribution. The idea behind this strategy is that we might be interested in sampling new points near the one that has to be refined in this iteration. This might lead to better results because the point that is refined might already be very promising. Therefor, in each dimension, the coordinate is sampled. A two-dimensional example is presented in Figure \ref{fig:alternative_3}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{figures/Adaptive_random/Visualizations/Alternative_3}
 	\caption{ Example for the normal distribution sampling strategy. The point being refined is indicated with the blue cross and contour represents the likelihood of samples. }
@@ -1342,7 +1349,16 @@ The example in Figure \ref{fig:alternative_3} shows five initial points in red. 
 	\end{split}
 \end{equation}
 
-Here, $ coord $ is the coordinate of the point refined in the corresponding dimension, $ bound_{lower} $ and $ bound_{upper} $ represent the bounds of the interval of the hyperparameter in this dimension and the distance $ dist $ is calculated the same way as the radius of the second refinement strategy. \newline 
+Here, $ coord $ is the coordinate of the point refined in the corresponding dimension, $ bound_{lower} $ and $ bound_{upper} $ represent the bounds of the interval of the hyperparameter in this dimension and the distance $ dist $ is calculated the same way as the radius of the second refinement strategy. Additionally, after sampling a point, it is ensured that the point lays inside the search space with 
+
+\begin{equation}
+	\begin{split}
+		coordinate =& \text{ max}((coordinate, bound_{lower})) \\
+		coordinate =& \text{ min}((coordinate, bound_{upper})).
+	\end{split}
+\end{equation}
+
+This is done for each dimension so that for all $ coordinate $ variables drawn, the sample is not higher than the upper bound and not lower than the lower bound in each dimension. \newline 
 
 For the implementation, we added a new subclass inheriting \texttt{Optimization}. It has ad additional parameter for the choice of refinement strategy. 
 
@@ -1365,7 +1381,7 @@ We will optimize the Rosenbrock function (see Table \ref{tab:test_functions} and
 The first parameter we want to analyze is the adaptivity parameter $ \gamma $ to check, if the algorithm behaves as expected. Especially the refinement criterion and strategy are influencing the behavior depending on this parameter. Therefor, we want to visualize how the points are distributed depending on the concrete value. We optimize the Rosenbrock function (see Table \ref{tab:test_functions} and Figure \ref{fig:test_functions_plot}) in two dimensions visualize the resulting points. The optimal point is at $ (1, 1) $ with function value 0. The results with a 200 budget and 5 initial points are depicted in Figure \ref{fig:Adapt_param_alternatives}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\begin{subfigure}{\textwidth}
 		\centering
 		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0}
@@ -1399,7 +1415,7 @@ The resulting points in Figure \ref{fig:Adapt_param_alternatives} show the behav
 
 The concrete optimum found in each case is presented in Table \ref{tab:results_alternatives}.
 
-\begin{table}[htbp!]
+\begin{table}[H]
 	\caption{ Resulting optimum found by the three different refinement strategies interval based refinement strategy (1), uniform d-ball sampling strategy (2), and normal distribution sampling strategy (3). The best of each refinement algorithm is marked in bold. }
 	\label{tab:results_alternatives}
 	\centering
@@ -1439,7 +1455,7 @@ The Table \ref{tab:results_alternatives} shows that each of the algorithms find 
 
 The experiments by now were only made with 3 distinct values for the adaptivity parameter and this only leads to assumptions that the evaluated parameters are the best in each case. To further analyze this parameter, the Rosenbrock and additionally the Rastrigin function were solved with 11 different adaptivity parameters between 0 and 1 with a step size of $ 0.1 $. The results for each of the three algorithms are presented in Figure \ref{fig:alternatives_adaptivities_plot}.
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1504,7 +1520,7 @@ The results in Figure \ref{fig:alternatives_adaptivities_plot} confirm that each
 
 The second parameter we want to analyze is the number of initial points. Intuitively, a high value for this parameter makes the algorithm behave more similar like the normal random search because more random points on the whole domain are sampled and less refinement steps are done. We therefor optimize the three test functions Rosenbrock, Rastrigin, and Eggholder with a different number of initial points and compare the Errors of the optimum found. The overall budget is 200 and the results are shown in Figure \ref{fig:init_points_alternatives}. In each case, 10 runs are evaluated and the average error is plotted. \newline
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -1513,7 +1529,7 @@ The second parameter we want to analyze is the number of initial points. Intuiti
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1540,7 +1556,7 @@ The second parameter we want to analyze is the number of initial points. Intuiti
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1566,7 +1582,7 @@ The second parameter we want to analyze is the number of initial points. Intuiti
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1592,7 +1608,7 @@ The second parameter we want to analyze is the number of initial points. Intuiti
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1619,7 +1635,7 @@ The second parameter we want to analyze is the number of initial points. Intuiti
 		cycle list name=exotic,
 		legend style={at={(1.3,0.5)},anchor=west},
 		scale=0.8,
-		ymode=log,
+		%ymode=log,
 		]
 		
 		\addplot coordinates
@@ -1649,7 +1665,7 @@ For the Rosenbrock and Eggholder function, the behavior is the same for all alte
 
 For the behavior on the Rastrigin function, we can conclude that strategy 1 is not the best because the results are getting better when the number of refinements decreases. This means that the algorithm is not performing well. The results for the second and third refinement strategy are very promising as they perform well already for a small number of initial points which means that the refinements are finding good optima. \newline 
 
-For the following, we will set the number of initial points with $ d $ hyperparameters as presented in the following.
+For the following experiments, we will set the number of initial points with $ d $ hyperparameters to:
 
 \begin{itemize}
 	\item Strategy 1: $ 10 \cdot d $
@@ -1661,18 +1677,18 @@ For the following, we will set the number of initial points with $ d $ hyperpara
 
 \subsubsection{Number of refinements per iteration}
 
-Analysis of influence of number of refinements per iteration
+The next parameter that is influencing the performance of the algorithm is the number of refinements per iteration. Intuitively, a higher value for this parameter makes the algorithm less adaptive because the point that has to be refined is chosen fewer times. To analyze this parameter, again the three function (Rastrigin in 2, 4, and 6 dimensions and Rosenbrock and Eggholder in 2 dimensions) are optimized with a budget of 200 in case of the 2-d problems and 400 for 4 and 6 dimensions. The resulting errors which are the averages of ten runs with up to 50 refinements per iteration are presented on Figure \ref{fig:ref_per_step}. \newline 
 
-\begin{figure}[htbp!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
-			xlabel = Initial points,
+			xlabel = Refinements per iteration,
 			ylabel = Error (Rastrigin 2d),
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1694,12 +1710,12 @@ Analysis of influence of number of refinements per iteration
 	\end{tikzpicture}
 	\begin{tikzpicture}
 		\begin{axis}[
-			xlabel = Initial points,
+			xlabel = Refinements per iteration,
 			ylabel = Error (Rastrigin 4d),
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1720,12 +1736,12 @@ Analysis of influence of number of refinements per iteration
 	\end{tikzpicture}
 	\begin{tikzpicture}
 		\begin{axis}[
-			xlabel = Initial points,
+			xlabel = Refinements per iteration,
 			ylabel = Error (Rastrigin 6d),
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1746,12 +1762,12 @@ Analysis of influence of number of refinements per iteration
 	\end{tikzpicture}
 	\begin{tikzpicture}
 		\begin{axis}[
-			xlabel = Initial points,
+			xlabel = Refinements per iteration,
 			ylabel = Error (Rosenbrock 2d),
 			cycle list name=exotic,
 			legend style={at={(1.03,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1773,12 +1789,12 @@ Analysis of influence of number of refinements per iteration
 	\end{tikzpicture}
 	\begin{tikzpicture}
 		\begin{axis}[
-			xlabel = Initial points,
+			xlabel = Refinements per iteration,
 			ylabel = Error (Eggholder 2d),
 			cycle list name=exotic,
 			legend style={at={(1.3,0.5)},anchor=west},
 			scale=0.8,
-			ymode=log,
+			%ymode=log,
 			]
 			
 			\addplot coordinates
@@ -1798,15 +1814,20 @@ Analysis of influence of number of refinements per iteration
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{  }	
+	\caption{ Error of the optimum found by the algorithm depending on the number of points added per refinement step. The budget is 200 in all two dimensional cases and 400 in the 4- and 6-dimensional problems. Each point is the average of 10 evaluations. }	
 	\label{fig:ref_per_step}
 \end{figure}
 
+As depicted in Figure \ref{fig:ref_per_step}, this parameter does not have the biggest impact on the performance. However, especially for the first refinement strategy, smaller values sometimes lead to better results  as it can be seen on the top left (Figure \ref{fig:ref_per_step}) and center right (Figure \ref{fig:ref_per_step}). \newline 
+
+In the following, we set the number of points to be added in each iteration to $ 2 \cdot d $ with d being the dimension of the problem. This is the same number of points that are added in each iteration in the sparse grid generation algorithm. \newline 
+
+In summary, the third strategy almost always performs best. This can be seen in Figure \ref{fig:init_points_alternatives} and Figure \ref{fig:ref_per_step}. 
+
+
 \subsection{Hyperparameter Optimization}
 
-\begin{itemize}
-	\item small first experiments (2d with visualizations)
-\end{itemize}
+First experiments -> Problem from Figure \ref{fig:analysis_model_training}.
 
 \subsection{Comparison with other Techniques}
 
