@@ -1268,7 +1268,7 @@ is refined. Here, the rank is the position of the point in the list of all point
 For the refinement strategy, meaning where the points are added, random points are sampled following a distribution on a specific domain. There are different possible techniques for refinement. In general, the algorithm takes the steps as depicted in Algorithm \ref{alg:adaptive_random_search_alg}. The iterations take place as long as the number of points where the function is evaluated is smaller or equal to the budget which has to be given.
 
 \begin{algorithm}[H]
-	\caption{  }
+	\caption{ Iterative adaptive random search for hyperparameter optimization. In each iteration, a random point is sampled following a specific distribution depending on the refinement criterion. }
 	\label{alg:adaptive_random_search_alg}
 	\textbf{Input} \textbf{m}: number of initial points, \textbf{n}: number of refinements per iteration, \textbf{budget}: upper bound for evaluations, \boldmath{ $ \gamma $}: adaptivity parameter\\
 	\textbf{Output} \textbf{points}: Array of all evaluated points
