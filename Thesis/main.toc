@@ -49,10 +49,10 @@
 \contentsline {subsubsection}{\nonumberline Adaptivity Parameter}{66}{subsubsection*.75}%
 \contentsline {subsubsection}{\nonumberline Number of initial points}{71}{subsubsection*.80}%
 \contentsline {subsubsection}{\nonumberline Number of refinements per iteration}{73}{subsubsection*.83}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{76}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{76}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{77}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{78}{chapter*.85}%
-\contentsline {chapter}{\nonumberline List of Tables}{82}{chapter*.86}%
-\contentsline {chapter}{\nonumberline Bibliography}{84}{chapter*.87}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{77}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Comparison with other Techniques}{78}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{79}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{80}{chapter*.87}%
+\contentsline {chapter}{\nonumberline List of Tables}{84}{chapter*.88}%
+\contentsline {chapter}{\nonumberline Bibliography}{86}{chapter*.89}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

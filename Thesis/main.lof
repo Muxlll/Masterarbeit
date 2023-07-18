@@ -41,6 +41,7 @@
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Error of the found optimum by the different refinement strategies for the Rosenbrock (top) and the Rastrigin (bottom) function. \relax }}{70}{figure.caption.78}%
 \contentsline {figure}{\numberline {3.25}{\ignorespaces Error of the optimum found by the algorithm depending on the number of initial points. The budget is 200 in all two dimensional cases and 400 in the 4- and 6-dimensional problem. Each point is the average of 10 evaluations. \relax }}{72}{figure.caption.81}%
 \contentsline {figure}{\numberline {3.26}{\ignorespaces Error of the optimum found by the algorithm depending on the number of points added per refinement step. The budget is 200 in all two dimensional cases and 400 in the 4- and 6-dimensional problems. Each point is the average of 10 evaluations. \relax }}{75}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces \relax }}{77}{figure.caption.85}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1830,6 +1830,64 @@ In summary, the third strategy almost always performs best. This can be seen in 
 
 \subsection{Hyperparameter Optimization}
 
+
+\begin{figure}[H]
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100}
+		\caption{ Refinement strategy 1 }
+		\label{fig:alt0_ml}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100}
+		\caption{ Refinement strategy 2 }
+		\label{fig:alt1_ml}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50}
+		\includegraphics[width=0.31\textwidth]{figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100}
+		\caption{ Refinement strategy 3 }
+		\label{fig:alt2_ml}
+	\end{subfigure}
+	
+	\caption{  }
+	\label{fig:Alternatives_ml_visualization}
+\end{figure}
+
+
+\begin{table}[H]
+	\caption{  }
+	\label{tab:results_alternatives_ml}
+	\centering
+	\begin{tabular}{| c |  c |c c |} 
+		\hline
+		Alternative & Budget & Coordinates & Function value \\ 
+		\hline
+		
+		& 10 & $ [38, 0.0001404]$ & 0.2706 \\ 
+		1 & 50 & $[22, 0.0003172]$ & 0.2538 \\ 
+		& 100 & $[12, 0.0002233]$ & 0.2588 \\ 
+		\hline
+		& 10 & $ [5, 4.712\cdot 10^{-8}] $ & 0.5883 \\ 
+		2 & 50 & $[25, 0.0001037]$ & 0.3183 \\ 
+		& 100 & $[18, 0.1]$ & 0.3595 \\ 
+		\hline
+		& 10 & $ [35, 0.0009751] $ & 0.5973 \\ 
+		3 & 50 & $[10, 0.009276]$ & 0.4416 \\ 
+		& 100 &$ [38, 0.0001735] $& 0.2436 \\ 
+		
+		\hline
+	\end{tabular}
+\end{table}
+
+
 First experiments -> Problem from Figure \ref{fig:analysis_model_training}.
 
 \subsection{Comparison with other Techniques}

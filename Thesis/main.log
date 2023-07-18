@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  17 JUL 2023 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  18 JUL 2023 10:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3061,32 +3061,162 @@ Underfull \hbox (badness 10000) in paragraph at lines 1826--1827
 
  []
 
-) (./chapters/05_conclusion_and_outlook.tex [76]
+<figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf, id
+=2213, 374.43388pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_0_budget_10.pdf  used on input line 1837.
+(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf, id
+=2214, 382.24205pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_0_budget_50.pdf  used on input line 1838.
+(pdftex.def)             Requested size: 129.65819pt x 100.91684pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pdf, i
+d=2215, 374.43388pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.p
+df Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pd
+f>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_0_budget_100.pdf  used on input line 1839.
+(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf, id
+=2216, 369.41513pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_1_budget_10.pdf  used on input line 1845.
+(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf, id
+=2217, 379.45264pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_1_budget_50.pdf  used on input line 1846.
+(pdftex.def)             Requested size: 129.65819pt x 101.66135pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pdf, i
+d=2218, 374.43388pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.p
+df Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pd
+f>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_1_budget_100.pdf  used on input line 1847.
+(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf, id
+=2219, 369.41513pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_2_budget_10.pdf  used on input line 1853.
+(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf, id
+=2220, 369.41513pt x 300.85298pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pd
+f Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf
+>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_2_budget_50.pdf  used on input line 1854.
+(pdftex.def)             Requested size: 129.65819pt x 105.59392pt.
+<figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pdf, i
+d=2221, 369.41513pt x 297.51251pt>
+File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.p
+df Graphic file (type pdf)
+<use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pd
+f>
+Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
+tive_2_budget_100.pdf  used on input line 1855.
+(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+[76] [77 <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget
+_10.pdf> <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget
+_50.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_0_budget_50.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pd
+f
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_0_budget_100.pdf): PDF inclusion: multiple pdfs with page
+ group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_1_budget_10.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_1_budget_50.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pd
+f
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_1_budget_100.pdf): PDF inclusion: multiple pdfs with page
+ group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_2_budget_10.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_2_budget_50.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+> <./figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pd
+f
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
+ing_first/Alternative_2_budget_100.pdf): PDF inclusion: multiple pdfs with page
+ group included in a single page
+>]) (./chapters/05_conclusion_and_outlook.tex [78]
 chapter 4.
-) [77
+) [79
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [78
+ (./main.lof [80
 
 
-] [79] [80])
+] [81] [82])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [81]
+ [83]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
- (./main.lot)
+ (./main.lot [84
+
+
+])
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [82
-
-
-] [83]
+ [85]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
@@ -3098,12 +3228,12 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[84
+[86
 
 
-] [85] [86] [87] [88]
+] [87] [88] [89] [90]
 No complaints by nag.
-[89] (./main.aux)
+[91] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -3111,10 +3241,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56383 strings out of 480121
- 1304789 string characters out of 5892160
- 2352679 words of memory out of 5000000
- 72099 multiletter control sequences out of 15000+600000
+ 56486 strings out of 480121
+ 1311979 string characters out of 5892160
+ 2353092 words of memory out of 5000000
+ 72188 multiletter control sequences out of 15000+600000
  574255 words of font info for 638 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3133,10 +3263,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (97 pages, 9500657 bytes).
+Output written on main.pdf (99 pages, 9612446 bytes).
 PDF statistics:
- 2787 PDF objects out of 2984 (max. 8388607)
- 2095 compressed objects within 21 object streams
- 345 named destinations out of 1000 (max. 500000)
- 131471 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2922 PDF objects out of 2984 (max. 8388607)
+ 2181 compressed objects within 22 object streams
+ 349 named destinations out of 1000 (max. 500000)
+ 131516 words of extra memory for PDF output out of 154059 (max. 10000000)
 
