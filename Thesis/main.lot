@@ -14,7 +14,7 @@
 \contentsline {table}{\numberline {3.8}{\ignorespaces Architecture used in \blx@tocontentsinit {0}\cite {WU201926} for MNIST image classification. \relax }}{58}{table.caption.62}%
 \contentsline {table}{\numberline {3.9}{\ignorespaces Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. \relax }}{60}{table.caption.64}%
 \contentsline {table}{\numberline {3.10}{\ignorespaces Resulting optimum found by the three different refinement strategies interval based refinement strategy (1), uniform d-ball sampling strategy (2), and normal distribution sampling strategy (3). The best of each refinement algorithm is marked in bold. \relax }}{69}{table.caption.77}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces \relax }}{78}{table.caption.86}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces \relax }}{77}{table.caption.86}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  18 JUL 2023 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  19 JUL 2023 10:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2218,21 +2218,15 @@ LaTeX Warning: Citation 'gall1966practical' on page 22 undefined on input line
 ) (./chapters/04_hyperparameter_optimization.tex
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
+LaTeX Warning: Reference `chapter:theoretical_background' on page 23 undefined 
+on input line 12.
 
 
-LaTeX Warning: Reference `subsec:Implementation' on page 23 undefined on input 
-line 14.
+LaTeX Warning: Citation 'valentin2016hierarchical' on page 23 undefined on inpu
+t line 12.
 
 
-LaTeX Warning: Citation 'feurer-arxiv19a' on page 23 undefined on input line 28
+LaTeX Warning: Citation 'feurer-arxiv19a' on page 24 undefined on input line 28
 .
 
 
@@ -2263,15 +2257,15 @@ LaTeX Warning: Citation 'whitley1996evaluating' on page 25 undefined on input l
 ine 74.
 
 
-LaTeX Warning: Citation 'yang2010engineering' on page 25 undefined on input lin
+LaTeX Warning: Citation 'yang2010engineering' on page 26 undefined on input lin
 e 79.
 
 
-LaTeX Warning: Citation 'yang2010engineering' on page 25 undefined on input lin
+LaTeX Warning: Citation 'yang2010engineering' on page 26 undefined on input lin
 e 83.
 
 
-LaTeX Warning: Reference `fig:test_functions_plot' on page 25 undefined on inpu
+LaTeX Warning: Reference `fig:test_functions_plot' on page 26 undefined on inpu
 t line 87.
 
 The command '\includegraphics [width=\textwidth ]{Eggholder_normal}' has been o
@@ -2307,7 +2301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
  []
 
 
-LaTeX Warning: Reference `fig:Eggholder_grid' on page 26 undefined on input lin
+LaTeX Warning: Reference `fig:Eggholder_grid' on page 27 undefined on input lin
 e 127.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
@@ -2393,11 +2387,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
  []
 
 
-LaTeX Warning: Reference `fig:Rastrigin' on page 28 undefined on input line 199
+LaTeX Warning: Reference `fig:Rastrigin' on page 29 undefined on input line 199
 .
 
 
-LaTeX Warning: Reference `fig:Rastrigin_grid' on page 28 undefined on input lin
+LaTeX Warning: Reference `fig:Rastrigin_grid' on page 29 undefined on input lin
 e 199.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
@@ -3196,6 +3190,8 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 \openout6 = `main-figure28.dpth'.
 
+Package pgfplots info on input line 1646: Using 'lua backend=false' for axis: y
+mode=log unsupported (yet).
 [56
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -3301,7 +3297,7 @@ achine_learning_first/Alternative_2_budget_100}' has been optimized away. Use '
 /tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Reference `fig:analysis_model_training' on page 59 undefined on 
-input line 1922.
+input line 1923.
 
 ) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
@@ -3333,19 +3329,20 @@ Package logreq Info: Writing requests to 'main-figure28.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54910 strings out of 480121
- 1248600 string characters out of 5892160
- 2105796 words of memory out of 5000000
- 71586 multiletter control sequences out of 15000+600000
- 532783 words of font info for 250 fonts, out of 8000000 for 9000
+ 54916 strings out of 480121
+ 1248575 string characters out of 5892160
+ 2126796 words of memory out of 5000000
+ 71581 multiletter control sequences out of 15000+600000
+ 534152 words of font info for 257 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,17n,112p,10633b,2377s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure28.pdf (1 page, 27828 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on main-figure28.pdf (1 page, 37145 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 26 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  1 named destinations out of 1000 (max. 500000)
- 65037 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 69133 words of extra memory for PDF output out of 74296 (max. 10000000)
 

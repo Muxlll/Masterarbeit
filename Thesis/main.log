@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  18 JUL 2023 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  19 JUL 2023 11:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1995,25 +1995,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
 ) (./chapters/04_hyperparameter_optimization.tex [25]
 chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
 [26
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
@@ -2024,42 +2014,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
  []
 
 [28]
-<Eggholder_normal.pdf, id=675, 343.62178pt x 282.05878pt>
+<Eggholder_normal.pdf, id=673, 343.62178pt x 282.05878pt>
 File: Eggholder_normal.pdf Graphic file (type pdf)
 <use Eggholder_normal.pdf>
 Package pdftex.def Info: Eggholder_normal.pdf  used on input line 93.
 (pdftex.def)             Requested size: 125.47794pt x 102.99577pt.
-<Eggholder_above.pdf, id=676, 343.62178pt x 281.56392pt>
+<Eggholder_above.pdf, id=674, 343.62178pt x 281.56392pt>
 File: Eggholder_above.pdf Graphic file (type pdf)
 <use Eggholder_above.pdf>
 Package pdftex.def Info: Eggholder_above.pdf  used on input line 94.
 (pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
-<Rosenbrock_normal.pdf, id=677, 325.7771pt x 287.03537pt>
+<Rosenbrock_normal.pdf, id=675, 325.7771pt x 287.03537pt>
 File: Rosenbrock_normal.pdf Graphic file (type pdf)
 <use Rosenbrock_normal.pdf>
 Package pdftex.def Info: Rosenbrock_normal.pdf  used on input line 100.
 (pdftex.def)             Requested size: 125.47794pt x 110.55495pt.
-<Rosenbrock_above.pdf, id=678, 325.7771pt x 281.56392pt>
+<Rosenbrock_above.pdf, id=676, 325.7771pt x 281.56392pt>
 File: Rosenbrock_above.pdf Graphic file (type pdf)
 <use Rosenbrock_above.pdf>
 Package pdftex.def Info: Rosenbrock_above.pdf  used on input line 101.
 (pdftex.def)             Requested size: 125.47794pt x 108.44754pt.
-<Rastrigin_normal.pdf, id=679, 335.81561pt x 287.03537pt>
+<Rastrigin_normal.pdf, id=677, 335.81561pt x 287.03537pt>
 File: Rastrigin_normal.pdf Graphic file (type pdf)
 <use Rastrigin_normal.pdf>
 Package pdftex.def Info: Rastrigin_normal.pdf  used on input line 107.
 (pdftex.def)             Requested size: 125.47794pt x 107.24818pt.
-<Rastrigin_above.pdf, id=680, 335.81561pt x 281.56392pt>
+<Rastrigin_above.pdf, id=678, 335.81561pt x 281.56392pt>
 File: Rastrigin_above.pdf Graphic file (type pdf)
 <use Rastrigin_above.pdf>
 Package pdftex.def Info: Rastrigin_above.pdf  used on input line 108.
 (pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
-
- []
-
-[29 <./Eggholder_normal.pdf> <./Eggholder_above.pdf
+ [29 <./Eggholder_normal.pdf> <./Eggholder_above.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Eggholder_above.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
@@ -2080,6 +2065,10 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Rastrigin_normal.pdf): PDF inclusion:
 pdfTeX warning: /usr/bin/pdflatex (file ./Rastrigin_above.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
 <figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggholder_1
 .pdf, id=769, 415.74022pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Egghol
@@ -2134,11 +2123,16 @@ er_above_0.pdf>
 Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Egghold
 er/tex_files/Eggholder_above_0.pdf  used on input line 147.
 (pdftex.def)             Requested size: 125.47794pt x 102.81508pt.
- [30 <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggh
-older_1.pdf> <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_fi
-les/Eggholder_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Eg
-gholder/tex_files/Eggholder_0_5.pdf> <./figures/Results/Sparse_grid_generation_
-results/Eggholder/tex_files/Eggholder_above_0_5.pdf
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+[31 <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_files/Eggho
+lder_1.pdf> <./figures/Results/Sparse_grid_generation_results/Eggholder/tex_fil
+es/Eggholder_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Egg
+holder/tex_files/Eggholder_0_5.pdf> <./figures/Results/Sparse_grid_generation_r
+esults/Eggholder/tex_files/Eggholder_above_0_5.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Eggholder/tex_files/Eggholder_above_0_5.pdf): PDF inclusion: multiple
@@ -2151,12 +2145,8 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Eggholder/tex_files/Eggholder_above_0.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_1.pdf, id=849, 405.70271pt x 310.44884pt>
+_1.pdf, id=854, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2165,7 +2155,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_1.pdf  used on input line 169.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_1.pdf, id=850, 350.87186pt x 281.56392pt>
+_above_1.pdf, id=855, 350.87186pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_1.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2174,7 +2164,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_1.pdf  used on input line 170.
 (pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_0_5.pdf, id=851, 405.70271pt x 310.44884pt>
+_0_5.pdf, id=856, 405.70271pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2183,7 +2173,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_0_5.pdf  used on input line 176.
 (pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_0_5.pdf, id=852, 350.87186pt x 281.56392pt>
+_above_0_5.pdf, id=857, 350.87186pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_0_5.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2192,7 +2182,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_0_5.pdf  used on input line 177.
 (pdftex.def)             Requested size: 125.47794pt x 100.6927pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_0.pdf, id=853, 397.89552pt x 310.44884pt>
+_0.pdf, id=858, 397.89552pt x 310.44884pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2201,7 +2191,7 @@ Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_0.pdf  used on input line 183.
 (pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
 <figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenbrock
-_above_0.pdf, id=854, 345.8531pt x 281.56392pt>
+_above_0.pdf, id=859, 345.8531pt x 281.56392pt>
 File: figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosen
 brock_above_0.pdf Graphic file (type pdf)
 <use figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rosenb
@@ -2209,7 +2199,66 @@ rock_above_0.pdf>
 Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rosenbr
 ock/tex_files/Rosenbrock_above_0.pdf  used on input line 184.
 (pdftex.def)             Requested size: 125.47794pt x 102.15344pt.
-[31 <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rose
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1
+.pdf, id=866, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_1.pdf  used on input line 204.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_1.pdf, id=867, 335.81561pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_1.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_1.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_1.pdf  used on input line 205.
+(pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
+_5.pdf, id=868, 405.70271pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_0_5.pdf  used on input line 211.
+(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_0_5.pdf, id=869, 330.79585pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_0_5.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_0_5.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_0_5.pdf  used on input line 212.
+(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
+.pdf, id=870, 397.89552pt x 310.44884pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_0.pdf  used on input line 218.
+(pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
+<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
+bove_0.pdf, id=871, 330.79585pt x 281.56392pt>
+File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
+gin_above_0.pdf Graphic file (type pdf)
+<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
+in_above_0.pdf>
+Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
+in/tex_files/Rastrigin_above_0.pdf  used on input line 219.
+(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
+[32 <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_files/Rose
 nbrock_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rosenbrock/tex_
 files/Rosenbrock_above_1.pdf> <./figures/Results/Sparse_grid_generation_results
 /Rosenbrock/tex_files/Rosenbrock_0_5.pdf> <./figures/Results/Sparse_grid_genera
@@ -2226,70 +2275,16 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Rosenbrock/tex_files/Rosenbrock_above_0.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
-
- []
-
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_1
-.pdf, id=926, 405.70271pt x 310.44884pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_1.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_1.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_1.pdf  used on input line 204.
-(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_1.pdf, id=927, 335.81561pt x 281.56392pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_above_1.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_above_1.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_above_1.pdf  used on input line 205.
-(pdftex.def)             Requested size: 125.47794pt x 105.20383pt.
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
-_5.pdf, id=928, 405.70271pt x 310.44884pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_0_5.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_0_5.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_0_5.pdf  used on input line 211.
-(pdftex.def)             Requested size: 125.47794pt x 96.0155pt.
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_0_5.pdf, id=929, 330.79585pt x 281.56392pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_above_0_5.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_above_0_5.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_above_0_5.pdf  used on input line 212.
-(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_0
-.pdf, id=930, 397.89552pt x 310.44884pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_0.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_0.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_0.pdf  used on input line 218.
-(pdftex.def)             Requested size: 125.47794pt x 97.90085pt.
-<figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrigin_a
-bove_0.pdf, id=931, 330.79585pt x 281.56392pt>
-File: figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastri
-gin_above_0.pdf Graphic file (type pdf)
-<use figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastrig
-in_above_0.pdf>
-Package pdftex.def Info: figures/Results/Sparse_grid_generation_results/Rastrig
-in/tex_files/Rastrigin_above_0.pdf  used on input line 219.
-(pdftex.def)             Requested size: 125.47794pt x 106.80206pt.
-
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-[32 <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastr
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+[33 <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_files/Rastr
 igin_1.pdf> <./figures/Results/Sparse_grid_generation_results/Rastrigin/tex_fil
 es/Rastrigin_above_1.pdf> <./figures/Results/Sparse_grid_generation_results/Ras
 trigin/tex_files/Rastrigin_0_5.pdf> <./figures/Results/Sparse_grid_generation_r
@@ -2306,11 +2301,6 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Results/Sparse_grid_generatio
 n_results/Rastrigin/tex_files/Rastrigin_above_0.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
@@ -2318,7 +2308,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--238
 ===== Image 'main-figure0' is up-to-date. ======
 ===== Image 'main-figure1' is up-to-date. ======
 ===== Image 'main-figure2' is up-to-date. ======
-[33]
+
 Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
@@ -2333,7 +2323,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 399--400
  []
 
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-5.pdf, id=1050, 388.26155pt x 313.93484pt>
+5.pdf, id=1051, 388.26155pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation5.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
@@ -2342,7 +2332,7 @@ Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization5.pdf  used on input line 404.
 (pdftex.def)             Requested size: 129.65819pt x 104.83948pt.
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-80.pdf, id=1051, 388.26155pt x 313.93484pt>
+80.pdf, id=1052, 388.26155pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation80.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
@@ -2351,7 +2341,7 @@ Package pdftex.def Info: figures/Results/Testfunctions/Optimizer_visualization/
 Optimizers_visualization80.pdf  used on input line 405.
 (pdftex.def)             Requested size: 129.65819pt x 104.83948pt.
 <figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualization
-1000.pdf, id=1052, 388.26155pt x 313.93484pt>
+1000.pdf, id=1053, 388.26155pt x 313.93484pt>
 File: figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiz
 ation1000.pdf Graphic file (type pdf)
 <use figures/Results/Testfunctions/Optimizer_visualization/Optimizers_visualiza
@@ -2388,7 +2378,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 480--481
  []
 
 [38 <./main-figure6.pdf>]
-<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1132, 
+<figures/Results/Machine_learning/1000_evaluations/Network_above.pdf, id=1133, 
 341.39143pt x 281.56392pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_above.pdf Graph
 ic file (type pdf)
@@ -2396,7 +2386,7 @@ ic file (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/1000_evaluations/Netw
 ork_above.pdf  used on input line 501.
 (pdftex.def)             Requested size: 200.76086pt x 165.58421pt.
-<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1133,
+<figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf, id=1134,
  341.39143pt x 287.03537pt>
 File: figures/Results/Machine_learning/1000_evaluations/Network_normal.pdf Grap
 hic file (type pdf)
@@ -2409,7 +2399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
-<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1142, 333.
+<figures/Results/Machine_learning/first_analysis/above_30_85.pdf, id=1143, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_30_85.pdf Graphic f
 ile (type pdf)
@@ -2417,7 +2407,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 30_85.pdf  used on input line 514.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1143, 333.
+<figures/Results/Machine_learning/first_analysis/above_80_85.pdf, id=1144, 333.
 58527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/above_80_85.pdf Graphic f
 ile (type pdf)
@@ -2425,7 +2415,7 @@ ile (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/above_
 80_85.pdf  used on input line 515.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1144, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_30_5.pdf, id=1145, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_30_5.pdf Graphic fi
 le (type pdf)
@@ -2433,7 +2423,7 @@ le (type pdf)
 Package pdftex.def Info: figures/Results/Machine_learning/first_analysis/Above_
 30_5.pdf  used on input line 521.
 (pdftex.def)             Requested size: 200.76086pt x 169.4552pt.
-<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1145, 333.5
+<figures/Results/Machine_learning/first_analysis/Above_80_5.pdf, id=1146, 333.5
 8527pt x 281.56392pt>
 File: figures/Results/Machine_learning/first_analysis/Above_80_5.pdf Graphic fi
 le (type pdf)
@@ -2465,7 +2455,7 @@ t_analysis/above_80_5.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.pdf, 
-id=1266, 402.20264pt x 313.93484pt>
+id=1267, 402.20264pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.
 pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_5.p
@@ -2474,7 +2464,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_5.pdf  used on input line 565.
 (pdftex.def)             Requested size: 204.94751pt x 159.97052pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10.pdf,
- id=1267, 404.99104pt x 313.93484pt>
+ id=1268, 404.99104pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_10.
@@ -2483,7 +2473,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_10.pdf  used on input line 566.
 (pdftex.def)             Requested size: 204.94751pt x 158.86876pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30.pdf,
- id=1268, 392.16513pt x 313.93484pt>
+ id=1269, 392.16513pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_30.
@@ -2492,7 +2482,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/Optimizers_
 visualization_ml_30.pdf  used on input line 568.
 (pdftex.def)             Requested size: 204.94751pt x 164.06618pt.
 <figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50.pdf,
- id=1269, 397.18388pt x 313.93484pt>
+ id=1270, 397.18388pt x 313.93484pt>
 File: figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50
 .pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/Optimizers_visualization_ml_50.
@@ -2523,7 +2513,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 700--701
 
 [45 <./main-figure7.pdf> <./main-figure8.pdf>]
 <figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
-ppar_28.pdf, id=1366, 403.3188pt x 310.44884pt>
+ppar_28.pdf, id=1367, 403.3188pt x 310.44884pt>
 File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
 al_hyppar_28.pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
@@ -2532,7 +2522,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
 _hyperpar/Categorical_hyppar_28.pdf  used on input line 705.
 (pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
 <figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
-ppar_48.pdf, id=1367, 403.3188pt x 310.44884pt>
+ppar_48.pdf, id=1368, 403.3188pt x 310.44884pt>
 File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
 al_hyppar_48.pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
@@ -2541,7 +2531,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
 _hyperpar/Categorical_hyppar_48.pdf  used on input line 706.
 (pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
 <figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
-ppar_98.pdf, id=1368, 403.3188pt x 310.44884pt>
+ppar_98.pdf, id=1369, 403.3188pt x 310.44884pt>
 File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
 al_hyppar_98.pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
@@ -2550,7 +2540,7 @@ Package pdftex.def Info: figures/Results/Machine_learning/optimizer/categorical
 _hyperpar/Categorical_hyppar_98.pdf  used on input line 709.
 (pdftex.def)             Requested size: 200.76086pt x 154.53242pt.
 <figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorical_hy
-ppar_198.pdf, id=1369, 403.3188pt x 310.44884pt>
+ppar_198.pdf, id=1370, 403.3188pt x 310.44884pt>
 File: figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categoric
 al_hyppar_198.pdf Graphic file (type pdf)
 <use figures/Results/Machine_learning/optimizer/categorical_hyperpar/Categorica
@@ -2619,84 +2609,84 @@ Overfull \vbox (19.20723pt too high) has occurred while \output is active []
 
 [50 <./main-figure9.pdf> <./main-figure10.pdf> <./main-figure11.pdf> <./main-fi
 gure12.pdf> <./main-figure13.pdf>]
-<figures/Results/First_comparison/Grid10.pdf, id=1493, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid10.pdf, id=1494, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid10.pdf  used on i
 nput line 884.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Grid30.pdf, id=1494, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid30.pdf, id=1495, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid30.pdf  used on i
 nput line 885.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Grid50.pdf, id=1495, 387.1464pt x 313.93484pt
+<figures/Results/First_comparison/Grid50.pdf, id=1496, 387.1464pt x 313.93484pt
 >
 File: figures/Results/First_comparison/Grid50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Grid50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Grid50.pdf  used on i
 nput line 886.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random10.pdf, id=1496, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random10.pdf, id=1497, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random10.pdf  used on
  input line 892.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random30.pdf, id=1497, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random30.pdf, id=1498, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random30.pdf  used on
  input line 893.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Random50.pdf, id=1498, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Random50.pdf, id=1499, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Random50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Random50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Random50.pdf  used on
  input line 894.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian10.pdf, id=1499, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian10.pdf, id=1500, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian10.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian10.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian10.pdf  used 
 on input line 900.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian30.pdf, id=1500, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian30.pdf, id=1501, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian30.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian30.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian30.pdf  used 
 on input line 901.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Bayesian50.pdf, id=1501, 387.1464pt x 313.934
+<figures/Results/First_comparison/Bayesian50.pdf, id=1502, 387.1464pt x 313.934
 84pt>
 File: figures/Results/First_comparison/Bayesian50.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Bayesian50.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Bayesian50.pdf  used 
 on input line 902.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse8.pdf, id=1502, 387.1464pt x 313.93484p
+<figures/Results/First_comparison/Sparse8.pdf, id=1503, 387.1464pt x 313.93484p
 t>
 File: figures/Results/First_comparison/Sparse8.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse8.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse8.pdf  used on 
 input line 909.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse28.pdf, id=1503, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse28.pdf, id=1504, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse28.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse28.pdf>
 Package pdftex.def Info: figures/Results/First_comparison/Sparse28.pdf  used on
  input line 910.
 (pdftex.def)             Requested size: 129.65819pt x 105.13647pt.
-<figures/Results/First_comparison/Sparse48.pdf, id=1504, 387.1464pt x 313.93484
+<figures/Results/First_comparison/Sparse48.pdf, id=1505, 387.1464pt x 313.93484
 pt>
 File: figures/Results/First_comparison/Sparse48.pdf Graphic file (type pdf)
 <use figures/Results/First_comparison/Sparse48.pdf>
@@ -2844,7 +2834,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
 
  []
 
-<figures/Adaptive_random/Visualizations/Alternative_1.pdf, id=1842, 306.43484pt
+<figures/Adaptive_random/Visualizations/Alternative_1.pdf, id=1843, 306.43484pt
  x 300.99751pt>
 File: figures/Adaptive_random/Visualizations/Alternative_1.pdf Graphic file (ty
 pe pdf)
@@ -2853,7 +2843,7 @@ Package pdftex.def Info: figures/Adaptive_random/Visualizations/Alternative_1.p
 df  used on input line 1319.
 (pdftex.def)             Requested size: 245.1482pt x 240.79832pt.
 [62] [63 <./figures/Adaptive_random/Visualizations/Alternative_1.pdf>]
-<figures/Adaptive_random/Visualizations/Alternative_2.pdf, id=1870, 306.43484pt
+<figures/Adaptive_random/Visualizations/Alternative_2.pdf, id=1871, 306.43484pt
  x 300.99751pt>
 File: figures/Adaptive_random/Visualizations/Alternative_2.pdf Graphic file (ty
 pe pdf)
@@ -2862,7 +2852,7 @@ Package pdftex.def Info: figures/Adaptive_random/Visualizations/Alternative_2.p
 df  used on input line 1332.
 (pdftex.def)             Requested size: 245.1482pt x 240.79832pt.
  [64 <./figures/Adaptive_random/Visualizations/Alternative_2.pdf>]
-<figures/Adaptive_random/Visualizations/Alternative_3.pdf, id=1888, 367.60236pt
+<figures/Adaptive_random/Visualizations/Alternative_3.pdf, id=1889, 367.60236pt
  x 300.99751pt>
 File: figures/Adaptive_random/Visualizations/Alternative_3.pdf Graphic file (ty
 pe pdf)
@@ -2877,7 +2867,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
 
 [66]
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf, id=1
-925, 369.8337pt x 300.99751pt>
+926, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf 
 Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_1.0.pdf>
@@ -2885,7 +2875,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_1.0.pdf  used on input line 1399.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf, id=
-1926, 369.8337pt x 300.99751pt>
+1927, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.75.pdf>
@@ -2894,7 +2884,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_0.75.pdf  used on input line 1400.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf, id=1
-927, 369.8337pt x 300.99751pt>
+928, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf 
 Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_0_adapt_0.0.pdf>
@@ -2902,7 +2892,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_0_adapt_0.0.pdf  used on input line 1401.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.pdf, i
-d=1928, 369.8337pt x 300.99751pt>
+d=1929, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_1.0_1_.pd
@@ -2911,7 +2901,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_1.0_1_.pdf  used on input line 1407.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf, id=
-1929, 369.8337pt x 300.99751pt>
+1930, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.75.pdf>
@@ -2920,7 +2910,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_0.75.pdf  used on input line 1408.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.pdf, i
-d=1930, 369.8337pt x 300.99751pt>
+d=1931, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_1_adapt_0.0_1_.pd
@@ -2929,7 +2919,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_1_adapt_0.0_1_.pdf  used on input line 1409.
 (pdftex.def)             Requested size: 129.65819pt x 105.52522pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pdf, i
-d=1931, 352.54712pt x 308.07997pt>
+d=1932, 352.54712pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_1.0_2_.pd
@@ -2938,7 +2928,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_1.0_2_.pdf  used on input line 1415.
 (pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf, id=
-1932, 352.54712pt x 308.07997pt>
+1933, 352.54712pt x 308.07997pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf
  Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.75.pdf>
@@ -2947,7 +2937,7 @@ Package pdftex.def Info: figures/Adaptive_random/Adaptivity_parameter/Alternati
 ve_2_adapt_0.75.pdf  used on input line 1416.
 (pdftex.def)             Requested size: 129.65819pt x 113.30617pt.
 <figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pdf, i
-d=1933, 369.8337pt x 300.99751pt>
+d=1934, 369.8337pt x 300.99751pt>
 File: figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Adaptivity_parameter/Alternative_2_adapt_0.0_2_.pd
@@ -3036,7 +3026,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1714--1715
+Underfull \hbox (badness 10000) in paragraph at lines 1708--1709
 
  []
 
@@ -3045,105 +3035,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 1714--1715
 ===== Image 'main-figure32' is up-to-date. ======
 ===== Image 'main-figure33' is up-to-date. ======
 ===== Image 'main-figure34' is up-to-date. ======
-[73] [74]
-Overfull \vbox (12.15257pt too high) has occurred while \output is active []
+[73]
+Overfull \vbox (18.15599pt too high) has occurred while \output is active []
 
 
-[75 <./main-figure30.pdf> <./main-figure31.pdf> <./main-figure32.pdf> <./main-f
+[74 <./main-figure30.pdf> <./main-figure31.pdf> <./main-figure32.pdf> <./main-f
 igure33.pdf> <./main-figure34.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1855--1856
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1858
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
 
  []
 
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf, id
-=2230, 374.43388pt x 297.51251pt>
+=2235, 374.43388pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_0_budget_10.pdf  used on input line 1868.
+tive_0_budget_10.pdf  used on input line 1862.
 (pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf, id
-=2231, 382.24205pt x 297.51251pt>
+=2236, 382.24205pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_0_budget_50.pdf  used on input line 1869.
+tive_0_budget_50.pdf  used on input line 1863.
 (pdftex.def)             Requested size: 129.65819pt x 100.91684pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pdf, i
-d=2232, 374.43388pt x 297.51251pt>
+d=2237, 374.43388pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_0_budget_100.pdf  used on input line 1870.
+tive_0_budget_100.pdf  used on input line 1864.
 (pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf, id
-=2233, 369.41513pt x 297.51251pt>
+=2238, 369.41513pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_1_budget_10.pdf  used on input line 1876.
+tive_1_budget_10.pdf  used on input line 1870.
 (pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf, id
-=2234, 379.45264pt x 297.51251pt>
+=2239, 379.45264pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_1_budget_50.pdf  used on input line 1877.
+tive_1_budget_50.pdf  used on input line 1871.
 (pdftex.def)             Requested size: 129.65819pt x 101.66135pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pdf, i
-d=2235, 374.43388pt x 297.51251pt>
+d=2240, 374.43388pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_1_budget_100.pdf  used on input line 1878.
+tive_1_budget_100.pdf  used on input line 1872.
 (pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf, id
-=2236, 369.41513pt x 297.51251pt>
+=2241, 369.41513pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_2_budget_10.pdf  used on input line 1884.
+tive_2_budget_10.pdf  used on input line 1878.
 (pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf, id
-=2237, 369.41513pt x 300.85298pt>
+=2242, 369.41513pt x 300.85298pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_2_budget_50.pdf  used on input line 1885.
+tive_2_budget_50.pdf  used on input line 1879.
 (pdftex.def)             Requested size: 129.65819pt x 105.59392pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pdf, i
-d=2238, 369.41513pt x 297.51251pt>
+d=2243, 369.41513pt x 297.51251pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
-tive_2_budget_100.pdf  used on input line 1886.
+tive_2_budget_100.pdf  used on input line 1880.
 (pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
-[76] [77 <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget
-_10.pdf> <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget
-_50.pdf
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 1889--1890
+
+ []
+
+[76 <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.p
+df> <./figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.p
+df
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
 ing_first/Alternative_0_budget_50.pdf): PDF inclusion: multiple pdfs with page 
@@ -3190,32 +3180,32 @@ f
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
 ing_first/Alternative_2_budget_100.pdf): PDF inclusion: multiple pdfs with page
  group included in a single page
->]) (./chapters/05_conclusion_and_outlook.tex [78]
+>]) (./chapters/05_conclusion_and_outlook.tex [77]
 chapter 4.
-) [79
+) [78
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
 6.
- (./main.lof [80
+ (./main.lof [79
 
 
-] [81] [82])
+] [80] [81])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [83]
+ [82]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
 7.
- (./main.lot [84
+ (./main.lot [83
 
 
 ])
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [85]
+ [84]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
@@ -3227,24 +3217,32 @@ logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[86
+[85
 
 
-] [87] [88] [89] [90]
+] [86] [87] [88] [89]
 No complaints by nag.
-[91] (./main.aux)
+[90] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56495 strings out of 480121
- 1312075 string characters out of 5892160
- 2308201 words of memory out of 5000000
+ 56498 strings out of 480121
+ 1312099 string characters out of 5892160
+ 2350094 words of memory out of 5000000
  72192 multiletter control sequences out of 15000+600000
- 574255 words of font info for 638 fonts, out of 8000000 for 9000
+ 574455 words of font info for 641 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/maxi/.texl
@@ -3262,10 +3260,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (99 pages, 9619395 bytes).
+Output written on main.pdf (98 pages, 9627079 bytes).
 PDF statistics:
- 2954 PDF objects out of 2984 (max. 8388607)
- 2209 compressed objects within 23 object streams
- 353 named destinations out of 1000 (max. 500000)
+ 2976 PDF objects out of 2984 (max. 8388607)
+ 2227 compressed objects within 23 object streams
+ 352 named destinations out of 1000 (max. 500000)
  131553 words of extra memory for PDF output out of 154059 (max. 10000000)
 
