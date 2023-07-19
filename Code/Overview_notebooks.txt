@@ -43,3 +43,6 @@ Figures:
         - 3.25  Iterative_Random/Number_init_points.ipynb
         - 3.26  Iterative_Random/Refinements_per_step.ipynb
         - 3.27  Iterative_Random/Machine_learning/ML_visualization.ipynb
+        - 3.28  Iterative_Random/Machine_learning/Higher_dimensional.ipynb
+
+        

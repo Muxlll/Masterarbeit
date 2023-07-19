@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  6 JUL 2023 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  19 JUL 2023 17:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -363,24 +363,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: Alternative_1_adapt_0.75-img0.png Graphic file (type png)
 <use Alternative_1_adapt_0.75-img0.png>
 Package pdftex.def Info: Alternative_1_adapt_0.75-img0.png  used on input line 
-5293.
+5305.
 (pdftex.def)             Requested size: 13.00803pt x 267.40445pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Alternative_1_adapt_0.75
 -img0.png>]) (./Alternative_1_adapt_0.75.aux) ) 
 Here is how much of TeX's memory you used:
- 9799 strings out of 480121
- 197763 string characters out of 5892160
- 624785 words of memory out of 5000000
- 27605 multiletter control sequences out of 15000+600000
+ 9805 strings out of 480121
+ 197893 string characters out of 5892160
+ 622945 words of memory out of 5000000
+ 27611 multiletter control sequences out of 15000+600000
  469259 words of font info for 28 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  85i,7n,90p,430b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Alternative_1_adapt_0.75.pdf (1 page, 55182 bytes).
+Output written on Alternative_1_adapt_0.75.pdf (1 page, 55692 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  14 compressed objects within 1 object stream

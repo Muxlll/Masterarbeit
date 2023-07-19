@@ -1237,7 +1237,7 @@ class IterativeRandomOptimization(Optimization):
 
                     points.append(Point(coordinates=coordinates,
                                         value=value, level=level_best+1))
-            
+
             points.sort(key=operator.attrgetter('value'))
 
         return points

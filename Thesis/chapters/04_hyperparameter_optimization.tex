@@ -1920,6 +1920,39 @@ The overall best function value is found by the third alternative with 100 budge
 
 \subsection{High-dimensional Optimization}
 
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Result (diamonds),
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(5,39.911633472184285)(10,28.184326096028368)(20,20.822328724414646)(30,18.002789090940414)(40,18.000106608201577)(50,19.737573735551326)(60,23.09285117463779)}
+			;
+			
+			\addplot coordinates 
+			{(5,44.4573499682562)(10,30.191633560819955)(20,11.927831753419248)(30,6.797546890999828)(40,4.854545454609092)(50,4.396643226971192)(60,4.009090909181819)}
+			;
+			
+			\addplot coordinates
+			{(5,38.36786030197544)(10,26.183473563067537)(20,16.128919602652935)(30,16.52013067842722)(40,10.818181821233052)(50,10.627417023079374)(60,8.009090909090908)}
+			;
+			
+			\legend{Strategy 1, Strategy 2, Strategy 3}
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{  }	
+	\label{fig:result_adaptive_random_high_dim}
+\end{figure}
+
 \begin{itemize}
 	\item compare all 5 techniques
 \end{itemize}
