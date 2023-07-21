@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  19 JUL 2023 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JUL 2023 08:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1498,7 +1498,10 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip99
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/outlines/outlines.sty
+Package: outlines 2012/1/23 1.1 Ch. Pecheur
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 \c@subfigure=\count486
 \c@subtable=\count487
@@ -1518,39 +1521,39 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+pplx on input line 7
-7.
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 79.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 77.
+line 79.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 77.
-Package scrbase Info: activating american \contentsname on input line 77.
-Package scrbase Info: activating american \listfigurename on input line 77.
-Package scrbase Info: activating american \listtablename on input line 77.
+ line 79.
+Package scrbase Info: activating american \contentsname on input line 79.
+Package scrbase Info: activating american \listfigurename on input line 79.
+Package scrbase Info: activating american \listtablename on input line 79.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1593,8 +1596,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 77.
-Package biblatex Info: Reference segment=0 on input line 77.
+Package biblatex Info: Reference section=0 on input line 79.
+Package biblatex Info: Reference segment=0 on input line 79.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count488
@@ -1618,23 +1621,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count494
-Package scrhack Info: undefining \float@addtolists on input line 77.
+Package scrhack Info: undefining \float@addtolists on input line 79.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 77.
-Package microtype Info: Applying patch `item' on input line 77.
-Package microtype Info: Applying patch `toc' on input line 77.
-Package microtype Info: Applying patch `eqnum' on input line 77.
-Package microtype Info: Applying patch `footnote' on input line 77.
+LaTeX Info: Redefining \microtypecontext on input line 79.
+Package microtype Info: Applying patch `item' on input line 79.
+Package microtype Info: Applying patch `toc' on input line 79.
+Package microtype Info: Applying patch `eqnum' on input line 79.
+Package microtype Info: Applying patch `footnote' on input line 79.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 77.
+LaTeX Info: Redefining \showhyphens on input line 79.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1645,7 +1648,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 77.
+Package hyperref Info: Link coloring OFF on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1658,9 +1661,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count495
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 79.
+LaTeX Info: Redefining \pageref on input line 79.
+LaTeX Info: Redefining \nameref on input line 79.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1673,7 +1676,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 77.
+(scrbook)           before \begin{document} on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1683,9 +1686,9 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count496
 ))
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 77.
+line 79.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 77.
+line 79.
 
 (./pages/cover.tex
 <logos/tum.pdf, id=7, 742.775pt x 391.4625pt>
@@ -1766,7 +1769,7 @@ chapter without number
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 91
+Package tocbasic Info: character protrusion at toc deactivated on input line 93
 .
  (./main.toc [6
 
@@ -1778,7 +1781,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 91
 \openout7 = `main.toc'.
 
 LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 94.
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 96.
  [7] (./chapters/01_introduction.tex
 chapter 1.
 
@@ -3046,86 +3049,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
  []
 
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf, id
-=2235, 374.43388pt x 297.51251pt>
+=2235, 387.37123pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_0_budget_10.pdf  used on input line 1862.
-(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+(pdftex.def)             Requested size: 129.65819pt x 103.91217pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf, id
-=2236, 382.24205pt x 297.51251pt>
+=2236, 395.17838pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_0_budget_50.pdf  used on input line 1863.
-(pdftex.def)             Requested size: 129.65819pt x 100.91684pt.
+(pdftex.def)             Requested size: 129.65819pt x 101.8563pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pdf, i
-d=2237, 374.43388pt x 297.51251pt>
+d=2237, 387.37123pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_0_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_0_budget_100.pdf  used on input line 1864.
-(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+(pdftex.def)             Requested size: 129.65819pt x 103.91217pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf, id
-=2238, 369.41513pt x 297.51251pt>
+=2238, 382.35345pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_1_budget_10.pdf  used on input line 1870.
-(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+(pdftex.def)             Requested size: 129.65819pt x 105.27646pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf, id
-=2239, 379.45264pt x 297.51251pt>
+=2239, 392.38997pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_1_budget_50.pdf  used on input line 1871.
-(pdftex.def)             Requested size: 129.65819pt x 101.66135pt.
+(pdftex.def)             Requested size: 129.65819pt x 102.5858pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pdf, i
-d=2240, 374.43388pt x 297.51251pt>
+d=2240, 387.37123pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_1_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_1_budget_100.pdf  used on input line 1872.
-(pdftex.def)             Requested size: 129.65819pt x 103.02325pt.
+(pdftex.def)             Requested size: 129.65819pt x 103.91217pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf, id
-=2241, 369.41513pt x 297.51251pt>
+=2241, 382.35345pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_10.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_2_budget_10.pdf  used on input line 1878.
-(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+(pdftex.def)             Requested size: 129.65819pt x 105.27646pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf, id
-=2242, 369.41513pt x 300.85298pt>
+=2242, 382.35345pt x 313.79033pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pd
 f Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_50.pdf
 >
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_2_budget_50.pdf  used on input line 1879.
-(pdftex.def)             Requested size: 129.65819pt x 105.59392pt.
+(pdftex.def)             Requested size: 129.65819pt x 106.40958pt.
 <figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pdf, i
-d=2243, 369.41513pt x 297.51251pt>
+d=2243, 382.35345pt x 310.44884pt>
 File: figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.p
 df Graphic file (type pdf)
 <use figures/Adaptive_random/Machine_learning_first/Alternative_2_budget_100.pd
 f>
 Package pdftex.def Info: figures/Adaptive_random/Machine_learning_first/Alterna
 tive_2_budget_100.pdf  used on input line 1880.
-(pdftex.def)             Requested size: 129.65819pt x 104.42146pt.
+(pdftex.def)             Requested size: 129.65819pt x 105.27646pt.
 [75]
 Underfull \hbox (badness 10000) in paragraph at lines 1889--1890
 
@@ -3180,51 +3183,63 @@ f
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
 ing_first/Alternative_2_budget_100.pdf): PDF inclusion: multiple pdfs with page
  group included in a single page
->]
-===== Image 'main-figure35' is up-to-date. ======
-) (./chapters/05_conclusion_and_outlook.tex [77 <./main-figure35.pdf>] [78]
+>] [77]
+\openout4 = `main-figure35.md5'.
+
+\openout4 = `main.auxlock'.
+
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "main-figure35" "\def\tikzexternalrealj
+ob{main}\input{main}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "main-figure35" "\def\tikzexternalrealjob{main}\input{main}")...executed.
+
+\openout4 = `main.auxlock'.
+
+[78 <./main-figure35.pdf>]) (./chapters/05_conclusion_and_outlook.tex [79]
 chapter 4.
-) [79
+) [80
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
-6.
- (./main.lof [80
+8.
+ (./main.lof [81
 
 
-] [81] [82])
+] [82] [83])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [83] [84]
+ [84] [85]
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
-7.
- (./main.lot [85
+9.
+ (./main.lot [86
 
 
 ])
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [86]
+ [87]
 chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (12.56586pt too wide) in paragraph at lines 109--109
+Overfull \hbox (12.56586pt too wide) in paragraph at lines 111--111
 \T1/pplx/m/n/10.95 (-20) op-ti-mal pat-tern recog-ni-tion with propo-si-tional 
 logic,^^Q \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.01508\T1/pplx/m/n
 /10.95 (-20) ,
  []
 
-[87
+[88
 
 
-] [88] [89] [90] [91]
+] [89] [90] [91] [92]
 No complaints by nag.
-[92] (./main.aux)
+[93] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3240,10 +3255,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56503 strings out of 480121
- 1312180 string characters out of 5892160
- 2350132 words of memory out of 5000000
- 72193 multiletter control sequences out of 15000+600000
+ 56557 strings out of 480121
+ 1313193 string characters out of 5892160
+ 2351140 words of memory out of 5000000
+ 72241 multiletter control sequences out of 15000+600000
  574455 words of font info for 641 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3262,10 +3277,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (100 pages, 9633561 bytes).
+Output written on main.pdf (101 pages, 9640400 bytes).
 PDF statistics:
- 2993 PDF objects out of 3580 (max. 8388607)
- 2240 compressed objects within 23 object streams
- 355 named destinations out of 1000 (max. 500000)
+ 3009 PDF objects out of 3580 (max. 8388607)
+ 2254 compressed objects within 23 object streams
+ 357 named destinations out of 1000 (max. 500000)
  131558 words of extra memory for PDF output out of 154059 (max. 10000000)
 

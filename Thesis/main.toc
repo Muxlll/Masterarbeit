@@ -55,8 +55,8 @@
 \contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{75}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{77}{subsection.3.5.4}%
 \contentsline {section}{\numberline {3.6}Comparison and Discussion}{78}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{79}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{80}{chapter*.88}%
-\contentsline {chapter}{\nonumberline List of Tables}{85}{chapter*.89}%
-\contentsline {chapter}{\nonumberline Bibliography}{87}{chapter*.90}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{80}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{81}{chapter*.89}%
+\contentsline {chapter}{\nonumberline List of Tables}{86}{chapter*.90}%
+\contentsline {chapter}{\nonumberline Bibliography}{88}{chapter*.91}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

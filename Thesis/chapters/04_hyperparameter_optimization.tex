@@ -1892,12 +1892,12 @@ The exact optima found by each refinement strategy and for each budget are prese
 
 
 \begin{table}[H]
-	\caption{  }
+	\caption{ Best configurations found by the adaptive iterative random search with three different refinement strategies and budgets 10, 50, and 100. }
 	\label{tab:results_alternatives_ml}
 	\centering
 	\begin{tabular}{| c |  c |c c |} 
 		\hline
-		Alternative & Budget & Coordinates & Function value \\ 
+		Strategy & Budget & Coordinates & Function value \\ 
 		\hline
 		
 		& 10 & $ [38, 0.0001404]$ & \textbf{0.2706} \\ 
@@ -1920,28 +1920,49 @@ The overall best function value is found by the third alternative with 100 budge
 
 \subsection{High-dimensional Optimization}
 
+We finally also want to analyze the adaptive iterative random search in settings of higher dimensions. In the following, we optimize the regression problem with the Brazilian\_housing dataset and a simple fully-connected neural network. The hyperparameter space is 6-dimensional and the parameters presented in Table \ref{tab:hyperparameter_space_adaptive_random_search}.
+
+\begin{table}[H]
+	\caption{ Hyperparameters with their type and interval for the 6-dimensional optimization problem solved with the iterative adaptive random search. }
+	\label{tab:hyperparameter_space_adaptive_random_search}
+	\centering
+	\begin{tabular}{| c c c |} 
+		\hline
+		Hyperparameter & Type & Interval \\ 
+		\hline
+		Epochs & Int-Interval & $ [1,30] $ \\ 
+		Batch size & Int-Interval & $ [100,1000] $ \\ 
+		Learning rate & Log-Interval & $ [10^{-10},10^{-1}] $ \\ 
+		Number of layers & Int-Interval & $ [1,10] $ \\ 
+		Neurons per layer & Int-Interval & $ [1,40] $ \\ 
+		Dropout probability & Interval & $ [0,0.999] $ \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+As optimizer of the network, Adam is used and the mean squared error is the loss function. We used 2-fold cross-validation and the mean average percentage error as metric. The results with increasing budget are depicted in Figure \ref{fig:result_adaptive_random_high_dim}.
 
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (diamonds),
+			ylabel = Mean average percentage error,
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
 			]
 			
 			\addplot coordinates
-			{(5,39.911633472184285)(10,28.184326096028368)(20,20.822328724414646)(30,18.002789090940414)(40,18.000106608201577)(50,19.737573735551326)(60,23.09285117463779)}
+			{(15,0.17085522338747977)(20,0.15570929311215878)(30,0.12546524107456208)(40,0.09796145539730787)(50,0.11236386708915233)(60,0.11014161929488182)(70,0.08918306156992913)(80,0.08909676894545555)(90,0.08251675572246313)(100,0.09207458049058914)}
 			;
 			
 			\addplot coordinates 
-			{(5,44.4573499682562)(10,30.191633560819955)(20,11.927831753419248)(30,6.797546890999828)(40,4.854545454609092)(50,4.396643226971192)(60,4.009090909181819)}
+			{(15,0.2135143307968974)(20,0.17106599342077972)(30,0.20546316485852004)(40,0.11698700953274965)(50,0.13199663180857896)(60,0.09910747352987528)(70,0.1283601655624807)(80,0.1145835742354393)(90,0.11219834145158529)(100,0.1126535750925541)}
 			;
 			
 			\addplot coordinates
-			{(5,38.36786030197544)(10,26.183473563067537)(20,16.128919602652935)(30,16.52013067842722)(40,10.818181821233052)(50,10.627417023079374)(60,8.009090909090908)}
+			{(15,0.15346778202801942)(20,0.12807831205427647)(30,0.13472946528345348)(40,0.12490067407488822)(50,0.11091633513569832)(60,0.13224060665816068)(70,0.13538499288260936)(80,0.1170282680541277)(90,0.10562000963836908)(100,0.10916520934551954)}
 			;
 			
 			\legend{Strategy 1, Strategy 2, Strategy 3}
@@ -1949,16 +1970,40 @@ The overall best function value is found by the third alternative with 100 budge
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{  }	
+	\caption{ Resulting mean average percentage error for the 6-dimensional optimization problem with hyperparameters from Table \ref{tab:hyperparameter_space_adaptive_random_search}. The iterative adaptive random search with three different refinement strategies depicted in different colors. The Brazilian\_housing dataset was used. }	
 	\label{fig:result_adaptive_random_high_dim}
 \end{figure}
 
-\begin{itemize}
-	\item compare all 5 techniques
-\end{itemize}
-
-
 \section{Comparison and Discussion}
+
+\begin{outline}
+	\1 Discussion of Sparse grids optimization
+		\2 Problem of Sparse grids
+			\3 Problem of sparse grid optimization: if optimum is at boundaries/ corners of the domain $\rightarrow$ grid points really centered, more refinement in corners takes a lot of refinement steps
+			\3 Sparse grid optimization with additional optimization algorithm on top: in hyperparameter opt not really enough points to create well enough interpolant
+				\4 However still use it, sometimes finds better configuration 
+				\4 only 2 more function evaluations
+		\2 referring to top points: not really important because of application of hyperparameter optimization:
+			\3 solution has to be found fast $\rightarrow$ expensive function evaluation
+			\3 exact optimum not necessary to be found, only a very good value 
+			\3 often even multiple good configurations 
+			\3 stochastic behavior $\rightarrow$ cannot even guarantee that exact optimum is the same in all different evaluations
+	\1 Discussion iterative adaptive random search
+		\2 more analysis is needed:
+			\3 theoretically convergence? 
+			\3 not really taken into account here because we need solution fast
+			\3 maybe algorithm has to be changed to add points of level 0
+			\3 maybe search radius has to be changed 
+			\3 maybe other refinement criterion (with function value?)
+			\3 maybe other refinement strategy 
+		\2 experiments show that it is promising
+	\1 Comparison
+		\2 Sparse grid optimization much more efficient in high dimensions than Grid search
+			\3 Problem of high number of points for grid search, sparse grid search grows slower
+			\3 compare 2d/ 3d and 5d experiments
+			\3 BUT: sparse grid not that distributed as conventional grid
+		
+\end{outline}
 
 
 
