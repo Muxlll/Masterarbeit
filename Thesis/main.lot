@@ -16,6 +16,7 @@
 \contentsline {table}{\numberline {3.10}{\ignorespaces Resulting optimum found by the three different refinement strategies interval based refinement strategy (1), uniform d-ball sampling strategy (2), and normal distribution sampling strategy (3). The best of each refinement algorithm is marked in bold. \relax }}{69}{table.caption.77}%
 \contentsline {table}{\numberline {3.11}{\ignorespaces Best configurations found by the adaptive iterative random search with three different refinement strategies and budgets 10, 50, and 100. \relax }}{77}{table.caption.86}%
 \contentsline {table}{\numberline {3.12}{\ignorespaces Hyperparameters with their type and interval for the 6-dimensional optimization problem solved with the iterative adaptive random search. \relax }}{77}{table.caption.87}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces \relax }}{78}{table.caption.89}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

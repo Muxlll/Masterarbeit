@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JUL 2023 08:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JUL 2023 11:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3184,19 +3184,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figures/Adaptive_random/Machine_learn
 ing_first/Alternative_2_budget_100.pdf): PDF inclusion: multiple pdfs with page
  group included in a single page
 >] [77]
-\openout4 = `main-figure35.md5'.
-
-\openout4 = `main.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "main-figure35" "\def\tikzexternalrealj
-ob{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "main-figure35" "\def\tikzexternalrealjob{main}\input{main}")...executed.
-
-\openout4 = `main.auxlock'.
-
+===== Image 'main-figure35' is up-to-date. ======
 [78 <./main-figure35.pdf>]) (./chapters/05_conclusion_and_outlook.tex [79]
 chapter 4.
 ) [80
@@ -3255,10 +3243,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56557 strings out of 480121
- 1313193 string characters out of 5892160
- 2351140 words of memory out of 5000000
- 72241 multiletter control sequences out of 15000+600000
+ 56559 strings out of 480121
+ 1313240 string characters out of 5892160
+ 2351175 words of memory out of 5000000
+ 72242 multiletter control sequences out of 15000+600000
  574455 words of font info for 641 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  115i,17n,109p,10599b,3091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3277,10 +3265,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (101 pages, 9640400 bytes).
+Output written on main.pdf (101 pages, 9640943 bytes).
 PDF statistics:
- 3009 PDF objects out of 3580 (max. 8388607)
- 2254 compressed objects within 23 object streams
- 357 named destinations out of 1000 (max. 500000)
+ 3011 PDF objects out of 3580 (max. 8388607)
+ 2256 compressed objects within 23 object streams
+ 358 named destinations out of 1000 (max. 500000)
  131558 words of extra memory for PDF output out of 154059 (max. 10000000)
 

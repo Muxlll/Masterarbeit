@@ -1974,6 +1974,25 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 	\label{fig:result_adaptive_random_high_dim}
 \end{figure}
 
+
+\begin{table}[H]
+	\caption{  }
+	\label{tab:comparison_all_algorithms}
+	\centering
+	\begin{tabular}{| c c c |} 
+		\hline
+		Algorithm & Cost & Mean average percentage error \\ 
+		\hline
+		Grid search & 64 & 21.64\% \\ 
+		Random search & 100 & 5.758\% \\
+		Bayesian optimization & 100 & 7.874\% \\
+		Sparse grid search & 99 & 6.949\% \\
+		Adaptive random search (strategy 1) & 80 & 8.252\% \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
 \section{Comparison and Discussion}
 
 \begin{outline}
