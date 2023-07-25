@@ -1916,11 +1916,63 @@ The exact optima found by each refinement strategy and for each budget are prese
 	\end{tabular}
 \end{table}
 
-The overall best function value is found by the third alternative with 100 budget. However, the values of the first one are very similar to the best one and it achieves already very good results with a budget of 10.
+The overall best function value is found by the third alternative with 100 budget. However, the values of the first one are very similar to the best one and it achieves already very good results with a budget of 10. \newline 
+
+We finally want to compare all different algorithms presented so far. The optimization problem is two-dimensional and the number of epochs (from 1 to 20) and the learning rate (logarithmic from $ 10^{-10} $ to $ 10^{-1} $) are the hyperparameters. The model is a simple two-layer network with 30 neurons in each layer and the batch size is set to 400. As dataset, the diamonds regression problem is used. The resulting mean average percentage error for increasing cost is presented in Figure \ref{fig:comparison_2d}.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel = Cost,
+			ylabel = Mean average percentage error,
+			cycle list name=exotic,
+			legend pos=outer north east,
+			scale=0.85
+			]
+			
+			\addplot coordinates
+			{(12,0.561686709523201)(20,0.561686709523201)(30,0.3593377470970154)(40,0.3593377470970154)(50,0.3593377470970154)(60,0.3593377470970154)(70,0.3593377470970154)(80,0.3593377470970154)(90,0.3593377470970154)}
+			;
+			
+			\addplot coordinates 
+			{(12,0.6530265212059021)(20,0.6388656198978424)(30,0.4123602956533432)(40,0.4123602956533432)(50,0.4123602956533432)(60,0.4123602956533432)(70,0.4123602956533432)(80,0.4123602956533432)(90,0.4123602956533432)}
+				;
+			
+			\addplot coordinates
+			{(12,0.5859223902225494)(20,0.5859223902225494)(30,0.5859223902225494)(40,0.4224883168935776)(50,0.2970848008990288)(60,0.2970848008990288)(70,0.2970848008990288)(80,0.2970848008990288)(90,0.2970848008990288)}
+			;
+			
+			\addplot coordinates
+			{(9,0.5451523661613464)(16,0.4490787833929062)(25,0.3621925860643387)(36,0.5727062821388245)(49,0.40663371980190277)(49,0.40663371980190277)(64,0.3256450444459915)(64,0.3256450444459915)(81,0.3565814197063446)}
+			;
+				
+			\addplot coordinates
+			{(12,0.4797375500202179)(20,0.4797375500202179)(30,0.4797375500202179)(40,0.3352629020810127)(50,0.3352629020810127)(60,0.33082716166973114)(70,0.33082716166973114)(80,0.33082716166973114)(90,0.33082716166973114)}
+			;
+				
+			\addplot coordinates
+			{(12,0.2904946506023407)(20,0.2904946506023407)(30,0.2904946506023407)(40,0.2904946506023407)(50,0.2672734633088112)(60,0.2672734633088112)(70,0.2672734633088112)(80,0.2672734633088112)(90,0.2672734633088112)}
+			;
+			
+			\addplot coordinates
+			{(11,0.557055801153183)(19,0.38420042395591736)(27,0.31314781308174133)(39,0.2810547798871994)(47,0.2810547798871994)(59,0.2552933469414711)(67,0.2552933469414711)(79,0.2552933469414711)(87,0.2552933469414711)};
+			
+			\legend{Strategy 1, Strategy 2, Strategy 3, Grid search, Random search, Bayesian Optimization, Sparse grid search}
+			
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{ Mean average percentage error depending on the cost for the different optimization algorithms. The diamonds regression task and a simple two-layer neural network are used. }	
+	\label{fig:comparison_2d}
+\end{figure}
+
+As depicted in Figure \ref{fig:comparison_searches}, the iterative adaptive random search performs worse than the normal random search approach with all three refinement strategies. With a cost of at least 50, the third strategy has a lower error than the conventional random search approach meaning that a better optimum can be found. The overall best solution is found with the sparse grid optimization with a cost of about 60 and higher.
+
 
 \subsection{High-dimensional Optimization}
 
-We finally also want to analyze the adaptive iterative random search in settings of higher dimensions. In the following, we optimize the regression problem with the Brazilian\_housing dataset and a simple fully-connected neural network. The hyperparameter space is 6-dimensional and the parameters presented in Table \ref{tab:hyperparameter_space_adaptive_random_search}.
+The last thing we want to analyze is the adaptive iterative random search in settings of higher dimensions. In the following, we optimize the regression problem with the Brazilian\_housing dataset and a simple fully-connected neural network. The hyperparameter space is 6-dimensional and the parameters presented in Table \ref{tab:hyperparameter_space_adaptive_random_search}.
 
 \begin{table}[H]
 	\caption{ Hyperparameters with their type and interval for the 6-dimensional optimization problem solved with the iterative adaptive random search. }
@@ -1953,30 +2005,51 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 			scale=0.85
 			]
 			
+			%\addplot coordinates
+			%{(15,0.17085522338747977)(20,0.15570929311215878)(30,0.12546524107456208)(40,0.09796145539730787)(50,0.11236386708915233)(60,0.11014161929488182)(70,0.08918306156992913)(80,0.08909676894545555)(90,0.08251675572246313)(100,0.09207458049058914)(150,0.10400954969227313)(200,0.07590454872697591)}
+			%;
+			
+			%\addplot coordinates 
+			%{(15,0.2135143307968974)(20,0.17106599342077972)(30,0.20546316485852004)(40,0.11698700953274965)(50,0.13199663180857896)(60,0.09910747352987528)(70,0.1283601655624807)(80,0.1145835742354393)(90,0.11219834145158529)(100,0.1126535750925541)(150,0.08087892914190889)(200,0.0986378276720643)}
+			%;
+			
+			%\addplot coordinates
+			%{(15,0.15346778202801942)(20,0.12807831205427647)(30,0.13472946528345348)(40,0.12490067407488822)(50,0.11091633513569832)(60,0.13224060665816068)(70,0.13538499288260936)(80,0.1170282680541277)(90,0.10562000963836908)(100,0.10916520934551954)(150,0.10335624758154154)(200,0.0914656520821154)}
+			%;
+			
+			%\addplot coordinates
+			%{(20,0.1709650568664074)(30,0.1253951158374548)(50,0.10341974310576915)(70,0.08028824012726546)(90,0.09139971919357777)(110,0.08258555997163057)(130,0.08009140864014626)(150,0.0792172959074378)(200,0.07392622400075197)};
+			
 			\addplot coordinates
-			{(15,0.17085522338747977)(20,0.15570929311215878)(30,0.12546524107456208)(40,0.09796145539730787)(50,0.11236386708915233)(60,0.11014161929488182)(70,0.08918306156992913)(80,0.08909676894545555)(90,0.08251675572246313)(100,0.09207458049058914)}
+			{(40,0.09796145539730787)(50,0.11236386708915233)(60,0.11014161929488182)(70,0.08918306156992913)(80,0.08909676894545555)(90,0.08251675572246313)(100,0.09207458049058914)(150,0.10400954969227313)(200,0.07590454872697591)}
 			;
 			
 			\addplot coordinates 
-			{(15,0.2135143307968974)(20,0.17106599342077972)(30,0.20546316485852004)(40,0.11698700953274965)(50,0.13199663180857896)(60,0.09910747352987528)(70,0.1283601655624807)(80,0.1145835742354393)(90,0.11219834145158529)(100,0.1126535750925541)}
+			{(40,0.11698700953274965)(50,0.13199663180857896)(60,0.09910747352987528)(70,0.1283601655624807)(80,0.1145835742354393)(90,0.11219834145158529)(100,0.1126535750925541)(150,0.08087892914190889)(200,0.0986378276720643)}
 			;
 			
 			\addplot coordinates
-			{(15,0.15346778202801942)(20,0.12807831205427647)(30,0.13472946528345348)(40,0.12490067407488822)(50,0.11091633513569832)(60,0.13224060665816068)(70,0.13538499288260936)(80,0.1170282680541277)(90,0.10562000963836908)(100,0.10916520934551954)}
+			{(40,0.12490067407488822)(50,0.11091633513569832)(60,0.13224060665816068)(70,0.13538499288260936)(80,0.1170282680541277)(90,0.10562000963836908)(100,0.10916520934551954)(150,0.10335624758154154)(200,0.0914656520821154)}
 			;
 			
-			\legend{Strategy 1, Strategy 2, Strategy 3}
+			\addplot coordinates
+			{(50,0.10341974310576915)(70,0.08028824012726546)(90,0.09139971919357777)(110,0.08258555997163057)(130,0.08009140864014626)(150,0.0792172959074378)(200,0.07392622400075197)};
+			
+			\legend{Strategy 1, Strategy 2, Strategy 3, Random search}
 			
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Resulting mean average percentage error for the 6-dimensional optimization problem with hyperparameters from Table \ref{tab:hyperparameter_space_adaptive_random_search}. The iterative adaptive random search with three different refinement strategies depicted in different colors. The Brazilian\_housing dataset was used. }	
+	\caption{ Resulting mean average percentage error for the 6-dimensional optimization problem with hyperparameters from Table \ref{tab:hyperparameter_space_adaptive_random_search}. The iterative adaptive random search with three different refinement strategies depicted in different colors. The Brazilian\_housing dataset was used and each point is the average of 10 runs. }	
 	\label{fig:result_adaptive_random_high_dim}
 \end{figure}
 
+We can observe that in this setting of the 6-dimensional optimization problem, the iterative adaptive random search almost always performs worse than the conventional random search. One reason can be that the d-dimensional ball has way less area volume than the d-dimensional hypercube for higher dimensions d. \newline 
+
+For comparison, Table \ref{tab:comparison_all_algorithms} shows the mean percentage error of all other optimization algorithms for up to a cost of 100. Only the best performing alternative of the refinement strategies is represented.
 
 \begin{table}[H]
-	\caption{  }
+	\caption{ Comparison of the optimization algorithms in terms of mean average percentage error for the 6-dimensional optimization problem. }
 	\label{tab:comparison_all_algorithms}
 	\centering
 	\begin{tabular}{| c c c |} 
@@ -1992,6 +2065,7 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 	\end{tabular}
 \end{table}
 
+The overall best optimization algorithm for up to 100 function evaluation is the conventional random search in this case. 
 
 \section{Comparison and Discussion}
 
@@ -2007,7 +2081,10 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 			\3 exact optimum not necessary to be found, only a very good value 
 			\3 often even multiple good configurations 
 			\3 stochastic behavior $\rightarrow$ cannot even guarantee that exact optimum is the same in all different evaluations
+		\2 performing well when:
+			\3 high number of points available: then optimizer can contribute
 	\1 Discussion iterative adaptive random search
+		\2 problem of d-ball sampling and normal sampling: very small volume of d-ball compared to d-hypercube (compare rejection sampling method for higher dimensions)
 		\2 more analysis is needed:
 			\3 theoretically convergence? 
 			\3 not really taken into account here because we need solution fast
@@ -2015,12 +2092,17 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 			\3 maybe search radius has to be changed 
 			\3 maybe other refinement criterion (with function value?)
 			\3 maybe other refinement strategy 
-		\2 experiments show that it is promising
+		\2 experiments show that it is promising in smaller dimensions
+		\2 higher dimensions: no good performance compared to conventional random search, higher radius or other refinement strategy
 	\1 Comparison
 		\2 Sparse grid optimization much more efficient in high dimensions than Grid search
 			\3 Problem of high number of points for grid search, sparse grid search grows slower
 			\3 compare 2d/ 3d and 5d experiments
 			\3 BUT: sparse grid not that distributed as conventional grid
+		\2 Bayesian Optimization very strong in most problems
+		\2 (Iterative adaptive) random search:
+			\3 in lower dimensions: iterative adaptive $\rightarrow$ time to good solution can be accelerated
+			\3 in higher dimensions: problems with the sampling strategy
 		
 \end{outline}
 

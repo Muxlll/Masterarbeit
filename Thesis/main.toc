@@ -53,10 +53,10 @@
 \contentsline {subsubsection}{\nonumberline Number of initial points}{71}{subsubsection*.80}%
 \contentsline {subsubsection}{\nonumberline Number of refinements per iteration}{73}{subsubsection*.83}%
 \contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{75}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{77}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Comparison and Discussion}{78}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{80}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{81}{chapter*.90}%
-\contentsline {chapter}{\nonumberline List of Tables}{86}{chapter*.91}%
-\contentsline {chapter}{\nonumberline Bibliography}{88}{chapter*.92}%
+\contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{78}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Comparison and Discussion}{80}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{82}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{83}{chapter*.91}%
+\contentsline {chapter}{\nonumberline List of Tables}{88}{chapter*.92}%
+\contentsline {chapter}{\nonumberline Bibliography}{90}{chapter*.93}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
