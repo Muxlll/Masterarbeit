@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  25 JUL 2023 08:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  25 JUL 2023 15:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3332,28 +3332,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 1889--1890
 LaTeX Warning: Reference `tab:results_alternatives_ml' on page 59 undefined on 
 input line 1891.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1919--1920
+
+ []
+
+
+LaTeX Warning: Reference `fig:comparison_2d' on page 60 undefined on input line
+ 1921.
+
 \openout6 = `main-figure35.dpth'.
 
 [60
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
+LaTeX Warning: Reference `fig:comparison_searches' on page 60 undefined on inpu
+t line 1971.
+
+
 LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
-age 60 undefined on input line 1971.
+age 60 undefined on input line 1976.
 
 
-LaTeX Warning: Reference `fig:result_adaptive_random_high_dim' on page 60 undef
-ined on input line 1991.
+LaTeX Warning: Reference `fig:result_adaptive_random_high_dim' on page 61 undef
+ined on input line 1996.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
-age 61 undefined on input line 2039.
+age 61 undefined on input line 2044.
 
 
 LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
-age 61 undefined on input line 2039.
+age 61 undefined on input line 2044.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2048--2049
+
+ []
+
+
+LaTeX Warning: Reference `tab:comparison_all_algorithms' on page 61 undefined o
+n input line 2050.
 
 ) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
@@ -3385,16 +3407,16 @@ Package logreq Info: Writing requests to 'main-figure35.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55012 strings out of 480121
- 1250676 string characters out of 5892160
+ 54995 strings out of 480121
+ 1250249 string characters out of 5892160
  2127166 words of memory out of 5000000
- 71684 multiletter control sequences out of 15000+600000
+ 71667 multiletter control sequences out of 15000+600000
  532783 words of font info for 250 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2582s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,21n,112p,10633b,2565s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure35.pdf (1 page, 22911 bytes).
+Output written on main-figure35.pdf (1 page, 20785 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream

@@ -1184,7 +1184,7 @@ We can observe that the algorithms find different best configurations for the co
 
 \subsection{Comparison with Implementation of other Authors}
 
-A similar experiment with the same dataset is presented in \cite{WU201926}. The authors concentrate on bayesian optimization and optimize two hyperparameters. The first one is the batch size with an interval $ [20, 2000] $. The second one is the learning rate which can take values from $ [0,1] $. The network that is used for predicting the class of the images is a small convolutional neural network. The architecture can be seen in Table \ref{tab:architecture_MNIST_comp}.
+A similar experiment with the same dataset is presented in \cite{WU201926}. The authors concentrate on Bayesian optimization and optimize two hyperparameters. The first one is the batch size with an interval $ [20, 2000] $. The second one is the learning rate which can take values from $ [0,1] $. The network that is used for predicting the class of the images is a small convolutional neural network. The architecture can be seen in Table \ref{tab:architecture_MNIST_comp}.
 
 
 \begin{table}[H]
@@ -1240,7 +1240,7 @@ In \cite{WU201926}, it is not described for how many epochs they train the neura
 	\label{fig:Comparison_MNIST}
 \end{figure}
 
-Again, with increasing cost, the performance of the optimization techniques improves. The absolute highest accuracy is achieved by the bayesian optimization with $ 98.96\% $ followed by the sparse grid optimization with $ 98.83\% $, and random search with $ 98.52\% $. The lowest accuracy is achieved by grid search with a value of $ 97.64\% $. The authors of \cite{WU201926} reach an accuracy of $ 99.14\% $ with a budget of 50, however, we do not know for how many epochs they trained the network. For the evaluation of our four algorithms, we always used exactly ten epochs. The best configurations found by the techniques are depicted in Table \ref{tab:configs_MNIST_comp}. \newline 
+Again, with increasing cost, the performance of the optimization techniques improves. The absolute highest accuracy is achieved by the Bayesian optimization with $ 98.96\% $ followed by the sparse grid optimization with $ 98.83\% $, and random search with $ 98.52\% $. The lowest accuracy is achieved by grid search with a value of $ 97.64\% $. The authors of \cite{WU201926} reach an accuracy of $ 99.14\% $ with a budget of 50, however, we do not know for how many epochs they trained the network. For the evaluation of our four algorithms, we always used exactly ten epochs. The best configurations found by the techniques are depicted in Table \ref{tab:configs_MNIST_comp}. \newline 
 
 \begin{table}[H]
 	\caption{ Best configurations and corresponding test accuracy found by the four algorithms for the MNIST dataset. }
@@ -1943,22 +1943,23 @@ We finally want to compare all different algorithms presented so far. The optimi
 			{(12,0.5859223902225494)(20,0.5859223902225494)(30,0.5859223902225494)(40,0.4224883168935776)(50,0.2970848008990288)(60,0.2970848008990288)(70,0.2970848008990288)(80,0.2970848008990288)(90,0.2970848008990288)}
 			;
 			
-			\addplot coordinates
-			{(9,0.5451523661613464)(16,0.4490787833929062)(25,0.3621925860643387)(36,0.5727062821388245)(49,0.40663371980190277)(49,0.40663371980190277)(64,0.3256450444459915)(64,0.3256450444459915)(81,0.3565814197063446)}
-			;
+			%\addplot coordinates
+			%{(9,0.5451523661613464)(16,0.4490787833929062)(25,0.3621925860643387)(36,0.5727062821388245)(49,0.40663371980190277)(49,0.40663371980190277)(64,0.3256450444459915)(64,0.3256450444459915)(81,0.3565814197063446)}
+			%;
 				
 			\addplot coordinates
 			{(12,0.4797375500202179)(20,0.4797375500202179)(30,0.4797375500202179)(40,0.3352629020810127)(50,0.3352629020810127)(60,0.33082716166973114)(70,0.33082716166973114)(80,0.33082716166973114)(90,0.33082716166973114)}
 			;
 				
-			\addplot coordinates
-			{(12,0.2904946506023407)(20,0.2904946506023407)(30,0.2904946506023407)(40,0.2904946506023407)(50,0.2672734633088112)(60,0.2672734633088112)(70,0.2672734633088112)(80,0.2672734633088112)(90,0.2672734633088112)}
-			;
+			%\addplot coordinates
+			%{(12,0.2904946506023407)(20,0.2904946506023407)(30,0.2904946506023407)(40,0.2904946506023407)(50,0.2672734633088112)(60,0.2672734633088112)(70,0.2672734633088112)(80,0.2672734633088112)(90,0.2672734633088112)}
+			%;
 			
-			\addplot coordinates
-			{(11,0.557055801153183)(19,0.38420042395591736)(27,0.31314781308174133)(39,0.2810547798871994)(47,0.2810547798871994)(59,0.2552933469414711)(67,0.2552933469414711)(79,0.2552933469414711)(87,0.2552933469414711)};
+			%\addplot coordinates
+			%{(11,0.557055801153183)(19,0.38420042395591736)(27,0.31314781308174133)(39,0.2810547798871994)(47,0.2810547798871994)(59,0.2552933469414711)(67,0.2552933469414711)(79,0.2552933469414711)(87,0.2552933469414711)};
 			
-			\legend{Strategy 1, Strategy 2, Strategy 3, Grid search, Random search, Bayesian Optimization, Sparse grid search}
+			%\legend{Strategy 1, Strategy 2, Strategy 3, Grid search, Random search, Bayesian Optimization, Sparse grid search}
+			\legend{Strategy 1, Strategy 2, Strategy 3, Random search}
 			
 			
 		\end{axis}
@@ -2083,6 +2084,7 @@ The overall best optimization algorithm for up to 100 function evaluation is the
 			\3 stochastic behavior $\rightarrow$ cannot even guarantee that exact optimum is the same in all different evaluations
 		\2 performing well when:
 			\3 high number of points available: then optimizer can contribute
+			\3 high dimensional problems
 	\1 Discussion iterative adaptive random search
 		\2 problem of d-ball sampling and normal sampling: very small volume of d-ball compared to d-hypercube (compare rejection sampling method for higher dimensions)
 		\2 more analysis is needed:
@@ -2099,7 +2101,7 @@ The overall best optimization algorithm for up to 100 function evaluation is the
 			\3 Problem of high number of points for grid search, sparse grid search grows slower
 			\3 compare 2d/ 3d and 5d experiments
 			\3 BUT: sparse grid not that distributed as conventional grid
-		\2 Bayesian Optimization very strong in most problems
+		\2 Bayesian Optimization very good in most problems
 		\2 (Iterative adaptive) random search:
 			\3 in lower dimensions: iterative adaptive $\rightarrow$ time to good solution can be accelerated
 			\3 in higher dimensions: problems with the sampling strategy
