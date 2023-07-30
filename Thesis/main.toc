@@ -8,55 +8,55 @@
 \contentsline {subsection}{\numberline {2.2.1}Grid Search}{7}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Random Search}{7}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Bayesian Optimization}{8}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Other Techniques}{9}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Sparse Grids}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Numerical Approximation of Functions}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{15}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{17}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Optimization with Sparse Grids}{19}{subsection.2.3.4}%
-\contentsline {paragraph}{\nonumberline Gradient-Free Methods}{20}{paragraph*.17}%
-\contentsline {subparagraph}{\nonumberline Nelder Mead Method}{20}{subparagraph*.19}%
-\contentsline {subparagraph}{\nonumberline Differential Evolution}{20}{subparagraph*.21}%
-\contentsline {subparagraph}{\nonumberline CMA-ES}{20}{subparagraph*.23}%
-\contentsline {paragraph}{\nonumberline Gradient-Based Methods}{20}{paragraph*.25}%
-\contentsline {subparagraph}{\nonumberline Gradient Descent}{20}{subparagraph*.27}%
-\contentsline {subparagraph}{\nonumberline NLCG}{20}{subparagraph*.29}%
-\contentsline {subparagraph}{\nonumberline Newton}{21}{subparagraph*.31}%
-\contentsline {subparagraph}{\nonumberline BFGS}{21}{subparagraph*.33}%
-\contentsline {subparagraph}{\nonumberline Rprop}{21}{subparagraph*.35}%
-\contentsline {section}{\numberline {2.4}Adaptive Random Search}{23}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodology}{25}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{25}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Iterative Adaptive Random Search}{25}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Evaluation Metrics}{26}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Sparse Grid Optimization of Functions}{26}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Implementation}{26}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Test Functions}{27}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Sparse Grid Generation with different Adaptivities}{29}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Local and Global Optimization}{33}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{37}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{37}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{40}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{42}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{43}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{44}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Experiment with MNIST Dataset}{45}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{47}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{48}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Implementation}{48}{subsection.3.5.1}%
-\contentsline {subsubsection}{\nonumberline Interval Based Refinement Strategy}{50}{subsubsection*.66}%
-\contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{50}{subsubsection*.69}%
-\contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{51}{subsubsection*.72}%
-\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{52}{subsection.3.5.2}%
-\contentsline {subsubsection}{\nonumberline Adaptivity Parameter}{52}{subsubsection*.75}%
-\contentsline {subsubsection}{\nonumberline Number of initial points}{54}{subsubsection*.80}%
-\contentsline {subsubsection}{\nonumberline Number of refinements per iteration}{55}{subsubsection*.83}%
-\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{56}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{57}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Comparison and Discussion}{58}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{78}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{79}{chapter*.91}%
-\contentsline {chapter}{\nonumberline List of Tables}{84}{chapter*.92}%
-\contentsline {chapter}{\nonumberline Bibliography}{86}{chapter*.93}%
+\contentsline {subsection}{\numberline {2.2.4}Other Techniques}{12}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Sparse Grids}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Numerical Approximation of Functions}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Adaptive Sparse Grids}{16}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Basis Functions for Sparse Grids}{19}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Optimization with Sparse Grids}{20}{subsection.2.3.4}%
+\contentsline {paragraph}{\nonumberline Gradient-Free Methods}{21}{paragraph*.17}%
+\contentsline {subparagraph}{\nonumberline Nelder Mead Method}{21}{subparagraph*.19}%
+\contentsline {subparagraph}{\nonumberline Differential Evolution}{21}{subparagraph*.21}%
+\contentsline {subparagraph}{\nonumberline CMA-ES}{21}{subparagraph*.23}%
+\contentsline {paragraph}{\nonumberline Gradient-Based Methods}{21}{paragraph*.25}%
+\contentsline {subparagraph}{\nonumberline Gradient Descent}{21}{subparagraph*.27}%
+\contentsline {subparagraph}{\nonumberline NLCG}{21}{subparagraph*.29}%
+\contentsline {subparagraph}{\nonumberline Newton}{22}{subparagraph*.31}%
+\contentsline {subparagraph}{\nonumberline BFGS}{22}{subparagraph*.33}%
+\contentsline {subparagraph}{\nonumberline Rprop}{22}{subparagraph*.35}%
+\contentsline {section}{\numberline {2.4}Adaptive Random Search}{24}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Hyperparameter Optimization with Sparse Grids}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology}{26}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Adaptive Grid Search with Sparse Grids}{26}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Iterative Adaptive Random Search}{26}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Evaluation Metrics}{27}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Sparse Grid Optimization of Functions}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Implementation}{27}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Test Functions}{28}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Sparse Grid Generation with different Adaptivities}{30}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Local and Global Optimization}{35}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{40}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{43}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{49}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{49}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Three- and Five-dimensional Experiments of Regression with Small Neural Network}{54}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Nine-dimensional Experiment with MNIST Dataset}{57}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Comparison with Implementation of other Authors}{59}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Iterative Adaptive Random Search}{61}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Implementation}{61}{subsection.3.5.1}%
+\contentsline {subsubsection}{\nonumberline Interval Based Refinement Strategy}{63}{subsubsection*.66}%
+\contentsline {subsubsection}{\nonumberline Uniform D-Ball Sampling Strategy}{64}{subsubsection*.69}%
+\contentsline {subsubsection}{\nonumberline Normal Distribution Sampling Strategy}{66}{subsubsection*.72}%
+\contentsline {subsection}{\numberline {3.5.2}Analysis of Parameters with Functions}{67}{subsection.3.5.2}%
+\contentsline {subsubsection}{\nonumberline Adaptivity Parameter}{67}{subsubsection*.75}%
+\contentsline {subsubsection}{\nonumberline Number of initial points}{72}{subsubsection*.80}%
+\contentsline {subsubsection}{\nonumberline Number of refinements per iteration}{74}{subsubsection*.83}%
+\contentsline {subsection}{\numberline {3.5.3}Hyperparameter Optimization}{76}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{79}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Comparison and Discussion}{81}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{83}{chapter.4}%
+\contentsline {chapter}{\nonumberline List of Figures}{84}{chapter*.91}%
+\contentsline {chapter}{\nonumberline List of Tables}{89}{chapter*.92}%
+\contentsline {chapter}{\nonumberline Bibliography}{91}{chapter*.93}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
