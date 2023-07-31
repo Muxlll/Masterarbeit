@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  30 JUL 2023 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  31 JUL 2023 13:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3186,7 +3186,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2048--2049
 
  []
 
-[80 <./main-figure36.pdf>] [81]) (./chapters/05_conclusion_and_outlook.tex
+[80 <./main-figure36.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 2073--2074
+
+ []
+
+[81] Excluding 'comment' comment.) (./chapters/05_conclusion_and_outlook.tex
 [82]
 chapter 4.
 ) [83
@@ -3238,7 +3243,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  56574 strings out of 480121
- 1313931 string characters out of 5892160
+ 1313920 string characters out of 5892160
  2351371 words of memory out of 5000000
  72253 multiletter control sequences out of 15000+600000
  574455 words of font info for 641 fonts, out of 8000000 for 9000
@@ -3259,10 +3264,10 @@ texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (104 pages, 10189497 bytes).
+Output written on main.pdf (104 pages, 10188872 bytes).
 PDF statistics:
- 14333 PDF objects out of 15390 (max. 8388607)
- 9766 compressed objects within 98 object streams
+ 14334 PDF objects out of 15390 (max. 8388607)
+ 9767 compressed objects within 98 object streams
  362 named destinations out of 1000 (max. 500000)
  131558 words of extra memory for PDF output out of 154059 (max. 10000000)
 

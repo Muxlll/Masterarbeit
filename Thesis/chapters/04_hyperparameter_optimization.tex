@@ -2070,13 +2070,27 @@ The overall best optimization algorithm for up to 100 function evaluation is the
 
 \section{Comparison and Discussion}
 
+The numerical results showed that each optimization algorithm has advantages and disadvantages in different problem settings. This depends on the hyperparamater space, e.g. the dimension and type of hyperparameters and also the model used, as well as the dataset. We want to summarize the behaviors of the algorithms and compare them. \newline 
+
+Sparse grids are normally used to interpolate functions with a high number of grid points compared to the hyperparameter optimization. The high cost for a function evaluation does not make it practically possible for a high number of grid points. This leads to the first problem we encountered when using the sparse grid for hyperparameter optimization. The interpolation with B-splines and the additional application of an optimization algorithm is not precise enough to get better results in all settings. As we have seen for example in Figure \ref{fig:optimizers_network_visualization}, the gradient descent takes steps towards the boundary of the domain because interpolated function has its minimum there. However, in most cases, the optimal point is somewhere else. We finally decided to apply two different types of optimizers, anyways. A local and a globalized optimization algorithm are applied after the grid generation. The application of them are relatively cheap compared one function evaluation as they only work with the interpolated function which is much cheaper to evaluate. The final result of the sparse grid hyperparameter optimization is then the minimum of the best grid point found, the minimum of the local, and the globalized optimization algorithms. This way, we only have two additional expensive function evaluations from the optimizers and sometimes, the result is better than the best grid point from the grid generation.
+
+In the context of hyperparameter optimization, we can have very different types of hyperparameters. In this thesis, the focus was on integer, continuous, and logarithmic ones. The sparse grid optimization can 
+
+
+
+
+
+
+\begin{comment}
+	
 \begin{outline}
 	\1 Discussion of Sparse grids optimization
 		\2 Problem of Sparse grids
 			\3 Problem of sparse grid optimization: if optimum is at boundaries/ corners of the domain $\rightarrow$ grid points really centered, more refinement in corners takes a lot of refinement steps
-			\3 Sparse grid optimization with additional optimization algorithm on top: in hyperparameter opt not really enough points to create well enough interpolant
-				\4 However still use it, sometimes finds better configuration 
-				\4 only 2 more function evaluations
+DONE		\3 Sparse grid optimization with additional optimization algorithm on top: in hyperparameter opt not really enough points to create well enough interpolant
+DONE			\4 However still use it, sometimes finds better configuration 
+DONE			\4 only 2 more function evaluations
+			\3 categorical hyperparameters: more analysis needed
 		\2 referring to top points: not really important because of application of hyperparameter optimization:
 			\3 solution has to be found fast $\rightarrow$ expensive function evaluation
 			\3 exact optimum not necessary to be found, only a very good value 
@@ -2108,6 +2122,7 @@ The overall best optimization algorithm for up to 100 function evaluation is the
 		
 \end{outline}
 
+\end{comment}
 
 
 
