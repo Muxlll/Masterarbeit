@@ -33,18 +33,18 @@ For the sparse grid optimization, the hyperparameters have to be scaled to the s
 
 \begin{lstlisting}[language=Python]
 	def to_standard(lower, upper, value):
-	return (value - lower) / (upper - lower)
+		return (value - lower) / (upper - lower)
 	
 	def from_standard(lower, upper, value):
-	return value * (upper - lower) + lower
+		return value * (upper - lower) + lower
 	
 	def to_standard_log(lower, upper, value):
-	a = math.log10(upper / lower)
+		a = math.log10(upper / lower)
 	return math.log10(value / lower) / a	
 	
 	def from_standard_log(lower, upper, value):
-	a = math.log10(upper / lower)
-	return lower * 10 ** (a * value)
+		a = math.log10(upper / lower)
+		return lower * 10 ** (a * value)
 \end{lstlisting}
 
 The parameters lower and upper are the bounds of the original hyperparameter interval. The value argument is then scaled to or from the standard domain $ [0,1] $, respectively. \newline 
@@ -1943,23 +1943,23 @@ We finally want to compare all different algorithms presented so far. The optimi
 			{(12,0.5859223902225494)(20,0.5859223902225494)(30,0.5859223902225494)(40,0.4224883168935776)(50,0.2970848008990288)(60,0.2970848008990288)(70,0.2970848008990288)(80,0.2970848008990288)(90,0.2970848008990288)}
 			;
 			
-			%\addplot coordinates
-			%{(9,0.5451523661613464)(16,0.4490787833929062)(25,0.3621925860643387)(36,0.5727062821388245)(49,0.40663371980190277)(49,0.40663371980190277)(64,0.3256450444459915)(64,0.3256450444459915)(81,0.3565814197063446)}
-			%;
+			\addplot coordinates
+			{(9,0.5451523661613464)(16,0.4490787833929062)(25,0.3621925860643387)(36,0.5727062821388245)(49,0.40663371980190277)(49,0.40663371980190277)(64,0.3256450444459915)(64,0.3256450444459915)(81,0.3565814197063446)}
+			;
 				
 			\addplot coordinates
 			{(12,0.4797375500202179)(20,0.4797375500202179)(30,0.4797375500202179)(40,0.3352629020810127)(50,0.3352629020810127)(60,0.33082716166973114)(70,0.33082716166973114)(80,0.33082716166973114)(90,0.33082716166973114)}
 			;
 				
-			%\addplot coordinates
-			%{(12,0.2904946506023407)(20,0.2904946506023407)(30,0.2904946506023407)(40,0.2904946506023407)(50,0.2672734633088112)(60,0.2672734633088112)(70,0.2672734633088112)(80,0.2672734633088112)(90,0.2672734633088112)}
-			%;
+			\addplot coordinates
+			{(12,0.2904946506023407)(20,0.2904946506023407)(30,0.2904946506023407)(40,0.2904946506023407)(50,0.2672734633088112)(60,0.2672734633088112)(70,0.2672734633088112)(80,0.2672734633088112)(90,0.2672734633088112)}
+			;
 			
-			%\addplot coordinates
-			%{(11,0.557055801153183)(19,0.38420042395591736)(27,0.31314781308174133)(39,0.2810547798871994)(47,0.2810547798871994)(59,0.2552933469414711)(67,0.2552933469414711)(79,0.2552933469414711)(87,0.2552933469414711)};
+			\addplot coordinates
+			{(11,0.557055801153183)(19,0.38420042395591736)(27,0.31314781308174133)(39,0.2810547798871994)(47,0.2810547798871994)(59,0.2552933469414711)(67,0.2552933469414711)(79,0.2552933469414711)(87,0.2552933469414711)};
 			
-			%\legend{Strategy 1, Strategy 2, Strategy 3, Grid search, Random search, Bayesian Optimization, Sparse grid search}
-			\legend{Strategy 1, Strategy 2, Strategy 3, Random search}
+			\legend{Strategy 1, Strategy 2, Strategy 3, Grid search, Random search, Bayesian Optimization, Sparse grid search}
+			%\legend{Strategy 1, Strategy 2, Strategy 3, Random search}
 			
 			
 		\end{axis}
@@ -2072,13 +2072,25 @@ The overall best optimization algorithm for up to 100 function evaluation is the
 
 The numerical results showed that each optimization algorithm has advantages and disadvantages in different problem settings. This depends on the hyperparamater space, e.g. the dimension and type of hyperparameters and also the model used, as well as the dataset. We want to summarize the behaviors of the algorithms and compare them. \newline 
 
-Sparse grids are normally used to interpolate functions with a high number of grid points compared to the hyperparameter optimization. The high cost for a function evaluation does not make it practically possible for a high number of grid points. This leads to the first problem we encountered when using the sparse grid for hyperparameter optimization. The interpolation with B-splines and the additional application of an optimization algorithm is not precise enough to get better results in all settings. As we have seen for example in Figure \ref{fig:optimizers_network_visualization}, the gradient descent takes steps towards the boundary of the domain because interpolated function has its minimum there. However, in most cases, the optimal point is somewhere else. We finally decided to apply two different types of optimizers, anyways. A local and a globalized optimization algorithm are applied after the grid generation. The application of them are relatively cheap compared one function evaluation as they only work with the interpolated function which is much cheaper to evaluate. The final result of the sparse grid hyperparameter optimization is then the minimum of the best grid point found, the minimum of the local, and the globalized optimization algorithms. This way, we only have two additional expensive function evaluations from the optimizers and sometimes, the result is better than the best grid point from the grid generation.
+Sparse grids are normally used to interpolate functions with a high number of grid points compared to hyperparameter optimization. The high cost for a function evaluation does not make it practically possible for a high number of grid points. This leads to the first problem we encountered when using the sparse grid for hyperparameter optimization. The interpolation with B-splines and the additional application of an optimization algorithm are not precise enough to get better results in all settings. As we have seen for example in Figure \ref{fig:optimizers_network_visualization}, the gradient descent takes steps towards the boundary of the domain because the interpolated function has its minimum there. However, in most cases, the optimal point is somewhere else. We finally decided to apply two different types of optimizers, anyways. A local and a globalized optimization algorithm are applied after the grid generation. The application of them is relatively cheap compared to one function evaluation as they only work with the interpolated function which is much cheaper to evaluate. The final result of the sparse grid hyperparameter optimization is then the minimum of the best grid point found, the minimum of the local, and the globalized optimization algorithms. This way, we only have two additional expensive function evaluations from the optimizers and sometimes, the result is better than the best grid point from the grid generation.
 
-In the context of hyperparameter optimization, we can have very different types of hyperparameters. In this thesis, the focus was on integer, continuous, and logarithmic ones. The sparse grid optimization can 
+In the context of hyperparameter optimization, we can have very different types of hyperparameters. In this thesis, the focus was on integer, continuous, and logarithmic ones. A short analysis was also conducted with categorical hyperparameters with Figure \ref{fig:optimizer_categorical_hyperparams}. However, further analysis can be done in the settings of other examples. One such scenario is the choice of optimizer or loss function of the neural network. With such examples, Bayesian optimization has problems in interpreting the different choices. When using sparse grids, the standard domain in this dimension would be separated into intervals just like it is done in Figure \ref{fig:optimizer_categorical_hyperparams}. Further analysis can be conducted on how well the optimization can work with such a setting. A question is for example if the order or number of categories has an impact on the performance. 
 
+The numerical results showed that especially for high dimensions, the sparse grid hyperparameter optimization performs well compared to other techniques. What we have also seen is that in many situations, there is more than one configuration leads to the best performance. This can be seen in Table \ref{tab:best_configurations_MNIST} where Bayesian optimization and sparse grid hyperparameter optimization reach an accuracy of $97.5\%$ with different configurations. In most cases, there is a region with very good results as can be seen in Figure \ref{fig:analysis_model_training}. There, a learning rate of $10^{-4} $ with high epochs leads to very small error values. However, with a smaller number of epochs, the learning rate has to be set to higher values. In such settings, it is important to find the tendencies because the functions are not very multimodal in the case of integer or continuous hyperparameter types. The sparse grid hyperparameter optimization performs well in those aspects. Note that the problems in this thesis are made deterministic for the sparse grid optimization, in real-world applications, randomnesses such as the network's weight initialization, dataset splitting or dropout influence the behavior. This means that optima are not always fixed. Rather the region where the tendency shows good results is important to be found fast which is why the sparse grid performs well. 
 
+In summary, the sparse grid hyperparameter optimization is a good choice for problems of high dimension where the hyperparameter types are combinations of integers, continuous, and logarithmic ones. \newline 
 
+The second new algorithm, iterative adaptive random search, was based on the idea to improve the conventional random search by making it adaptive. The first two-dimensional analysis showed that the optimization is very promising in small dimensions. In Figure \ref{fig:Adapt_param_alternatives}, we can see that the generated points are gathered around the real optimum of the Rosenbrock function for adaptivity parameter 0.0 which is at $ (1,1) $. The numerical results from Figure \ref{fig:comparison_2d} indicated that the iterative adaptive random search performs better than the conventional one in some cases. However, in higher dimensions, the refinement strategies have a problem. The d-ball sampling covers a very small region compared to the d-hypercube. This is also the reason why rejection sampling gets very inefficient in higher dimensions \cite{HARMAN20102297}. This means that there is not much exploration in high dimensions meaning that not many new configurations are evaluated. Also, the first refinement strategy can have high exploitation if the intervals for refinement are very small. This can happen if neighboring points have a similar coordinate in a specific dimension. This can also be seen in Figure \ref{fig:alt0_adapt_param} (left) where no points are added in the top left corner of the domain for the adaptivity parameter 1.0.
 
+There are more questions that have to be analyzed for this hyperparameter optimization algorithm. Conventional random search is convergent for increasing cost meaning that the optimum will be found with a sufficient number of trials. We concentrated on a rather fast time to solution which is more important for hyperparameter optimization with expensive function evaluations. However, this convergence analysis still has to be made. One important aspect referring to the convergence is that in the current algorithm, no new points with level 0 are added after the initial ones are drawn. Besides this question, the search radius is also one thing that could be changed. It might change the performance in higher dimensions if the radius is set to a higher value to increase the exploration. It could be dependent on the dimension and the adaptivity parameter. Of course, other refinement strategies can be introduced which do not have the problem of low exploration in high dimensions. Additionally, the refinement criterion can be adapted for the selection of the point. The function value could for example also be included in the term. 
+
+In summary, the iterative adaptive random search shows promising results in small dimensions. However, more analysis is needed to further improve this optimization algorithm. \newline 
+
+In comparison to the most intuitive algorithm, the grid search, sparse grid hyperparameter optimization is much more efficient in high dimensions. The reduced number of grid points makes finding the optimum much faster. The numerical results of Figures \ref{fig:result_first_comparison}, \ref{fig:result_second_comparison_dim3}, \ref{fig:result_second_comparison_dim5} and \ref{fig:MNIST_results} showed that the sparse grid optimization is very competitive. 
+
+In most cases not depending on the concrete setting, the Bayesian optimization and also the conventional random search perform very well which makes them good choices for any optimization problem setting. 
+
+In lower dimensions, the iterative adaptive random search shows promising results, however, further investigation is needed to also achieve good results in higher dimensions.
 
 
 \begin{comment}
@@ -2090,17 +2102,17 @@ In the context of hyperparameter optimization, we can have very different types 
 DONE		\3 Sparse grid optimization with additional optimization algorithm on top: in hyperparameter opt not really enough points to create well enough interpolant
 DONE			\4 However still use it, sometimes finds better configuration 
 DONE			\4 only 2 more function evaluations
-			\3 categorical hyperparameters: more analysis needed
+DONE		\3 categorical hyperparameters: more analysis needed
 		\2 referring to top points: not really important because of application of hyperparameter optimization:
-			\3 solution has to be found fast $\rightarrow$ expensive function evaluation
-			\3 exact optimum not necessary to be found, only a very good value 
-			\3 often even multiple good configurations 
-			\3 stochastic behavior $\rightarrow$ cannot even guarantee that exact optimum is the same in all different evaluations
+DONE		\3 solution has to be found fast $\rightarrow$ expensive function evaluation
+DONE		\3 exact optimum not necessary to be found, only a very good value 
+DONE		\3 often even multiple good configurations 
+DONE		\3 stochastic behavior $\rightarrow$ cannot even guarantee that exact optimum is the same in all different evaluations
 		\2 performing well when:
 			\3 high number of points available: then optimizer can contribute
 			\3 high dimensional problems
 	\1 Discussion iterative adaptive random search
-		\2 problem of d-ball sampling and normal sampling: very small volume of d-ball compared to d-hypercube (compare rejection sampling method for higher dimensions)
+DONE	\2 problem of d-ball sampling and normal sampling: very small volume of d-ball compared to d-hypercube (compare rejection sampling method for higher dimensions)
 		\2 more analysis is needed:
 			\3 theoretically convergence? 
 			\3 not really taken into account here because we need solution fast

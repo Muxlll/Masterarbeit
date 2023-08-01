@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:officeooo="http://openoffice.org/2009/office" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><dc:date>2023-07-28T09:18:09.519076157</dc:date><meta:editing-duration>PT1H56M43S</meta:editing-duration><meta:editing-cycles>17</meta:editing-cycles><meta:generator>LibreOffice/7.3.7.2$Linux_X86_64 LibreOffice_project/30$Build-2</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="1" meta:object-count="0" meta:page-count="6" meta:paragraph-count="166" meta:word-count="1501" meta:character-count="9252" meta:non-whitespace-character-count="7971"/></office:meta>
+ <office:meta><dc:date>2023-07-31T21:20:09.602978889</dc:date><meta:editing-duration>PT2H8M2S</meta:editing-duration><meta:editing-cycles>20</meta:editing-cycles><meta:generator>LibreOffice/7.3.7.2$Linux_X86_64 LibreOffice_project/30$Build-2</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="2" meta:object-count="0" meta:page-count="7" meta:paragraph-count="182" meta:word-count="1879" meta:character-count="11415" meta:non-whitespace-character-count="9781"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">11075</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">1323</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">31124</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">27684</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">84040</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">40880</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">9601</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">17210</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">33519</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">27451</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">11075</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">31122</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">38758</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">1323</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">84039</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">42201</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -104,7 +104,7 @@
    </config:config-item-map-indexed>
    <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
    <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2790562</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">3002526</config:config-item>
    <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
    <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
@@ -1084,316 +1084,336 @@
   </style:style>
   <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0022893e" officeooo:paragraph-rsid="0022893e" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002341da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0024ec3a" officeooo:paragraph-rsid="0024ec3a" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0022893e" officeooo:paragraph-rsid="0022893e" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002341da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="001a2e26"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="002850c4"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0024ec3a" officeooo:paragraph-rsid="0024ec3a" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Arial1" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P33" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Arial" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties style:line-height-at-least="0.198in"/>
-   <style:text-properties fo:color="#cccccc" loext:opacity="100%" style:font-name="Droid Sans Mono" fo:font-size="10.5pt" fo:font-weight="normal" fo:background-color="#1f1f1f"/>
-  </style:style>
-  <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:color="#6a9955" loext:opacity="100%" style:font-name="Droid Sans Mono" fo:font-size="10.5pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" fo:background-color="#1f1f1f" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties style:line-height-at-least="0.198in"/>
-  </style:style>
-  <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties style:line-height-at-least="0.198in"/>
-   <style:text-properties fo:font-size="10.5pt" fo:font-weight="normal"/>
-  </style:style>
-  <style:style style:name="P38" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Arial" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L19">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Arial1" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L3">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L7">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L9">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L8">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002341da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L23">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0024ec3a" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L23">
+  <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0024ec3a" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L10">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L11">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L13">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L14">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L15">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L15">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P79" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L16">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L17">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L18">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L17">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L21">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P84" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L20">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0022893e" officeooo:paragraph-rsid="0022893e" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P85" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L21">
+  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P86" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L21">
+  <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P87" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
+  <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P88" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
+  <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002a94a2" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P89" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
+  <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002a94a2" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002bea3b" officeooo:paragraph-rsid="002bea3b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
+  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="001a2e26"/>
+  </style:style>
+  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="002850c4"/>
+  </style:style>
+  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="0028a90b"/>
   </style:style>
-  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L23">
+  <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="002a94a2"/>
   </style:style>
-  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L21">
+  <style:style style:name="P43" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Arial1" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P44" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Arial" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties style:line-height-at-least="0.198in"/>
+   <style:text-properties fo:color="#cccccc" loext:opacity="100%" style:font-name="Droid Sans Mono" fo:font-size="10.5pt" fo:font-weight="normal" fo:background-color="#1f1f1f"/>
+  </style:style>
+  <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:color="#6a9955" loext:opacity="100%" style:font-name="Droid Sans Mono" fo:font-size="10.5pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" fo:background-color="#1f1f1f" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties style:line-height-at-least="0.198in"/>
+  </style:style>
+  <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties style:line-height-at-least="0.198in"/>
+   <style:text-properties fo:font-size="10.5pt" fo:font-weight="normal"/>
+  </style:style>
+  <style:style style:name="P49" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P50" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Arial" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P51" style:family="paragraph" style:parent-style-name="_32_0160307_5f_TUM_5f_Präsentation_5f_o_5f_v13_7e_LT_7e_Titel" style:list-style-name="L19">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Arial1" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002092da" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001a2e26" officeooo:paragraph-rsid="001a2e26" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L3">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001c02f2" officeooo:paragraph-rsid="001c02f2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0028a90b" officeooo:paragraph-rsid="0028a90b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L5">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002a94a2" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002a94a2" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L7">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d2062" officeooo:paragraph-rsid="001d2062" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L7">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L8">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L9">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001d74ed" officeooo:paragraph-rsid="001d74ed" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L10">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P79" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L11">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001e98fe" officeooo:paragraph-rsid="001e98fe" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L12">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001efcda" officeooo:paragraph-rsid="001efcda" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L13">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L14">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P84" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L15">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002092da" officeooo:paragraph-rsid="002092da" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P85" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L15">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P86" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L16">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P87" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L17">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P88" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L18">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020e629" officeooo:paragraph-rsid="0020e629" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P89" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L17">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002850c4" officeooo:paragraph-rsid="002850c4" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L20">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002341da" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L20">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0024ec3a" officeooo:paragraph-rsid="002a94a2" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P93" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L21">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0022893e" officeooo:paragraph-rsid="0022893e" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P94" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P95" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0020f8f0" officeooo:paragraph-rsid="0020f8f0" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P96" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="002bea3b" officeooo:paragraph-rsid="002bea3b" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P97" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L22">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:color="#6a9955" loext:opacity="100%" style:font-name="Droid Sans Mono" fo:font-size="10.5pt" fo:font-weight="normal" officeooo:rsid="002576f7" officeooo:paragraph-rsid="002576f7" fo:background-color="#1f1f1f" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
@@ -2484,6 +2504,58 @@
   <text:list-style style:name="L20">
    <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%." style:num-suffix="." text:bullet-char="•">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%." style:num-suffix="." text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1in" fo:text-indent="-0.25in" fo:margin-left="1in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%." style:num-suffix="." text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%." style:num-suffix="." text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%." style:num-suffix="." text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%." style:num-suffix="." text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2in" fo:text-indent="-0.25in" fo:margin-left="2in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%." style:num-suffix="." text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%." style:num-suffix="." text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%." style:num-suffix="." text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%." style:num-suffix="." text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3in" fo:text-indent="-0.25in" fo:margin-left="3in"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+  </text:list-style>
+  <text:list-style style:name="L21">
+   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%." style:num-suffix="." text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
      <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.7425in" fo:text-indent="-0.25in" fo:margin-left="0.7425in"/>
     </style:list-level-properties>
    </text:list-level-style-bullet>
@@ -2533,7 +2605,7 @@
     </style:list-level-properties>
    </text:list-level-style-bullet>
   </text:list-style>
-  <text:list-style style:name="L21">
+  <text:list-style style:name="L22">
    <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%." style:num-suffix="." text:bullet-char="•">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
      <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in"/>
@@ -2585,110 +2657,6 @@
     </style:list-level-properties>
    </text:list-level-style-bullet>
   </text:list-style>
-  <text:list-style style:name="L22">
-   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1in" fo:text-indent="-0.25in" fo:margin-left="1in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2in" fo:text-indent="-0.25in" fo:margin-left="2in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3in" fo:text-indent="-0.25in" fo:margin-left="3in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-  </text:list-style>
-  <text:list-style style:name="L23">
-   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.75in" fo:text-indent="-0.25in" fo:margin-left="0.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1in" fo:text-indent="-0.25in" fo:margin-left="1in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.25in" fo:text-indent="-0.25in" fo:margin-left="1.25in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.5in" fo:text-indent="-0.25in" fo:margin-left="1.5in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.75in" fo:text-indent="-0.25in" fo:margin-left="1.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2in" fo:text-indent="-0.25in" fo:margin-left="2in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.25in" fo:text-indent="-0.25in" fo:margin-left="2.25in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%." text:bullet-char="◦">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.5in" fo:text-indent="-0.25in" fo:margin-left="2.5in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%." text:bullet-char="▪">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.75in" fo:text-indent="-0.25in" fo:margin-left="2.75in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%." text:bullet-char="•">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3in" fo:text-indent="-0.25in" fo:margin-left="3in"/>
-    </style:list-level-properties>
-   </text:list-level-style-bullet>
-  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="8.2681in" fo:page-height="11.6929in" style:num-format="1" style:print-orientation="portrait" fo:margin-top="0.7874in" fo:margin-bottom="0.7874in" fo:margin-left="0.7874in" fo:margin-right="0.7874in" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="44" style:layout-grid-base-height="0.2165in" style:layout-grid-ruby-height="0in" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="true" style:layout-grid-display="true" style:layout-grid-base-width="0.1457in" style:layout-grid-snap-to="true" style:footnote-max-height="0in" loext:margin-gutter="0in">
     <style:footnote-sep style:width="0.0071in" style:distance-before-sep="0.0398in" style:distance-after-sep="0.0398in" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -2713,634 +2681,637 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
    </text:sequence-decls>
    <text:p text:style-name="P1">MA Presentation</text:p>
-   <text:list xml:id="list1560841855" text:style-name="L1">
+   <text:list xml:id="list3227961695" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P41">Introduction slide</text:p>
+     <text:p text:style-name="P52">Introduction slide</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P41">Hyperparameter Optimization</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P2"/>
-   <text:list xml:id="list1928217914" text:style-name="L2">
-    <text:list-item>
-     <text:p text:style-name="P54">Definition Hyperparameters: Parameters of a ML model that are fixed before training, number of layers/ neurons, epochs, learning rate, … → architecture decision (size of network etc. )</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P54">Optimization: finding the optimum of a function, e.g. Rosenbrock function → optimal value at (1,1)</text:p>
-     <text:p text:style-name="P54"/>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list91810825328996" text:continue-list="list1560841855" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P41">Hyperparameter Optimization</text:p>
+     <text:p text:style-name="P52">Hyperparameter Optimization</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P2"/>
-   <text:list xml:id="list3259127770" text:style-name="L3">
+   <text:list xml:id="list2026626853" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P55">Together: Optimization of a very expensive black box function</text:p>
+     <text:p text:style-name="P64">Definition Hyperparameters: Parameters of a ML model that are fixed before training, number of layers/ neurons, epochs, learning rate, … → architecture decision (size of network etc. )</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P55">Each function evaluation is training &amp; evaluation of a ML model with different configuration</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P55">Example: 2D optimization, 2-layer neural network, diamonds dataset used → mean average percentage error on test set</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P55">Problem: Too expensive to evaluate this many times to get this plot</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P55">Already many approaches, baby sitting (trial &amp; error like everyone does it), expert knowledge, more epochs → lower learning rate etc. … )</text:p>
+     <text:p text:style-name="P64">Optimization: finding the optimum of a function, e.g. Rosenbrock function → optimal value at (1,1)</text:p>
+     <text:p text:style-name="P64"/>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P14"/>
-   <text:list xml:id="list91811173250168" text:continue-list="list91810825328996" text:style-name="L1">
+   <text:list xml:id="list131215412231742" text:continue-list="list3227961695" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P52">Hyperparameter Optimization – State of the Art</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P53"/>
-   <text:list xml:id="list354372743" text:style-name="L22">
-    <text:list-item>
-     <text:p text:style-name="P90"><text:span text:style-name="T4">Techniques from literature, without any knowledge about hyperparameters &amp; model</text:span></text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P59">Grid search: spanning a homogeneous grid on the whole domain </text:p>
-     <text:list>
-      <text:list-item>
-       <text:p text:style-name="P59"><text:s/>curse of dimensionality</text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P59">only 7 different values for each parameter </text:p>
-      </text:list-item>
-     </text:list>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P59">Random search: pick random candidates (uniformly on whole domain)</text:p>
-     <text:list>
-      <text:list-item>
-       <text:p text:style-name="P59">more different values for each hyperparameter</text:p>
-       <text:p text:style-name="P59"/>
-      </text:list-item>
-     </text:list>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list91811140691995" text:continue-list="list91811173250168" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P52">Hyperparameter Optimization – State of the Art </text:p>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list364624300" text:style-name="L4">
-    <text:list-header>
-     <text:p text:style-name="P57"/>
-    </text:list-header>
-    <text:list-item>
-     <text:p text:style-name="P57">Bayesian Optimization: <text:span text:style-name="T31">iterative algorithm </text:span></text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P87">three parts:</text:p>
-     <text:list>
-      <text:list-item>
-       <text:p text:style-name="P87">archive: all function evaluations so far</text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P87">surrogate model: approximates the function with regression, e.g. gaussian process, random forest,…</text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P87">acquisition function: its maximum is the new candidate point → added to the archive</text:p>
-      </text:list-item>
-     </text:list>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P53"/>
-   <text:list xml:id="list91809832718358" text:continue-list="list91811140691995" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P41">Hyperparamater Optimization <text:span text:style-name="T31">with Sparse Grids</text:span></text:p>
+     <text:p text:style-name="P52">Hyperparameter Optimization</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P2"/>
-   <text:list xml:id="list91810643890741" text:continue-list="list364624300" text:style-name="L4">
+   <text:list xml:id="list2165537114" text:style-name="L3">
     <text:list-item>
-     <text:p text:style-name="P87">Efficient way for representing functions:</text:p>
-     <text:list>
-      <text:list-item>
-       <text:p text:style-name="P88">number of grid points scales exponentially vs. not exponentially</text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P88">but on the other hand, sparse grids not as precise as full grids</text:p>
-      </text:list-item>
-     </text:list>
+     <text:p text:style-name="P65">Together: Optimization of a very expensive black box function</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P88">interpolation with basis functions, B-splines very good for optimization</text:p>
+     <text:p text:style-name="P65">Each function evaluation is training &amp; evaluation of a ML model with different configuration</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P56">Sparse Grid search: new approach, iterative, adaptive to the function values</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P14"/>
-   <text:p text:style-name="P14"/>
-   <text:p text:style-name="P14"/>
-   <text:p text:style-name="P14"/>
-   <text:p text:style-name="P14"><text:soft-page-break/></text:p>
-   <text:list xml:id="list91810039155204" text:continue-list="list91809832718358" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P41">Sparse Grid Hyperparameter Optimization</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P2"/>
-   <text:list xml:id="list3596400313" text:style-name="L5">
-    <text:list-item>
-     <text:p text:style-name="P58">In each iteration, one point is selected to be refined with the Novak-Ritter refinement criterion:</text:p>
+     <text:p text:style-name="P65">Example: 2D optimization, 2-layer neural network, diamonds dataset used → mean average percentage error on test set</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P61">For each point, term is evaluated and point with minimal value is selected:</text:p>
-     <text:list>
-      <text:list-item>
-       <text:p text:style-name="P61"><text:span text:style-name="T6">r</text:span>: rank of the points → place of the function value in the ascending order of all function values </text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P42">l: <text:span text:style-name="T1">level of the point</text:span></text:p>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P42">d: <text:span text:style-name="T1">degree, number of previous refinements of this point</text:span></text:p>
-      </text:list-item>
-     </text:list>
+     <text:p text:style-name="P65">Problem: Too expensive to evaluate this many times to get this plot</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P61">Adaptivity parameter: Trade-off between exploration (high value) and exploitation (low value)</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P15"/>
-   <text:p text:style-name="P15"/>
-   <text:list xml:id="list91810209467947" text:continue-list="list91810039155204" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P43">Adaptivity Parameter</text:p>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list3988604908" text:style-name="L6">
-    <text:list-header>
-     <text:p text:style-name="P62"/>
-    </text:list-header>
-    <text:list-item>
-     <text:p text:style-name="P62">Smaller value (top): very adaptive sparse grid, small value found in the top right corner, few points in other regions</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P62">higher value (bottom): a bit adaptive, most points in the top regions, but more distributed</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P62">Extreme case: gamma = 1 → normal sparse grid without any adaptivity</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P64">Perfect parameter depends on setting (dataset &amp; model), but 0.85 is a good value to start with </text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P64">Interpolation possible with B-splines basis functions</text:p>
+     <text:p text:style-name="P65">Already many approaches, baby sitting (trial &amp; error like everyone does it), expert knowledge, more epochs → lower learning rate etc. … )</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P16"/>
-   <text:list xml:id="list91810516687482" text:continue-list="list91810209467947" text:style-name="L1">
+   <text:list xml:id="list131214404366661" text:continue-list="list131215412231742" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P44">Sparse Grid Hyperparameter Optimization</text:p>
+     <text:p text:style-name="P53">Hyperparameter Optimization – State of the Art</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P15"/>
+   <text:list xml:id="list2851096628" text:style-name="L4">
+    <text:list-item>
+     <text:p text:style-name="P66">Techniques from literature, without any knowledge about hyperparameters &amp; model</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P66">Grid search: spanning a homogeneous grid on the whole domain </text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P66"><text:s/>curse of dimensionality</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P66">only 7 different values for each parameter </text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P66">Random search: pick random candidates (uniformly on whole domain)</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P66">more different values for each hyperparameter</text:p>
+       <text:p text:style-name="P66"/>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+   </text:list>
+   <text:list xml:id="list131215368351850" text:continue-list="list131214404366661" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P53">Hyperparameter Optimization – State of the Art </text:p>
+    </text:list-item>
+   </text:list>
+   <text:list xml:id="list3412375462" text:style-name="L5">
+    <text:list-header>
+     <text:p text:style-name="P67"/>
+    </text:list-header>
+    <text:list-item>
+     <text:p text:style-name="P67">Bayesian Optimization: <text:span text:style-name="T31">iterative algorithm </text:span></text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P70">three parts:</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P70">archive: all function evaluations so far</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P70">surrogate model: approximates the function with regression, e.g. gaussian process, random forest,…</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P70">acquisition function: its maximum is the new candidate point → added to the archive</text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P15"/>
+   <text:list xml:id="list131216384757603" text:continue-list="list131215368351850" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P52">Hyperparamater Optimization <text:span text:style-name="T31">with Sparse Grids</text:span></text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P2"/>
+   <text:list xml:id="list131216141835749" text:continue-list="list3412375462" text:style-name="L5">
+    <text:list-item>
+     <text:p text:style-name="P70">Efficient way for representing functions:</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P71">number of grid points scales exponentially vs. not exponentially</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P71">but on the other hand, sparse grids not as precise as full grids</text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P71">interpolation with basis functions, B-splines very good for optimization</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P68">Sparse Grid search: new approach, iterative, adaptive to the function values</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P16"/>
+   <text:p text:style-name="P16"/>
+   <text:p text:style-name="P16"/>
+   <text:p text:style-name="P16"/>
+   <text:p text:style-name="P16"><text:soft-page-break/></text:p>
+   <text:list xml:id="list131215740672283" text:continue-list="list131216384757603" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P52">Sparse Grid Hyperparameter Optimization</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P2"/>
+   <text:list xml:id="list2962255580" text:style-name="L6">
+    <text:list-item>
+     <text:p text:style-name="P69">In each iteration, one point is selected to be refined with the Novak-Ritter refinement criterion:</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P73">For each point, term is evaluated and point with minimal value is selected:</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P73"><text:span text:style-name="T6">r</text:span>: rank of the points → place of the function value in the ascending order of all function values </text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P54">l: <text:span text:style-name="T1">level of the point</text:span></text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P54">d: <text:span text:style-name="T1">degree, number of previous refinements of this point</text:span></text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P73">Adaptivity parameter: Trade-off between exploration (high value) and exploitation (low value)</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P18"/>
+   <text:p text:style-name="P18"/>
+   <text:list xml:id="list131215811873868" text:continue-list="list131215740672283" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P55">Adaptivity Parameter</text:p>
+    </text:list-item>
+   </text:list>
+   <text:list xml:id="list3022650616" text:style-name="L7">
+    <text:list-header>
+     <text:p text:style-name="P74"/>
+    </text:list-header>
+    <text:list-item>
+     <text:p text:style-name="P74">Smaller value (top): very adaptive sparse grid, small value found in the top right corner, few points in other regions</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P74">higher value (bottom): a bit adaptive, most points in the top regions, but more distributed</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P74">Extreme case: gamma = 1 → normal sparse grid without any adaptivity</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P75">Perfect parameter depends on setting (dataset &amp; model), but 0.85 is a good value to start with </text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P75">Interpolation possible with B-splines basis functions</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P19"/>
+   <text:list xml:id="list131214828089070" text:continue-list="list131215811873868" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P56">Sparse Grid Hyperparameter Optimization</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P4"/>
-   <text:list xml:id="list1809547494" text:style-name="L7">
+   <text:list xml:id="list1772298552" text:style-name="L8">
     <text:list-item>
-     <text:p text:style-name="P65">Not only possible to take the best grid point as result, but one step further</text:p>
+     <text:p text:style-name="P76">Not only possible to take the best grid point as result, but one step further</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Use interpolant and optimize</text:p>
+     <text:p text:style-name="P76">Use interpolant and optimize</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Gradient-free optimizers, not using the gradient of the interpolant</text:p>
+     <text:p text:style-name="P76">Gradient-free optimizers, not using the gradient of the interpolant</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Gradient-based optimizers: Gradient descent (as depicted)</text:p>
+     <text:p text:style-name="P76">Gradient-based optimizers: Gradient descent (as depicted)</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Additionally global, globalized, and local optimizers</text:p>
+     <text:p text:style-name="P76">Additionally global, globalized, and local optimizers</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Gradient descent steps with different number of grid points → have to use high number of grid points to really optimizer</text:p>
+     <text:p text:style-name="P76">Gradient descent steps with different number of grid points → have to use high number of grid points to really optimizer</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">Problem in our setting: too few grid points because evaluation very expensive</text:p>
+     <text:p text:style-name="P76">Problem in our setting: too few grid points because evaluation very expensive</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P65">But: additionally apply global and local optimizer to the interpolant and take smallest of all three values as the result</text:p>
+     <text:p text:style-name="P76">But: additionally apply global and local optimizer to the interpolant and take smallest of all three values as the result</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P69"/>
+   <text:p text:style-name="P32"/>
    <text:p text:style-name="P13"/>
-   <text:list xml:id="list91810160273324" text:continue-list="list91810516687482" text:style-name="L1">
+   <text:list xml:id="list131215283691183" text:continue-list="list131214828089070" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P44">Numerical Results (2D) </text:p>
+     <text:p text:style-name="P56">Numerical Results (2D) </text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P4"/>
-   <text:list xml:id="list504119707" text:style-name="L9">
+   <text:list xml:id="list3701986536" text:style-name="L9">
     <text:list-item>
-     <text:p text:style-name="P66">2 Hyperparameters: Epochs and learning rate</text:p>
+     <text:p text:style-name="P77">2 Hyperparameters: Epochs and learning rate</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P66">3 different datasets: house_16H, house_sales, and Brazilian_houses</text:p>
+     <text:p text:style-name="P77">3 different datasets: house_16H, house_sales, and Brazilian_houses</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P66">Mean average percentage error</text:p>
+     <text:p text:style-name="P77">Mean average percentage error</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P66">Trends: decrease with increasing cost (budget given)</text:p>
+     <text:p text:style-name="P77">Trends: decrease with increasing cost (budget given)</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P66">Sparse grids optimization very competitive, best result found for second and third dataset and cost higher than 40</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P16"/>
-   <text:list xml:id="list91811448305194" text:continue-list="list91810160273324" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P45">Numerical Results (<text:span text:style-name="T7">3</text:span>D) </text:p>
+     <text:p text:style-name="P77">Sparse grids optimization very competitive, best result found for second and third dataset and cost higher than 40</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P5"/>
-   <text:list xml:id="list1713754561" text:style-name="L10">
+   <text:p text:style-name="P19"/>
+   <text:p text:style-name="P19"/>
+   <text:p text:style-name="P19"/>
+   <text:p text:style-name="P19"/>
+   <text:p text:style-name="P19"/>
+   <text:list xml:id="list131214489624639" text:continue-list="list131215283691183" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P71">Additionally optimize the batch size</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P71">Higher dimension: problems for grid search only 3, and 4 values per parameter <text:soft-page-break/>→ 27 and 64 cost</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P71">For house_sales dataset: sparse grid optimization very powerful already for small budget</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P71">for house_16H, it need a few iterations to find a good optimum</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P17"/>
-   <text:p text:style-name="P17"/>
-   <text:list xml:id="list91809861754664" text:continue-list="list91811448305194" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P45">Numerical Results (<text:span text:style-name="T7">5</text:span>D) </text:p>
+     <text:p text:style-name="P57"><text:soft-page-break/>Numerical Results (<text:span text:style-name="T7">3</text:span>D) </text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P5"/>
-   <text:list xml:id="list91810987374900" text:continue-list="list1713754561" text:style-name="L10">
+   <text:list xml:id="list813249858" text:style-name="L10">
     <text:list-item>
-     <text:p text:style-name="P71">Additionally optimize the number of layers and the neurons per layer <text:s text:c="23"/>→ architecture decisions</text:p>
+     <text:p text:style-name="P78">Additionally optimize the batch size</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P71">big problems for the grid search, only 2 values for each parameter <text:s text:c="30"/>→ 2^5=32 budget</text:p>
+     <text:p text:style-name="P78">Higher dimension: problems for grid search only 3, and 4 values per parameter → 27 and 64 cost</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P71">sparse grid search performs well for all three datasets</text:p>
+     <text:p text:style-name="P78">For house_sales dataset: sparse grid optimization very powerful already for small budget</text:p>
     </text:list-item>
-   </text:list>
-   <text:p text:style-name="P17"/>
-   <text:p text:style-name="P17"/>
-   <text:p text:style-name="P17"/>
-   <text:list xml:id="list91810756587127" text:continue-list="list91809861754664" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P47">Application: MNIST</text:p>
+     <text:p text:style-name="P78">for house_16H, it need a few iterations to find a good optimum</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P6"/>
-   <text:list xml:id="list2555364241" text:style-name="L11">
+   <text:p text:style-name="P20"/>
+   <text:p text:style-name="P20"/>
+   <text:list xml:id="list131216326138366" text:continue-list="list131214489624639" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P72">Handwritten digits classification</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Also different type of network: convolutional</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">9 dimensional problem, architecture decision and parameter values</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Grid search only performs with budget of 1</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Others: Reach accuracy of up to 97.5% with cost of 80-93% </text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Bayesian optimization very fast very good</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Sparse grid search a bit faster than random search</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P72">Note: Still only a small and simple network, not a specific network architecture for object classification, and limited number of epochs</text:p>
+     <text:p text:style-name="P57">Numerical Results (<text:span text:style-name="T7">5</text:span>D) </text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P17"/>
-   <text:list xml:id="list91810036689520" text:continue-list="list91810756587127" text:style-name="L1">
+   <text:p text:style-name="P5"/>
+   <text:list xml:id="list131214717023504" text:continue-list="list813249858" text:style-name="L10">
     <text:list-item>
-     <text:p text:style-name="P47">Iterative Adaptive Random Search</text:p>
+     <text:p text:style-name="P78">Additionally optimize the number of layers and the neurons per layer <text:s text:c="23"/>→ architecture decisions</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P78">big problems for the grid search, only 2 values for each parameter <text:s text:c="30"/>→ 2^5=32 budget</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P78">sparse grid search performs well for all three datasets</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P20"/>
+   <text:p text:style-name="P20"/>
+   <text:p text:style-name="P20"/>
+   <text:list xml:id="list131215976459575" text:continue-list="list131216326138366" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P58">Application: MNIST</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P6"/>
-   <text:list xml:id="list2411634968" text:style-name="L12">
+   <text:list xml:id="list609350126" text:style-name="L11">
     <text:list-item>
-     <text:p text:style-name="P73">Second new approach for hyperparameter optimization</text:p>
+     <text:p text:style-name="P79">Handwritten digits classification</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P73">Idea: Combine advantages of random search and iterative optimization algorithm</text:p>
+     <text:p text:style-name="P79">Also different type of network: convolutional</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P73">Algorithm:</text:p>
+     <text:p text:style-name="P79">9 dimensional problem, architecture decision and parameter values</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P79">Grid search only performs with budget of 1</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P79">Others: Reach accuracy of up to 97.5% with cost of 80-93% </text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P79">Bayesian optimization very fast very good</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P79">Sparse grid search a bit faster than random search</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P79">Note: Still only a small and simple network, not a specific network architecture for object classification, and limited number of epochs</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P20"/>
+   <text:list xml:id="list131214860130908" text:continue-list="list131215976459575" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P58">Iterative Adaptive Random Search</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P6"/>
+   <text:list xml:id="list1141571366" text:style-name="L12">
+    <text:list-item>
+     <text:p text:style-name="P80">Second new approach for hyperparameter optimization</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P80">Idea: Combine advantages of random search and iterative optimization algorithm</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P80">Algorithm:</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P73">Start: Sample initial points uniformly in whole <text:span text:style-name="T8">domain</text:span></text:p>
+       <text:p text:style-name="P80">Start: Sample initial points uniformly in whole <text:span text:style-name="T8">domain</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P74">Iterations until the budget is exhausted:</text:p>
+       <text:p text:style-name="P81">Iterations until the budget is exhausted:</text:p>
        <text:list>
         <text:list-item>
-         <text:p text:style-name="P74">Sort the array of all sampled points with increasing function values</text:p>
+         <text:p text:style-name="P81">Sort the array of all sampled points with increasing function values</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P74">Select point to be refined → <text:span text:style-name="T6">refinement criterion</text:span></text:p>
+         <text:p text:style-name="P81">Select point to be refined → <text:span text:style-name="T6">refinement criterion</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P74">Sample new points according to <text:span text:style-name="T6">refinement strategy</text:span></text:p>
+         <text:p text:style-name="P81">Sample new points according to <text:span text:style-name="T6">refinement strategy</text:span></text:p>
         </text:list-item>
        </text:list>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P74">Return sorted array</text:p>
+       <text:p text:style-name="P81">Return sorted array</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P74">Two questions: <text:span text:style-name="T6">Refinement criterion</text:span> and <text:span text:style-name="T6">refinement strategy</text:span></text:p>
+     <text:p text:style-name="P81">Two questions: <text:span text:style-name="T6">Refinement criterion</text:span> and <text:span text:style-name="T6">refinement strategy</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P89">Important parameters:</text:p>
+     <text:p text:style-name="P72">Important parameters:</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P89">Number of initial points</text:p>
+       <text:p text:style-name="P72">Number of initial points</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P89">Number of points added per refinement</text:p>
+       <text:p text:style-name="P72">Number of points added per refinement</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P89">adaptivity parameter</text:p>
+       <text:p text:style-name="P72">adaptivity parameter</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P89">refinement strategy</text:p>
+       <text:p text:style-name="P72">refinement strategy</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P89">budget</text:p>
-       <text:p text:style-name="P89"/>
+       <text:p text:style-name="P72">budget</text:p>
+       <text:p text:style-name="P72"/>
       </text:list-item>
      </text:list>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P7"/>
-   <text:list xml:id="list91809767482503" text:continue-list="list91810036689520" text:style-name="L1">
+   <text:list xml:id="list131215132479615" text:continue-list="list131214860130908" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P48">Refinement Strategies</text:p>
+     <text:p text:style-name="P59"><text:soft-page-break/>Refinement Strategies</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P7"/>
-   <text:list xml:id="list3342423030" text:style-name="L13">
+   <text:list xml:id="list925534955" text:style-name="L13">
     <text:list-item>
-     <text:p text:style-name="P75">Each case: 5 initial points were sampled</text:p>
+     <text:p text:style-name="P82">Each case: 5 initial points were sampled</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P75"><text:soft-page-break/>Refinement criterion is used, similar to Ritter-Novak refinement criterion, the point with minimal term</text:p>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list803552410" text:style-name="L14">
-    <text:list-item>
-     <text:p text:style-name="P76">Interval based refinement: In each dimension, the upper and lower bounds are defined by the next neighboring point, then sampled uniformly in blue area</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P76">Uniform d-ball sampling: radius calculated with distances to all points, not exactly the next point</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P76">Normal distribution sampling: similar to d-ball sampling, but with probabilities, idea: if the point is promising, we should add points next to it with higher probability</text:p>
+     <text:p text:style-name="P82">Refinement criterion is used, similar to Ritter-Novak refinement criterion, the point with minimal term</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P7"/>
-   <text:p text:style-name="P7"/>
-   <text:p text:style-name="P7"/>
-   <text:p text:style-name="P7"/>
-   <text:list xml:id="list91811427783193" text:continue-list="list91809767482503" text:style-name="L1">
+   <text:list xml:id="list3008121605" text:style-name="L14">
     <text:list-item>
-     <text:p text:style-name="P49">Adaptivity Parameter gamma = 1</text:p>
+     <text:p text:style-name="P83">Interval based refinement: In each dimension, the upper and lower bounds are defined by the next neighboring point, then sampled uniformly in blue area</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P83">Uniform d-ball sampling: radius calculated with distances to all points, not exactly the next point</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P83">Normal distribution sampling: similar to d-ball sampling, but with probabilities, idea: if the point is promising, we should add points next to it with higher probability</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P7"/>
+   <text:p text:style-name="P7"/>
+   <text:list xml:id="list131215891808767" text:continue-list="list131215132479615" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P60">Adaptivity Parameter gamma = 1</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P9"/>
-   <text:list xml:id="list1377630529" text:style-name="L15">
+   <text:list xml:id="list400718449" text:style-name="L15">
     <text:list-item>
-     <text:p text:style-name="P77">Left part is constant → not adaptive point generation</text:p>
+     <text:p text:style-name="P84">Left part is constant → not adaptive point generation</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P78">points distributed over domain, but: depends on initial distribution, e.g. areas without any points</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P9"/>
-   <text:list xml:id="list91811400550569" text:continue-list="list91811427783193" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P49">Adaptivity Parameter gamma = 0</text:p>
+     <text:p text:style-name="P85">points distributed over domain, but: depends on initial distribution, e.g. areas without any points</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P9"/>
-   <text:list xml:id="list1272704233" text:style-name="L16">
+   <text:list xml:id="list131215776755617" text:continue-list="list131215891808767" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P79">Right part is constant → point wih smallest rank is always reifned </text:p>
+     <text:p text:style-name="P60">Adaptivity Parameter gamma = 0</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P9"/>
+   <text:list xml:id="list530496057" text:style-name="L16">
+    <text:list-item>
+     <text:p text:style-name="P86">Right part is constant → point wih smallest rank is always reifned </text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P79">Very adaptive </text:p>
+     <text:p text:style-name="P86">Very adaptive </text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P79">Difference between 2 and 3: </text:p>
+     <text:p text:style-name="P86">Difference between 2 and 3: </text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P79">2 has concentrated ball with sharp border</text:p>
+       <text:p text:style-name="P86">2 has concentrated ball with sharp border</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P79">3 has more points also outside → can see the normal distribution</text:p>
+       <text:p text:style-name="P86">3 has more points also outside → can see the normal distribution</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P9"/>
-   <text:list xml:id="list91811600592145" text:continue-list="list91811400550569" text:style-name="L1">
+   <text:list xml:id="list131215724544454" text:continue-list="list131215776755617" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P50">Comparison of Optimization Algorithms <text:span text:style-name="T11">2D – </text:span><text:span text:style-name="T30">only Random Searches</text:span></text:p>
+     <text:p text:style-name="P61">Comparison of Optimization Algorithms <text:span text:style-name="T11">2D – </text:span><text:span text:style-name="T30">only Random Searches</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P11"/>
-   <text:list xml:id="list4107721091" text:style-name="L17">
+   <text:list xml:id="list792318903" text:style-name="L17">
     <text:list-item>
-     <text:p text:style-name="P80">2D optimization problem, epochs and learning rate </text:p>
+     <text:p text:style-name="P87">2D optimization problem, epochs and learning rate </text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P80">Focus on Random search and strategies:</text:p>
+     <text:p text:style-name="P87">Focus on Random search and strategies:</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P82">In the beginning conventional is best</text:p>
+       <text:p text:style-name="P89">In the beginning conventional is best</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P82">Then: Strategy 3 with smallest error</text:p>
+       <text:p text:style-name="P89">Then: Strategy 3 with smallest error</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P11"/>
-   <text:list xml:id="list91810724463008" text:continue-list="list91811600592145" text:style-name="L1">
+   <text:list xml:id="list131215083174831" text:continue-list="list131215724544454" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P49">Comparison of Optimization Algorithms <text:span text:style-name="T11">2D</text:span></text:p>
+     <text:p text:style-name="P60">Comparison of Optimization Algorithms <text:span text:style-name="T11">2D</text:span></text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P23"/>
-   <text:list xml:id="list1250663814" text:style-name="L18">
+   <text:p text:style-name="P26"/>
+   <text:list xml:id="list43648140" text:style-name="L18">
     <text:list-item>
-     <text:p text:style-name="P81">All in all best: sparse grid opt after 60 best solution</text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P9"/>
-   <text:list xml:id="list91810559123515" text:continue-list="list91810724463008" text:style-name="L1">
-    <text:list-item>
-     <text:p text:style-name="P49">Comparison of Optimization Algorithms <text:span text:style-name="T11">6D</text:span></text:p>
-    </text:list-item>
-   </text:list>
-   <text:p text:style-name="P10"/>
-   <text:list xml:id="list91809990453378" text:continue-list="list1250663814" text:style-name="L18">
-    <text:list-item>
-     <text:p text:style-name="P81">6D optimization problem, additionally batch size, number of layers, neurons per layer, dropout probability</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P81">Random search outperforms all refinement strategies</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P81">Reason: d-ball sampling (and normal distribution sampling)</text:p>
+     <text:p text:style-name="P88">All in all best: sparse grid opt after 60 best solution</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P9"/>
-   <text:list xml:id="list91810237519417" text:continue-list="list91810559123515" text:style-name="L1">
+   <text:list xml:id="list131215223619875" text:continue-list="list131215083174831" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P38"><text:span text:style-name="T9">Discussion – Sparse Grid Hyperparameter </text:span><text:span text:style-name="T10">Optimization</text:span></text:p>
+     <text:p text:style-name="P60">Comparison of Optimization Algorithms <text:span text:style-name="T11">6D</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P10"/>
-   <text:list xml:id="list91810352610623" text:continue-list="list91809990453378" text:style-name="L18">
+   <text:list xml:id="list131214893173609" text:continue-list="list43648140" text:style-name="L18">
     <text:list-item>
-     <text:p text:style-name="P81">Number of grid points often not high enough for interpolated function to be good enough</text:p>
+     <text:p text:style-name="P88">6D optimization problem, additionally batch size, number of layers, neurons per layer, dropout probability</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P81">Example image: interpolated function has minimal point in right top corner</text:p>
+     <text:p text:style-name="P88">Random search outperforms all refinement strategies</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P81">Nevertheless: apply global and local optimizer, just compare to the best grid point</text:p>
+     <text:p text:style-name="P88">Reason: d-ball sampling (and normal distribution sampling)</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:list xml:id="list131215644457912" text:continue-list="list131215223619875" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P49"><text:soft-page-break/><text:span text:style-name="T9">Discussion – Sparse Grid Hyperparameter </text:span><text:span text:style-name="T10">Optimization</text:span></text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P10"/>
+   <text:list xml:id="list131215193908502" text:continue-list="list131214893173609" text:style-name="L18">
+    <text:list-item>
+     <text:p text:style-name="P88">Number of grid points often not high enough for interpolated function to be good enough</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P81"><text:soft-page-break/>Problems if optimum at the boundary: optimizer can sometimes help </text:p>
+     <text:p text:style-name="P88">Example image: interpolated function has minimal point in right top corner</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P81">Or use sparse grid with boundary points, BUT: number of function evaluations increases</text:p>
+     <text:p text:style-name="P88">Nevertheless: apply global and local optimizer, just compare to the best grid point</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P81">ALL IN ALL: time to solution is most important and exact optimum is not that important, also because of stochastic behavior </text:p>
-     <text:p text:style-name="P81">→ initialization, splitting, …</text:p>
+     <text:p text:style-name="P88">Problems if optimum at the boundary: optimizer can sometimes help </text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P88">Or use sparse grid with boundary points, BUT: number of function evaluations increases</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P88">ALL IN ALL: time to solution is most important and exact optimum is not that important, also because of stochastic behavior </text:p>
+     <text:p text:style-name="P88">→ initialization, splitting, …</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P8"/>
    <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:list xml:id="list91811404927942" text:continue-list="list91810237519417" text:style-name="L1">
+   <text:list xml:id="list131215224533729" text:continue-list="list131215644457912" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P39">Discussion – Iterative Adaptive Random Search</text:p>
+     <text:p text:style-name="P50">Discussion – Iterative Adaptive Random Search</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P8"/>
-   <text:list xml:id="list3778546827" text:style-name="L19">
+   <text:list xml:id="list1772779931" text:style-name="L19">
     <text:list-item>
-     <text:p text:style-name="P40">Promising results in small dimension</text:p>
+     <text:p text:style-name="P51">Promising results in small dimension</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P40"><text:span text:style-name="T6">Problem</text:span>: Volume of d-ball compared to d-hypercube decreases rapidly for increasing d</text:p>
+     <text:p text:style-name="P51"><text:span text:style-name="T6">Problem</text:span>: Volume of d-ball compared to d-hypercube decreases rapidly for increasing d</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P40">→ worse performance than conventional random search for higher dimensions</text:p>
+     <text:p text:style-name="P51">→ worse performance than conventional random search for higher dimensions</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P40">More analysis:</text:p>
+     <text:p text:style-name="P51">More analysis:</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P40">Convergence?</text:p>
+       <text:p text:style-name="P51">Convergence?</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P40">Adapt algorithm?</text:p>
+       <text:p text:style-name="P51">Adapt algorithm?</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P40">Other search radius?</text:p>
+       <text:p text:style-name="P51">Other search radius?</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P40">Change refinement criterion (e.g. add function value)?</text:p>
+       <text:p text:style-name="P51">Change refinement criterion (e.g. add function value)?</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P40">Other refinement strategy?</text:p>
+       <text:p text:style-name="P51">Other refinement strategy?</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P8"/>
-   <text:list xml:id="list91811084330290" text:continue-list="list91811404927942" text:style-name="L1">
+   <text:list xml:id="list131214662650917" text:continue-list="list131215224533729" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P49">Conclusion</text:p>
+     <text:p text:style-name="P60">Conclusion</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P46">Optimization – Categorical Hyperparameters</text:p>
-     <text:p text:style-name="P46"/>
-    </text:list-item>
-   </text:list>
-   <text:list xml:id="list998142026" text:style-name="L23">
-    <text:list-item>
-     <text:p text:style-name="P91"><text:span text:style-name="T5">Examples: choice of optimizer and also rounding to integer values </text:span></text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P68">→ always discretization</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P68">In this case: extreme case with only 3 different values for each parameter </text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P68">The more grid points, the exacter the interpolated function</text:p>
-    </text:list-item>
-    <text:list-item>
-     <text:p text:style-name="P70">Interpolated function only important for additional optimizer → too few points to rely on optimizer anyway</text:p>
+     <text:p text:style-name="P62">Optimization – Categorical Hyperparameters</text:p>
+     <text:p text:style-name="P62"/>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P9"/>
-   <text:list xml:id="list91810178369376" text:continue-list="list91811084330290" text:style-name="L1">
+   <text:list xml:id="list73968713" text:style-name="L20">
     <text:list-item>
-     <text:p text:style-name="P51">Appendix</text:p>
+     <text:p text:style-name="P91">Examples: choice of optimizer and also rounding to integer values </text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P91">→ always discretization</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P91">In this case: extreme case with only 3 different values for each parameter </text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P91">The more grid points, the exacter the interpolated function</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P92">Interpolated function only important for additional optimizer → too few points to rely on optimizer anyway</text:p>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list2813862520" text:style-name="L20">
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:list xml:id="list131215095445360" text:continue-list="list131214662650917" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P84">Ritter-Novak criterion <text:span text:style-name="T30">JULIAN VALENTIN</text:span>:</text:p>
-     <text:p text:style-name="P84"><text:soft-page-break/><draw:frame draw:style-name="fr1" draw:name="Image1" text:anchor-type="as-char" svg:width="5.1189in" svg:height="2.7925in" draw:z-index="0"><draw:image draw:mime-type="image/png">
+     <text:p text:style-name="P63"><text:soft-page-break/>Appendix</text:p>
+    </text:list-item>
+   </text:list>
+   <text:list xml:id="list762885090" text:style-name="L21">
+    <text:list-item>
+     <text:p text:style-name="P93">Ritter-Novak criterion <text:span text:style-name="T30">JULIAN VALENTIN</text:span>:</text:p>
+     <text:p text:style-name="P93"><draw:frame draw:style-name="fr1" draw:name="Image1" text:anchor-type="as-char" svg:width="5.1189in" svg:height="2.7925in" draw:z-index="0"><draw:image draw:mime-type="image/png">
         <office:binary-data>iVBORw0KGgoAAAANSUhEUgAABMEAAAKYCAIAAAD153hfAAAAA3NCSVQICAjb4U/gAAAAGXRF
          WHRTb2Z0d2FyZQBnbm9tZS1zY3JlZW5zaG907wO/PgAAIABJREFUeJzs3T1wnFgaL/zHb22V
          UCQUCd3EOLlGkXFkHBlHRpFR1a0aHBlHRpFxNChTNigaFA2KFkWLqm7VomhQtChaFA26yaKb
@@ -5635,32 +5606,178 @@
       </draw:frame></text:p>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list2305136631" text:style-name="L21">
+   <text:list xml:id="list1850285356" text:style-name="L22">
     <text:list-item>
-     <text:p text:style-name="P85">Uniform d-ball sampling:</text:p>
+     <text:p text:style-name="P94">Uniform d-ball sampling:</text:p>
      <text:list>
       <text:list-header>
-       <text:p text:style-name="P92"># an array of d normally distributed random variables</text:p>
+       <text:p text:style-name="P97"># an array of d normally distributed random variables</text:p>
       </text:list-header>
      </text:list>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P34"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">u</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T24">np</text:span>.<text:span text:style-name="T24">random</text:span>.<text:span text:style-name="T12">normal</text:span>(<text:span text:style-name="T26">0</text:span>, <text:span text:style-name="T26">1</text:span>, <text:span text:style-name="T28">len</text:span>(<text:span text:style-name="T12">self</text:span>.<text:span text:style-name="T12">hyperparameterspace</text:span>))</text:p>
-   <text:p text:style-name="P34"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">norm</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T24">np</text:span>.<text:span text:style-name="T28">sum</text:span>(<text:span text:style-name="T12">u</text:span><text:span text:style-name="T28">**</text:span><text:span text:style-name="T26">2</text:span>) <text:span text:style-name="T28">**</text:span> (<text:span text:style-name="T26">0.5</text:span>)</text:p>
-   <text:p text:style-name="P36"><text:span text:style-name="T14"><text:tab/><text:tab/></text:span><text:span text:style-name="T13">r</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T22">=</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T25">random</text:span><text:span text:style-name="T19">.</text:span><text:span text:style-name="T13">uniform</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T27">0</text:span><text:span text:style-name="T19">, </text:span><text:span text:style-name="T27">1</text:span><text:span text:style-name="T19">)</text:span><text:span text:style-name="T22">**</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T27">1.0</text:span><text:span text:style-name="T22">/</text:span><text:span text:style-name="T29">len</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T13">self</text:span><text:span text:style-name="T19">.</text:span><text:span text:style-name="T13">hyperparameterspace</text:span><text:span text:style-name="T19">))</text:span></text:p>
-   <text:p text:style-name="P34"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">x</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T12">r</text:span><text:span text:style-name="T28">*</text:span><text:span text:style-name="T12">u</text:span><text:span text:style-name="T28">/</text:span><text:span text:style-name="T12">norm</text:span></text:p>
-   <text:p text:style-name="P37"><text:span text:style-name="T15"><text:tab/><text:tab/></text:span><text:span text:style-name="T16">x</text:span><text:span text:style-name="T20"> </text:span><text:span text:style-name="T23">=</text:span><text:span text:style-name="T20"> </text:span><text:span text:style-name="T16">x</text:span><text:span text:style-name="T23">*</text:span><text:span text:style-name="T16">smallest_dis</text:span><text:span text:style-name="T17">t # scaling </text:span></text:p>
-   <text:list xml:id="list91810230471813" text:continue-numbering="true" text:style-name="L21">
+   <text:p text:style-name="P45"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">u</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T24">np</text:span>.<text:span text:style-name="T24">random</text:span>.<text:span text:style-name="T12">normal</text:span>(<text:span text:style-name="T26">0</text:span>, <text:span text:style-name="T26">1</text:span>, <text:span text:style-name="T28">len</text:span>(<text:span text:style-name="T12">self</text:span>.<text:span text:style-name="T12">hyperparameterspace</text:span>))</text:p>
+   <text:p text:style-name="P45"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">norm</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T24">np</text:span>.<text:span text:style-name="T28">sum</text:span>(<text:span text:style-name="T12">u</text:span><text:span text:style-name="T28">**</text:span><text:span text:style-name="T26">2</text:span>) <text:span text:style-name="T28">**</text:span> (<text:span text:style-name="T26">0.5</text:span>)</text:p>
+   <text:p text:style-name="P47"><text:span text:style-name="T14"><text:tab/><text:tab/></text:span><text:span text:style-name="T13">r</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T22">=</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T25">random</text:span><text:span text:style-name="T19">.</text:span><text:span text:style-name="T13">uniform</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T27">0</text:span><text:span text:style-name="T19">, </text:span><text:span text:style-name="T27">1</text:span><text:span text:style-name="T19">)</text:span><text:span text:style-name="T22">**</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T27">1.0</text:span><text:span text:style-name="T22">/</text:span><text:span text:style-name="T29">len</text:span><text:span text:style-name="T19">(</text:span><text:span text:style-name="T13">self</text:span><text:span text:style-name="T19">.</text:span><text:span text:style-name="T13">hyperparameterspace</text:span><text:span text:style-name="T19">))</text:span></text:p>
+   <text:p text:style-name="P45"><text:span text:style-name="T18"><text:tab/><text:tab/></text:span><text:span text:style-name="T12">x</text:span> <text:span text:style-name="T21">=</text:span> <text:span text:style-name="T12">r</text:span><text:span text:style-name="T28">*</text:span><text:span text:style-name="T12">u</text:span><text:span text:style-name="T28">/</text:span><text:span text:style-name="T12">norm</text:span></text:p>
+   <text:p text:style-name="P48"><text:span text:style-name="T15"><text:tab/><text:tab/></text:span><text:span text:style-name="T16">x</text:span><text:span text:style-name="T20"> </text:span><text:span text:style-name="T23">=</text:span><text:span text:style-name="T20"> </text:span><text:span text:style-name="T16">x</text:span><text:span text:style-name="T23">*</text:span><text:span text:style-name="T16">smallest_dis</text:span><text:span text:style-name="T17">t # scaling </text:span></text:p>
+   <text:list xml:id="list131215322219884" text:continue-numbering="true" text:style-name="L22">
     <text:list-item>
-     <text:p text:style-name="P86">Probabilities for rejection sampling of d-ball with 1 radius, acceptance rate:</text:p>
-     <text:p text:style-name="P86">1D<text:tab/><text:tab/><text:tab/><text:tab/>100%</text:p>
-     <text:p text:style-name="P86">2D<text:tab/><text:tab/><text:tab/><text:tab/>78%</text:p>
-     <text:p text:style-name="P86">3D<text:tab/><text:tab/><text:tab/><text:tab/>52%</text:p>
-     <text:p text:style-name="P86">10D<text:tab/><text:tab/><text:tab/>0.25%</text:p>
+     <text:p text:style-name="P95">Probabilities for rejection sampling of d-ball with 1 radius, acceptance rate:</text:p>
+     <text:p text:style-name="P95">1D<text:tab/><text:tab/><text:tab/><text:tab/>100%</text:p>
+     <text:p text:style-name="P95">2D<text:tab/><text:tab/><text:tab/><text:tab/>78%</text:p>
+     <text:p text:style-name="P95">3D<text:tab/><text:tab/><text:tab/><text:tab/>52%</text:p>
+     <text:p text:style-name="P95">10D<text:tab/><text:tab/><text:tab/>0.25%</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P83">Dropout probability not 1:</text:p>
-     <text:p text:style-name="P83">“Inputs not set to 0 are scaled up by 1/(1 - rate) such that the sum over all inputs is unchanged.” - Keras Dropout layer page</text:p>
+     <text:p text:style-name="P90">Dropout probability not 1:</text:p>
+     <text:p text:style-name="P90">“Inputs not set to 0 are scaled up by 1/(1 - rate) such that the sum over all inputs is unchanged.” - Keras Dropout layer page</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P96">Optimization algorithms:</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P96"><text:span text:style-name="T6">Nelder Mead </text:span>Method This iterative algorithm stores d + 1 vertices of a d-dimensional simplex in ascending order of function values. In each round, either reflection, expansion, outer contraction, inner contraction or shrinking is performed on the vertices. In this way, the simplex contracts around the optimum.</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P96"><text:span text:style-name="T6">Differential Evolution</text:span> This algorithm maintains a list of points which are iteratively updated by the weighted sum of the previous generation. The mutated vector is crossed over with the original vector entry by entry and the resulting points are only accepted if they have better function values.</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P96">CMA-ES <text:span text:style-name="T6">CMA-ES (covariance matrix adaption, evolution strategy) </text:span>keeps track of the covariance matrix of the Gaussian search distribution. After sampling m points from the current distribution, the k best samples are used to calculate the distribution of the next iteration as the weighted mean of them. Then the covariance matrix is updated.</text:p>
+       <text:p text:style-name="P96"/>
+       <text:p text:style-name="P96"/>
+       <text:p text:style-name="P96"/>
+       <text:p text:style-name="P96"/>
+       <text:p text:style-name="P96"/>
+       <text:p text:style-name="P96"/>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P96"><text:soft-page-break/>NLCG <text:span text:style-name="T6">NLCG (non-linear conjugate gradients)</text:span> is equivalent to the conjugate gradient method when optimizing function of the form f ( x ) = 12 x T Ax − b T x. It finds the optimum after d steps for strictly convex quadratic functions. According to the Taylor theorem, it converges also for non-convex functions that are three times continuously differentiable with positive definite Hessian because those functions are similar to strictly convex quadratic function in the region of the optimum.</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P96"><text:span text:style-name="T6">Newton</text:span> This method replaces the objective function with the second-order</text:p>
+       <text:p text:style-name="P96">Taylor approximation f ( xk + dk ) ≈ f ( xk ) + (∇ x f ( xk ))T dk + 12 (dk )T ∇2x f ( xk ) dk and sets −1 the search direction to dk ∝ − ∇2x f ( xk ) ∇ x f ( xk ). This way xk + dk is the minimum of the approximation.</text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P96">Rprop <text:span text:style-name="T6">Rprop</text:span> (resilient propagation) is not dependent of the exact direction of the gradient of the function but often works robustly in machine learning scenarios. The gradient entries are considered separately for each dimension and the entries of the current point xk are updated depending on the sign of the gradient entry. Also the step size is adapted dimension-wise.</text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P96">Bayesian optimization:</text:p>
+     <text:p text:style-name="P96"><draw:frame draw:style-name="fr1" draw:name="Image2" text:anchor-type="as-char" svg:width="5.6508in" svg:height="0.689in" draw:z-index="1"><draw:image draw:mime-type="image/png">
+        <office:binary-data>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
+        </office:binary-data>
+       </draw:image>
+      </draw:frame></text:p>
     </text:list-item>
    </text:list>
   </office:text>
