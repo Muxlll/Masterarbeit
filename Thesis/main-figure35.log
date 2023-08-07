@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 AUG 2023 09:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 AUG 2023 15:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2116,10 +2116,6 @@ LaTeX Warning: Citation 'hamzaccebi2006heuristic' on page 20 undefined on input
  line 465.
 
 
-LaTeX Warning: Citation 'schilling1999applied' on page 20 undefined on input li
-ne 465.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
@@ -2165,10 +2161,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
 LaTeX Warning: Citation 'kelahan1978application' on page 22 undefined on input 
 line 475.
-
-
-LaTeX Warning: Citation 'gall1966practical' on page 22 undefined on input line 
-475.
 
 ) (./chapters/04_hyperparameter_optimization.tex
 chapter 3.
@@ -3364,6 +3356,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 2081--2082
 LaTeX Warning: Reference `fig:Adapt_param_alternatives' on page 63 undefined on
  input line 2083.
 
+
+LaTeX Warning: Reference `fig:comparison_2d' on page 63 undefined on input line
+ 2083.
+
+
+LaTeX Warning: Citation 'HARMAN20102297' on page 63 undefined on input line 208
+3.
+
+
+LaTeX Warning: Reference `fig:alt0_adapt_param' on page 63 undefined on input l
+ine 2083.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2087--2088
+
+ []
+
+
+LaTeX Warning: Reference `fig:result_first_comparison' on page 64 undefined on 
+input line 2089.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 64 undefin
+ed on input line 2089.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 64 undefin
+ed on input line 2089.
+
+
+LaTeX Warning: Reference `fig:MNIST_results' on page 64 undefined on input line
+ 2089.
+
 Excluding 'comment' comment.) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
@@ -3396,14 +3421,14 @@ Package logreq Info: Writing requests to 'main-figure35.run.xml'.
 Here is how much of TeX's memory you used:
  55014 strings out of 480121
  1250715 string characters out of 5892160
- 2127166 words of memory out of 5000000
+ 2129166 words of memory out of 5000000
  71686 multiletter control sequences out of 15000+600000
  532783 words of font info for 250 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  119i,21n,112p,10633b,2582s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure35.pdf (1 page, 22911 bytes).
+Output written on main-figure35.pdf (1 page, 23502 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream

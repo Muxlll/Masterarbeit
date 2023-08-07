@@ -290,7 +290,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.028029in, y=0.173586in, left, base,rotate=45.742112]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log of learning rate}%
+\pgftext[x=3.028029in, y=0.173586in, left, base,rotate=45.742112]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log(learning rate)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%

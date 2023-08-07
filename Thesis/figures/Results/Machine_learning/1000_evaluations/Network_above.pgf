@@ -290,7 +290,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.507150in, y=1.420784in, left, base,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log of learning rate}%
+\pgftext[x=0.507150in, y=1.420784in, left, base,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log(learning rate)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -452,7 +452,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.217847in, y=3.728940in, left, base,rotate=315.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log(Result)}%
+\pgftext[x=0.217847in, y=3.728940in, left, base,rotate=315.000000]{\color{textcolor}\rmfamily\fontsize{10.000000}{12.000000}\selectfont log(MAPE)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.100000in}{0.100000in}}{\pgfqpoint{3.696000in}{3.696000in}}%

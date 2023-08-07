@@ -501,7 +501,7 @@ The interval of the epochs is $ [1, 40] $ and the learning rate is sampled equid
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/1000_evaluations/Network_above}
 	\includegraphics[width=0.48\textwidth]{figures/Results/Machine_learning/1000_evaluations/Network_normal}
 	
-	\caption{ 2-layer (with 30 neurons each) fully connected network evaluation on the diamonds dataset depending on the number of epochs and learning rate of the Adam optimizer. The result is plotted with $ log_{10}(\text{Result}) $ for better visualization. }
+	\caption{ 2-layer (with 30 neurons each) fully connected network evaluation on the diamonds dataset depending on the number of epochs and learning rate of the Adam optimizer. The result is plotted with $ log_{10}(\text{MAPE}) $ for better visualization. }
 	\label{fig:analysis_model_training}
 \end{figure}
 
@@ -602,7 +602,7 @@ Note that the additional optimization is very cheap compared to generating the a
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
-			ylabel = Result (2d),
+			ylabel = MAPE (2d),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=1
@@ -650,7 +650,7 @@ Note that the additional optimization is very cheap compared to generating the a
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Number of grid points,
-			ylabel = Result (3d),
+			ylabel = MAPE (3d),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=1
@@ -755,7 +755,7 @@ All the categorical features are transformed with one hot encoding and the numer
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (diamonds),
+			ylabel = MAPE (diamonds),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
@@ -779,7 +779,7 @@ All the categorical features are transformed with one hot encoding and the numer
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_16H),
+			ylabel = MAPE (house\_16H),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
@@ -802,7 +802,7 @@ All the categorical features are transformed with one hot encoding and the numer
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (sensory),
+			ylabel = MAPE (sensory),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
@@ -827,7 +827,7 @@ All the categorical features are transformed with one hot encoding and the numer
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_sales),
+			ylabel = MAPE (house\_sales),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
@@ -850,7 +850,7 @@ All the categorical features are transformed with one hot encoding and the numer
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (Brazilian\_houses),
+			ylabel = MAPE (Brazilian\_houses),
 			cycle list name=exotic,
 			legend style={at={(2,0.7)}},
 			scale=0.85
@@ -931,7 +931,7 @@ For the three-dimensional case, we first use the same network with fixed archite
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_16H),
+			ylabel = MAPE (house\_16H),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.8
@@ -955,7 +955,7 @@ For the three-dimensional case, we first use the same network with fixed archite
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_sales),
+			ylabel = MAPE (house\_sales),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.8
@@ -979,7 +979,7 @@ For the three-dimensional case, we first use the same network with fixed archite
 	\begin{tikzpicture}
 	\begin{axis}[
 		xlabel = Cost,
-		ylabel = Result (Brazilian\_houses),
+		ylabel = MAPE (Brazilian\_houses),
 		cycle list name=exotic,
 		legend style={at={(2,0.7)}},
 		scale=0.8
@@ -1015,7 +1015,7 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_16H),
+			ylabel = MAPE (house\_16H),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.8
@@ -1039,7 +1039,7 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (house\_sales),
+			ylabel = MAPE (house\_sales),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.8
@@ -1064,7 +1064,7 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Result (Brazilian\_houses),
+			ylabel = MAPE (Brazilian\_houses),
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.8
@@ -1925,7 +1925,7 @@ We finally want to compare all different algorithms presented so far. The optimi
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Mean average percentage error,
+			ylabel = MAPE,
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
@@ -2000,7 +2000,7 @@ As optimizer of the network, Adam is used and the mean squared error is the loss
 	\begin{tikzpicture}
 		\begin{axis}[
 			xlabel = Cost,
-			ylabel = Mean average percentage error,
+			ylabel = MAPE,
 			cycle list name=exotic,
 			legend pos=outer north east,
 			scale=0.85
