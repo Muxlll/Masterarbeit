@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.17)  17 MAY 2023 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 AUG 2023 14:40
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1374,6 +1374,8 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip99
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/outlines/outlines.sty
+Package: outlines 2012/1/23 1.1 Ch. Pecheur
 ) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 \c@subfigure=\count486
@@ -1394,37 +1396,37 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+pplx on input line 7
-7.
+9.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 )
 No file main-figure4.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-Package nag Info: pgf.sty is broken: disabling dollar check on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 79.
 Package nag Info: Command \RaggedLeft not defined, skipping amendment on input 
-line 77.
+line 79.
 Package nag Info: Command \RaggedRight not defined, skipping amendment on input
- line 77.
-Package scrbase Info: activating american \contentsname on input line 77.
-Package scrbase Info: activating american \listfigurename on input line 77.
-Package scrbase Info: activating american \listtablename on input line 77.
+ line 79.
+Package scrbase Info: activating american \contentsname on input line 79.
+Package scrbase Info: activating american \listfigurename on input line 79.
+Package scrbase Info: activating american \listtablename on input line 79.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
@@ -1459,8 +1461,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main-figure4.bbl' not found.
 No file main-figure4.bbl.
-Package biblatex Info: Reference section=0 on input line 77.
-Package biblatex Info: Reference segment=0 on input line 77.
+Package biblatex Info: Reference section=0 on input line 79.
+Package biblatex Info: Reference segment=0 on input line 79.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count488
@@ -1483,22 +1485,22 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count494
-Package scrhack Info: undefining \float@addtolists on input line 77.
+Package scrhack Info: undefining \float@addtolists on input line 79.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 77.
-Package microtype Info: Applying patch `item' on input line 77.
-Package microtype Info: Applying patch `toc' on input line 77.
-Package microtype Info: Applying patch `eqnum' on input line 77.
-Package microtype Info: Applying patch `footnote' on input line 77.
+LaTeX Info: Redefining \microtypecontext on input line 79.
+Package microtype Info: Applying patch `item' on input line 79.
+Package microtype Info: Applying patch `toc' on input line 79.
+Package microtype Info: Applying patch `eqnum' on input line 79.
+Package microtype Info: Applying patch `footnote' on input line 79.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 77.
+LaTeX Info: Redefining \showhyphens on input line 79.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1510,7 +1512,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (|'inkscape' -V )
-Package hyperref Info: Link coloring OFF on input line 77.
+Package hyperref Info: Link coloring OFF on input line 79.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1520,9 +1522,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count495
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 79.
+LaTeX Info: Redefining \pageref on input line 79.
+LaTeX Info: Redefining \nameref on input line 79.
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
 (scrbook)           because of handling of possible bookmark level gaps.
@@ -1530,7 +1532,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 77.
+(scrbook)           before \begin{document} on input line 79.
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1539,9 +1541,9 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count496
 ))
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
-line 77.
+line 79.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
-line 77.
+line 79.
 (./pages/cover.tex
 The command '\includegraphics [height=20mm]{logos/tum.pdf}' has been optimized 
 away. Use '/tikz/external/optimize=false' to disable this.
@@ -1587,49 +1589,86 @@ zed away. Use '/tikz/external/optimize=false' to disable this.
 ) (./pages/disclaimer.tex) (./pages/acknowledgments.tex) (./pages/abstract.tex
 chapter without number
 )
-Package tocbasic Info: character protrusion at toc deactivated on input line 91
+Package tocbasic Info: character protrusion at toc deactivated on input line 93
 .
 (./chapters/01_introduction.tex
 chapter 1.
+
+LaTeX Warning: Citation 'MALAKOUTI2023200248' on page 1 undefined on input line
+ 6.
+
+
+LaTeX Warning: Citation 'gorgolis2019hyperparameter' on page 1 undefined on inp
+ut line 6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+LaTeX Warning: Reference `chapter:theoretical_background' on page 1 undefined o
+n input line 12.
+
+
+LaTeX Warning: Reference `chapter:main_part' on page 1 undefined on input line 
+12.
+
+
+LaTeX Warning: Reference `chapter:conclusion_and_outlook' on page 1 undefined o
+n input line 12.
+
 ) (./chapters/02_theoretical_background.tex
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 4.
 chapter 2.
 
-LaTeX Warning: Citation 'wang2016machine' on page 2 undefined on input line 6.
+LaTeX Warning: Citation 'wang2016machine' on page 3 undefined on input line 6.
 
 
-LaTeX Warning: Citation 'mahesh2020machine' on page 2 undefined on input line 6
+LaTeX Warning: Citation 'mahesh2020machine' on page 3 undefined on input line 6
 .
 
 
-LaTeX Warning: Citation 'ayodele2010types' on page 2 undefined on input line 6.
+LaTeX Warning: Citation 'ayodele2010types' on page 3 undefined on input line 6.
 
 
 
-LaTeX Warning: Citation 'noble2006support' on page 2 undefined on input line 8.
+LaTeX Warning: Citation 'noble2006support' on page 3 undefined on input line 8.
 
 
 
-LaTeX Warning: Citation 'granmo2018tsetlin' on page 2 undefined on input line 8
+LaTeX Warning: Citation 'granmo2018tsetlin' on page 3 undefined on input line 8
 .
 
 
-LaTeX Warning: Citation 'rokach2005decision' on page 2 undefined on input line 
+LaTeX Warning: Citation 'rokach2005decision' on page 3 undefined on input line 
 8.
 
 
-LaTeX Warning: Reference `sec:neural_networks' on page 2 undefined on input lin
+LaTeX Warning: Reference `sec:neural_networks' on page 3 undefined on input lin
 e 8.
 
 
-LaTeX Warning: Citation 'bishop1994neural' on page 2 undefined on input line 12
+LaTeX Warning: Citation 'bishop1994neural' on page 3 undefined on input line 12
 .
 
 
-LaTeX Warning: Citation 'da2017artificial' on page 2 undefined on input line 12
+LaTeX Warning: Citation 'da2017artificial' on page 3 undefined on input line 12
 .
 
 
-LaTeX Warning: Reference `fig:perceptron' on page 2 undefined on input line 14.
+LaTeX Warning: Reference `fig:perceptron' on page 3 undefined on input line 14.
 
 
 (./figures/drawing.pdf_tex
@@ -1637,13 +1676,13 @@ The command '\includegraphics [width=\unitlength ,page=1]{figures/drawing.pdf}'
  has been optimized away. Use '/tikz/external/optimize=false' to disable this.
 )
 
-LaTeX Warning: Reference `eq:perceptron' on page 2 undefined on input line 20.
+LaTeX Warning: Reference `eq:perceptron' on page 3 undefined on input line 20.
 
 
-LaTeX Warning: Reference `eq:perceptron' on page 2 undefined on input line 20.
+LaTeX Warning: Reference `eq:perceptron' on page 3 undefined on input line 20.
 
 
-LaTeX Warning: Citation 'da2017artificial' on page 2 undefined on input line 31
+LaTeX Warning: Citation 'da2017artificial' on page 4 undefined on input line 31
 .
 
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
@@ -1652,7 +1691,7 @@ LaTeX Font Info:    Trying to load font information for U+fplmbb on input line
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
-LaTeX Warning: Reference `fig:network' on page 2 undefined on input line 33.
+LaTeX Warning: Reference `fig:network' on page 4 undefined on input line 33.
 
 (./figures/drawing2.pdf_tex
 The command '\includegraphics [width=\unitlength ,page=1]{figures/drawing2.pdf}
@@ -1660,11 +1699,11 @@ The command '\includegraphics [width=\unitlength ,page=1]{figures/drawing2.pdf}
 
 )
 
-LaTeX Warning: Reference `fig:perceptron' on page 3 undefined on input line 43.
+LaTeX Warning: Reference `fig:perceptron' on page 5 undefined on input line 43.
 
 
 
-LaTeX Warning: Citation 'da2017artificial' on page 3 undefined on input line 50
+LaTeX Warning: Citation 'da2017artificial' on page 5 undefined on input line 50
 .
 
 
@@ -1678,26 +1717,24 @@ m/n/10.95 (-20) ...\OML/zplm/m/it/10.95 x[]\OT1/zplm/m/n/10.95 ][]$
  []
 
 
-LaTeX Warning: Citation 'medsker2001recurrent' on page 3 undefined on input lin
+LaTeX Warning: Citation 'medsker2001recurrent' on page 5 undefined on input lin
 e 52.
 
 
-LaTeX Warning: Citation 'li2021survey' on page 3 undefined on input line 52.
+LaTeX Warning: Citation 'li2021survey' on page 5 undefined on input line 52.
 
 
-LaTeX Warning: Citation 'gu2018recent' on page 3 undefined on input line 52.
+LaTeX Warning: Citation 'gu2018recent' on page 5 undefined on input line 52.
 
 
-LaTeX Warning: Citation 'o2015introduction' on page 3 undefined on input line 5
+LaTeX Warning: Citation 'o2015introduction' on page 5 undefined on input line 5
 2.
 
 
-LaTeX Warning: Citation 'liu2017survey' on page 3 undefined on input line 52.
+LaTeX Warning: Citation 'liu2017survey' on page 5 undefined on input line 52.
 
-LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 53.
 
-LaTeX Warning: Reference `sec:hyperparameter_optimization' on page 4 undefined 
+LaTeX Warning: Reference `sec:hyperparameter_optimization' on page 6 undefined 
 on input line 54.
 
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
@@ -1706,316 +1743,262 @@ LaTeX Font Info:    Trying to load font information for TS1+pplx on input line
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
 
-LaTeX Warning: Reference `eq:weights_update' on page 4 undefined on input line 
+LaTeX Warning: Reference `eq:weights_update' on page 6 undefined on input line 
 57.
 
 
-LaTeX Warning: Reference `eq:weights_update' on page 5 undefined on input line 
+LaTeX Warning: Reference `eq:weights_update' on page 6 undefined on input line 
 59.
 
 
-LaTeX Warning: Citation 'supervised_learning' on page 5 undefined on input line
+LaTeX Warning: Citation 'supervised_learning' on page 7 undefined on input line
  80.
 
 
-LaTeX Warning: Reference `eq:optimization' on page 5 undefined on input line 82
+LaTeX Warning: Reference `eq:optimization' on page 7 undefined on input line 82
 .
 
 
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 5 undefined on input
+LaTeX Warning: Citation 'feurer2019hyperparameter' on page 7 undefined on input
  line 83.
-
-
-LaTeX Warning: Citation 'bischl2021hyperparameter' on page 5 undefined on input
- line 83.
-
-
-LaTeX Warning: Citation 'yang2020hyperparameter' on page 5 undefined on input l
-ine 83.
-
-
-LaTeX Warning: Reference `fig:comparison_searches' on page 6 undefined on input
- line 92.
-
-
-LaTeX Warning: Citation 'random_search' on page 6 undefined on input line 96.
-
-
-LaTeX Warning: Reference `fig:comparison_searches' on page 6 undefined on input
- line 96.
-
-The command '\includegraphics [scale=0.2]{figures/comparison_searches.png}' has
- been optimized away. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 6 undefined on input
- line 101.
-
-
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 6 undefined on input
- line 101.
-
-
-LaTeX Warning: Citation 'snoek2012practical' on page 7 undefined on input line 
-114.
 
 
 LaTeX Warning: Citation 'bischl2021hyperparameter' on page 7 undefined on input
- line 114.
+ line 83.
 
 
-LaTeX Warning: Citation 'andonie2019hyperparameter' on page 7 undefined on inpu
-t line 114.
+LaTeX Warning: Citation 'yang2020hyperparameter' on page 7 undefined on input l
+ine 83.
 
 
-LaTeX Warning: Citation 'garrido2020dealing' on page 7 undefined on input line 
-114.
+LaTeX Warning: Reference `fig:comparison_searches' on page 7 undefined on input
+ line 92.
 
 
-LaTeX Warning: Citation 'hutter2011sequential' on page 7 undefined on input lin
-e 114.
+LaTeX Warning: Citation 'random_search' on page 7 undefined on input line 96.
 
 
-LaTeX Warning: Citation 'wilson2018maximizing' on page 7 undefined on input lin
-e 114.
+LaTeX Warning: Reference `fig:comparison_searches' on page 7 undefined on input
+ line 96.
+
+The command '\includegraphics [width=0.9\textwidth ]{figures/Fig_2_3_grid_rando
+m_search}' has been optimized away. Use '/tikz/external/optimize=false' to disa
+ble this.
+
+LaTeX Warning: Citation 'snoek2012practical' on page 8 undefined on input line 
+116.
 
 
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 7 undefined on input
- line 120.
+LaTeX Warning: Citation 'bischl2021hyperparameter' on page 8 undefined on input
+ line 116.
 
 
-Overfull \hbox (93.00671pt too wide) in paragraph at lines 120--121
+LaTeX Warning: Citation 'andonie2019hyperparameter' on page 8 undefined on inpu
+t line 116.
+
+
+LaTeX Warning: Citation 'garrido2020dealing' on page 8 undefined on input line 
+116.
+
+
+LaTeX Warning: Citation 'hutter2011sequential' on page 8 undefined on input lin
+e 116.
+
+
+LaTeX Warning: Citation 'wilson2018maximizing' on page 8 undefined on input lin
+e 116.
+
+
+LaTeX Warning: Citation 'feurer2019hyperparameter' on page 9 undefined on input
+ line 122.
+
+
+Overfull \hbox (93.00671pt too wide) in paragraph at lines 122--123
 []\T1/pplx/m/n/10.95 (-20) If the model pre-dic-tion y with con-fig-u-ra-tion $
 \OML/zplm/m/it/10.95 ^^U$ \T1/pplx/m/n/10.95 (-20) fol-lows a nor-mal dis-tri-b
 u-tion [[]],
  []
 
 
-LaTeX Warning: Reference `alg:bayesian_opt' on page 8 undefined on input line 1
-31.
+LaTeX Warning: Reference `alg:bayesian_opt' on page 9 undefined on input line 1
+33.
 
 
-LaTeX Warning: Reference `fig:bayesian_optimization' on page 8 undefined on inp
-ut line 131.
+LaTeX Warning: Reference `fig:bayesian_optimization' on page 9 undefined on inp
+ut line 133.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 134.
-The command '\includegraphics [scale=0.35]{figures/bayesian_optimization.png}' 
-has been optimized away. Use '/tikz/external/optimize=false' to disable this.
+put line 136.
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_4_bayesian}' ha
+s been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 8 undefined on input
- line 155.
-
-
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 8 undefined on input
- line 155.
+LaTeX Warning: Citation 'feurer2019hyperparameter' on page 10 undefined on inpu
+t line 167.
 
 
-LaTeX Warning: Citation 'feurer2019hyperparameter' on page 9 undefined on input
- line 163.
+LaTeX Warning: Citation 'jamieson2016non' on page 10 undefined on input line 16
+7.
 
 
-LaTeX Warning: Citation 'jamieson2016non' on page 9 undefined on input line 163
-.
+LaTeX Warning: Citation '8030298' on page 10 undefined on input line 167.
 
 
-LaTeX Warning: Citation '8030298' on page 9 undefined on input line 163.
+LaTeX Warning: Citation 'smithson2016neural' on page 10 undefined on input line
+ 167.
 
 
-LaTeX Warning: Citation 'smithson2016neural' on page 9 undefined on input line 
-163.
+LaTeX Warning: Citation 'loshchilov2016cma' on page 10 undefined on input line 
+167.
 
 
-LaTeX Warning: Citation 'loshchilov2016cma' on page 9 undefined on input line 1
-63.
+LaTeX Warning: Reference `fig:interpolant' on page 12 undefined on input line 2
+00.
+
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_5_interpolant}'
+ has been optimized away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:hierarchical_basis' on page 12 undefined on input
+ line 227.
+
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_6_hierarchical_
+subspaces}' has been optimized away. Use '/tikz/external/optimize=false' to dis
+able this.
+
+LaTeX Warning: Reference `fig:weighted_sum_hierarchical' on page 12 undefined o
+n input line 241.
+
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_7_hierarchical}
+' has been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
 
-LaTeX Warning: Reference `fig:interpolant' on page 10 undefined on input line 1
-96.
-
-The command '\includegraphics [scale=0.5]{figures/weighted_sum.png}' has been o
-ptimized away. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Citation 'pfluger2010spatially' on page 10 undefined on input li
-ne 201.
+LaTeX Warning: Citation 'pfluger2010spatially' on page 12 undefined on input li
+ne 247.
 
 
-LaTeX Warning: Citation 'pfluger2010spatially' on page 10 undefined on input li
-ne 201.
+LaTeX Warning: Citation 'pfluger2010spatially' on page 12 undefined on input li
+ne 247.
 
 
-LaTeX Warning: Reference `fig:hierarchical_basis' on page 10 undefined on input
- line 215.
-
-The command '\includegraphics [scale=0.5]{figures/hierarchical_basis.png}' has 
-been optimized away. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Citation 'pfluger2010spatially' on page 10 undefined on input li
-ne 219.
+LaTeX Warning: Reference `fig:2d_basis' on page 13 undefined on input line 271.
 
 
-LaTeX Warning: Citation 'pfluger2010spatially' on page 10 undefined on input li
-ne 219.
-
-
-LaTeX Warning: Reference `fig:weighted_sum_hierarchical' on page 11 undefined o
-n input line 228.
-
-The command '\includegraphics [scale=0.5]{figures/weighted_sum_hierarchical.png
-}' has been optimized away. Use '/tikz/external/optimize=false' to disable this
-.
-
-LaTeX Warning: Citation 'pfluger2010spatially' on page 11 undefined on input li
-ne 233.
-
-
-LaTeX Warning: Citation 'pfluger2010spatially' on page 11 undefined on input li
-ne 233.
-
-
-LaTeX Warning: Reference `fig:2d_basis' on page 12 undefined on input line 257.
-
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 The command '\includegraphics [scale=0.26]{figures/2d_basis.png}' has been opti
 mized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation 'garcke2013sparse' on page 12 undefined on input line 2
-62.
+LaTeX Warning: Citation 'garcke2013sparse' on page 13 undefined on input line 2
+87.
 
 
-LaTeX Warning: Citation 'garcke2013sparse' on page 12 undefined on input line 2
-62.
+LaTeX Warning: Citation 'garcke2013sparse' on page 13 undefined on input line 2
+87.
 
 
-LaTeX Warning: Citation 'b_splines' on page 12 undefined on input line 270.
+LaTeX Warning: Citation 'b_splines' on page 14 undefined on input line 295.
 
 
-LaTeX Warning: Citation 'zenger1991sparse' on page 12 undefined on input line 2
-73.
+LaTeX Warning: Citation 'zenger1991sparse' on page 14 undefined on input line 2
+98.
 
 
-LaTeX Warning: Citation 'bungartz2004sparse' on page 12 undefined on input line
- 273.
+LaTeX Warning: Citation 'bungartz2004sparse' on page 14 undefined on input line
+ 298.
 
 
-LaTeX Warning: Reference `fig:sparse_grid' on page 12 undefined on input line 2
-77.
+LaTeX Warning: Reference `fig:sparse_grid' on page 14 undefined on input line 3
+02.
 
-The command '\includegraphics [scale=0.5]{figures/subspaces_twodims.png}' has b
-een optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.8\textwidth ]{figures/Fig_2_9_two_dim_ex
+ample}' has been optimized away. Use '/tikz/external/optimize=false' to disable
+ this.
 
-LaTeX Warning: Citation 'garcke2013sparse' on page 12 undefined on input line 2
-81.
-
-
-LaTeX Warning: Citation 'garcke2013sparse' on page 12 undefined on input line 2
-81.
+LaTeX Warning: Citation 'obersteiner2022spatially' on page 14 undefined on inpu
+t line 316.
 
 
-LaTeX Warning: Citation 'obersteiner2022spatially' on page 12 undefined on inpu
-t line 289.
+LaTeX Warning: Citation 'griebel1990combination' on page 14 undefined on input 
+line 318.
 
 
-LaTeX Warning: Citation 'griebel1990combination' on page 12 undefined on input 
-line 291.
+LaTeX Warning: Citation 'obersteiner2021generalized' on page 15 undefined on in
+put line 326.
 
 
-LaTeX Warning: Citation 'obersteiner2021generalized' on page 13 undefined on in
-put line 299.
+LaTeX Warning: Reference `fig:combi_technique' on page 15 undefined on input li
+ne 326.
 
 
-LaTeX Warning: Reference `fig:combi_technique' on page 13 undefined on input li
-ne 299.
+LaTeX Warning: Citation 'hegland2002adaptive' on page 15 undefined on input lin
+e 328.
+
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_10_combi}' has 
+been optimized away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Citation 'obersteiner2021generalized' on page 15 undefined on in
+put line 340.
 
 
-LaTeX Warning: Citation 'hegland2002adaptive' on page 13 undefined on input lin
-e 301.
-
-The command '\includegraphics [scale=0.18]{figures/normal_combi_technique.png}'
- has been optimized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.18]{figures/adaptive_combination_techniq
-ue.png}' has been optimized away. Use '/tikz/external/optimize=false' to disabl
-e this.
-
-LaTeX Warning: Citation 'pfluger2010spatially' on page 13 undefined on input li
-ne 307.
+LaTeX Warning: Reference `fig:spatially_adaptive_combi_technique' on page 15 un
+defined on input line 340.
 
 
-LaTeX Warning: Citation 'pfluger2010spatially' on page 13 undefined on input li
-ne 307.
-
-
-LaTeX Warning: Citation 'obersteiner2021generalized' on page 13 undefined on in
-put line 312.
-
-
-LaTeX Warning: Reference `fig:spatially_adaptive_combi_technique' on page 13 un
-defined on input line 312.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
+The command '\includegraphics [width=\textwidth ]{figures/Fig_2_11_adaptive_com
+bigrid}' has been optimized away. Use '/tikz/external/optimize=false' to disabl
+e this.
 
-LaTeX Warning: Reference `tab:comparison_grids' on page 13 undefined on input l
-ine 315.
+LaTeX Warning: Reference `tab:comparison_grids' on page 15 undefined on input l
+ine 351.
 
 
-LaTeX Warning: Citation 'pfluger2010spatially' on page 13 undefined on input li
-ne 315.
+LaTeX Warning: Citation 'pfluger2010spatially' on page 15 undefined on input li
+ne 351.
 
-LaTeX Font Info:    Trying to load font information for U+eus on input line 324
+LaTeX Font Info:    Trying to load font information for U+eus on input line 362
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-The command '\includegraphics [scale=0.2]{figures/spatially_adaptive_combi_tech
-nique.png}' has been optimized away. Use '/tikz/external/optimize=false' to dis
-able this.
 
-LaTeX Warning: Citation 'obersteiner2021generalized' on page 14 undefined on in
-put line 336.
+LaTeX Warning: Citation 'pfluger2010spatially' on page 16 undefined on input li
+ne 371.
 
 
-LaTeX Warning: Citation 'obersteiner2021generalized' on page 14 undefined on in
-put line 336.
+LaTeX Warning: Citation 'bungartz1998finite' on page 16 undefined on input line
+ 371.
 
 
-LaTeX Warning: Citation 'pfluger2010spatially' on page 14 undefined on input li
-ne 342.
+LaTeX Warning: Citation 'bungartz2004sparse' on page 16 undefined on input line
+ 371.
 
 
-LaTeX Warning: Citation 'bungartz1998finite' on page 14 undefined on input line
- 342.
+LaTeX Warning: Citation 'b_splines' on page 16 undefined on input line 371.
 
 
-LaTeX Warning: Citation 'bungartz2004sparse' on page 14 undefined on input line
- 342.
+LaTeX Warning: Citation 'hollig2013approximation' on page 16 undefined on input
+ line 378.
 
 
-LaTeX Warning: Citation 'b_splines' on page 14 undefined on input line 342.
-
-
-LaTeX Warning: Citation 'hollig2013approximation' on page 15 undefined on input
- line 349.
-
-
-Overfull \hbox (54.9583pt too wide) in paragraph at lines 348--350
+Overfull \hbox (54.9583pt too wide) in paragraph at lines 377--379
 \T1/pplx/m/n/10.95 (-20) with $\OML/zplm/m/it/10.95 ^^_[]$ \T1/pplx/m/n/10.95 (
 -20) be-ing the char-ac-ter-is-tic func-tion of the half-open unit in-ter-val [
 []].
  []
 
 
-LaTeX Warning: Citation 'b_splines' on page 15 undefined on input line 370.
+LaTeX Warning: Citation 'b_splines' on page 17 undefined on input line 399.
 
 
-LaTeX Warning: Citation 'b_splines' on page 15 undefined on input line 376.
+LaTeX Warning: Citation 'b_splines' on page 17 undefined on input line 405.
 
 
-Overfull \hbox (4.77068pt too wide) in paragraph at lines 381--382
+Overfull \hbox (4.77068pt too wide) in paragraph at lines 411--412
  []\T1/pplx/b/n/10.95 (-20) Nelder Mead Method[] \T1/pplx/m/n/10.95 (-20) This 
 it-er-a-tive al-go-rithm stores $\OML/zplm/m/it/10.95 d \OT1/zplm/m/n/10.95 + \
 OT1/pplx/m/n/10.95 (-20) 1$ \T1/pplx/m/n/10.95 (-20) ver-tices of a $\OML/zplm/
@@ -2023,15 +2006,15 @@ m/it/10.95 d$\T1/pplx/m/n/10.95 (-20) -dimensional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-LaTeX Warning: Citation 'b_splines' on page 17 undefined on input line 411.
+LaTeX Warning: Citation 'b_splines' on page 19 undefined on input line 441.
 
 
-Overfull \hbox (39.1271pt too wide) in paragraph at lines 411--413
+Overfull \hbox (39.1271pt too wide) in paragraph at lines 441--443
 \T1/pplx/m/n/10.95 (-20) has to be found while con-strain-ing an-other func-tio
 n $\OML/zplm/m/it/10.95 g$ \T1/pplx/m/n/10.95 (-20) with $\OML/zplm/m/it/10.95 
 x[] \OT1/zplm/m/n/10.95 = \OML/zplm/m/it/10.95 argminf\OT1/zplm/m/n/10.95 (\OML
@@ -2041,106 +2024,190 @@ MS/zplm/m/n/10.95 ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
 
-LaTeX Warning: Citation 'valentin2018gradient' on page 17 undefined on input li
-ne 414.
+LaTeX Warning: Citation 'valentin2018gradient' on page 19 undefined on input li
+ne 444.
 
 
-Overfull \hbox (31.22328pt too wide) in paragraph at lines 414--416
+Overfull \hbox (31.22328pt too wide) in paragraph at lines 444--446
 []\T1/pplx/m/n/10.95 (-20) One ap-pli-ca-tion of the op-ti-miza-tion with spars
 e grids is pre-sented in [[]].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 444--446
 
  []
 
 
-LaTeX Warning: Citation 'novak1996global' on page 17 undefined on input line 41
+LaTeX Warning: Citation 'novak1996global' on page 19 undefined on input line 44
 7.
 
 
-LaTeX Warning: Citation 'duan2016induction' on page 17 undefined on input line 
-417.
+LaTeX Warning: Citation 'duan2016induction' on page 19 undefined on input line 
+447.
 
 
-LaTeX Warning: Reference `fig:hyperbolic' on page 17 undefined on input line 42
+LaTeX Warning: Reference `fig:hyperbolic' on page 19 undefined on input line 45
 1.
 
-The command '\includegraphics [scale=0.18]{figures/hyperbolic.png}' has been op
-timized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.8\textwidth ]{figures/Fig_2_12_altern_sp
+arse}' has been optimized away. Use '/tikz/external/optimize=false' to disable 
+this.
 
-LaTeX Warning: Citation 'duan2016induction' on page 17 undefined on input line 
-426.
-
-
-LaTeX Warning: Citation 'duan2016induction' on page 17 undefined on input line 
-426.
+LaTeX Warning: Citation 'duan2016induction' on page 19 undefined on input line 
+457.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
-
- []
-
-
-LaTeX Warning: Citation 'saska2007path' on page 18 undefined on input line 433.
+LaTeX Warning: Citation 'duan2016induction' on page 19 undefined on input line 
+457.
 
 
-
-LaTeX Warning: Citation 'duan2016induction' on page 18 undefined on input line 
-433.
-
-
-LaTeX Warning: Citation 'novak1996global' on page 18 undefined on input line 43
-3.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--435
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
 
  []
 
 
-LaTeX Warning: Citation 'hulsmann2013spagrow' on page 18 undefined on input lin
-e 436.
+LaTeX Warning: Citation 'saska2007path' on page 20 undefined on input line 464.
 
 
-LaTeX Warning: Citation 'chen2013derivative' on page 18 undefined on input line
- 438.
+
+LaTeX Warning: Citation 'duan2016induction' on page 20 undefined on input line 
+464.
 
 
-LaTeX Warning: Citation 'sankaran2009stochastic' on page 18 undefined on input 
-line 440.
+LaTeX Warning: Citation 'novak1996global' on page 20 undefined on input line 46
+4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
+
+ []
+
+
+LaTeX Warning: Citation 'hulsmann2013spagrow' on page 20 undefined on input lin
+e 467.
+
+
+LaTeX Warning: Citation 'chen2013derivative' on page 20 undefined on input line
+ 469.
+
+
+LaTeX Warning: Citation 'sankaran2009stochastic' on page 20 undefined on input 
+line 471.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+
+LaTeX Warning: Citation 'hamzaccebi2006heuristic' on page 20 undefined on input
+ line 477.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+
+ []
+
+
+LaTeX Warning: Citation 'MASRI1980353' on page 21 undefined on input line 479.
+
+
+LaTeX Warning: Citation 'MASRI1980353' on page 21 undefined on input line 479.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
+
+ []
+
+
+LaTeX Warning: Citation 'random_search_2' on page 21 undefined on input line 48
+1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
+
+ []
+
+
+LaTeX Warning: Citation 'schumer1968adaptive' on page 21 undefined on input lin
+e 483.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+
+ []
+
+
+LaTeX Warning: Citation 'tang1994adaptive' on page 21 undefined on input line 4
+85.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
+LaTeX Warning: Citation 'kelahan1978application' on page 22 undefined on input 
+line 487.
 
 ) (./chapters/04_hyperparameter_optimization.tex
 chapter 3.
 
-LaTeX Warning: Citation 'valentin2016hierarchical' on page 19 undefined on inpu
-t line 16.
+LaTeX Warning: Reference `chapter:theoretical_background' on page 23 undefined 
+on input line 12.
 
 
-LaTeX Warning: Reference `fig:test_functions_plot' on page 19 undefined on inpu
-t line 33.
+LaTeX Warning: Citation 'valentin2016hierarchical' on page 23 undefined on inpu
+t line 12.
 
 
-LaTeX Warning: Citation 'whitley1996evaluating' on page 19 undefined on input l
-ine 33.
+LaTeX Warning: Citation 'feurer-arxiv19a' on page 24 undefined on input line 28
+.
 
 
-LaTeX Warning: Citation 'yang2010engineering' on page 19 undefined on input lin
-e 38.
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
 
 
-LaTeX Warning: Citation 'yang2010engineering' on page 19 undefined on input lin
-e 42.
+LaTeX Warning: Citation 'valentin2016hierarchical' on page 24 undefined on inpu
+t line 30.
 
 
-LaTeX Warning: Reference `fig:test_functions_plot' on page 20 undefined on inpu
-t line 46.
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+LaTeX Warning: Citation 'valentin2016hierarchical' on page 25 undefined on inpu
+t line 57.
+
+
+LaTeX Warning: Citation 'whitley1996evaluating' on page 25 undefined on input l
+ine 74.
+
+
+LaTeX Warning: Citation 'yang2010engineering' on page 26 undefined on input lin
+e 79.
+
+
+LaTeX Warning: Citation 'yang2010engineering' on page 26 undefined on input lin
+e 83.
+
+
+LaTeX Warning: Reference `fig:test_functions_plot' on page 26 undefined on inpu
+t line 87.
 
 The command '\includegraphics [width=\textwidth ]{Eggholder_normal}' has been o
 ptimized away. Use '/tikz/external/optimize=false' to disable this.
@@ -2155,23 +2222,28 @@ ptimized away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [width=\textwidth ]{Rastrigin_above}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `fig:Eggholder' on page 20 undefined on input line 76.
-
-
-
-LaTeX Warning: Reference `fig:Rosenbrock' on page 20 undefined on input line 76
+LaTeX Warning: Reference `fig:Eggholder' on page 26 undefined on input line 117
 .
 
 
-LaTeX Warning: Reference `fig:Rastrigin' on page 20 undefined on input line 76.
+LaTeX Warning: Reference `fig:Rosenbrock' on page 26 undefined on input line 11
+7.
 
 
+LaTeX Warning: Reference `fig:Rastrigin' on page 26 undefined on input line 117
+.
 
-LaTeX Warning: Citation 'b_splines' on page 20 undefined on input line 78.
+
+LaTeX Warning: Citation 'b_splines' on page 26 undefined on input line 119.
 
 
-LaTeX Warning: Reference `fig:Eggholder_grid' on page 21 undefined on input lin
-e 84.
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
+
+LaTeX Warning: Reference `fig:Eggholder_grid' on page 27 undefined on input lin
+e 127.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Eggholder/tex_files/Eggholder_1}' has been optimized away. Us
@@ -2192,29 +2264,29 @@ The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Eggholder/tex_files/Eggholder_above_0}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `fig:Eggholder' on page 21 undefined on input line 113
+LaTeX Warning: Reference `fig:Eggholder' on page 27 undefined on input line 156
 .
 
 
-LaTeX Warning: Reference `fig:Egg_gamma_0' on page 21 undefined on input line 1
-15.
+LaTeX Warning: Reference `fig:Egg_gamma_0' on page 27 undefined on input line 1
+58.
 
 
-LaTeX Warning: Reference `tab:test_functions' on page 21 undefined on input lin
-e 115.
+LaTeX Warning: Reference `tab:test_functions' on page 27 undefined on input lin
+e 158.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 
-LaTeX Warning: Reference `fig:Rosenbrock' on page 22 undefined on input line 12
-2.
+LaTeX Warning: Reference `fig:Rosenbrock' on page 28 undefined on input line 16
+4.
 
 
-LaTeX Warning: Reference `fig:Rosenbrock_grid' on page 22 undefined on input li
-ne 122.
+LaTeX Warning: Reference `fig:Rosenbrock_grid' on page 28 undefined on input li
+ne 164.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Rosenbrock/tex_files/Rosenbrock_1}' has been optimized away. 
@@ -2235,33 +2307,33 @@ The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Rosenbrock/tex_files/Rosenbrock_above_0}' has been optimized 
 away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `fig:Ros_gamma_1' on page 22 undefined on input line 1
-52.
+LaTeX Warning: Reference `fig:Ros_gamma_1' on page 28 undefined on input line 1
+94.
 
 
-LaTeX Warning: Reference `fig:Egg_gamma_1' on page 22 undefined on input line 1
-52.
+LaTeX Warning: Reference `fig:Egg_gamma_1' on page 28 undefined on input line 1
+94.
 
 
-LaTeX Warning: Reference `fig:Rosenbrock' on page 22 undefined on input line 15
-2.
+LaTeX Warning: Reference `fig:Rosenbrock' on page 28 undefined on input line 19
+4.
 
 
-LaTeX Warning: Reference `fig:Ros_gamma_0' on page 22 undefined on input line 1
-54.
+LaTeX Warning: Reference `fig:Ros_gamma_0' on page 28 undefined on input line 1
+96.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-LaTeX Warning: Reference `fig:Rastrigin' on page 22 undefined on input line 157
+LaTeX Warning: Reference `fig:Rastrigin' on page 29 undefined on input line 199
 .
 
 
-LaTeX Warning: Reference `fig:Rastrigin_grid' on page 22 undefined on input lin
-e 157.
+LaTeX Warning: Reference `fig:Rastrigin_grid' on page 29 undefined on input lin
+e 199.
 
 The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Rastrigin/tex_files/Rastrigin_1}' has been optimized away. Us
@@ -2282,21 +2354,21 @@ The command '\includegraphics [width=\textwidth ]{figures/Results/Sparse_grid_g
 eneration_results/Rastrigin/tex_files/Rastrigin_above_0}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-LaTeX Warning: Reference `fig:test_functions_plot' on page 23 undefined on inpu
-t line 195.
+LaTeX Warning: Reference `fig:test_functions_plot' on page 29 undefined on inpu
+t line 237.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
@@ -2307,27 +2379,1019 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:Ras_gamma_0' on page 23 undefined on input line 2
-89.
+LaTeX Warning: Reference `fig:Ras_gamma_0' on page 30 undefined on input line 3
+21.
 
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+LaTeX Warning: Reference `Optimization_algorithms' on page 30 undefined on inpu
+t line 325.
+
+
+LaTeX Warning: Reference `fig:Optimizer_results' on page 30 undefined on input 
+line 325.
+
 \openout6 = `main-figure4.dpth'.
 
-[24
+[30
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-) (./chapters/05_conclusion_and_outlook.tex
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 31 undefined on in
+put line 401.
+
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/Testfunct
+ions/Optimizer_visualization/Optimizers_visualization5}' has been optimized awa
+y. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/Testfunct
+ions/Optimizer_visualization/Optimizers_visualization80}' has been optimized aw
+ay. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/Testfunct
+ions/Optimizer_visualization/Optimizers_visualization1000}' has been optimized 
+away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 31 undefined on in
+put line 412.
+
+
+LaTeX Warning: Reference `fig:Rastrigin' on page 31 undefined on input line 412
+.
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 31 undefined on in
+put line 414.
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 31 undefined on in
+put line 416.
+
+
+LaTeX Warning: Reference `tab:optimizer_vis_function' on page 32 undefined on i
+nput line 419.
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 32 undefined on in
+put line 421.
+
+
+LaTeX Warning: Reference `tab:test_functions' on page 32 undefined on input lin
+e 421.
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 32 undefined on in
+put line 421.
+
+
+LaTeX Warning: Reference `tab:test_functions' on page 32 undefined on input lin
+e 421.
+
+
+Overfull \hbox (8.35046pt too wide) in paragraph at lines 424--436
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 32 undefined on in
+put line 438.
+
+
+LaTeX Warning: Reference `fig:optimizers_visualized' on page 32 undefined on in
+put line 438.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+LaTeX Warning: Reference `fig:Dimensions_results' on page 32 undefined on input
+ line 443.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+
+LaTeX Warning: Citation 'feurer-arxiv19a' on page 33 undefined on input line 49
+1.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 33 undefined on 
+input line 491.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 33 undefined on 
+input line 497.
+
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/1000_evaluations/Network_above}' has been optimized away. Use '/tikz/ex
+ternal/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/1000_evaluations/Network_normal}' has been optimized away. Use '/tikz/e
+xternal/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 34 undefined on 
+input line 508.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning' on pa
+ge 34 undefined on input line 510.
+
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/first_analysis/above_30_85}' has been optimized away. Use '/tikz/extern
+al/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/first_analysis/above_80_85}' has been optimized away. Use '/tikz/extern
+al/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/first_analysis/Above_30_5}' has been optimized away. Use '/tikz/externa
+l/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/first_analysis/Above_80_5}' has been optimized away. Use '/tikz/externa
+l/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_085' o
+n page 34 undefined on input line 527.
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_05' on
+ page 34 undefined on input line 527.
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_085' o
+n page 34 undefined on input line 527.
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_05' on
+ page 34 undefined on input line 527.
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_085' o
+n page 35 undefined on input line 531.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 35 undefined on 
+input line 531.
+
+
+LaTeX Warning: Reference `fig:analysis_sparse_grid_with_machine_learning_05' on
+ page 35 undefined on input line 533.
+
+
+LaTeX Warning: Reference `tab:analysis_sparse_grid_with_machine_learning_result
+s' on page 35 undefined on input line 535.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 35 undefined on 
+input line 557.
+
+
+LaTeX Warning: Reference `fig:optimizers_network_visualization' on page 36 unde
+fined on input line 561.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 36 undefined on 
+input line 561.
+
+The command '\includegraphics [width=0.49\textwidth ]{figures/Results/Machine_l
+earning/optimizer/Optimizers_visualization_ml_5}' has been optimized away. Use 
+'/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.49\textwidth ]{figures/Results/Machine_l
+earning/optimizer/Optimizers_visualization_ml_10}' has been optimized away. Use
+ '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.49\textwidth ]{figures/Results/Machine_l
+earning/optimizer/Optimizers_visualization_ml_30}' has been optimized away. Use
+ '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.49\textwidth ]{figures/Results/Machine_l
+earning/optimizer/Optimizers_visualization_ml_50}' has been optimized away. Use
+ '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 36 undefined on 
+input line 571.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 36 undefined on 
+input line 571.
+
+
+LaTeX Warning: Reference `fig:optimizers_network_visualization' on page 36 unde
+fined on input line 575.
+
+
+LaTeX Warning: Reference `tab:results_opt_ml' on page 36 undefined on input lin
+e 575.
+
+
+Overfull \hbox (5.49312pt too wide) in paragraph at lines 582--592
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `tab:results_opt_ml' on page 37 undefined on input lin
+e 596.
+
+
+LaTeX Warning: Reference `fig:Optimizer_results' on page 37 undefined on input 
+line 596.
+
+
+LaTeX Warning: Reference `fig:optimizers_network_visualization' on page 37 unde
+fined on input line 596.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 37 undefined on 
+input line 596.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
+
+ []
+
+
+LaTeX Warning: Reference `fig:Comparison_optimizers' on page 37 undefined on in
+put line 598.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:Optimizer_results' on page 38 undefined on input 
+line 700.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--701
+
+ []
+
+
+LaTeX Warning: Reference `fig:optimizer_categorical_hyperparams' on page 38 und
+efined on input line 702.
+
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/optimizer/categorical_hyperpar/Categorical_hyppar_28}' has been optimiz
+ed away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/optimizer/categorical_hyperpar/Categorical_hyppar_48}' has been optimiz
+ed away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/optimizer/categorical_hyperpar/Categorical_hyppar_98}' has been optimiz
+ed away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.48\textwidth ]{figures/Results/Machine_l
+earning/optimizer/categorical_hyperpar/Categorical_hyppar_198}' has been optimi
+zed away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:optimizer_categorical_hyperparams' on page 39 und
+efined on input line 716.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--717
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 718--719
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--724
+
+ []
+
+
+LaTeX Warning: Reference `chapter:theoretical_background' on page 39 undefined 
+on input line 728.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
+
+ []
+
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 40 undefined o
+n input line 732.
+
+
+LaTeX Warning: Citation 'OpenML2013' on page 40 undefined on input line 736.
+
+
+LaTeX Warning: Citation 'OpenML2013' on page 40 undefined on input line 736.
+
+
+LaTeX Warning: Citation 'scikit-learn' on page 40 undefined on input line 752.
+
+
+LaTeX Warning: Reference `fig:result_first_comparison' on page 40 undefined on 
+input line 752.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 41 undefined o
+n input line 875.
+
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 41 undefined o
+n input line 875.
+
+
+LaTeX Warning: Reference `fig:Comparison_visualization' on page 41 undefined on
+ input line 879.
+
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Grid10}' has been optimized away. Use '/tikz/external/optimize=false' t
+o disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Grid30}' has been optimized away. Use '/tikz/external/optimize=false' t
+o disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Grid50}' has been optimized away. Use '/tikz/external/optimize=false' t
+o disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random10}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random30}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Random50}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian10}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian30}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Bayesian50}' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Sparse8}' has been optimized away. Use '/tikz/external/optimize=false' 
+to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Sparse28}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Results/First_com
+parison/Sparse48}' has been optimized away. Use '/tikz/external/optimize=false'
+ to disable this.
+
+LaTeX Warning: Reference `fig:Comparison_visualization' on page 42 undefined on
+ input line 920.
+
+
+LaTeX Warning: Reference `fig:first_comparison_grid_search' on page 42 undefine
+d on input line 920.
+
+
+LaTeX Warning: Reference `fig:first_comparison_sparse_optimization' on page 42 
+undefined on input line 920.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 925--926
+
+ []
+
+
+LaTeX Warning: Reference `tab:datasets_first_experiment' on page 43 undefined o
+n input line 927.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 43 undefin
+ed on input line 927.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
+
+ []
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 43 undefin
+ed on input line 1011.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 43 undefin
+ed on input line 1011.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 44 undefin
+ed on input line 1094.
+
+
+LaTeX Warning: Reference `tab:hyperparameter_space_mnist' on page 44 undefined 
+on input line 1099.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+
+ []
+
+
+LaTeX Warning: Reference `fig:MNIST_results' on page 45 undefined on input line
+ 1124.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `tab:hyperparameter_space_mnist' on page 45 undefined 
+on input line 1155.
+
+
+LaTeX Warning: Reference `tab:hyperparameter_space_mnist' on page 45 undefined 
+on input line 1155.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1159--1160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
+
+ []
+
+
+LaTeX Warning: Reference `tab:best_configurations_MNIST' on page 46 undefined o
+n input line 1165.
+
+
+LaTeX Warning: Citation 'WU201926' on page 47 undefined on input line 1187.
+
+
+LaTeX Warning: Reference `tab:architecture_MNIST_comp' on page 47 undefined on 
+input line 1187.
+
+
+LaTeX Warning: Citation 'WU201926' on page 47 undefined on input line 1191.
+
+
+LaTeX Warning: Citation 'WU201926' on page 47 undefined on input line 1191.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
+
+ []
+
+
+LaTeX Warning: Citation 'WU201926' on page 47 undefined on input line 1209.
+
+
+LaTeX Warning: Reference `fig:Comparison_MNIST' on page 47 undefined on input l
+ine 1209.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Citation 'WU201926' on page 47 undefined on input line 1243.
+
+
+LaTeX Warning: Reference `tab:configs_MNIST_comp' on page 47 undefined on input
+ line 1243.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+
+ []
+
+
+LaTeX Warning: Reference `tab:configs_MNIST_comp' on page 48 undefined on input
+ line 1261.
+
+
+LaTeX Warning: Citation 'WU201926' on page 48 undefined on input line 1261.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
+
+ []
+
+
+LaTeX Warning: Reference `alg:adaptive_random_search_alg' on page 49 undefined 
+on input line 1277.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+285.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+LaTeX Warning: Reference `alg:adaptive_random_search_alg' on page 49 undefined 
+on input line 1303.
+
+
+LaTeX Warning: Reference `eq:refinement_criterion' on page 50 undefined on inpu
+t line 1307.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+
+ []
+
+
+LaTeX Warning: Reference `fig:alternative_1' on page 50 undefined on input line
+ 1315.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
+
+ []
+
+The command '\includegraphics [scale=0.8]{figures/Adaptive_random/Visualization
+s/Alternative_1}' has been optimized away. Use '/tikz/external/optimize=false' 
+to disable this.
+
+LaTeX Warning: Reference `fig:alternative_1' on page 50 undefined on input line
+ 1324.
+
+
+LaTeX Warning: Reference `eq:refinement_criterion' on page 50 undefined on inpu
+t line 1324.
+
+
+LaTeX Warning: Citation 'HARMAN20102297' on page 51 undefined on input line 132
+8.
+
+
+LaTeX Warning: Reference `fig:alternative_2' on page 51 undefined on input line
+ 1328.
+
+The command '\includegraphics [scale=0.8]{figures/Adaptive_random/Visualization
+s/Alternative_2}' has been optimized away. Use '/tikz/external/optimize=false' 
+to disable this.
+
+LaTeX Warning: Reference `fig:alternative_2' on page 51 undefined on input line
+ 1337.
+
+
+LaTeX Warning: Reference `fig:alternative_3' on page 51 undefined on input line
+ 1346.
+
+The command '\includegraphics [scale=0.8]{figures/Adaptive_random/Visualization
+s/Alternative_3}' has been optimized away. Use '/tikz/external/optimize=false' 
+to disable this.
+
+LaTeX Warning: Reference `fig:alternative_3' on page 52 undefined on input line
+ 1355.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
+
+ []
+
+
+LaTeX Warning: Reference `tab:test_functions' on page 53 undefined on input lin
+e 1389.
+
+
+LaTeX Warning: Reference `fig:test_functions_plot' on page 53 undefined on inpu
+t line 1389.
+
+
+LaTeX Warning: Reference `tab:test_functions' on page 53 undefined on input lin
+e 1393.
+
+
+LaTeX Warning: Reference `fig:test_functions_plot' on page 53 undefined on inpu
+t line 1393.
+
+
+LaTeX Warning: Reference `fig:Adapt_param_alternatives' on page 53 undefined on
+ input line 1393.
+
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_0_adapt_1.0}' has been optimized away. Use '/ti
+kz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_0_adapt_0.75}' has been optimized away. Use '/t
+ikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_0_adapt_0.0}' has been optimized away. Use '/ti
+kz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_1_adapt_1.0_1_}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_1_adapt_0.75}' has been optimized away. Use '/t
+ikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_1_adapt_0.0_1_}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_2_adapt_1.0_2_}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_2_adapt_0.75}' has been optimized away. Use '/t
+ikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/A
+daptivity_parameter/Alternative_2_adapt_0.0_2_}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:alt0_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:alt1_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:alt2_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:alt0_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:alt1_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:alt2_adapt_param' on page 53 undefined on input l
+ine 1422.
+
+
+LaTeX Warning: Reference `fig:Adapt_param_alternatives' on page 54 undefined on
+ input line 1426.
+
+
+LaTeX Warning: Reference `eq:refinement_criterion' on page 54 undefined on inpu
+t line 1426.
+
+
+LaTeX Warning: Reference `fig:alt1_adapt_param' on page 54 undefined on input l
+ine 1426.
+
+
+LaTeX Warning: Reference `fig:alt2_adapt_param' on page 54 undefined on input l
+ine 1426.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
+
+ []
+
+
+LaTeX Warning: Reference `tab:results_alternatives' on page 55 undefined on inp
+ut line 1428.
+
+
+LaTeX Warning: Reference `tab:results_alternatives' on page 55 undefined on inp
+ut line 1466.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1466--1467
+
+ []
+
+
+LaTeX Warning: Reference `fig:alternatives_adaptivities_plot' on page 55 undefi
+ned on input line 1468.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:alternatives_adaptivities_plot' on page 55 undefi
+ned on input line 1551.
+
+
+LaTeX Warning: Reference `fig:init_points_alternatives' on page 56 undefined on
+ input line 1555.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1556
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:init_points_alternatives' on page 56 undefined on
+ input line 1696.
+
+
+LaTeX Warning: Reference `fig:init_points_alternatives' on page 56 undefined on
+ input line 1696.
+
+
+LaTeX Warning: Reference `fig:init_points_alternatives' on page 56 undefined on
+ input line 1696.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
+
+ []
+
+
+LaTeX Warning: Reference `fig:ref_per_step' on page 57 undefined on input line 
+1708.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1708--1709
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:ref_per_step' on page 58 undefined on input line 
+1849.
+
+
+LaTeX Warning: Reference `fig:ref_per_step' on page 58 undefined on input line 
+1849.
+
+
+LaTeX Warning: Reference `fig:ref_per_step' on page 58 undefined on input line 
+1849.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
+
+ []
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 58 undefined on 
+input line 1856.
+
+
+LaTeX Warning: Reference `fig:Alternatives_ml_visualization' on page 58 undefin
+ed on input line 1856.
+
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_0_budget_10}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_0_budget_50}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_0_budget_100}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_1_budget_10}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_1_budget_50}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_1_budget_100}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_2_budget_10}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_2_budget_50}' has been optimized away. Use '/
+tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.31\textwidth ]{figures/Adaptive_random/M
+achine_learning_first/Alternative_2_budget_100}' has been optimized away. Use '
+/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `fig:alt0_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt1_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt2_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt0_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt1_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt2_ml' on page 58 undefined on input line 1885.
+
+
+
+LaTeX Warning: Reference `fig:alt1_ml' on page 59 undefined on input line 1889.
+
+
+
+LaTeX Warning: Reference `fig:alt2_ml' on page 59 undefined on input line 1889.
+
+
+
+LaTeX Warning: Reference `fig:alt0_ml' on page 59 undefined on input line 1889.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1889--1890
+
+ []
+
+
+LaTeX Warning: Reference `tab:results_alternatives_ml' on page 59 undefined on 
+input line 1891.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1919--1920
+
+ []
+
+
+LaTeX Warning: Reference `fig:comparison_2d' on page 60 undefined on input line
+ 1921.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:comparison_searches' on page 60 undefined on inpu
+t line 1971.
+
+
+LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
+age 60 undefined on input line 1976.
+
+
+LaTeX Warning: Reference `fig:result_adaptive_random_high_dim' on page 61 undef
+ined on input line 1996.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
+age 61 undefined on input line 2044.
+
+
+LaTeX Warning: Reference `tab:hyperparameter_space_adaptive_random_search' on p
+age 61 undefined on input line 2044.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2048--2049
+
+ []
+
+
+LaTeX Warning: Reference `tab:comparison_all_algorithms' on page 61 undefined o
+n input line 2050.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2073--2074
+
+ []
+
+
+LaTeX Warning: Reference `fig:optimizers_network_visualization' on page 62 unde
+fined on input line 2075.
+
+
+LaTeX Warning: Reference `fig:optimizer_categorical_hyperparams' on page 62 und
+efined on input line 2077.
+
+
+LaTeX Warning: Reference `fig:optimizer_categorical_hyperparams' on page 62 und
+efined on input line 2077.
+
+
+LaTeX Warning: Reference `tab:best_configurations_MNIST' on page 63 undefined o
+n input line 2079.
+
+
+LaTeX Warning: Reference `fig:analysis_model_training' on page 63 undefined on 
+input line 2079.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2081--2082
+
+ []
+
+
+LaTeX Warning: Reference `fig:Adapt_param_alternatives' on page 63 undefined on
+ input line 2083.
+
+
+LaTeX Warning: Reference `fig:comparison_2d' on page 63 undefined on input line
+ 2083.
+
+
+LaTeX Warning: Citation 'HARMAN20102297' on page 63 undefined on input line 208
+3.
+
+
+LaTeX Warning: Reference `fig:alt0_adapt_param' on page 63 undefined on input l
+ine 2083.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2087--2088
+
+ []
+
+
+LaTeX Warning: Reference `fig:result_first_comparison' on page 64 undefined on 
+input line 2089.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim3' on page 64 undefin
+ed on input line 2089.
+
+
+LaTeX Warning: Reference `fig:result_second_comparison_dim5' on page 64 undefin
+ed on input line 2089.
+
+
+LaTeX Warning: Reference `fig:MNIST_results' on page 64 undefined on input line
+ 2089.
+
+Excluding 'comment' comment.) (./chapters/05_conclusion_and_outlook.tex
 chapter 4.
 )
 Package tocbasic Info: character protrusion at lof deactivated on input line 10
-6.
+8.
 Package tocbasic Info: character protrusion at lot deactivated on input line 10
-7.
+9.
 
-LaTeX Warning: Empty bibliography on input line 109.
+LaTeX Warning: Empty bibliography on input line 111.
 
 No complaints by nag.
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
@@ -2349,19 +3413,19 @@ Package logreq Info: Writing requests to 'main-figure4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54273 strings out of 480121
- 1240857 string characters out of 5892160
- 2084787 words of memory out of 5000000
- 71044 multiletter control sequences out of 15000+600000
- 519178 words of font info for 189 fonts, out of 8000000 for 9000
+ 54989 strings out of 480121
+ 1249952 string characters out of 5892160
+ 2129157 words of memory out of 5000000
+ 71657 multiletter control sequences out of 15000+600000
+ 532925 words of font info for 252 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 119i,21n,112p,10633b,2552s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,21n,112p,10633b,2550s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main-figure4.pdf (1 page, 22219 bytes).
+Output written on main-figure4.pdf (1 page, 21484 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
  1 named destinations out of 1000 (max. 500000)
- 49677 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 65037 words of extra memory for PDF output out of 74296 (max. 10000000)
 

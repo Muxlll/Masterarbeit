@@ -270,10 +270,45 @@ with $ \left|\vec{l}\right| = \max_{1 \le i \le d} \left|d_i\right| $. Again, a 
 
 The resulting regular grid has then $ (2^n - 1)^d $ basis points. An example of a basis function in two dimensions can be seen in Figure \ref{fig:2d_basis}. It is constructed by the tensor product of two 1d hat functions. 
 
+
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.26]{figures/2d_basis.png}
-	\caption{ Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. Taken from \cite{garcke2013sparse}. }
+	%\includegraphics[scale=0.26]{figures/2d_basis.png}
+	\begin{tikzpicture}[]
+		\begin{axis}[view = {60}{40},
+			width=0.8\textwidth,
+			xmax = 1,
+			xmin = 0,
+			ymax = 1, 
+			ymin = 0, 
+			zmax = 1, 
+			zmin = 0,
+			%xtick = {-6,-4,-2,0,2,4},
+			ytick = {0,0.25,0.5,0.75,1.0},
+			%ztick = {-10,10,30,50},
+			grid,
+			x dir=reverse]
+			
+			
+			%\addplot3[] coordinates {
+				%	(0.5,0,0) (0.5,0.25,1) (0.5,0.5,0) (0.5,1,0)};
+			
+			\addplot3[] coordinates {
+				(1,0,0) (1,0.25,1) (1,0.5,0) (1,1,0)};
+			
+			%\addplot3[] coordinates {
+				%	(0.0,0.25,0) (0.5,0.25,1) (1,0.25,0)};
+			
+			\addplot3[] coordinates {
+				(0.0,1,0) (0.5,1,1) (1,1,0)};
+			
+			\addplot3[surf] file {figures/data.dat};
+			
+		\end{axis}
+	\end{tikzpicture}
+	\caption{ Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. }
 	\label{fig:2d_basis}
 \end{figure}
 
@@ -330,8 +365,9 @@ In contrast to the previously mentioned refinement concentrating on whole dimens
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.2]{figures/spatially_adaptive_combi_technique.png}
-	\caption{ Example of the spatially adaptive combination technique in two dimensions. Taken from \cite{obersteiner2021generalized}. }
+	%\includegraphics[scale=0.2]{figures/spatially_adaptive_combi_technique.png}
+	\includegraphics[width=\textwidth]{figures/Fig_2_11_adaptive_combigrid}
+	\caption{ Example of the spatially adaptive combination technique in two dimensions. } % Taken from \cite{obersteiner2021generalized}. }
 	\label{fig:spatially_adaptive_combi_technique}
 \end{figure}
 
