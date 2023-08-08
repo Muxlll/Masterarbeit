@@ -29,25 +29,30 @@ The implementation was done in Python (version 3.10.6) and two main classes are 
 
 The second class introduced is the Optimization class. The abstract super class has 5 concrete implementations, one for each of grid-, random search, bayesian optimization, the sparse grid search and iterative adaptive random search. In all cases, a dataset object has to be given. Additionally, the machine learning model as a function depending on the hyperparameters is required. For the sparse grid search, the functionality of the \textit{SG++} \cite{valentin2016hierarchical} is used. The function has to inherit the class \textit{ScalarFunction} and the concrete model evaluation is done in the member function \textit{eval(x)}. Also, the hyperparameter space has to be defined. This is a dictionary with information about the names and the types of parameters. Possible types are list for categorical ones, interval (int) for continuous (or integer) parameters, and log interval for ones that should be sampled logarithmically. Additionally, the lower and upper bound for each of them has to be provided. The next parameters are the budget defining the upper bound for function evaluations and the verbosity for outputs. \newline
 
-For the sparse grid optimization, the hyperparameters have to be scaled to the standard interval $ [0,1] $ and back to the original one for interpretation. Therefore, the functions \textit{to\_standard}, \textit{from\_standard}, \textit{to\_standard\_log} and \textit{from\_standard\_log} are introduced for the linear and logarithmic scaling. 
+For the sparse grid optimization, the hyperparameters have to be scaled to the standard interval $ [0,1] $ and back to the original one for interpretation. Therefore, the functions \textit{to\_standard}, \textit{from\_standard}, \textit{to\_standard\_log} and \textit{from\_standard\_log} are introduced for the linear and logarithmic scaling as presented in Figure \ref{fig:scaling_code}. 
 
-\begin{lstlisting}[language=Python]
-	def to_standard(lower, upper, value):
+\begin{figure}
+	\begin{lstlisting}[language=Python]
+		def to_standard(lower, upper, value):
 		return (value - lower) / (upper - lower)
-	
-	def from_standard(lower, upper, value):
+		
+		def from_standard(lower, upper, value):
 		return value * (upper - lower) + lower
-	
-	def to_standard_log(lower, upper, value):
+		
+		def to_standard_log(lower, upper, value):
 		a = math.log10(upper / lower)
-	return math.log10(value / lower) / a	
-	
-	def from_standard_log(lower, upper, value):
+		return math.log10(value / lower) / a	
+		
+		def from_standard_log(lower, upper, value):
 		a = math.log10(upper / lower)
 		return lower * 10 ** (a * value)
-\end{lstlisting}
+	\end{lstlisting}
+	\caption{Scaling to and from the standard interval $[0,1] $ for the sparse grid optimization.}
+	\label{fig:scaling_code}
+\end{figure}
 
-The parameters lower and upper are the bounds of the original hyperparameter interval. The value argument is then scaled to or from the standard domain $ [0,1] $, respectively. \newline 
+
+The parameters lower and upper from the functions in Figure \ref{fig:scaling_code} are the bounds of the original hyperparameter interval. The value argument is then scaled to or from the standard domain $ [0,1] $, respectively. \newline 
 
 Due to many stochastic influences in the scope of neural networks, reproducibility is not always given by default. Examples are the network's weight initialization, random dataset splitting, and shuffling during the training phase. To overcome this problem, the seeds of random functions can be set to be deterministic and reproducible.
 
