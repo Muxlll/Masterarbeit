@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Sparse Grid Generation with different Adaptivities}{30}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Local and Global Optimization}{35}{subsection.3.2.4}%
 \contentsline {section}{\numberline {3.3}Hyperparameter Optimization with Sparse Grids}{39}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Optimum Approximation with Sparse Grids}{40}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Optimization on Sparse Grid Points}{40}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Optimization on Sparse Grids}{43}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Comparison with Grid-, Random Search and Bayesian Optimization}{49}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Two-dimensional Experiment of Regression with Small Neural Network}{49}{subsection.3.4.1}%
@@ -56,7 +56,5 @@
 \contentsline {subsection}{\numberline {3.5.4}High-dimensional Optimization}{79}{subsection.3.5.4}%
 \contentsline {section}{\numberline {3.6}Comparison and Discussion}{81}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Conclusion and Outlook}{84}{chapter.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{86}{chapter*.92}%
-\contentsline {chapter}{\nonumberline List of Tables}{91}{chapter*.93}%
-\contentsline {chapter}{\nonumberline Bibliography}{93}{chapter*.94}%
+\contentsline {chapter}{\nonumberline Bibliography}{86}{chapter*.92}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

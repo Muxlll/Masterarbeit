@@ -27,26 +27,25 @@ For this comparison, we used several kinds of artificial neural networks such as
 
 The implementation was done in Python (version 3.10.6) and two main classes are introduced. The first is the \textit{Dataset} encapsulating the input and target data of the dataset used for the machine learning model. One can either instantiate an object with a given X and Y vector for the data and target or by giving a task id. This identification number is used to instantiate both arrays with the dataset that can be fetched with the functionality given by OpenML \cite{feurer-arxiv19a}. Each task has a unique id, we first concentrate on Regression tasks with small neural networks. \newline
 
-The second class introduced is the Optimization class. The abstract super class has 5 concrete implementations, one for each of grid-, random search, bayesian optimization, the sparse grid search and iterative adaptive random search. In all cases, a dataset object has to be given. Additionally, the machine learning model as a function depending on the hyperparameters is required. For the sparse grid search, the functionality of the \textit{SG++} \cite{valentin2016hierarchical} is used. The function has to inherit the class \textit{ScalarFunction} and the concrete model evaluation is done in the member function \textit{eval(x)}. Also, the hyperparameter space has to be defined. This is a dictionary with information about the names and the types of parameters. Possible types are list for categorical ones, interval (int) for continuous (or integer) parameters, and log interval for ones that should be sampled logarithmically. Additionally, the lower and upper bound for each of them has to be provided. The next parameters are the budget defining the upper bound for function evaluations and the verbosity for outputs. \newline
+The second class introduced is the Optimization class. The abstract super class has 5 concrete implementations, one for each of grid-, random search, Bayesian optimization, the sparse grid search and iterative adaptive random search. In all cases, a dataset object has to be given. Additionally, the machine learning model as a function depending on the hyperparameters is required. For the sparse grid search, the functionality of the \textit{SG++} \cite{valentin2016hierarchical} is used. The function has to inherit the class \textit{ScalarFunction} and the concrete model evaluation is done in the member function \textit{eval(x)}. Also, the hyperparameter space has to be defined. This is a dictionary with information about the names and the types of parameters. Possible types are list for categorical ones, interval (int) for continuous (or integer) parameters, and log interval for ones that should be sampled logarithmically. Additionally, the lower and upper bound for each of them has to be provided. The next parameters are the budget defining the upper bound for function evaluations and the verbosity for outputs. \newline
 
 For the sparse grid optimization, the hyperparameters have to be scaled to the standard interval $ [0,1] $ and back to the original one for interpretation. Therefore, the functions \textit{to\_standard}, \textit{from\_standard}, \textit{to\_standard\_log} and \textit{from\_standard\_log} are introduced for the linear and logarithmic scaling as presented in Figure \ref{fig:scaling_code}. 
 
 \begin{figure}
 	\begin{lstlisting}[language=Python]
-		def to_standard(lower, upper, value):
-		return (value - lower) / (upper - lower)
+def to_standard(lower, upper, value):
+	return (value - lower) / (upper - lower)
 		
-		def from_standard(lower, upper, value):
-		return value * (upper - lower) + lower
+def from_standard(lower, upper, value):
+	return value * (upper - lower) + lower
+	
+def to_standard_log(lower, upper, value):
+	a = math.log10(upper / lower)
+	return math.log10(value / lower) / a	
 		
-		def to_standard_log(lower, upper, value):
-		a = math.log10(upper / lower)
-		return math.log10(value / lower) / a	
-		
-		def from_standard_log(lower, upper, value):
-		a = math.log10(upper / lower)
-		return lower * 10 ** (a * value)
-	\end{lstlisting}
+def from_standard_log(lower, upper, value):
+	a = math.log10(upper / lower)
+	return lower * 10 ** (a * value)\end{lstlisting}
 	\caption{Scaling to and from the standard interval $[0,1] $ for the sparse grid optimization.}
 	\label{fig:scaling_code}
 \end{figure}
@@ -478,7 +477,7 @@ The inputs of the previous experiments were all just two-dimensional. The follow
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Error of the optimization depending on the number of grid points used for different dimensions of the Rastrigini function. }	
+	\caption{ Error of the optimization depending on the number of grid points used for different dimensions of the Rastrigin function. }	
 	\label{fig:Dimensions_results}
 \end{figure}
 
@@ -491,7 +490,7 @@ In conclusion, the adaptivity parameter, the degree of the B-splines on the spar
 
 Now we replace the function, where we know the analytical optimum with the evaluation of a machine learning model. The biggest change is the much higher duration of one function call and the complexity of finding the analytical solution which is impossible due to the high number of network weights in neural networks. 
 
-\subsection{Optimum Approximation with Sparse Grids}
+\subsection{Optimization on Sparse Grid Points}
 
 The following plots show an example of a small neural network being evaluated on the diamonds dataset which is available on OpenML \cite{feurer-arxiv19a}. We used a model consisting of two fully connected layers, each made up of 30 neurons. In one batch, 100 data samples are processed. The two-dimensional plot (see Figure \ref{fig:analysis_model_training}) depicts the network evaluation depending on the number of epochs used and the value for the learning rate of the Adam optimizer of the model. The loss of the network is calculated with the mean squared error. As pre-processing of the data, the numeric features of the input data are scaled with a standard scaler and the categorical features are one hot encoded. The target values are also scaled separately. For the evaluation metric, we chose the average result of 2-fold cross validation with the mean absolute percentage error (MAPE). This metric is defined as 
 \begin{equation}
@@ -877,7 +876,7 @@ All the categorical features are transformed with one hot encoding and the numer
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Comparison of grid-, random search, bayesian optimization and sparse grid search for the datasets shown in Table \ref{tab:datasets_first_experiment}. Two hyperparameters, epochs and learning rate of the neural network's optimizer, were optimized. }	
+	\caption{ Comparison of grid-, random search, Bayesian optimization and sparse grid search for the datasets shown in Table \ref{tab:datasets_first_experiment}. Two hyperparameters, epochs and learning rate of the neural network's optimizer, were optimized. }	
 	\label{fig:result_first_comparison}
 \end{figure}
 
@@ -1006,7 +1005,7 @@ For the three-dimensional case, we first use the same network with fixed archite
 		
 	\end{axis}
 	\end{tikzpicture}
-	\caption{ Comparison of grid search, random search, bayesian optimization and sparse grid search. The model optimized consists of two layers with 40 neurons each. The number of epochs, batch size, and learning rate are optimized.  }	
+	\caption{ Comparison of grid search, random search, Bayesian optimization and sparse grid search. The model optimized consists of two layers with 40 neurons each. The number of epochs, batch size, and learning rate are optimized.  }	
 	\label{fig:result_second_comparison_dim3}
 \end{figure}
 
@@ -1087,11 +1086,11 @@ To also analyze the behavior in settings of higher dimensionality, we now also a
 			\addplot coordinates 
 			{(43,0.08488190919160843)(83,0.03610859997570515)(123,0.028350481763482094)};
 			
-			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
+			\legend{Grid search, Random search, Bayesian optimization, Sparse grid optimization}
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{  Comparison of grid search, random search, bayesian optimization and sparse grid search. The number of epochs, batch size, and learning rate are optimized as well as the number of layers and number of neurons per layer. }	
+	\caption{  Comparison of grid search, random search, Bayesian optimization and sparse grid search. The number of epochs, batch size, and learning rate are optimized as well as the number of layers and number of neurons per layer. }	
 	\label{fig:result_second_comparison_dim5}
 \end{figure}
 
@@ -1126,7 +1125,7 @@ To also compare the different approaches with a convolutional neural network for
 
 The input shape is always $ (28, 28, 1) $ which defines the first layer of the network. After that, blocks consisting of convolutional and pooling layers are added. The number of blocks is defined by the hyperparameter number of convolutional layers. The kernel and pool size of the 2D convolution and the following pooling layer is defined by the kernel size and pool size and they are optimized. After that, fully connected layers are added. The number of layers as well as the number of neurons per layer are optimized with the two hyperparameters. Between the convolutional part and the fully connected layers, a dropout layer is added. The probability is optimized as well. The other hyperparameters like epochs, batch size, and learning rate are optimized like in the previous experiments. As an optimizer, we used the Adam optimizer and the loss function is the categorical cross-entropy. \newline 
 
-The evaluation of the network is done as follows. The dataset is fetched with the predefined training and test set from keras. The model is fit on the training set with a validation split of $ 10\% $. It is not shuffled as we want to have reproducibility because the same hyperparameter configuration should produce the same result. This is also the reason why we reset the seeds of Python's random functions to always have the same weight initialization of the network. After the training step, we evaluate the model using the test set. As an optimization metric, we use the negative accuracy of the prediction as we still minimize. The resulting accuracy depending on the increasing cost is depicted in Figure \ref{fig:MNIST_results}.
+The evaluation of the network is done as follows. The dataset is fetched with the predefined training and test set from keras \cite{chollet2015keras}. The model is fit on the training set with a validation split of $ 10\% $. It is not shuffled as we want to have reproducibility because the same hyperparameter configuration should produce the same result. This is also the reason why we reset the seeds of Python's random functions to always have the same weight initialization of the network. After the training step, we evaluate the model using the test set. As an optimization metric, we use the negative accuracy of the prediction as we still minimize. The resulting accuracy depending on the increasing cost is depicted in Figure \ref{fig:MNIST_results}.
 
 
 
@@ -1153,7 +1152,7 @@ The evaluation of the network is done as follows. The dataset is fetched with th
 			\addplot coordinates 
 			{(3,0.3700999915599823)(21,0.8806999921798706)(39,0.9319000244140625)(75,0.9732999801635742)(93,0.9753999710083008)};
 			
-			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
+			\legend{Grid search, Random search, Bayesian optimization, Sparse grid optimization}
 			
 		\end{axis}
 	\end{tikzpicture}
@@ -1163,14 +1162,14 @@ The evaluation of the network is done as follows. The dataset is fetched with th
 
 Again, with increasing cost, the algorithms find better configurations leading to higher accuracy. In this example, the grid search can only evaluate the model with one single configuration. This is due to the reason that the next step would be $ 2^9 = 512 $ different configurations where it would try out 2 different values for each hyperparameter. \newline 
 
-The first points for sparse grid optimization and bayesian search are also very low, but with a bit higher cost, the performance increases very much. For the random search, even the first point with a budget of 5, the best accuracy is already at about $ 79\% $. \newline 
+The first points for sparse grid optimization and Bayesian optimization are also very low, but with a bit higher cost, the performance increases very much. For the random search, even the first point with a budget of 5, the best accuracy is already at about $ 79\% $. \newline 
 
-For the sparse grid search, the advantage compared to the normal grid search is that there is no \textit{curse of the dimensionality}. The performance is comparable with the other two algorithms, random search and bayesian optimization. \newline 
+For the sparse grid search, the advantage compared to the normal grid search is that there is no \textit{curse of the dimensionality}. The performance is comparable with the other two algorithms, random search and Bayesian optimization. \newline 
 
 The best configurations found by each algorithm for the problem are depicted in Table \ref{tab:best_configurations_MNIST}.
 
 \begin{table}[H]
-	\caption{ Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). }
+	\caption{ Overview over the best configurations found by the different algorithms grid search (GS), random search (RS), Bayesian optimization (BO) and sparse grid optimization (SG). The configuration is given as tuple (epochs, batch size, learning rate, number conv layers, number fully connected layers, kernel size, pool size, neurons per fc layer, dropout probability). }
 	\label{tab:best_configurations_MNIST}
 	\centering
 	\begin{tabular}{| c c c c |} 
@@ -1237,11 +1236,11 @@ In \cite{WU201926}, it is not described for how many epochs they train the neura
 			\addplot coordinates 
 			{(3,0.0860000029206276)(7,0.12290000170469284)(11,0.9416999816894531)(15,0.9824000000953674)(23,0.9861000180244446)(39,0.9883000254631042)(55,0.9883000254631042)};
 			
-			\legend{Grid search, Random search, Bayesian, Sparse grid optimization}
+			\legend{Grid search, Random search, Bayesian optimization, Sparse grid optimization}
 			
 		\end{axis}
 	\end{tikzpicture}
-	\caption{ Resulting accuracy with increasing budget for the grid search, random search, bayesian optimization and sparse grid optimization. The MNIST dataset and a small convolutional neural network were used. }	
+	\caption{ Resulting accuracy with increasing budget for the grid search, random search, Bayesian optimization and sparse grid optimization. The MNIST dataset and a small convolutional neural network were used. }	
 	\label{fig:Comparison_MNIST}
 \end{figure}
 
@@ -2081,7 +2080,7 @@ Sparse grids are normally used to interpolate functions with a high number of gr
 
 In the context of hyperparameter optimization, we can have very different types of hyperparameters. In this thesis, the focus was on integer, continuous, and logarithmic ones. A short analysis was also conducted with categorical hyperparameters with Figure \ref{fig:optimizer_categorical_hyperparams}. However, further analysis can be done in the settings of other examples. One such scenario is the choice of optimizer or loss function of the neural network. With such examples, Bayesian optimization has problems in interpreting the different choices. When using sparse grids, the standard domain in this dimension would be separated into intervals just like it is done in Figure \ref{fig:optimizer_categorical_hyperparams}. Further analysis can be conducted on how well the optimization can work with such a setting. A question is for example if the order or number of categories has an impact on the performance. 
 
-The numerical results showed that especially for high dimensions, the sparse grid hyperparameter optimization performs well compared to other techniques. What we have also seen is that in many situations, there is more than one configuration leads to the best performance. This can be seen in Table \ref{tab:best_configurations_MNIST} where Bayesian optimization and sparse grid hyperparameter optimization reach an accuracy of $97.5\%$ with different configurations. In most cases, there is a region with very good results as can be seen in Figure \ref{fig:analysis_model_training}. There, a learning rate of $10^{-4} $ with high epochs leads to very small error values. However, with a smaller number of epochs, the learning rate has to be set to higher values. In such settings, it is important to find the tendencies because the functions are not very multimodal in the case of integer or continuous hyperparameter types. The sparse grid hyperparameter optimization performs well in those aspects. Note that the problems in this thesis are made deterministic for the sparse grid optimization, in real-world applications, randomnesses such as the network's weight initialization, dataset splitting or dropout influence the behavior. This means that optima are not always fixed. Rather the region where the tendency shows good results is important to be found fast which is why the sparse grid performs well. 
+The numerical results showed that especially for high dimensions, the sparse grid hyperparameter optimization performs well compared to other techniques. What we have also seen is that in many situations, there is more than one configuration leads to the best performance. This can be seen in Table \ref{tab:best_configurations_MNIST} where Bayesian optimization and sparse grid hyperparameter optimization reach an accuracy of $97.5\%$ with different configurations. In most cases, there is a region with very good results as can be seen in Figure \ref{fig:analysis_model_training}. There, a learning rate of $10^{-4} $ with high epochs leads to very small error values. However, with a smaller number of epochs, the learning rate has to be set to higher values. In such settings, it is important to find the tendencies because the functions are not very multi-modal in the case of integer or continuous hyperparameter types. The sparse grid hyperparameter optimization performs well in those aspects. Note that the problems in this thesis are made deterministic for the sparse grid optimization, in real-world applications, randomnesses such as the network's weight initialization, dataset splitting or dropout influence the behavior. This means that optima are not always fixed. Rather the region where the tendency shows good results is important to be found fast which is why the sparse grid performs well. 
 
 In summary, the sparse grid hyperparameter optimization is a good choice for problems of high dimension where the hyperparameter types are combinations of integers, continuous, and logarithmic ones. \newline 
 

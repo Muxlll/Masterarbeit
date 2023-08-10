@@ -1175,8 +1175,8 @@
       \strng{authorbibnamehash}{2a56da0e6c116c9850c73b287754d07e}
       \strng{authornamehash}{2a56da0e6c116c9850c73b287754d07e}
       \strng{authorfullhash}{2a56da0e6c116c9850c73b287754d07e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Membrane Computing}
@@ -1439,8 +1439,8 @@
       \strng{authorbibnamehash}{3355e00423580cbb5adeb2cdc35d2223}
       \strng{authornamehash}{3355e00423580cbb5adeb2cdc35d2223}
       \strng{authorfullhash}{3355e00423580cbb5adeb2cdc35d2223}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}
@@ -1470,8 +1470,8 @@
       \strng{authorbibnamehash}{b308ccb07134a06ec3735828ac4f15e2}
       \strng{authornamehash}{b308ccb07134a06ec3735828ac4f15e2}
       \strng{authorfullhash}{b308ccb07134a06ec3735828ac4f15e2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1604.07269}
@@ -1504,6 +1504,34 @@
       \field{type}{phdthesis}
       \field{year}{2010}
     \endentry
+    \entry{garcke2013sparse}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d39d9fc432faacc56d2c3c532e1808a0}{%
+           family={Garcke},
+           familyi={G\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{fullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{bibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorbibnamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authornamehash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \strng{authorfullhash}{d39d9fc432faacc56d2c3c532e1808a0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sparse grids and applications}
+      \field{title}{Sparse grids in a nutshell}
+      \field{year}{2013}
+      \field{pages}{57\bibrangedash 80}
+      \range{pages}{24}
+    \endentry
     \entry{b_splines}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=06a62916f96f396a2a807520c092d764}{%
@@ -1519,8 +1547,8 @@
       \strng{authorbibnamehash}{06a62916f96f396a2a807520c092d764}
       \strng{authornamehash}{06a62916f96f396a2a807520c092d764}
       \strng{authorfullhash}{06a62916f96f396a2a807520c092d764}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1910.05379}
@@ -1548,8 +1576,8 @@
       \strng{authorbibnamehash}{17f1489d8b84ea47a1c7c455112402d2}
       \strng{authornamehash}{17f1489d8b84ea47a1c7c455112402d2}
       \strng{authorfullhash}{17f1489d8b84ea47a1c7c455112402d2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Research Workshop of the Israel Science Foundation on Multiscale Phenomenon, Modelling and Computation}
@@ -1582,8 +1610,8 @@
       \strng{authorbibnamehash}{d0a1f27c785b7d61140590690ac47017}
       \strng{authornamehash}{d0a1f27c785b7d61140590690ac47017}
       \strng{authorfullhash}{d0a1f27c785b7d61140590690ac47017}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta numerica}
@@ -1618,8 +1646,8 @@
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse Grids and Applications-Munich 2018}
@@ -1658,8 +1686,8 @@
       \strng{authorbibnamehash}{b7bafa5f4309f3f0a84312b6a723b705}
       \strng{authornamehash}{b7bafa5f4309f3f0a84312b6a723b705}
       \strng{authorfullhash}{b7bafa5f4309f3f0a84312b6a723b705}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A combination technique for the solution of sparse grid problems}
@@ -1690,8 +1718,8 @@
       \strng{authornamehash}{91fb8b4d0373238575275da07e684a49}
       \strng{authorfullhash}{91fb8b4d0373238575275da07e684a49}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM Journal on Scientific Computing}
@@ -1717,8 +1745,8 @@
       \strng{authorbibnamehash}{6022d776b216c890b7280bcfa0726029}
       \strng{authornamehash}{6022d776b216c890b7280bcfa0726029}
       \strng{authorfullhash}{6022d776b216c890b7280bcfa0726029}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Anziam Journal}
@@ -1746,8 +1774,8 @@
       \strng{authorbibnamehash}{26eafa3a34098b617e2a5381e1d2e42c}
       \strng{authornamehash}{26eafa3a34098b617e2a5381e1d2e42c}
       \strng{authorfullhash}{26eafa3a34098b617e2a5381e1d2e42c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Finite elements of higher order on sparse grids}
@@ -1778,8 +1806,8 @@
       \strng{authorbibnamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authornamehash}{57f79f590d6c2235e42127c6f6c5e557}
       \strng{authorfullhash}{57f79f590d6c2235e42127c6f6c5e557}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Approximation and modeling with B-splines}
@@ -1821,8 +1849,8 @@
       \strng{authorbibnamehash}{5e2003a754fd2e436ade2acdca17e046}
       \strng{authornamehash}{5e2003a754fd2e436ade2acdca17e046}
       \strng{authorfullhash}{5e2003a754fd2e436ade2acdca17e046}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International journal for numerical methods in biomedical engineering}
@@ -1857,8 +1885,8 @@
       \strng{authorbibnamehash}{f54e400205446843acf6022e87953c76}
       \strng{authornamehash}{f54e400205446843acf6022e87953c76}
       \strng{authorfullhash}{f54e400205446843acf6022e87953c76}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{State of the art in global optimization: computational methods and applications}
@@ -1903,8 +1931,8 @@
       \strng{authorbibnamehash}{5e08d14637d0d8068f56416afd0e1f2a}
       \strng{authornamehash}{5e08d14637d0d8068f56416afd0e1f2a}
       \strng{authorfullhash}{5e08d14637d0d8068f56416afd0e1f2a}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Industrial Informatics}
@@ -1948,8 +1976,8 @@
       \strng{authorbibnamehash}{494cae74b7990cd042e76f4c74e0b6f2}
       \strng{authornamehash}{494cae74b7990cd042e76f4c74e0b6f2}
       \strng{authorfullhash}{494cae74b7990cd042e76f4c74e0b6f2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proc. of The 13th IASTED International Conference on Robotics and Applications (RA 2007)}
@@ -1980,8 +2008,8 @@
       \strng{authorbibnamehash}{54ded902baa89791ba22380a77373ae3}
       \strng{authornamehash}{54ded902baa89791ba22380a77373ae3}
       \strng{authorfullhash}{54ded902baa89791ba22380a77373ae3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Entropy}
@@ -2016,8 +2044,8 @@
       \strng{authorbibnamehash}{c8fbe7650361f8337771821fd34ef1d3}
       \strng{authornamehash}{c8fbe7650361f8337771821fd34ef1d3}
       \strng{authorfullhash}{c8fbe7650361f8337771821fd34ef1d3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A derivative-free optimization algorithm using sparse grid integration}
@@ -2041,8 +2069,8 @@
       \strng{authorbibnamehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
       \strng{authornamehash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
       \strng{authorfullhash}{9fb22a0f23a43f9a2bcd30894e0e1e83}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Probabilistic engineering mechanics}
@@ -2077,8 +2105,8 @@
       \strng{authorbibnamehash}{48a5f942d64dc070aa558e76852ab431}
       \strng{authornamehash}{48a5f942d64dc070aa558e76852ab431}
       \strng{authorfullhash}{48a5f942d64dc070aa558e76852ab431}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Applied Mathematics and Computation}
@@ -2116,8 +2144,8 @@
       \strng{authorbibnamehash}{1c4a5ec62318afabb2069d9d88846d10}
       \strng{authornamehash}{1c4a5ec62318afabb2069d9d88846d10}
       \strng{authorfullhash}{1c4a5ec62318afabb2069d9d88846d10}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A new random-search global optimization is described in which the variance of the step-size distribution is periodically optimized. By searching over a variance range of 8 to 10 decades, the algorithm finds the step-size distribution that yields the best local improvement in the criterion function. The variance search is then followed by a specified number of iterations of local random search where the step-size variance remains fixed. Periodic wide-range searches are introduced to ensure that the process does not stop at a local minimum. The sensitivity of the complete algorithm to various search parameters is investigated experimentally for a specific test problem. The ability of the method to locate global minima is illustrated by an example. The method also displays considerable problem independence, as demonstrated by two large and realistic example problems: (1) the identification of 25 parameters in a nonlinear model of a five-degrees-of-freedom mechanical dynamic system and (2) solution of a 24-parameter inverse problem required to identify a pulse train whose frequency spectrum matched a desired reference spectrum.}
@@ -2160,8 +2188,8 @@
       \strng{authorbibnamehash}{b11eb0fd45477bf8de3668ab825137f0}
       \strng{authornamehash}{b11eb0fd45477bf8de3668ab825137f0}
       \strng{authorfullhash}{b11eb0fd45477bf8de3668ab825137f0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract We present, analyze, and compare three random search methods for solving stochastic optimization problems with uncountable feasible regions. Our adaptive search with resampling (ASR) approach is a framework for designing provably convergent algorithms that are adaptive and may consequently involve local search. The deterministic and stochastic shrinking ball (DSB and SSB) approaches are also convergent, but they are based on pure random search with the only difference being the estimator of the optimal solution [the DSB method was originally proposed and analyzed by Baumert and Smith]. The three methods use different techniques to reduce the effects of noise in the estimated objective function values. Our ASR method achieves this goal through resampling of already sampled points, whereas the DSB and SSB approaches address it by averaging observations in balls that shrink with time. We present conditions under which the three methods are convergent, both in probability and almost surely, and provide a limited computational study aimed at comparing the methods. Although further investigation is needed, our numerical results suggest that the ASR approach is promising, especially for difficult problems where the probability of identifying good solutions using pure random search is small. © 2010 Wiley Periodicals, Inc. Naval Research Logistics, 2010}
@@ -2210,8 +2238,8 @@
       \strng{authorbibnamehash}{e7407b9d9ebc78c5b8a116c2473bc810}
       \strng{authornamehash}{e7407b9d9ebc78c5b8a116c2473bc810}
       \strng{authorfullhash}{e7407b9d9ebc78c5b8a116c2473bc810}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Automatic Control}
@@ -2240,8 +2268,8 @@
       \strng{authorbibnamehash}{ad846f58de8cbf45a8825c2ae1259494}
       \strng{authornamehash}{ad846f58de8cbf45a8825c2ae1259494}
       \strng{authorfullhash}{ad846f58de8cbf45a8825c2ae1259494}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Automatic Control}
@@ -2276,8 +2304,8 @@
       \strng{authorbibnamehash}{becb3359a6cff2c8c5eae4ac748888a1}
       \strng{authornamehash}{becb3359a6cff2c8c5eae4ac748888a1}
       \strng{authorfullhash}{becb3359a6cff2c8c5eae4ac748888a1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal for Numerical Methods in Engineering}
@@ -2312,8 +2340,8 @@
       \strng{authorbibnamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authornamehash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
       \strng{authorfullhash}{cb401d12db7dfee07ca7c7d2e38bd2d5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Sparse Grids and Applications-Stuttgart 2014}
@@ -2388,8 +2416,8 @@
       \strng{authorbibnamehash}{6266a447054437b85f58a1b35c10f79c}
       \strng{authornamehash}{6f3339156d725c8aa09f013d30c486f5}
       \strng{authorfullhash}{6266a447054437b85f58a1b35c10f79c}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv:1911.02490}
@@ -2432,8 +2460,8 @@
       \strng{authorbibnamehash}{c15ce7b35c44f2acc752606c21b08f93}
       \strng{authornamehash}{c15ce7b35c44f2acc752606c21b08f93}
       \strng{authorfullhash}{c15ce7b35c44f2acc752606c21b08f93}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Artificial intelligence}
@@ -2462,8 +2490,8 @@
       \strng{authorbibnamehash}{8b9a8afb4153d569a17f211b83af9fac}
       \strng{authornamehash}{8b9a8afb4153d569a17f211b83af9fac}
       \strng{authorfullhash}{8b9a8afb4153d569a17f211b83af9fac}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Engineering optimization: an introduction with metaheuristic applications}
@@ -2511,8 +2539,8 @@
       \strng{authorbibnamehash}{db4436ad6be0fa006763d94d3cdf16dc}
       \strng{authornamehash}{db4436ad6be0fa006763d94d3cdf16dc}
       \strng{authorfullhash}{db4436ad6be0fa006763d94d3cdf16dc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIGKDD Explorations}
@@ -2637,8 +2665,8 @@
       \strng{authorbibnamehash}{7a67607c66e4af944b5f16461d6d0a87}
       \strng{authornamehash}{dae710add1b58c233b40c77fa8628347}
       \strng{authorfullhash}{7a67607c66e4af944b5f16461d6d0a87}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Machine Learning Research}
@@ -2647,6 +2675,31 @@
       \field{year}{2011}
       \field{pages}{2825\bibrangedash 2830}
       \range{pages}{6}
+    \endentry
+    \entry{chollet2015keras}{misc}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=14134a39113404b1f80969c9ccc1f71e}{%
+           family={Chollet},
+           familyi={C\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{fullhash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{bibnamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authorbibnamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authornamehash}{2f3cf4de7406c8a08275677188d056f8}
+      \strng{authorfullhash}{2f3cf4de7406c8a08275677188d056f8}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://keras.io}}
+      \field{title}{Keras}
+      \field{year}{2015}
     \endentry
     \entry{WU201926}{article}{}
       \name{author}{6}{}{%
@@ -2693,8 +2746,8 @@
       \strng{authorbibnamehash}{2f2757d3eacf8c6cbd03047cc93d2da8}
       \strng{authornamehash}{b7c38ec1418d00977066ad257b3b7996}
       \strng{authorfullhash}{2f2757d3eacf8c6cbd03047cc93d2da8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Hyperparameters are important for machine learning algorithms since they directly control the behaviors of training algorithms and have a significant effect on the performance of machine learning models. Several techniques have been developed and successfully applied for certain application domains. However, this work demands professional knowledge and expert experience. And sometimes it has to resort to the brute-force search. Therefore, if an efficient hyperparameter optimization algorithm can be developed to optimize any given machine learning method, it will greatly improve the efficiency of machine learning. In this paper, we consider building the relationship between the performance of the machine learning models and their hyperparameters by Gaussian processes. In this way, the hyperparameter tuning problem can be abstracted as an optimization problem and Bayesian optimization is used to solve the problem. Bayesian optimization is based on the Bayesian theorem. It sets a prior over the optimization function and gathers the information from the previous sample to update the posterior of the optimization function. A utility function selects the next sample point to maximize the optimization function. Several experiments were conducted on standard test datasets. Experiment results show that the proposed method can find the best hyperparameters for the widely used machine learning models, such as the random forest algorithm and the neural networks, even multi-grained cascade forest under the consideration of time cost.}
@@ -2738,8 +2791,8 @@
       \strng{authorbibnamehash}{6d992710094317b26d6d909e5dff3a73}
       \strng{authornamehash}{6d992710094317b26d6d909e5dff3a73}
       \strng{authorfullhash}{6d992710094317b26d6d909e5dff3a73}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We describe a universal conditional distribution method for uniform sampling from n-spheres and n-balls, based on properties of a family of radially symmetric multivariate distributions. The method provides us with a unifying view on several known algorithms as well as enabling us to construct novel variants. We give a numerical comparison of the known and newly proposed algorithms for dimensions 5, 6 and 7.}

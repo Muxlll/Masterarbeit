@@ -99,8 +99,7 @@ The next technique \cite{random_search} is similar to the grid search because th
 	\centering
 	%\includegraphics[scale=0.2]{figures/comparison_searches.png}
 	\includegraphics[width=0.9\textwidth]{figures/Fig_2_3_grid_random_search}
-	\caption{Comparison of grid search (left) and random search (right) in the two dimensional case. For both techniques, 9 different combinations are evaluated. In the left case, only 3 distinct values for each hyperparameter are set whereas there are 9 different values for each parameter in the random search. }
-		% Taken from \cite{feurer2019hyperparameter}. }
+	\caption{Comparison of grid search (left) and random search (right) in the two dimensional case. For both techniques, 9 different combinations are evaluated. In the left case, only 3 distinct values for each hyperparameter are set whereas there are 9 different values for each parameter in the random search, adapted from \cite{feurer2019hyperparameter}. }
 	\label{fig:comparison_searches}
 \end{figure}
 
@@ -157,7 +156,7 @@ The exact steps are presented in Algorithm \ref{alg:bayesian_opt} and Figure \re
 	\centering
 	%\includegraphics[scale=0.35]{figures/bayesian_optimization.png}
 	\includegraphics[width=\textwidth]{figures/Fig_2_4_bayesian}
-	\caption{ Schematic iteration steps of the bayesian optimization. The maximum of the acquisition function determines the next function evaluation (red dot in the middle). The goal is to find the minimum of the dashed line. The blue band is the uncertainty of the function. }
+	\caption{ Schematic iteration steps of the Bayesian optimization. The maximum of the acquisition function determines the next function evaluation (red dot in the middle). The goal is to find the minimum of the dashed line. The blue band is the uncertainty of the function. }
 		%Taken from \cite{feurer2019hyperparameter}. }
 	\label{fig:bayesian_optimization}
 \end{figure}
@@ -166,7 +165,7 @@ The exact steps are presented in Algorithm \ref{alg:bayesian_opt} and Figure \re
 First, $ k $ initial hyperparameter configurations are sampled and evaluated. This set is the starting archive $ A^{[0]} $. After that, the loop is executed as long as the stopping criterion is not met. This can be for example a budget, meaning a maximum number of function evaluations. The first step of the loop is to fit the surrogate model on the current archive. Then the acquisition function is made and optimized to get the next configuration $ \lambda^+ $. This point is evaluated and added to the archive. The overall result of the algorithm is the $ \lambda $ which is the hyperparameter configuration for the machine learning model with the overall best result. The implementation of this optimization method is based on the website "Bayesian optimization with scikit-learn" \footnote{https://thuijskens.github.io/2016/12/29/bayesian-optimisation/, accessed August 8, 2023}  which was the subject of the talk \cite{bayesian_optimization_talk}.
 
 \subsection{Other Techniques}
-There are also other techniques for finding the best hyperparameters. Multi-fidelity optimization \cite{feurer2019hyperparameter} aims to probe the learning of a model on a task with reduced complexity such as a subset of the data or fewer epochs for training the model for discovering the best configurations. For example, the learning curve can be predicted so that early stopping can be done if the prediction is not as good as the best model so far. There are also bandit-based selection methods that do not predict the learning curve but compare the different combinations on a small number of epochs and only perform the best ones. This can be done iteratively like it is done in \textit{successive halving} for hyperparameter optimization \cite{jamieson2016non}. The algorithm is very simple. It starts to evaluate all different combinations with a very small budget. The best half of the candidates are then evaluated in the next iteration with a double budget and so on until only one combination is left. In \cite{8030298}, a similar algorithm is presented. The authors use a model of the objective function (neural network depending on configurations) to find candidate hyperparameters. Those are then trained on a smaller number of epochs and the best ones are then evaluated with a higher budget. Also, neural networks can be used for the optimization which was done by the authors in \cite{smithson2016neural}. Also, the covariance matrix adaptation evolution strategy was implemented as an alternative to bayesian optimization in \cite{loshchilov2016cma}. 
+There are also other techniques for finding the best hyperparameters. Multi-fidelity optimization \cite{feurer2019hyperparameter} aims to probe the learning of a model on a task with reduced complexity such as a subset of the data or fewer epochs for training the model for discovering the best configurations. For example, the learning curve can be predicted so that early stopping can be done if the prediction is not as good as the best model so far. There are also bandit-based selection methods that do not predict the learning curve but compare the different combinations on a small number of epochs and only perform the best ones. This can be done iteratively like it is done in \textit{successive halving} for hyperparameter optimization \cite{jamieson2016non}. The algorithm is very simple. It starts to evaluate all different combinations with a very small budget. The best half of the candidates are then evaluated in the next iteration with a double budget and so on until only one combination is left. In \cite{8030298}, a similar algorithm is presented. The authors use a model of the objective function (neural network depending on configurations) to find candidate hyperparameters. Those are then trained on a smaller number of epochs and the best ones are then evaluated with a higher budget. Also, neural networks can be used for the optimization which was done by the authors in \cite{smithson2016neural}. Also, the covariance matrix adaptation evolution strategy was implemented as an alternative to Bayesian optimization in \cite{loshchilov2016cma}. 
 
 
 \section{Sparse Grids}
@@ -205,7 +204,7 @@ for constants $ \alpha_{l,i} \in \mathbb{R} $. An example can be seen in Figure 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/Fig_2_5_interpolant}
-	\caption{  Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the nodal basis. Level of the grid is 3 and hat functions are used. }
+	\caption{  Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the nodal basis. Level of the grid is 3 and hat functions are used, inspired from \cite{pfluger2010spatially}.}
 	\label{fig:interpolant}
 \end{figure}
 
@@ -231,7 +230,7 @@ An example can be seen in Figure \ref{fig:hierarchical_basis}.
 	\centering
 	%\includegraphics[scale=0.5]{figures/hierarchical_basis.png}
 	\includegraphics[width=\textwidth]{figures/Fig_2_6_hierarchical_subspaces}
-	\caption{ Hierarchical subspaces up to level 3 on the left. On the right, nodal spaces up to level 3. The combination of $ W_1 $ up to $ W_3 $ is the same space as $ V_3 $. }
+	\caption{ Hierarchical subspaces up to level 3 on the left. On the right, nodal spaces up to level 3. The combination of $ W_1 $ up to $ W_3 $ is the same space as $ V_3 $, inspired from \cite{pfluger2010spatially}.}
 	\label{fig:hierarchical_basis}
 \end{figure}
 
@@ -246,7 +245,7 @@ An example can be seen in Figure \ref{fig:weighted_sum_hierarchical}.
 	\centering
 	%\includegraphics[scale=0.5]{figures/weighted_sum_hierarchical.png}
 	\includegraphics[width=\textwidth]{figures/Fig_2_7_hierarchical}
-	\caption{ Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the hierarchical basis. Level of the grid is 3 and hat functions are used. Taken from \cite{pfluger2010spatially}.}
+	\caption{ Interpolation of the function $ f $ (black line) by its interpolant $ u $ (red, dashed) in the hierarchical basis. Level of the grid is 3 and hat functions are used, inspired from \cite{pfluger2010spatially}.}
 	\label{fig:weighted_sum_hierarchical}
 \end{figure}
 
@@ -279,7 +278,7 @@ The resulting regular grid has then $ (2^n - 1)^d $ basis points. An example of 
 	\centering
 	%\includegraphics[scale=0.26]{figures/2d_basis.png}
 	\begin{tikzpicture}[]
-		\begin{axis}[view = {60}{40},
+		\begin{axis}[view = {50}{30},
 			width=0.8\textwidth,
 			xmax = 1,
 			xmin = 0,
@@ -309,8 +308,8 @@ The resulting regular grid has then $ (2^n - 1)^d $ basis points. An example of 
 			\addplot3[surf] file {figures/data.dat};
 			
 		\end{axis}
-	\end{tikzpicture}
-	\caption{ Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. }
+		\end{tikzpicture}
+	\caption{ Example of a basis function in two dimensions. It is constructed with the tensor product of two 1d hat functions. Inspired from \cite{garcke2013sparse}. }
 	\label{fig:2d_basis}
 \end{figure}
 
@@ -330,8 +329,7 @@ An example with $ n = 3 $ can be seen in Figure \ref{fig:sparse_grid}.
 	\centering
 	%\includegraphics[scale=0.5]{figures/subspaces_twodims.png}
 	\includegraphics[width=0.8\textwidth]{figures/Fig_2_9_two_dim_example}
-	\caption{ Two dimensional example of a sparse grid with $ n = 3 $. Left, the subspaces $ W_{\vec{l}} $ can be seen and on the right is the resulting sparse grid. }
-		%Taken from \cite{garcke2013sparse}. }
+	\caption{ Two dimensional example of a sparse grid with $ n = 3 $. Left, the subspaces $ W_{\vec{l}} $ can be seen and on the right is the resulting sparse grid, inspired from \cite{pfluger2010spatially}. }
 	\label{fig:sparse_grid}
 \end{figure}
 
@@ -358,7 +356,7 @@ With the normal combination technique, this grid is still symmetric and focuses 
 	%\includegraphics[scale=0.18]{figures/normal_combi_technique.png}
 	%\includegraphics[scale=0.18]{figures/adaptive_combination_technique.png}
 	\includegraphics[width=\textwidth]{figures/Fig_2_10_combi}
-	\caption{ Example of the 2-dimensional combination technique. Here the blue regular grids are added and the red ones are subtracted. On the left, the normal combination technique can be seen and on the right is an dimension-adaptive version. }
+	\caption{ Example of the 2-dimensional combination technique. Here the blue regular grids are added and the red ones are subtracted. On the left, the normal combination technique can be seen and on the right is an dimension-adaptive version. Inspired from \cite{pfluger2010spatially}. }
 	\label{fig:combi_technique}
 \end{figure}
 
@@ -369,7 +367,7 @@ In contrast to the previously mentioned refinement concentrating on whole dimens
 	\centering
 	%\includegraphics[scale=0.2]{figures/spatially_adaptive_combi_technique.png}
 	\includegraphics[width=\textwidth]{figures/Fig_2_11_adaptive_combigrid}
-	\caption{ Example of the spatially adaptive combination technique in two dimensions. } % Taken from \cite{obersteiner2021generalized}. }
+	\caption{ Example of the spatially adaptive combination technique in two dimensions, inspired from \cite{obersteiner2021generalized}. }
 	\label{fig:spatially_adaptive_combi_technique}
 \end{figure}
 
@@ -411,7 +409,7 @@ with $ \chi_{[0,1[} $ being the characteristic function of the half-open unit in
 	\item $ \frac{d}{dx} b^p $ is the difference of $ b^{p-1} $ and $ -b^{p-1} $
 	\item has unit integral 
 	\item is the convolution of $ b^{p-1} $ and $ b^{0} $
-	\item hat function and gaussian function are special cases
+	\item hat function and Gaussian function are special cases
 \end{enumerate}
 
 This is the case for uniform B-splines. For adaptive grids, the distances between basis points are not always uniform. This is the reason why we need also non-uniform B-splines. Let $ m, p \in \mathbb{N}_0 $ and $ \xi = \left(\xi_0, ... , \xi_{m+p}\right) $ be an increasing sequence of real numbers called \textit{knot sequence}. For $ k=0,..., m-1 $, the non-uniform B-spline is defined by 
@@ -430,7 +428,6 @@ In general, an optimization problem can be constrained or unconstrained. In the 
 
 Depending on whether the optimization algorithm uses the gradient or not, it is called a gradient-based method or a gradient-free method, respectively. In the following, algorithms of both types are presented \cite{b_splines}.
 
-\newpage
 \paragraph{Gradient-Free Methods}
 
 \subparagraph{Nelder Mead Method}
@@ -480,7 +477,7 @@ The representation of those points (but not $ 0 $) is unique, for example $ 0.37
 	\centering
 	%\includegraphics[scale=0.18]{figures/hyperbolic.png}
 	\includegraphics[width=0.8\textwidth]{figures/Fig_2_12_altern_sparse}
-	\caption{ HPC of level $ k = 5 $ (red stars) and full grid (black dots). A full grid would have $ 33^2 = 1089 $ and this grid has $ 147 $ points. Taken from \cite{duan2016induction}.}
+	\caption{ HPC of level $ k = 5 $ (red stars) and full grid (black dots). A full grid would have $ 33^2 = 1089 $ and this grid has $ 147 $ points. Inspired from \cite{duan2016induction}.}
 	\label{fig:hyperbolic}
 \end{figure}
 
